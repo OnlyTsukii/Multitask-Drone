@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drone_interfaces/msg/RawWaypoint.msg
+// generated code does not contain a copyright notice
+
+
+module drone_interfaces {
+  module msg {
+    struct RawWaypoint {
+      uint8 id;
+
+      int8 type;
+
+      int8 mission;
+
+      double latitude;
+
+      double longitude;
+
+      @verbatim (language="comment", text=
+        "in meters, AMSL or above terrain")
+      float altitude;
+
+      float velocity;
+
+      double yaw;
+
+      double yaw_rate;
+    };
+  };
+};

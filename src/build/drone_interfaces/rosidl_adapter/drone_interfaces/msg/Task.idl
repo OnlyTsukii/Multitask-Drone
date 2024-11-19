@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from drone_interfaces/msg/Task.msg
+// generated code does not contain a copyright notice
+
+#include "drone_interfaces/msg/RawWaypoint.idl"
+
+module drone_interfaces {
+  module msg {
+    struct Task {
+      sequence<drone_interfaces::msg::RawWaypoint> waypoints;
+    };
+  };
+};
