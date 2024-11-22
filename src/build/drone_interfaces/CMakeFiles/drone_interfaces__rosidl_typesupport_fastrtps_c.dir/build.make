@@ -80,8 +80,11 @@ rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesuppor
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/drone_interfaces/msg/Yaw.idl
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/drone_interfaces/msg/PanelBox.idl
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/drone_interfaces/msg/Task.idl
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/drone_interfaces/msg/TaskState.idl
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/drone_interfaces/msg/RawWaypoint.idl
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/drone_interfaces/srv/TaskDispatch.idl
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/drone_interfaces/srv/YoloRequest.idl
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/drone_interfaces/srv/TaskPush.idl
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/drone_interfaces/action/ExecuteWaypoint.idl
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
@@ -353,6 +356,12 @@ rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__rosidl_typesuppo
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp
 
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp
+
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_fastrtps_c.h
 
@@ -364,6 +373,18 @@ rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__rosidl_
 
 rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp
 
 rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_fastrtps_c.h
@@ -413,10 +434,24 @@ CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp.s
 
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o -MF CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o.d -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp
+
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp > CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.i
+
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.s
+
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o -MF CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o.d -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp
 
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.i: cmake_force
@@ -430,7 +465,7 @@ CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o -MF CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o.d -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp
 
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.i: cmake_force
@@ -441,10 +476,38 @@ CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.s
 
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o -MF CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o.d -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp
+
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp > CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.i
+
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.s
+
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o -MF CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o.d -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp
+
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp > CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.i
+
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.s
+
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o -MF CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o.d -o CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp
 
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.i: cmake_force
@@ -460,8 +523,11 @@ drone_interfaces__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.cpp.o" \
 "CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/panel_box__type_support_c.cpp.o" \
 "CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp.o" \
+"CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o" \
 "CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o" \
 "CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o" \
+"CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o" \
+"CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o" \
 "CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o"
 
 # External object files for target drone_interfaces__rosidl_typesupport_fastrtps_c
@@ -470,8 +536,11 @@ drone_interfaces__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.cpp.o
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/panel_box__type_support_c.cpp.o
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp.o
+libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o
+libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o
+libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: libdrone_interfaces__rosidl_generator_c.so
@@ -500,7 +569,7 @@ libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/libun
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librcutils.so
 libdrone_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -519,10 +588,16 @@ CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_ty
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.cpp
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp
 	cd /home/x650/Multitask-Drone/src/build/drone_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/x650/Multitask-Drone/src/drone_interfaces /home/x650/Multitask-Drone/src/drone_interfaces /home/x650/Multitask-Drone/src/build/drone_interfaces /home/x650/Multitask-Drone/src/build/drone_interfaces /home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/depend
 

@@ -368,11 +368,23 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/msg" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/msg/TaskState.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/msg" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/msg/RawWaypoint.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/srv/TaskDispatch.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/srv/YoloRequest.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/srv/TaskPush.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -392,6 +404,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/msg" TYPE FILE FILES "/home/x650/Multitask-Drone/src/drone_interfaces/msg/TaskState.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/msg" TYPE FILE FILES "/home/x650/Multitask-Drone/src/drone_interfaces/msg/RawWaypoint.msg")
 endif()
 
@@ -405,6 +421,30 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_cmake/srv/TaskDispatch_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/drone_interfaces/srv/YoloRequest.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_cmake/srv/YoloRequest_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_cmake/srv/YoloRequest_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/drone_interfaces/srv/TaskPush.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_cmake/srv/TaskPush_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/drone_interfaces/srv" TYPE FILE FILES "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_cmake/srv/TaskPush_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

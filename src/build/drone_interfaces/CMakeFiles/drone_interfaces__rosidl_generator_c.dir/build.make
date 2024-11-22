@@ -85,8 +85,11 @@ rosidl_generator_c/drone_interfaces/msg/yaw.h: /opt/ros/humble/share/rosidl_gene
 rosidl_generator_c/drone_interfaces/msg/yaw.h: rosidl_adapter/drone_interfaces/msg/Yaw.idl
 rosidl_generator_c/drone_interfaces/msg/yaw.h: rosidl_adapter/drone_interfaces/msg/PanelBox.idl
 rosidl_generator_c/drone_interfaces/msg/yaw.h: rosidl_adapter/drone_interfaces/msg/Task.idl
+rosidl_generator_c/drone_interfaces/msg/yaw.h: rosidl_adapter/drone_interfaces/msg/TaskState.idl
 rosidl_generator_c/drone_interfaces/msg/yaw.h: rosidl_adapter/drone_interfaces/msg/RawWaypoint.idl
 rosidl_generator_c/drone_interfaces/msg/yaw.h: rosidl_adapter/drone_interfaces/srv/TaskDispatch.idl
+rosidl_generator_c/drone_interfaces/msg/yaw.h: rosidl_adapter/drone_interfaces/srv/YoloRequest.idl
+rosidl_generator_c/drone_interfaces/msg/yaw.h: rosidl_adapter/drone_interfaces/srv/TaskPush.idl
 rosidl_generator_c/drone_interfaces/msg/yaw.h: rosidl_adapter/drone_interfaces/action/ExecuteWaypoint.idl
 rosidl_generator_c/drone_interfaces/msg/yaw.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_c/drone_interfaces/msg/yaw.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
@@ -376,6 +379,18 @@ rosidl_generator_c/drone_interfaces/msg/detail/task__struct.h: rosidl_generator_
 rosidl_generator_c/drone_interfaces/msg/detail/task__type_support.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/msg/detail/task__type_support.h
 
+rosidl_generator_c/drone_interfaces/msg/task_state.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/msg/task_state.h
+
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.h
+
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__struct.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/msg/detail/task_state__struct.h
+
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__type_support.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/msg/detail/task_state__type_support.h
+
 rosidl_generator_c/drone_interfaces/msg/raw_waypoint.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/msg/raw_waypoint.h
 
@@ -400,6 +415,30 @@ rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__struct.h: rosidl_g
 rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__type_support.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__type_support.h
 
+rosidl_generator_c/drone_interfaces/srv/yolo_request.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/yolo_request.h
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.h
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__struct.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__struct.h
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__type_support.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__type_support.h
+
+rosidl_generator_c/drone_interfaces/srv/task_push.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/task_push.h
+
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.h
+
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__struct.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/task_push__struct.h
+
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__type_support.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/task_push__type_support.h
+
 rosidl_generator_c/drone_interfaces/action/execute_waypoint.h: rosidl_generator_c/drone_interfaces/msg/yaw.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/action/execute_waypoint.h
 
@@ -421,11 +460,20 @@ rosidl_generator_c/drone_interfaces/msg/detail/panel_box__functions.c: rosidl_ge
 rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c: rosidl_generator_c/drone_interfaces/msg/yaw.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c
 
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c
+
 rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c: rosidl_generator_c/drone_interfaces/msg/yaw.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c
 
 rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c: rosidl_generator_c/drone_interfaces/msg/yaw.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c
+
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c: rosidl_generator_c/drone_interfaces/msg/yaw.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c
 
 rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c: rosidl_generator_c/drone_interfaces/msg/yaw.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c
@@ -472,10 +520,24 @@ CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_int
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.s
 
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o: rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o -MF CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o.d -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c
+
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c > CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.i
+
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.s
+
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o: rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o -MF CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o.d -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c
 
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.i: cmake_force
@@ -489,7 +551,7 @@ CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_int
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o: rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o -MF CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o.d -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c
 
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.i: cmake_force
@@ -500,10 +562,38 @@ CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_int
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.s
 
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o: rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o -MF CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o.d -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c
+
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c > CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.i
+
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.s
+
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o: rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o -MF CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o.d -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c
+
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c > CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.i
+
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.s
+
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o: rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o -MF CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o.d -o CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o -c /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c
 
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.i: cmake_force
@@ -519,8 +609,11 @@ drone_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.c.o" \
 "CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/panel_box__functions.c.o" \
 "CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.o" \
+"CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o" \
 "CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o" \
 "CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o" \
+"CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o" \
+"CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o" \
 "CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o"
 
 # External object files for target drone_interfaces__rosidl_generator_c
@@ -529,8 +622,11 @@ drone_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.c.o
 libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/panel_box__functions.c.o
 libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.o
+libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o
 libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o
 libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o
+libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o
+libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o
 libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o
 libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make
 libdrone_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libmavros_msgs__rosidl_generator_c.so
@@ -545,7 +641,7 @@ libdrone_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_inter
 libdrone_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libdrone_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libdrone_interfaces__rosidl_generator_c.so: CMakeFiles/drone_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C shared library libdrone_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C shared library libdrone_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drone_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -573,6 +669,10 @@ CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/d
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/task__functions.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/task__struct.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/task__type_support.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/task_state__struct.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/task_state__type_support.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.c
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/detail/yaw__struct.h
@@ -580,12 +680,23 @@ CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/d
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/panel_box.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/raw_waypoint.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/task.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/task_state.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/msg/yaw.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__struct.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__type_support.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/task_push__struct.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/task_push__type_support.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__struct.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__type_support.h
 CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/task_dispatch.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/task_push.h
+CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/drone_interfaces/srv/yolo_request.h
 	cd /home/x650/Multitask-Drone/src/build/drone_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/x650/Multitask-Drone/src/drone_interfaces /home/x650/Multitask-Drone/src/drone_interfaces /home/x650/Multitask-Drone/src/build/drone_interfaces /home/x650/Multitask-Drone/src/build/drone_interfaces /home/x650/Multitask-Drone/src/build/drone_interfaces/CMakeFiles/drone_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/drone_interfaces__rosidl_generator_c.dir/depend
 

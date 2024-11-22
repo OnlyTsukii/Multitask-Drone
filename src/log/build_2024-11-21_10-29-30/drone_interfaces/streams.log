@@ -1,0 +1,424 @@
+[0.012s] Invoking command in '/home/x650/Multitask-Drone/src/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/x650/Multitask-Drone/src/build/drone_interfaces -- -j16 -l16
+[0.055s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.160s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.162s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.165s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.195s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.222s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.246s] -- Found mavros_msgs: 2.9.0 (/opt/ros/humble/share/mavros_msgs/cmake)
+[0.330s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.647s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.950s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.365s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.392s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.410s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.410s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.411s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.488s] -- Added test 'lint_cmake' to check CMake code style
+[1.489s] -- Added test 'xmllint' to check XML markup files
+[1.494s] -- Configuring done
+[1.533s] -- Generating done
+[1.535s] -- Build files have been written to: /home/x650/Multitask-Drone/src/build/drone_interfaces
+[1.558s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.568s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.570s] [  2%] Built target ament_cmake_python_copy_drone_interfaces
+[1.720s] running egg_info
+[1.729s] writing drone_interfaces.egg-info/PKG-INFO
+[1.729s] writing dependency_links to drone_interfaces.egg-info/dependency_links.txt
+[1.729s] writing top-level names to drone_interfaces.egg-info/top_level.txt
+[1.756s] reading manifest file 'drone_interfaces.egg-info/SOURCES.txt'
+[1.756s] writing manifest file 'drone_interfaces.egg-info/SOURCES.txt'
+[1.779s] [  2%] Built target ament_cmake_python_build_drone_interfaces_egg
+[2.021s] [  2%] Built target drone_interfaces__cpp
+[2.030s] [  5%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.030s] [  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.032s] [  6%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.032s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_generator_c[0m
+[2.044s] [  7%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/panel_box__functions.c.o[0m
+[2.045s] [  8%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.c.o[0m
+[2.045s] [ 10%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o[0m
+[2.046s] [ 11%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o[0m
+[2.046s] [ 12%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o[0m
+[2.047s] [ 13%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o[0m
+[2.048s] [ 15%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.o[0m
+[2.177s] [ 16%] [32m[1mLinking C shared library libdrone_interfaces__rosidl_generator_c.so[0m
+[2.226s] [ 16%] Built target drone_interfaces__rosidl_generator_c
+[2.236s] [ 17%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.236s] [ 18%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.236s] [ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.316s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_typesupport_cpp[0m
+[2.336s] [ 22%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.cpp.o[0m
+[2.336s] [ 22%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/raw_waypoint__type_support.cpp.o[0m
+[2.336s] [ 24%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.o[0m
+[2.337s] [ 26%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/yaw__type_support.cpp.o[0m
+[2.337s] [ 27%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/panel_box__type_support.cpp.o[0m
+[2.337s] [ 27%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/task__type_support.cpp.o[0m
+[2.338s] [ 29%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/action/execute_waypoint__type_support.cpp.o[0m
+[2.399s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_typesupport_introspection_cpp[0m
+[2.412s] [ 31%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/yaw__type_support.cpp.o[0m
+[2.413s] [ 31%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task__type_support.cpp.o[0m
+[2.415s] [ 32%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/panel_box__type_support.cpp.o[0m
+[2.415s] [ 34%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/raw_waypoint__type_support.cpp.o[0m
+[2.416s] [ 35%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_dispatch__type_support.cpp.o[0m
+[2.608s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[2.634s] [ 36%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/yaw__type_support.cpp.o[0m
+[2.689s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_typesupport_c[0m
+[2.698s] [ 37%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/panel_box__type_support.cpp.o[0m
+[2.701s] [ 39%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.o[0m
+[2.706s] [ 40%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task__type_support.cpp.o[0m
+[2.709s] [ 41%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/raw_waypoint__type_support.cpp.o[0m
+[2.720s] [ 43%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/yaw__type_support.cpp.o[0m
+[2.725s] [ 44%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_dispatch__type_support.cpp.o[0m
+[2.758s] [ 45%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/panel_box__type_support.cpp.o[0m
+[2.772s] [ 46%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/action/detail/execute_waypoint__type_support.cpp.o[0m
+[2.802s] [ 48%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/task__type_support.cpp.o[0m
+[2.847s] [ 49%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.o[0m
+[2.847s] [ 50%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/raw_waypoint__type_support.cpp.o[0m
+[2.884s] [ 53%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.o[0m
+[2.885s] [ 53%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.cpp.o[0m
+[2.904s] [ 54%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/action/detail/dds_fastrtps/execute_waypoint__type_support.cpp.o[0m
+[2.916s] [ 55%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/action/execute_waypoint__type_support.cpp.o[0m
+[2.930s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_typesupport_introspection_c[0m
+[2.947s] [ 56%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/yaw__type_support.c.o[0m
+[2.949s] [ 59%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/panel_box__type_support.c.o[0m
+[2.949s] [ 59%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task__type_support.c.o[0m
+[2.951s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_typesupport_fastrtps_c[0m
+[2.957s] [ 60%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/raw_waypoint__type_support.c.o[0m
+[2.972s] [ 62%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.cpp.o[0m
+[2.983s] [ 64%] [32m[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_c.so[0m
+[2.983s] [ 64%] [32m[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_cpp.so[0m
+[2.992s] [ 65%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__type_support.c.o[0m
+[2.996s] [ 67%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.o[0m
+[3.004s] [ 68%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/panel_box__type_support_c.cpp.o[0m
+[3.005s] [ 69%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/action/detail/execute_waypoint__type_support.c.o[0m
+[3.046s] [ 70%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp.o[0m
+[3.047s] [ 72%] Built target drone_interfaces__rosidl_typesupport_cpp
+[3.049s] [ 72%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o[0m
+[3.053s] [ 72%] Built target drone_interfaces__rosidl_typesupport_c
+[3.064s] [ 73%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o[0m
+[3.064s] [ 74%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o[0m
+[3.071s] [ 75%] [32m[1mLinking C shared library libdrone_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.127s] [ 77%] [32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o[0m
+[3.143s] [ 77%] Built target drone_interfaces__rosidl_typesupport_introspection_c
+[3.388s] [ 78%] [32m[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[3.412s] [ 79%] [32m[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.449s] [ 79%] Built target drone_interfaces__rosidl_typesupport_introspection_cpp
+[3.469s] [ 79%] Built target drone_interfaces__rosidl_typesupport_fastrtps_cpp
+[3.499s] [ 81%] [32m[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[3.571s] [ 81%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c
+[3.597s] [ 81%] Built target drone_interfaces
+[3.619s] [ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.386s] [ 82%] Built target drone_interfaces__py
+[4.396s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_generator_py[0m
+[4.415s] [ 84%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_task_s.c.o[0m
+[4.416s] [ 84%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_raw_waypoint_s.c.o[0m
+[4.416s] [ 86%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.o[0m
+[4.416s] [ 87%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/action/_execute_waypoint_s.c.o[0m
+[4.418s] [ 88%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_yaw_s.c.o[0m
+[4.418s] [ 89%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_panel_box_s.c.o[0m
+[4.419s] [ 91%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c.o[0m
+[4.580s] [ 92%] [32m[1mLinking C shared library rosidl_generator_py/drone_interfaces/libdrone_interfaces__rosidl_generator_py.so[0m
+[4.624s] [ 92%] Built target drone_interfaces__rosidl_generator_py
+[4.632s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[4.632s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[4.633s] [35m[1mConsolidate compiler generated dependencies of target drone_interfaces__rosidl_typesupport_c__pyext[0m
+[4.641s] [ 96%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[4.641s] [ 96%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.641s] [ 96%] [32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.738s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.738s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.742s] [100%] [32m[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.778s] [100%] Built target drone_interfaces__rosidl_typesupport_introspection_c__pyext
+[4.784s] [100%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[4.785s] [100%] Built target drone_interfaces__rosidl_typesupport_c__pyext
+[4.795s] Invoked command in '/home/x650/Multitask-Drone/src/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/x650/Multitask-Drone/src/build/drone_interfaces -- -j16 -l16
+[4.953s] Invoking command in '/home/x650/Multitask-Drone/src/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/x650/Multitask-Drone/src/build/drone_interfaces
+[4.962s] -- Install configuration: ""
+[4.963s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/ament_index/resource_index/rosidl_interfaces/drone_interfaces
+[4.963s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[4.963s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action
+[4.963s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail
+[4.963s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__functions.h
+[4.963s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__struct.h
+[4.963s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__functions.c
+[4.963s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.h
+[4.963s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/execute_waypoint.h
+[4.964s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv
+[4.964s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail
+[4.964s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.h
+[4.964s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__functions.h
+[4.964s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.h
+[4.964s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__functions.c
+[4.964s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__struct.h
+[4.964s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__struct.h
+[4.965s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__functions.h
+[4.965s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__functions.c
+[4.965s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_dispatch.h
+[4.965s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/yolo_request.h
+[4.965s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[4.965s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/yaw.h
+[4.965s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[4.965s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.h
+[4.965s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__functions.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__functions.c
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__functions.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__struct.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__struct.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__struct.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__functions.c
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__functions.c
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__functions.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__functions.c
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__struct.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__functions.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/raw_waypoint.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/panel_box.h
+[4.966s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.966s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task.h
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/environment/library_path.sh
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/environment/library_path.dsv
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_c.so
+[4.967s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_c.so" to ""
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_fastrtps_c.h
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_fastrtps_c.h
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_fastrtps_c.h
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_fastrtps_c.h
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_c.h
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_fastrtps_c.h
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.967s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.c
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_introspection_c.h
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv
+[4.967s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.c
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_introspection_c.h
+[4.967s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_introspection_c.h
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.c
+[4.968s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[4.968s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.968s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_introspection_c.h
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.c
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.c
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.c
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_introspection_c.h
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.c
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_introspection_c.h
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_introspection_c.h
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_c.so
+[4.968s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[4.968s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_c.so
+[4.968s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_c.so" to ""
+[4.968s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[4.969s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action
+[4.969s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__builder.hpp
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__traits.hpp
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__struct.hpp
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/execute_waypoint.hpp
+[4.969s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/yolo_request.hpp
+[4.969s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__traits.hpp
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__traits.hpp
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__struct.hpp
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__builder.hpp
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__builder.hpp
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__struct.hpp
+[4.969s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_dispatch.hpp
+[4.969s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task.hpp
+[4.970s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__struct.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__struct.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__traits.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__builder.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__traits.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__traits.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__builder.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__struct.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__struct.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__traits.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__builder.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__builder.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/raw_waypoint.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/yaw.hpp
+[4.970s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/panel_box.hpp
+[4.970s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail
+[4.971s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_fastrtps_cpp.hpp
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/dds_fastrtps
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail
+[4.971s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_fastrtps_cpp.hpp
+[4.971s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_fastrtps_cpp.hpp
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/dds_fastrtps
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[4.971s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_fastrtps_cpp.hpp
+[4.971s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_fastrtps_cpp.hpp
+[4.971s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_cpp.hpp
+[4.971s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_cpp.hpp
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/dds_fastrtps
+[4.971s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.971s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.972s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.972s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces
+[4.972s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action
+[4.972s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_introspection_cpp.hpp
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.cpp
+[4.972s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv
+[4.972s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_introspection_cpp.hpp
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_introspection_cpp.hpp
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.cpp
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.cpp
+[4.972s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg
+[4.972s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.cpp
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_introspection_cpp.hpp
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_introspection_cpp.hpp
+[4.972s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_introspection_cpp.hpp
+[4.973s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.cpp
+[4.973s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.cpp
+[4.973s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.cpp
+[4.973s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_introspection_cpp.hpp
+[4.973s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.973s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[4.973s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_cpp.so
+[4.973s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_cpp.so" to ""
+[4.973s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.sh
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.dsv
+[4.974s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.974s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c
+[4.974s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/_execute_waypoint.py
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/_execute_waypoint_s.c
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/__init__.py
+[4.974s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv
+[4.974s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_dispatch_s.c
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_yolo_request_s.c
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_yolo_request.py
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/__init__.py
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_dispatch.py
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/__init__.py
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/libdrone_interfaces__rosidl_generator_py.so
+[4.975s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg
+[4.975s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_yaw_s.c
+[4.976s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_raw_waypoint_s.c
+[4.976s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_panel_box.py
+[4.976s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task_s.c
+[4.976s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_raw_waypoint.py
+[4.976s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/__init__.py
+[4.976s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_yaw.py
+[4.976s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_panel_box_s.c
+[4.976s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task.py
+[5.015s] Listing '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/__init__.py'...
+[5.016s] Listing '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/__init__.py'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/_execute_waypoint.py'...
+[5.016s] Listing '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/__init__.py'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_panel_box.py'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_raw_waypoint.py'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task.py'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_yaw.py'...
+[5.016s] Listing '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/__init__.py'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_dispatch.py'...
+[5.016s] Compiling '/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_yolo_request.py'...
+[5.019s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.019s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.019s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.020s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.020s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.020s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.020s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_py.so
+[5.020s] -- Set runtime path of "/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_py.so" to ""
+[5.020s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/msg/Yaw.idl
+[5.020s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/msg/PanelBox.idl
+[5.020s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/msg/Task.idl
+[5.020s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/msg/RawWaypoint.idl
+[5.020s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch.idl
+[5.020s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest.idl
+[5.020s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/action/ExecuteWaypoint.idl
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/msg/Yaw.msg
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/msg/PanelBox.msg
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/msg/Task.msg
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/msg/RawWaypoint.msg
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch.srv
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch_Request.msg
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch_Response.msg
+[5.021s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest.srv
+[5.021s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest_Request.msg
+[5.021s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest_Response.msg
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/action/ExecuteWaypoint.action
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/ament_index/resource_index/package_run_dependencies/drone_interfaces
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/ament_index/resource_index/parent_prefix_path/drone_interfaces
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.sh
+[5.021s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.dsv
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/environment/path.sh
+[5.021s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/environment/path.dsv
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/local_setup.bash
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/local_setup.sh
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/local_setup.zsh
+[5.021s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/local_setup.dsv
+[5.021s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.dsv
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/ament_index/resource_index/packages/drone_interfaces
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport.cmake
+[5.021s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport-noconfig.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cppExport.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[5.022s] -- Installing: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake-extras.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.022s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.023s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig.cmake
+[5.023s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig-version.cmake
+[5.023s] -- Up-to-date: /home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.xml
+[5.025s] Invoked command in '/home/x650/Multitask-Drone/src/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/x650/Multitask-Drone/src/build/drone_interfaces

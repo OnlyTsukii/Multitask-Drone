@@ -31,8 +31,11 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     "msg/Yaw.msg"
     "msg/PanelBox.msg"
     "msg/Task.msg"
+    "msg/TaskState.msg"
     "msg/RawWaypoint.msg"
     "srv/TaskDispatch.srv"
+    "srv/YoloRequest.srv"
+    "srv/TaskPush.srv"
     "action/ExecuteWaypoint.action"
    DEPENDENCIES std_msgs mavros_msgs
 )

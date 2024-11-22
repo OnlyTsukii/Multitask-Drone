@@ -501,6 +501,30 @@ rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.s
 .PHONY : rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.s
 
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.o: rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o
+.PHONY : rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.o
+
+# target to build an object file
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o
+.PHONY : rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o
+
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.i: rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.i
+.PHONY : rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.i
+.PHONY : rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.i
+
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.s: rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.s
+.PHONY : rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.s
+.PHONY : rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.s
+
 rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.o: rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.c.o
 .PHONY : rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.o
 
@@ -548,6 +572,54 @@ rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.s: rosid
 rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.s
 .PHONY : rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.s
+
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.o: rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.o
+
+# target to build an object file
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o
+
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.i: rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.i
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.i
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.i
+
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.s: rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.s
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.s
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.s
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.o: rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.o
+
+# target to build an object file
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.i: rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.i
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.i
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.i
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.s: rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.s
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.s
+.PHONY : rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.s
 
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.o: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c.o
 .PHONY : rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.o
@@ -717,6 +789,30 @@ rosidl_generator_py/drone_interfaces/msg/_task_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_task_s.c.s
 .PHONY : rosidl_generator_py/drone_interfaces/msg/_task_s.c.s
 
+rosidl_generator_py/drone_interfaces/msg/_task_state_s.o: rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.o
+.PHONY : rosidl_generator_py/drone_interfaces/msg/_task_state_s.o
+
+# target to build an object file
+rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.o
+.PHONY : rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.o
+
+rosidl_generator_py/drone_interfaces/msg/_task_state_s.i: rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.i
+.PHONY : rosidl_generator_py/drone_interfaces/msg/_task_state_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.i
+.PHONY : rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.i
+
+rosidl_generator_py/drone_interfaces/msg/_task_state_s.s: rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.s
+.PHONY : rosidl_generator_py/drone_interfaces/msg/_task_state_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.s
+.PHONY : rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.s
+
 rosidl_generator_py/drone_interfaces/msg/_yaw_s.o: rosidl_generator_py/drone_interfaces/msg/_yaw_s.c.o
 .PHONY : rosidl_generator_py/drone_interfaces/msg/_yaw_s.o
 
@@ -764,6 +860,54 @@ rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.s: rosidl_generator_py
 rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c.s
 .PHONY : rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c.s
+
+rosidl_generator_py/drone_interfaces/srv/_task_push_s.o: rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.o
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_task_push_s.o
+
+# target to build an object file
+rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.o
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.o
+
+rosidl_generator_py/drone_interfaces/srv/_task_push_s.i: rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.i
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_task_push_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.i
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.i
+
+rosidl_generator_py/drone_interfaces/srv/_task_push_s.s: rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.s
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_task_push_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.s
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.s
+
+rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.o: rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.o
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.o
+
+# target to build an object file
+rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.o
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.o
+
+rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.i: rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.i
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.i
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.i
+
+rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.s: rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.s
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.s
+.PHONY : rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.s
 
 rosidl_typesupport_c/drone_interfaces/action/execute_waypoint__type_support.o: rosidl_typesupport_c/drone_interfaces/action/execute_waypoint__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/drone_interfaces/action/execute_waypoint__type_support.o
@@ -861,6 +1005,30 @@ rosidl_typesupport_c/drone_interfaces/msg/task__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/task__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/drone_interfaces/msg/task__type_support.cpp.s
 
+rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.o: rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.o
+
+rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.i: rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.i
+
+rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.s: rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.s
+
 rosidl_typesupport_c/drone_interfaces/msg/yaw__type_support.o: rosidl_typesupport_c/drone_interfaces/msg/yaw__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/drone_interfaces/msg/yaw__type_support.o
 
@@ -908,6 +1076,54 @@ rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.s: rosidl_
 rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.cpp.s
+
+rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.o: rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.o
+
+rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.i: rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.i
+
+rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.s: rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.s
+
+rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.o: rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.o
+
+rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.i: rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.i
+
+rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.s: rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.s
 
 rosidl_typesupport_cpp/drone_interfaces/action/execute_waypoint__type_support.o: rosidl_typesupport_cpp/drone_interfaces/action/execute_waypoint__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/drone_interfaces/action/execute_waypoint__type_support.o
@@ -1005,6 +1221,30 @@ rosidl_typesupport_cpp/drone_interfaces/msg/task__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/task__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/drone_interfaces/msg/task__type_support.cpp.s
 
+rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.o: rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.o
+
+rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.i: rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.i
+
+rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.s: rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.s
+
 rosidl_typesupport_cpp/drone_interfaces/msg/yaw__type_support.o: rosidl_typesupport_cpp/drone_interfaces/msg/yaw__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/drone_interfaces/msg/yaw__type_support.o
 
@@ -1052,6 +1292,54 @@ rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.s: rosid
 rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.cpp.s
+
+rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.o: rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.o
+
+rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.i: rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.i
+
+rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.s: rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.s
+
+rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.o: rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.o
+
+rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.i: rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.i
+
+rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.s: rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.s
 
 rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.o: rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.o
@@ -1149,6 +1437,30 @@ rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.c
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp.s
 
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.o: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.i: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.s: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.s
+
 rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.o: rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.o
 
@@ -1196,6 +1508,54 @@ rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_su
 rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.o: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.i: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.s: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.o: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.i: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.s: rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/drone_interfaces/action/detail/dds_fastrtps/execute_waypoint__type_support.o: rosidl_typesupport_fastrtps_cpp/drone_interfaces/action/detail/dds_fastrtps/execute_waypoint__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/action/detail/dds_fastrtps/execute_waypoint__type_support.o
@@ -1293,6 +1653,30 @@ rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task__t
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.o: rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.i: rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.s: rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/yaw__type_support.o: rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/yaw__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/yaw__type_support.o
 
@@ -1340,6 +1724,54 @@ rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_di
 rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_dispatch__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_dispatch__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_dispatch__type_support.cpp.s
+
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.o: rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.i: rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.s: rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.s
+
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.o: rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.i: rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.s: rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.s
 
 rosidl_typesupport_introspection_c/drone_interfaces/action/detail/execute_waypoint__type_support.o: rosidl_typesupport_introspection_c/drone_interfaces/action/detail/execute_waypoint__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/drone_interfaces/action/detail/execute_waypoint__type_support.o
@@ -1437,6 +1869,30 @@ rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task__type_suppor
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task__type_support.c.s
 
+rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.o: rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.o
+
+rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.i: rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.i
+
+rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.s: rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.s
+
 rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/yaw__type_support.o: rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/yaw__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/yaw__type_support.o
 
@@ -1484,6 +1940,54 @@ rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__ty
 rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__type_support.c.s
+
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.o: rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.o
+
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.i: rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.i
+
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.s: rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.s
+
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.o: rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.o
+
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.i: rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.i
+
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.s: rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.s
 
 rosidl_typesupport_introspection_cpp/drone_interfaces/action/detail/execute_waypoint__type_support.o: rosidl_typesupport_introspection_cpp/drone_interfaces/action/detail/execute_waypoint__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/action/detail/execute_waypoint__type_support.o
@@ -1581,6 +2085,30 @@ rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task__type_supp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.o: rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.i: rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.s: rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/yaw__type_support.o: rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/yaw__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/yaw__type_support.o
 
@@ -1629,6 +2157,54 @@ rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_dispatch__
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_dispatch__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_dispatch__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.o: rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.i: rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.s: rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.s
+
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.o: rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.i: rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.s: rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1672,12 +2248,21 @@ help:
 	@echo "... rosidl_generator_c/drone_interfaces/msg/detail/task__functions.o"
 	@echo "... rosidl_generator_c/drone_interfaces/msg/detail/task__functions.i"
 	@echo "... rosidl_generator_c/drone_interfaces/msg/detail/task__functions.s"
+	@echo "... rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.o"
+	@echo "... rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.i"
+	@echo "... rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.s"
 	@echo "... rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.o"
 	@echo "... rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.i"
 	@echo "... rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.s"
 	@echo "... rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.o"
 	@echo "... rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.i"
 	@echo "... rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.s"
+	@echo "... rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.o"
+	@echo "... rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.i"
+	@echo "... rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.s"
+	@echo "... rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.o"
+	@echo "... rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.i"
+	@echo "... rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.s"
 	@echo "... rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.o"
 	@echo "... rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.i"
 	@echo "... rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.s"
@@ -1699,12 +2284,21 @@ help:
 	@echo "... rosidl_generator_py/drone_interfaces/msg/_task_s.o"
 	@echo "... rosidl_generator_py/drone_interfaces/msg/_task_s.i"
 	@echo "... rosidl_generator_py/drone_interfaces/msg/_task_s.s"
+	@echo "... rosidl_generator_py/drone_interfaces/msg/_task_state_s.o"
+	@echo "... rosidl_generator_py/drone_interfaces/msg/_task_state_s.i"
+	@echo "... rosidl_generator_py/drone_interfaces/msg/_task_state_s.s"
 	@echo "... rosidl_generator_py/drone_interfaces/msg/_yaw_s.o"
 	@echo "... rosidl_generator_py/drone_interfaces/msg/_yaw_s.i"
 	@echo "... rosidl_generator_py/drone_interfaces/msg/_yaw_s.s"
 	@echo "... rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.o"
 	@echo "... rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.i"
 	@echo "... rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.s"
+	@echo "... rosidl_generator_py/drone_interfaces/srv/_task_push_s.o"
+	@echo "... rosidl_generator_py/drone_interfaces/srv/_task_push_s.i"
+	@echo "... rosidl_generator_py/drone_interfaces/srv/_task_push_s.s"
+	@echo "... rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.o"
+	@echo "... rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.i"
+	@echo "... rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.s"
 	@echo "... rosidl_typesupport_c/drone_interfaces/action/execute_waypoint__type_support.o"
 	@echo "... rosidl_typesupport_c/drone_interfaces/action/execute_waypoint__type_support.i"
 	@echo "... rosidl_typesupport_c/drone_interfaces/action/execute_waypoint__type_support.s"
@@ -1717,12 +2311,21 @@ help:
 	@echo "... rosidl_typesupport_c/drone_interfaces/msg/task__type_support.o"
 	@echo "... rosidl_typesupport_c/drone_interfaces/msg/task__type_support.i"
 	@echo "... rosidl_typesupport_c/drone_interfaces/msg/task__type_support.s"
+	@echo "... rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.o"
+	@echo "... rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.i"
+	@echo "... rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.s"
 	@echo "... rosidl_typesupport_c/drone_interfaces/msg/yaw__type_support.o"
 	@echo "... rosidl_typesupport_c/drone_interfaces/msg/yaw__type_support.i"
 	@echo "... rosidl_typesupport_c/drone_interfaces/msg/yaw__type_support.s"
 	@echo "... rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.o"
 	@echo "... rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.i"
 	@echo "... rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.o"
+	@echo "... rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.i"
+	@echo "... rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.s"
+	@echo "... rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.o"
+	@echo "... rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.i"
+	@echo "... rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.s"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/action/execute_waypoint__type_support.o"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/action/execute_waypoint__type_support.i"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/action/execute_waypoint__type_support.s"
@@ -1735,12 +2338,21 @@ help:
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/msg/task__type_support.o"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/msg/task__type_support.i"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/msg/task__type_support.s"
+	@echo "... rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.o"
+	@echo "... rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.i"
+	@echo "... rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.s"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/msg/yaw__type_support.o"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/msg/yaw__type_support.i"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/msg/yaw__type_support.s"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.o"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.i"
 	@echo "... rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.o"
+	@echo "... rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.i"
+	@echo "... rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.s"
+	@echo "... rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.o"
+	@echo "... rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.i"
+	@echo "... rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.s"
@@ -1753,12 +2365,21 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/action/detail/dds_fastrtps/execute_waypoint__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/action/detail/dds_fastrtps/execute_waypoint__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/action/detail/dds_fastrtps/execute_waypoint__type_support.s"
@@ -1771,12 +2392,21 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/yaw__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/yaw__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/yaw__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_dispatch__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_dispatch__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/action/detail/execute_waypoint__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/action/detail/execute_waypoint__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/action/detail/execute_waypoint__type_support.s"
@@ -1789,12 +2419,21 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/yaw__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/yaw__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/yaw__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/action/detail/execute_waypoint__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/action/detail/execute_waypoint__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/action/detail/execute_waypoint__type_support.s"
@@ -1807,12 +2446,21 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/yaw__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/yaw__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/yaw__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_dispatch__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_dispatch__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.s"
 .PHONY : help
 
 

@@ -19,7 +19,7 @@ class WaypointTaskExecutor(Node):
 
     def __init__(self):
         super().__init__('waypoint_task_executor')
-
+        
         self.gps_fix = None
         self.panel_yaw = float('nan')
         self.max_retries = 0
@@ -68,108 +68,103 @@ class WaypointTaskExecutor(Node):
                 self.panel_pos = msg
 
     def execute_clean_task(self):
-        rclpy.spin_once(self)
         if not self.panel_detected:
+            while self.gps_fix == None:
+                rclpy.spin_once(self)
+                self.body_move(BODY_HOLD)
+                time.sleep(0.3)
+
             prev_altitude = self.gps_fix.altitude
-            self.approach(BODY_CLIMB, prev_altitude)
-            if not self.panel_detected:
-                self.get_logger().info('panel not found, navigate to next waypoint')
-                return
-            
-        self.approach(APPROACH_HORIZONTAL_LR)
-
-        if self.task_ready:
-            self.get_logger().info("executing task ...")
-            # TODO: CLEAN
-        
-        if self.task_point_reached:
-            self.approach(APPROACH_PAENL_EDGE_TOP)
-            self.panel_center_reached = False
-            self.task_point_reached = False
-            self.task_ready = False
-            self.panel_yaw = float('nan')
-            self.get_logger().info("task finished")
-            return 
-        elif self.panel_center_reached:
-            self.approach(APPROACH_PAENL_EDGE_BOT)
-            self.approach(BODY_DOWN, proportion=1.5)
-            self.task_point_reached = True
-            self.get_logger().info(f'task point has reached {self.panel_pos, self.panel_yaw}')
-            self.task_ready = True
-            self.get_logger().info(f'ready to execute task {self.panel_pos, self.panel_yaw}')
-            return
-        
-        self.approach(APPROACH_HORIZONTAL_FB)
-        self.approach(BODY_DOWN, proportion=5)
-
-        if not math.isnan(self.panel_yaw):
-            self.max_retries = 0
-            self.approach(APPROACH_YAW)
-            self.get_logger().info(f'panel center has reached {self.panel_pos, self.panel_yaw}')
-            self.panel_center_reached = True
-        else:
-            self.body_move(BODY_HOLD)
-            self.max_retries += 1
-            if self.max_retries == 20:
-                self.max_retries = 0
-                self.get_logger().info('panel edge not found, navigate to next waypoint')
-                return
-        
-    def approach(self, direction, prev_altitude: Optional[float]=None, proportion: Optional[float]=None):
-         timestamp = time.time()
-
-         while rclpy.ok():
-            rclpy.spin_once(self)
-            if time.time() - timestamp < 0.1:
-                continue
-
-            panel_pos = self.panel_pos
-
-            if direction == BODY_CLIMB:
-                if self.gps_fix.altitude - prev_altitude > 10.0:
-                    return
-                self.body_move(direction)
-                if self.panel_detected:
-                    return
-            elif direction == BODY_DOWN:
-                if panel_pos.w >= IMAGE_WIDTH/proportion and panel_pos.h >= IMAGE_HEIGHT/proportion:
-                    return
-                self.body_move(direction)
-            elif direction == APPROACH_HORIZONTAL_LR:
-                if panel_pos.x > PANEL_POS_THRES_X:
-                    self.body_move(BODY_RIGHT)
-                elif panel_pos.x < -1 * PANEL_POS_THRES_X:
-                    self.body_move(BODY_LEFT)
-                else:
-                    return
-            elif direction == APPROACH_HORIZONTAL_FB:
-                if panel_pos.y > PANEL_POS_THRES_Y:
-                    self.body_move(BODY_FORWARD)
-                elif panel_pos.y < -1 * PANEL_POS_THRES_Y:
-                    self.body_move(BODY_BACKWARD)
-                else:
-                    return
-            elif direction == APPROACH_YAW:
-                if self.panel_yaw > 5:
-                    self.body_move(BODY_ROTATE_CLOCKWISE)
-                elif self.panel_yaw < -5:
-                    self.body_move(BODY_ROTATE_COUNTERCW)
-                else:
-                    return
-            elif direction == APPROACH_PAENL_EDGE_TOP:
-                top_edge_pos_y = panel_pos.h / 2 + panel_pos.y
-                if top_edge_pos_y > 0:
-                    self.body_move(BODY_FORWARD)
-                else:
-                    return
-            elif direction == APPROACH_PAENL_EDGE_BOT:
-                bottom_edge_pos_y = panel_pos.h / 2 - panel_pos.y
-                if bottom_edge_pos_y > 0:
-                    self.body_move(BODY_BACKWARD)
-                else:
-                    return
 
             timestamp = time.time()
+            while rclpy.ok():
+                rclpy.spin_once(self)
+                if time.time() - timestamp < 0.1:
+                    continue
+                if self.gps_fix.altitude - prev_altitude > 10.0:
+                    self.panel_yaw = float('nan')
+                    self.get_logger().info('panel not found, navigate to next waypoint')
+                    return
+                self.body_move(BODY_CLIMB)
+                if self.panel_detected:
+                    break
+                timestamp = time.time()
+            
+        panel_center_reached = False
+        task_point_reached = False
+        
+        timestamp = time.time()
+
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.3:
+                continue
+
+            if not self.panel_detected:
+                return 
+            
+            panel_pos = self.panel_pos
+            
+            if task_point_reached:
+                top_edge_pos_y = panel_pos.h / 2 + panel_pos.y
+                if top_edge_pos_y > -50:
+                    self.get_logger().info("executing task ...")
+                    # TODO: CLEAN
+                    self.body_move(BODY_FORWARD)
+                else:
+                    break
+                    
+                timestamp = time.time()
+                continue
+            
+            if panel_center_reached:
+                if not math.isnan(self.panel_yaw):
+                    self.max_retries = 0
+                    if self.panel_yaw > PANEL_YAW_THRES:
+                        self.body_move(BODY_ROTATE_CLOCKWISE)
+                    elif self.panel_yaw < -1 * PANEL_YAW_THRES:
+                        self.body_move(BODY_ROTATE_COUNTERCW)
+                    else:
+                        bottom_edge_pos_y = panel_pos.y - panel_pos.h / 2
+                        if bottom_edge_pos_y < 0:
+                            self.body_move(BODY_BACKWARD)
+                        elif bottom_edge_pos_y > 100:
+                            self.body_move(BODY_FORWARD)
+                        elif panel_pos.w < IMAGE_WIDTH/1.5 or panel_pos.h < IMAGE_HEIGHT/1.5:
+                            self.body_move(BODY_DOWN)
+                        else:
+                            task_point_reached = True
+                            self.get_logger().info("task point reached") 
+                else:
+                    self.body_move(BODY_HOLD)
+                    self.max_retries += 1
+                    if self.max_retries == 20:
+                        self.max_retries = 0
+                        self.get_logger().info('panel edge not found, navigate to next waypoint')
+                        self.panel_yaw = float('nan')
+                        return
+                
+                timestamp = time.time()
+                continue
+
+            if panel_pos.x > PANEL_POS_THRES_X:
+                self.body_move(BODY_LEFT)
+            elif panel_pos.x < -1 * PANEL_POS_THRES_X:
+                self.body_move(BODY_RIGHT)
+            elif panel_pos.y > PANEL_POS_THRES_Y:
+                self.body_move(BODY_FORWARD)
+            elif panel_pos.y < -1 * PANEL_POS_THRES_Y:
+                self.body_move(BODY_BACKWARD)
+            elif panel_pos.w < IMAGE_WIDTH/5 or panel_pos.h < IMAGE_HEIGHT/5:
+                self.body_move(BODY_DOWN)
+            else:
+                panel_center_reached = True
+                self.get_logger().info("panel center reached")
+
+            timestamp = time.time()
+
+        self.panel_yaw = float('nan')
+        self.get_logger().info("task finished")
     
     def body_move(self, direction):
         point = PositionTarget()
@@ -198,16 +193,16 @@ class WaypointTaskExecutor(Node):
             point.velocity = Vector3(x=0.0, y=-0.3, z=0.0)
             point.position = Point(x=0.0, y=0.3, z=0.0)
         elif direction == BODY_HOLD:
-            point.velocity = Vector3(x=0.0, y=0.0, z=0.001)
+            point.velocity = Vector3(x=0.0, y=0.0, z=0.0)
             point.position = Point(x=0.0, y=0.0, z=0.0)
         else:
             point.type_mask = IGNORE_YAW | IGNORE_AFX | IGNORE_AFY | IGNORE_AFZ
-            point.velocity = Vector3(x=0.0, y=0.0, z=0.01)
+            point.velocity = Vector3(x=0.0, y=0.0, z=0.0)
             point.position = Point(x=0.0, y=0.0, z=0.0)
             if direction == BODY_ROTATE_CLOCKWISE:
-                point.yaw_rate = -1 * DEFAULT_YAW_RATE
+                point.yaw_rate = -1 * 0.2
             else:
-                point.yaw_rate = DEFAULT_YAW_RATE
+                point.yaw_rate = 0.2
             
         self.local_point_publisher.publish(point)
 

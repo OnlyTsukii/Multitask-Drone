@@ -1,0 +1,312 @@
+[0.066s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.066s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x774ed51495a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x774ed523a5f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x774ed523a5f0>>)
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.093s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/x650/Multitask-Drone/src'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.103s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(drone_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(drone_controller) by extension 'ignore'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(drone_controller) by extension 'ignore_ament_install'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(drone_controller) by extensions ['colcon_pkg']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(drone_controller) by extension 'colcon_pkg'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(drone_controller) by extensions ['colcon_meta']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(drone_controller) by extension 'colcon_meta'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(drone_controller) by extensions ['ros']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(drone_controller) by extension 'ros'
+[0.106s] DEBUG:colcon.colcon_core.package_identification:Package 'drone_controller' with type 'ros.ament_python' and name 'drone_controller'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(drone_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(drone_interfaces) by extension 'ignore'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(drone_interfaces) by extension 'ignore_ament_install'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(drone_interfaces) by extensions ['colcon_pkg']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(drone_interfaces) by extension 'colcon_pkg'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(drone_interfaces) by extensions ['colcon_meta']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(drone_interfaces) by extension 'colcon_meta'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(drone_interfaces) by extensions ['ros']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(drone_interfaces) by extension 'ros'
+[0.107s] DEBUG:colcon.colcon_core.package_identification:Package 'drone_interfaces' with type 'ros.ament_cmake' and name 'drone_interfaces'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_monitor) by extensions ['ignore', 'ignore_ament_install']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_monitor) by extension 'ignore'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_monitor) by extension 'ignore_ament_install'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_monitor) by extensions ['colcon_pkg']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_monitor) by extension 'colcon_pkg'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_monitor) by extensions ['colcon_meta']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_monitor) by extension 'colcon_meta'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_monitor) by extensions ['ros']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_monitor) by extension 'ros'
+[0.107s] DEBUG:colcon.colcon_core.package_identification:Package 'drone_monitor' with type 'ros.ament_python' and name 'drone_monitor'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_vision) by extensions ['ignore', 'ignore_ament_install']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_vision) by extension 'ignore'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_vision) by extension 'ignore_ament_install'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_vision) by extensions ['colcon_pkg']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_vision) by extension 'colcon_pkg'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_vision) by extensions ['colcon_meta']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_vision) by extension 'colcon_meta'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_vision) by extensions ['ros']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(drone_vision) by extension 'ros'
+[0.108s] DEBUG:colcon.colcon_core.package_identification:Package 'drone_vision' with type 'ros.ament_python' and name 'drone_vision'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extensions ['ignore', 'ignore_ament_install']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extension 'ignore'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extension 'ignore_ament_install'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extensions ['colcon_pkg']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extension 'colcon_pkg'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extensions ['colcon_meta']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extension 'colcon_meta'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extensions ['ros']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extension 'ros'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extensions ['cmake', 'python']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extension 'cmake'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extension 'python'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extensions ['python_setup_py']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(shell) by extension 'python_setup_py'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extension 'ignore'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extension 'ignore_ament_install'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extensions ['colcon_pkg']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extension 'colcon_pkg'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extensions ['colcon_meta']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extension 'colcon_meta'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extensions ['ros']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extension 'ros'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extensions ['cmake', 'python']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extension 'cmake'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extension 'python'
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extensions ['python_setup_py']
+[0.109s] Level 1:colcon.colcon_core.package_identification:_identify(test_demo) by extension 'python_setup_py'
+[0.109s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.109s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.109s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.109s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.109s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.124s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 289 installed packages in /opt/ros/humble
+[0.125s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.147s] DEBUG:colcon.colcon_core.verb:Building package 'drone_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/x650/Multitask-Drone/src/build/drone_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/x650/Multitask-Drone/src/install/drone_interfaces', 'merge_install': False, 'path': '/home/x650/Multitask-Drone/src/drone_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_monitor' build argument 'cmake_args' from command line to 'None'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_monitor' build argument 'cmake_target' from command line to 'None'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_monitor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_monitor' build argument 'cmake_clean_cache' from command line to 'False'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_monitor' build argument 'cmake_clean_first' from command line to 'False'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_monitor' build argument 'cmake_force_configure' from command line to 'False'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_monitor' build argument 'ament_cmake_args' from command line to 'None'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_monitor' build argument 'catkin_cmake_args' from command line to 'None'
+[0.147s] Level 5:colcon.colcon_core.verb:set package 'drone_monitor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.147s] DEBUG:colcon.colcon_core.verb:Building package 'drone_monitor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/x650/Multitask-Drone/src/build/drone_monitor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/x650/Multitask-Drone/src/install/drone_monitor', 'merge_install': False, 'path': '/home/x650/Multitask-Drone/src/drone_monitor', 'symlink_install': False, 'test_result_base': None}
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_args' from command line to 'None'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_target' from command line to 'None'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.148s] DEBUG:colcon.colcon_core.verb:Building package 'drone_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/x650/Multitask-Drone/src/build/drone_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/x650/Multitask-Drone/src/install/drone_controller', 'merge_install': False, 'path': '/home/x650/Multitask-Drone/src/drone_controller', 'symlink_install': False, 'test_result_base': None}
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_vision' build argument 'cmake_args' from command line to 'None'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_vision' build argument 'cmake_target' from command line to 'None'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_vision' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_vision' build argument 'cmake_clean_cache' from command line to 'False'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_vision' build argument 'cmake_clean_first' from command line to 'False'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_vision' build argument 'cmake_force_configure' from command line to 'False'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_vision' build argument 'ament_cmake_args' from command line to 'None'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_vision' build argument 'catkin_cmake_args' from command line to 'None'
+[0.148s] Level 5:colcon.colcon_core.verb:set package 'drone_vision' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.148s] DEBUG:colcon.colcon_core.verb:Building package 'drone_vision' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/x650/Multitask-Drone/src/build/drone_vision', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/x650/Multitask-Drone/src/install/drone_vision', 'merge_install': False, 'path': '/home/x650/Multitask-Drone/src/drone_vision', 'symlink_install': False, 'test_result_base': None}
+[0.148s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.149s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.149s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/x650/Multitask-Drone/src/drone_interfaces' with build type 'ament_cmake'
+[0.149s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/x650/Multitask-Drone/src/drone_interfaces'
+[0.151s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.151s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.151s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.153s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/x650/Multitask-Drone/src/drone_monitor' with build type 'ament_python'
+[0.153s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_monitor', 'ament_prefix_path')
+[0.153s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/hook/ament_prefix_path.ps1'
+[0.153s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/hook/ament_prefix_path.dsv'
+[0.154s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/hook/ament_prefix_path.sh'
+[0.154s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.154s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.161s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/x650/Multitask-Drone/src/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/x650/Multitask-Drone/src/build/drone_interfaces -- -j16 -l16
+[0.298s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/x650/Multitask-Drone/src/drone_monitor'
+[0.298s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.298s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.422s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/x650/Multitask-Drone/src/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/x650/Multitask-Drone/src/build/drone_interfaces -- -j16 -l16
+[0.600s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/x650/Multitask-Drone/src/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/x650/Multitask-Drone/src/build/drone_interfaces
+[0.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/x650/Multitask-Drone/src/drone_monitor': PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_monitor build --build-base /home/x650/Multitask-Drone/src/build/drone_monitor/build install --record /home/x650/Multitask-Drone/src/build/drone_monitor/install.log --single-version-externally-managed install_data
+[0.646s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_interfaces)
+[0.646s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/x650/Multitask-Drone/src/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/x650/Multitask-Drone/src/build/drone_interfaces
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces' for CMake module files
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces' for CMake config files
+[0.648s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_interfaces', 'cmake_prefix_path')
+[0.648s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.ps1'
+[0.649s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.dsv'
+[0.649s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.sh'
+[0.649s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/lib'
+[0.649s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_interfaces', 'ld_library_path_lib')
+[0.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.ps1'
+[0.650s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.dsv'
+[0.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.sh'
+[0.650s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/bin'
+[0.650s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/pkgconfig/drone_interfaces.pc'
+[0.650s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/python3.10/site-packages'
+[0.651s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/bin'
+[0.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.ps1'
+[0.651s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.dsv'
+[0.652s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.sh'
+[0.652s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.bash'
+[0.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.zsh'
+[0.653s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/x650/Multitask-Drone/src/install/drone_interfaces/share/colcon-core/packages/drone_interfaces)
+[0.827s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_interfaces)
+[0.827s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces' for CMake module files
+[0.828s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces' for CMake config files
+[0.828s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_interfaces', 'cmake_prefix_path')
+[0.828s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.ps1'
+[0.828s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.dsv'
+[0.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.sh'
+[0.829s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/lib'
+[0.829s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_interfaces', 'ld_library_path_lib')
+[0.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.ps1'
+[0.830s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.dsv'
+[0.830s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.sh'
+[0.830s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/bin'
+[0.830s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/pkgconfig/drone_interfaces.pc'
+[0.831s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/lib/python3.10/site-packages'
+[0.831s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_interfaces/bin'
+[0.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.ps1'
+[0.831s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.dsv'
+[0.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.sh'
+[0.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.bash'
+[0.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_interfaces/share/drone_interfaces/package.zsh'
+[0.833s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/x650/Multitask-Drone/src/install/drone_interfaces/share/colcon-core/packages/drone_interfaces)
+[0.833s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/x650/Multitask-Drone/src/drone_controller' with build type 'ament_python'
+[0.833s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_controller', 'ament_prefix_path')
+[0.833s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/hook/ament_prefix_path.ps1'
+[0.834s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/hook/ament_prefix_path.dsv'
+[0.834s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/hook/ament_prefix_path.sh'
+[0.834s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.834s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.837s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/x650/Multitask-Drone/src/drone_vision' with build type 'ament_python'
+[0.837s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_vision', 'ament_prefix_path')
+[0.837s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/hook/ament_prefix_path.ps1'
+[0.837s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/hook/ament_prefix_path.dsv'
+[0.837s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/hook/ament_prefix_path.sh'
+[0.838s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.838s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.981s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/x650/Multitask-Drone/src/drone_controller'
+[0.982s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.982s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.118s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/x650/Multitask-Drone/src/drone_vision'
+[1.119s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.119s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.123s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_monitor' for CMake module files
+[1.123s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/x650/Multitask-Drone/src/drone_monitor' returned '0': PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_monitor build --build-base /home/x650/Multitask-Drone/src/build/drone_monitor/build install --record /home/x650/Multitask-Drone/src/build/drone_monitor/install.log --single-version-externally-managed install_data
+[1.123s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_monitor' for CMake config files
+[1.124s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_monitor/lib'
+[1.124s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_monitor/bin'
+[1.124s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_monitor/lib/pkgconfig/drone_monitor.pc'
+[1.124s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_monitor/lib/python3.10/site-packages'
+[1.124s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_monitor', 'pythonpath')
+[1.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/hook/pythonpath.ps1'
+[1.125s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/hook/pythonpath.dsv'
+[1.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/hook/pythonpath.sh'
+[1.125s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_monitor/bin'
+[1.125s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_monitor)
+[1.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/package.ps1'
+[1.126s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/package.dsv'
+[1.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/package.sh'
+[1.127s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/package.bash'
+[1.127s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor/package.zsh'
+[1.127s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/x650/Multitask-Drone/src/install/drone_monitor/share/colcon-core/packages/drone_monitor)
+[1.447s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/x650/Multitask-Drone/src/drone_vision': AMENT_PREFIX_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces LD_LIBRARY_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_vision/lib/python3.10/site-packages:/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_vision build --build-base /home/x650/Multitask-Drone/src/build/drone_vision/build install --record /home/x650/Multitask-Drone/src/build/drone_vision/install.log --single-version-externally-managed install_data
+[1.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/x650/Multitask-Drone/src/drone_controller': AMENT_PREFIX_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces LD_LIBRARY_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_controller/lib/python3.10/site-packages:/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_controller build --build-base /home/x650/Multitask-Drone/src/build/drone_controller/build install --record /home/x650/Multitask-Drone/src/build/drone_controller/install.log --single-version-externally-managed install_data
+[1.752s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_vision' for CMake module files
+[1.753s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/x650/Multitask-Drone/src/drone_vision' returned '0': AMENT_PREFIX_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces LD_LIBRARY_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_vision/lib/python3.10/site-packages:/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_vision build --build-base /home/x650/Multitask-Drone/src/build/drone_vision/build install --record /home/x650/Multitask-Drone/src/build/drone_vision/install.log --single-version-externally-managed install_data
+[1.753s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_vision' for CMake config files
+[1.753s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_vision/lib'
+[1.754s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_vision/bin'
+[1.754s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_vision/lib/pkgconfig/drone_vision.pc'
+[1.754s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_vision/lib/python3.10/site-packages'
+[1.754s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_vision', 'pythonpath')
+[1.754s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/hook/pythonpath.ps1'
+[1.755s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/hook/pythonpath.dsv'
+[1.755s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/hook/pythonpath.sh'
+[1.755s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_vision/bin'
+[1.755s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_vision)
+[1.756s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/package.ps1'
+[1.756s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/package.dsv'
+[1.756s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/package.sh'
+[1.757s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/package.bash'
+[1.757s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision/package.zsh'
+[1.757s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/x650/Multitask-Drone/src/install/drone_vision/share/colcon-core/packages/drone_vision)
+[1.785s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_controller' for CMake module files
+[1.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/x650/Multitask-Drone/src/drone_controller' returned '0': AMENT_PREFIX_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces LD_LIBRARY_PATH=/home/x650/Multitask-Drone/src/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_controller/lib/python3.10/site-packages:/home/x650/Multitask-Drone/src/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_controller build --build-base /home/x650/Multitask-Drone/src/build/drone_controller/build install --record /home/x650/Multitask-Drone/src/build/drone_controller/install.log --single-version-externally-managed install_data
+[1.786s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_controller' for CMake config files
+[1.786s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_controller/lib'
+[1.786s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_controller/bin'
+[1.786s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_controller/lib/pkgconfig/drone_controller.pc'
+[1.787s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_controller/lib/python3.10/site-packages'
+[1.787s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone_controller', 'pythonpath')
+[1.787s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/hook/pythonpath.ps1'
+[1.787s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/hook/pythonpath.dsv'
+[1.787s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/hook/pythonpath.sh'
+[1.788s] Level 1:colcon.colcon_core.environment:checking '/home/x650/Multitask-Drone/src/install/drone_controller/bin'
+[1.788s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone_controller)
+[1.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/package.ps1'
+[1.788s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/package.dsv'
+[1.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/package.sh'
+[1.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/package.bash'
+[1.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller/package.zsh'
+[1.789s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/x650/Multitask-Drone/src/install/drone_controller/share/colcon-core/packages/drone_controller)
+[1.789s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.790s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.790s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.790s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.796s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.796s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.796s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.809s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.810s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/x650/Multitask-Drone/src/install/local_setup.ps1'
+[1.811s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/x650/Multitask-Drone/src/install/_local_setup_util_ps1.py'
+[1.813s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/x650/Multitask-Drone/src/install/setup.ps1'
+[1.814s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/x650/Multitask-Drone/src/install/local_setup.sh'
+[1.815s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/x650/Multitask-Drone/src/install/_local_setup_util_sh.py'
+[1.816s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/x650/Multitask-Drone/src/install/setup.sh'
+[1.817s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/x650/Multitask-Drone/src/install/local_setup.bash'
+[1.818s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/x650/Multitask-Drone/src/install/setup.bash'
+[1.819s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/x650/Multitask-Drone/src/install/local_setup.zsh'
+[1.819s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/x650/Multitask-Drone/src/install/setup.zsh'

@@ -31,10 +31,9 @@
 /bin/sleep 3
 
 source /opt/ros/humble/setup.bash
-
 ros2 launch mavros px4.launch &
 
 /bin/sleep 3
 
-source /home/x650/UAV/ROS2/install/setup.bash
-ros2 launch uav_patrol uav_patrol.launch.py 
+source /home/x650/Multitask-Drone/src/install/setup.bash
+ros2 launch drone_controller drone_controller.launch.py

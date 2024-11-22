@@ -10,6 +10,7 @@ from ultralytics import YOLO
 from rclpy.node import Node
 from copy import deepcopy
 from drone_interfaces.msg import PanelBox, Yaw
+from drone_interfaces.srv import YoloRequest
 
 from drone_vision.utils import calc_angle_by_canny
 
@@ -17,13 +18,15 @@ IMAGE_WIDTH         = 1920
 IMAGE_HEIGHT        = 1080
 FRAME_PER_SECOND    = 30
 CONF_THRESHOLD      = 0.6
-MODEL_PATH          = '/home/x650/Multitask-Drone/src/drone_vision/weights/panel.pt'
+MODEL_PATH          = '/home/x650/Multitask-Drone/src/drone_vision/weights/new_panel.pt'
 IMAGE_PATH          = '/home/x650/Multitask-Drone/src/drone_vision/images/'
 
 
 class ObjectDetector(Node):
     def __init__(self):
         super().__init__('object_detector')
+
+        self.yolo_srv = self.create_service(YoloRequest, '/drone/yolo_request', self.handle_yolo_request)
 
         self.panel_publisher = self.create_publisher(PanelBox, '/drone/panel_box', 10)
         self.panel_yaw_publisher = self.create_publisher(Yaw, '/drone/panel_yaw', 10)
@@ -38,8 +41,15 @@ class ObjectDetector(Node):
         
         self.frame = None
         self.mutex = threading.Lock()
+
+        self.yolo_enabled = False
         
         self.create_timer(0.09, self.detect)
+
+    def handle_yolo_request(self, request, response):
+        self.yolo_enabled = request.start
+        response.success = True
+        return response
 
     def init_camera(self) -> bool:
         self.cap = cv2.VideoCapture(0)
@@ -61,13 +71,17 @@ class ObjectDetector(Node):
                 continue
 
             self.frame = frame
-            if self.counter % 20 == 0:
-                cv2.imwrite(IMAGE_PATH+'img-'+str(time.time())+'.jpg', frame)
-                self.counter = 0
-
-            self.counter += 1
     
     def detect(self):
+        if not self.yolo_enabled:
+            return
+        
+        if self.counter % 30 == 0:
+            cv2.imwrite(IMAGE_PATH+'img-'+str(time.time())+'.jpg', self.frame)
+            self.counter = 0
+
+        self.counter += 1
+        
         self.mutex.acquire()
         results = self.detect_model(self.frame, True)
         self.mutex.release()
@@ -99,7 +113,7 @@ class ObjectDetector(Node):
             panel_box.y = float(center_y)
             panel_box.w = float(w)
             panel_box.h = float(h)
-            self.get_logger().info(f'{panel_box, panel_box.h / 2 - panel_box.y, panel_box.h / 2 + panel_box.y}')
+            self.get_logger().info(f'{panel_box, panel_box.y - panel_box.h / 2, panel_box.h / 2 + panel_box.y}')
 
         self.panel_publisher.publish(panel_box)
 

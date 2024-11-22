@@ -72,8 +72,11 @@ drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_yaw.py
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_panel_box.py
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_task.py
+drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_task_state.py
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_raw_waypoint.py
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_task_dispatch.py
+drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_yolo_request.py
+drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_task_push.py
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/action/_execute_waypoint.py
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/__init__.py
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/__init__.py
@@ -81,8 +84,11 @@ drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_yaw_s.c
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_panel_box_s.c
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_task_s.c
+drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_task_state_s.c
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_raw_waypoint_s.c
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c
+drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c
+drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_task_push_s.c
 drone_interfaces__py/CMakeFiles/drone_interfaces__py: rosidl_generator_py/drone_interfaces/action/_execute_waypoint_s.c
 
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
@@ -101,8 +107,11 @@ rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_f
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/drone_interfaces/msg/Yaw.idl
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/drone_interfaces/msg/PanelBox.idl
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/drone_interfaces/msg/Task.idl
+rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/drone_interfaces/msg/TaskState.idl
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/drone_interfaces/msg/RawWaypoint.idl
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/drone_interfaces/srv/TaskDispatch.idl
+rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/drone_interfaces/srv/YoloRequest.idl
+rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/drone_interfaces/srv/TaskPush.idl
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/drone_interfaces/action/ExecuteWaypoint.idl
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/Byte.idl
@@ -374,11 +383,20 @@ rosidl_generator_py/drone_interfaces/msg/_panel_box.py: rosidl_generator_py/dron
 rosidl_generator_py/drone_interfaces/msg/_task.py: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/msg/_task.py
 
+rosidl_generator_py/drone_interfaces/msg/_task_state.py: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/msg/_task_state.py
+
 rosidl_generator_py/drone_interfaces/msg/_raw_waypoint.py: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/msg/_raw_waypoint.py
 
 rosidl_generator_py/drone_interfaces/srv/_task_dispatch.py: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/srv/_task_dispatch.py
+
+rosidl_generator_py/drone_interfaces/srv/_yolo_request.py: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/srv/_yolo_request.py
+
+rosidl_generator_py/drone_interfaces/srv/_task_push.py: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/srv/_task_push.py
 
 rosidl_generator_py/drone_interfaces/action/_execute_waypoint.py: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/action/_execute_waypoint.py
@@ -401,11 +419,20 @@ rosidl_generator_py/drone_interfaces/msg/_panel_box_s.c: rosidl_generator_py/dro
 rosidl_generator_py/drone_interfaces/msg/_task_s.c: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/msg/_task_s.c
 
+rosidl_generator_py/drone_interfaces/msg/_task_state_s.c: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/msg/_task_state_s.c
+
 rosidl_generator_py/drone_interfaces/msg/_raw_waypoint_s.c: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/msg/_raw_waypoint_s.c
 
 rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c
+
+rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c
+
+rosidl_generator_py/drone_interfaces/srv/_task_push_s.c: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/srv/_task_push_s.c
 
 rosidl_generator_py/drone_interfaces/action/_execute_waypoint_s.c: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/action/_execute_waypoint_s.c
@@ -424,11 +451,17 @@ drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_raw_waypoint.py
 drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_raw_waypoint_s.c
 drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_task.py
 drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_task_s.c
+drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_task_state.py
+drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_task_state_s.c
 drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_yaw.py
 drone_interfaces__py: rosidl_generator_py/drone_interfaces/msg/_yaw_s.c
 drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/__init__.py
 drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_task_dispatch.py
 drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c
+drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_task_push.py
+drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_task_push_s.c
+drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_yolo_request.py
+drone_interfaces__py: rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c
 drone_interfaces__py: drone_interfaces__py/CMakeFiles/drone_interfaces__py.dir/build.make
 .PHONY : drone_interfaces__py
 

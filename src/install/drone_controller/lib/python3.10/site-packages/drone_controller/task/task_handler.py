@@ -113,7 +113,7 @@ class TaskHandler():
         try:
             # Parse the task
             raw_task = json_data
-            if not isinstance(json_data, dict):
+            if not isinstance(json_data, (dict, list)):
                 raw_task = json.loads(json_data)
         
             task = self.parse_task(raw_task)

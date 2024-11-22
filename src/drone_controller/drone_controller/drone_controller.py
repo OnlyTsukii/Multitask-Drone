@@ -54,8 +54,8 @@ class DroneController(Node):
         if self.state == None or not self.state.connected:
             return False
         
-        if self.state.mode == 'OFFBOARD' and self.state.armed:
-            return True
+        # if self.state.mode == 'OFFBOARD' and self.state.armed:
+        #     return True
         
         for _ in range(10):
             self.init_pose()

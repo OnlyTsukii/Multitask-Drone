@@ -253,11 +253,20 @@ CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gen
   rosidl_generator_c/drone_interfaces/msg/detail/task__struct.h \
   rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__struct.h \
   rosidl_generator_c/drone_interfaces/msg/detail/task__functions.h \
+  rosidl_generator_c/drone_interfaces/msg/detail/task_state__type_support.h \
+  rosidl_generator_c/drone_interfaces/msg/detail/task_state__struct.h \
+  rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.h \
   rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__type_support.h \
   rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.h \
   rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__type_support.h \
   rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__struct.h \
   rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.h \
+  rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__type_support.h \
+  rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__struct.h \
+  rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.h \
+  rosidl_generator_c/drone_interfaces/srv/detail/task_push__type_support.h \
+  rosidl_generator_c/drone_interfaces/srv/detail/task_push__struct.h \
+  rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.h \
   rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__type_support.h \
   rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__struct.h \
   /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
@@ -271,13 +280,21 @@ rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__struct.h:
 
 rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__type_support.h:
 
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.h:
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.h:
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__struct.h:
+
+rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__type_support.h:
+
+rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__type_support.h:
+
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/linux/stddef.h:
 
 /usr/include/linux/posix_types.h:
-
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
 
@@ -285,7 +302,13 @@ rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__type_support
 
 /usr/include/x86_64-linux-gnu/asm/types.h:
 
+rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__struct.h:
+
+/usr/include/python3.10/longobject.h:
+
 /usr/include/linux/stat.h:
+
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_stat.h:
 
@@ -461,8 +484,6 @@ rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_f
 
 /usr/include/python3.10/pymacconfig.h:
 
-rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__type_support.h:
-
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
 /usr/include/python3.10/namespaceobject.h:
@@ -525,6 +546,8 @@ rosidl_generator_c/drone_interfaces/msg/detail/panel_box__struct.h:
 
 /usr/include/python3.10/cpython/pytime.h:
 
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__struct.h:
+
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/python3.10/pyconfig.h:
@@ -564,6 +587,10 @@ rosidl_generator_c/drone_interfaces/msg/detail/panel_box__struct.h:
 /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/errno.h:
 
@@ -633,6 +660,8 @@ rosidl_generator_c/drone_interfaces/msg/detail/task__functions.h:
 
 /usr/include/python3.10/complexobject.h:
 
+rosidl_generator_c/drone_interfaces/srv/detail/task_push__type_support.h:
+
 /usr/include/python3.10/rangeobject.h:
 
 /usr/include/python3.10/cpython/pyfpe.h:
@@ -658,10 +687,6 @@ rosidl_generator_c/drone_interfaces/msg/rosidl_generator_c__visibility_control.h
 /usr/include/python3.10/cpython/pydebug.h:
 
 /usr/include/python3.10/cpython/fileobject.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.h:
 
 rosidl_generator_c/drone_interfaces/msg/detail/task__struct.h:
 
@@ -779,12 +804,14 @@ rosidl_generator_c/drone_interfaces/msg/detail/task__type_support.h:
 
 rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__struct.h:
 
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__type_support.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.h:
+
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__type_support.h:
 
 rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.h:
-
-/usr/include/python3.10/longobject.h:
-
-rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__struct.h:

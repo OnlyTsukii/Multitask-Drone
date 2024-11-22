@@ -18,7 +18,8 @@ ANGLE_TOLERANCE     = 3
 DEFAULT_YAW_RATE    = 0.5
 DEFAULT_VERTICAL_VEL    = 1.0
 
-SOCKET_IP           = '127.0.0.1'
+# SOCKET_IP           = '127.0.0.1'
+SOCKET_IP           = '10.42.0.1'
 SOCKET_PORT         = 8765
 
 GROUND_ALTITUDE     = 7.8
@@ -41,7 +42,10 @@ IMAGE_HEIGHT        = 1080
 DIRECTORY_PREFIX    = '/home/x650/UAV/USB_CAM/'
 
 MAX_CLIMB_HEIGHT        = 10.0
-PANEL_POS_THRES_X       = 80
-PANEL_POS_THRES_Y       = 50
+PANEL_POS_THRES_X       = 50
+PANEL_POS_THRES_Y       = 30
+PANEL_YAW_THRES         = 5
+
+STATIC_VELOCITY         = 0.001
 
 

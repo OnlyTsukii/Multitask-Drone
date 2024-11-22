@@ -54,8 +54,8 @@ class DroneController(Node):
         if self.state == None or not self.state.connected:
             return False
         
-        if self.state.mode == 'OFFBOARD' and self.state.armed:
-            return True
+        # if self.state.mode == 'OFFBOARD' and self.state.armed:
+        #     return True
         
         for _ in range(10):
             self.init_pose()
@@ -136,9 +136,6 @@ class DroneController(Node):
             await socket.send(json.dumps(response))
         except Exception as e:
             self.get_logger().info(f"Failed to send response: {e}")
-
-    def run_server(self):
-        asyncio.run(self.start_websocket_server())
 
     async def start_websocket_server(self):
         async with websockets.serve(self.websocket_handler, SOCKET_IP, SOCKET_PORT):

@@ -212,11 +212,20 @@ CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosid
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/task__struct.h \
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__struct.h \
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.h \
+ /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/task_state__type_support.h \
+ /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/task_state__struct.h \
+ /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.h \
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__type_support.h \
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.h \
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__type_support.h \
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__struct.h \
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.h \
+ /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__type_support.h \
+ /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__struct.h \
+ /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.h \
+ /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_push__type_support.h \
+ /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_push__struct.h \
+ /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.h \
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__type_support.h \
  /home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__struct.h \
  /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \

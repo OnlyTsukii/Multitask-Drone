@@ -6,8 +6,11 @@
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/Yaw.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/PanelBox.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/Task.idl",
+    "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/TaskState.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/RawWaypoint.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces:srv/TaskDispatch.idl",
+    "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces:srv/YoloRequest.idl",
+    "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces:srv/TaskPush.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces:action/ExecuteWaypoint.idl"
   ],
   "ros_interface_dependencies": [
@@ -281,8 +284,11 @@
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/msg/Yaw.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/msg/PanelBox.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/msg/Task.idl",
+    "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/msg/TaskState.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/msg/RawWaypoint.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/srv/TaskDispatch.idl",
+    "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/srv/YoloRequest.idl",
+    "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/srv/TaskPush.idl",
     "/home/x650/Multitask-Drone/src/build/drone_interfaces/rosidl_adapter/drone_interfaces/action/ExecuteWaypoint.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",
     "/opt/ros/humble/share/std_msgs/msg/Byte.idl",

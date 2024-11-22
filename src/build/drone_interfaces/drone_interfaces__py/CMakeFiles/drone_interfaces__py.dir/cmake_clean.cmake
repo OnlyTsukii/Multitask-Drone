@@ -12,11 +12,17 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/drone_interfaces/msg/_raw_waypoint_s.c"
   "../rosidl_generator_py/drone_interfaces/msg/_task.py"
   "../rosidl_generator_py/drone_interfaces/msg/_task_s.c"
+  "../rosidl_generator_py/drone_interfaces/msg/_task_state.py"
+  "../rosidl_generator_py/drone_interfaces/msg/_task_state_s.c"
   "../rosidl_generator_py/drone_interfaces/msg/_yaw.py"
   "../rosidl_generator_py/drone_interfaces/msg/_yaw_s.c"
   "../rosidl_generator_py/drone_interfaces/srv/__init__.py"
   "../rosidl_generator_py/drone_interfaces/srv/_task_dispatch.py"
   "../rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c"
+  "../rosidl_generator_py/drone_interfaces/srv/_task_push.py"
+  "../rosidl_generator_py/drone_interfaces/srv/_task_push_s.c"
+  "../rosidl_generator_py/drone_interfaces/srv/_yolo_request.py"
+  "../rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c"
   "CMakeFiles/drone_interfaces__py"
 )
 

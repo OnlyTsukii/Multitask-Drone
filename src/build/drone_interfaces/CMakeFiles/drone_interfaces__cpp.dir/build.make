@@ -78,6 +78,10 @@ CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/task
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task__builder.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task__struct.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task__traits.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/task_state.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__builder.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__struct.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__traits.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/raw_waypoint.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/raw_waypoint__builder.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/raw_waypoint__struct.hpp
@@ -86,6 +90,14 @@ CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/task
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_dispatch__builder.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_dispatch__struct.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_dispatch__traits.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/yolo_request.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__builder.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__struct.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__traits.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/task_push.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__builder.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__struct.hpp
+CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__traits.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/action/execute_waypoint.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/action/detail/execute_waypoint__builder.hpp
 CMakeFiles/drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/action/detail/execute_waypoint__struct.hpp
@@ -109,8 +121,11 @@ rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: /opt/ros/humble/share/rosidl_
 rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: rosidl_adapter/drone_interfaces/msg/Yaw.idl
 rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: rosidl_adapter/drone_interfaces/msg/PanelBox.idl
 rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: rosidl_adapter/drone_interfaces/msg/Task.idl
+rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: rosidl_adapter/drone_interfaces/msg/TaskState.idl
 rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: rosidl_adapter/drone_interfaces/msg/RawWaypoint.idl
 rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: rosidl_adapter/drone_interfaces/srv/TaskDispatch.idl
+rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: rosidl_adapter/drone_interfaces/srv/YoloRequest.idl
+rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: rosidl_adapter/drone_interfaces/srv/TaskPush.idl
 rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: rosidl_adapter/drone_interfaces/action/ExecuteWaypoint.idl
 rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
@@ -400,6 +415,18 @@ rosidl_generator_cpp/drone_interfaces/msg/detail/task__struct.hpp: rosidl_genera
 rosidl_generator_cpp/drone_interfaces/msg/detail/task__traits.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/msg/detail/task__traits.hpp
 
+rosidl_generator_cpp/drone_interfaces/msg/task_state.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/msg/task_state.hpp
+
+rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__builder.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__builder.hpp
+
+rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__struct.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__struct.hpp
+
+rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__traits.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__traits.hpp
+
 rosidl_generator_cpp/drone_interfaces/msg/raw_waypoint.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/msg/raw_waypoint.hpp
 
@@ -423,6 +450,30 @@ rosidl_generator_cpp/drone_interfaces/srv/detail/task_dispatch__struct.hpp: rosi
 
 rosidl_generator_cpp/drone_interfaces/srv/detail/task_dispatch__traits.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/srv/detail/task_dispatch__traits.hpp
+
+rosidl_generator_cpp/drone_interfaces/srv/yolo_request.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/srv/yolo_request.hpp
+
+rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__builder.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__builder.hpp
+
+rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__struct.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__struct.hpp
+
+rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__traits.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__traits.hpp
+
+rosidl_generator_cpp/drone_interfaces/srv/task_push.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/srv/task_push.hpp
+
+rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__builder.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__builder.hpp
+
+rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__struct.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__struct.hpp
+
+rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__traits.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__traits.hpp
 
 rosidl_generator_cpp/drone_interfaces/action/execute_waypoint.hpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/drone_interfaces/action/execute_waypoint.hpp
@@ -450,17 +501,29 @@ drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/raw_wayp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task__builder.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task__struct.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task__traits.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__builder.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__struct.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/task_state__traits.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/yaw__builder.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/yaw__struct.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/detail/yaw__traits.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/panel_box.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/raw_waypoint.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/task.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/task_state.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/msg/yaw.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_dispatch__builder.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_dispatch__struct.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_dispatch__traits.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__builder.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__struct.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/task_push__traits.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__builder.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__struct.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/detail/yolo_request__traits.hpp
 drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/task_dispatch.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/task_push.hpp
+drone_interfaces__cpp: rosidl_generator_cpp/drone_interfaces/srv/yolo_request.hpp
 drone_interfaces__cpp: CMakeFiles/drone_interfaces__cpp.dir/build.make
 .PHONY : drone_interfaces__cpp
 

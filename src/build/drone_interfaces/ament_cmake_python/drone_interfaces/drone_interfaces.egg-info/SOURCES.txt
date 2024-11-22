@@ -10,6 +10,9 @@ drone_interfaces/msg/__init__.py
 drone_interfaces/msg/_panel_box.py
 drone_interfaces/msg/_raw_waypoint.py
 drone_interfaces/msg/_task.py
+drone_interfaces/msg/_task_state.py
 drone_interfaces/msg/_yaw.py
 drone_interfaces/srv/__init__.py
 drone_interfaces/srv/_task_dispatch.py
+drone_interfaces/srv/_task_push.py
+drone_interfaces/srv/_yolo_request.py

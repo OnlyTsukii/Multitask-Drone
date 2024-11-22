@@ -69,10 +69,17 @@ include CMakeFiles/drone_interfaces.dir/progress.make
 CMakeFiles/drone_interfaces: /home/x650/Multitask-Drone/src/drone_interfaces/msg/Yaw.msg
 CMakeFiles/drone_interfaces: /home/x650/Multitask-Drone/src/drone_interfaces/msg/PanelBox.msg
 CMakeFiles/drone_interfaces: /home/x650/Multitask-Drone/src/drone_interfaces/msg/Task.msg
+CMakeFiles/drone_interfaces: /home/x650/Multitask-Drone/src/drone_interfaces/msg/TaskState.msg
 CMakeFiles/drone_interfaces: /home/x650/Multitask-Drone/src/drone_interfaces/msg/RawWaypoint.msg
 CMakeFiles/drone_interfaces: /home/x650/Multitask-Drone/src/drone_interfaces/srv/TaskDispatch.srv
 CMakeFiles/drone_interfaces: rosidl_cmake/srv/TaskDispatch_Request.msg
 CMakeFiles/drone_interfaces: rosidl_cmake/srv/TaskDispatch_Response.msg
+CMakeFiles/drone_interfaces: /home/x650/Multitask-Drone/src/drone_interfaces/srv/YoloRequest.srv
+CMakeFiles/drone_interfaces: rosidl_cmake/srv/YoloRequest_Request.msg
+CMakeFiles/drone_interfaces: rosidl_cmake/srv/YoloRequest_Response.msg
+CMakeFiles/drone_interfaces: /home/x650/Multitask-Drone/src/drone_interfaces/srv/TaskPush.srv
+CMakeFiles/drone_interfaces: rosidl_cmake/srv/TaskPush_Request.msg
+CMakeFiles/drone_interfaces: rosidl_cmake/srv/TaskPush_Response.msg
 CMakeFiles/drone_interfaces: /home/x650/Multitask-Drone/src/drone_interfaces/action/ExecuteWaypoint.action
 CMakeFiles/drone_interfaces: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 CMakeFiles/drone_interfaces: /opt/ros/humble/share/std_msgs/msg/Byte.idl

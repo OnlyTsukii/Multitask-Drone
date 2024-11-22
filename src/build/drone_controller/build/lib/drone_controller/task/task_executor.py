@@ -3,14 +3,15 @@ import rclpy
 
 from queue import Queue
 from rclpy.node import Node
-from drone_interfaces.srv import TaskDispatch
-from drone_interfaces.msg import Task, RawWaypoint
+from drone_interfaces.srv import TaskDispatch, YoloRequest
+from drone_interfaces.msg import Task, RawWaypoint, TaskState
 from drone_interfaces.action import ExecuteWaypoint
 from rclpy.action import ActionClient
 from std_msgs.msg import Float64
 from geometry_msgs.msg import PoseStamped, Vector3
 from sensor_msgs.msg import NavSatFix, NavSatStatus
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+from mavros_msgs.srv import CommandTOL
 
 from drone_controller.utils import *
 from drone_controller.constant import *
@@ -19,6 +20,16 @@ from drone_controller.constant import *
 class TaskExecutor(Node):
     def __init__(self):
         super().__init__('task_executor')
+
+        self.state_pub = self.create_publisher(TaskState, 'drone/task_state', 10)
+
+        self.land_client = self.create_client(CommandTOL, '/mavros/cmd/land')
+        self.yolo_client = self.create_client(YoloRequest, '/drone/yolo_request')
+
+        while not self.land_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Waiting for Land service to be available...")
+        while not self.yolo_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Waiting for Yolo service to be available...")
 
         qos_profile = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT, history=HistoryPolicy.KEEP_LAST, depth=10)
         self.gps_sub = self.create_subscription(NavSatFix, '/mavros/global_position/global', self.gps_callback, qos_profile)
@@ -65,6 +76,29 @@ class TaskExecutor(Node):
             response.success = False
 
         return response
+    
+    def yolo_request(self, start: bool):
+        req = YoloRequest.Request()
+        req.start = start
+        future = self.yolo_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result().success:
+            self.get_logger().info('Request yolo service successfully.')
+        else:
+            self.get_logger().error('Failed to request yolo service.')
+    
+    def land(self):
+        rclpy.spin_once(self)
+        req = CommandTOL.Request()
+        req.latitude = self.gps_fix.latitude
+        req.longitude = self.gps_fix.longitude
+        future = self.land_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result().success:
+            self.get_logger().info('Drone landed successfully.')
+            self.has_takeoff = False
+        else:
+            self.get_logger().error('Failed to land.')
 
     def execute_takeoff(self, id, altitude=DEFAULT_TAKEOFF_ALTITUDE):
         rclpy.spin_once(self)
@@ -133,8 +167,11 @@ class TaskExecutor(Node):
         """
         while rclpy.ok():
             rclpy.spin_once(self)
+            # self.state_pub.publish(TaskState(state=1))
 
             if self.pending_tasks.qsize() > 0:
+                self.yolo_request(True)
+
                 task = self.pending_tasks.get()
 
                 next_waypoint_id = 0
@@ -150,7 +187,6 @@ class TaskExecutor(Node):
                     next_waypoint_id += 1
             
                 while index < length:
-                    self.get_logger().info(f'{length, index}')
                     waypoint = task.waypoints[index]
                     waypoint.id = next_waypoint_id
                     self.send_waypoint_action(waypoint)
@@ -162,13 +198,13 @@ class TaskExecutor(Node):
 
                     index += 1
 
-                if self.has_takeoff:
-                    self.execute_land(next_waypoint_id)
-                    next_waypoint_id += 1
-
+                self.yolo_request(False)
                 self.get_logger().info(f"Task completed.")
             else:
-                time.sleep(1.0)
+                if self.has_takeoff:
+                    # self.execute_land(next_waypoint_id)
+                    # next_waypoint_id += 1
+                    self.land()
 
     def send_waypoint_action(self, waypoint):
         """
@@ -185,7 +221,8 @@ class TaskExecutor(Node):
         goal_future.add_done_callback(self.goal_response_callback)
 
         while not self.goal_finished:
-            rclpy.spin_once(self, timeout_sec=0.1)
+            rclpy.spin_once(self)
+            # self.state_pub.publish(TaskState(state=0))
 
         self.goal_finished = False
     
