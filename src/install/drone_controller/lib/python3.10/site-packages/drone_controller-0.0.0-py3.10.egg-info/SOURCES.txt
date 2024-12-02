@@ -18,9 +18,9 @@ drone_controller/task/__init__.py
 drone_controller/task/task_executor.py
 drone_controller/task/task_handler.py
 drone_controller/waypoint/__init__.py
-drone_controller/waypoint/waypoint.py
 drone_controller/waypoint/waypoint_handler.py
 drone_controller/waypoint/waypoint_task_executor.py
+drone_controller/waypoint/waypoint_task_executor_test.py
 launch/drone_controller.launch.py
 resource/drone_controller
 test/test_copyright.py

@@ -1,0 +1,28 @@
+[0.714s] Invoking command in '/home/x650/Multitask-Drone/src/drone_vision': PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_vision build --build-base /home/x650/Multitask-Drone/src/build/drone_vision/build install --record /home/x650/Multitask-Drone/src/build/drone_vision/install.log --single-version-externally-managed install_data
+[0.887s] running egg_info
+[0.896s] writing ../build/drone_vision/drone_vision.egg-info/PKG-INFO
+[0.896s] writing dependency_links to ../build/drone_vision/drone_vision.egg-info/dependency_links.txt
+[0.896s] writing entry points to ../build/drone_vision/drone_vision.egg-info/entry_points.txt
+[0.896s] writing requirements to ../build/drone_vision/drone_vision.egg-info/requires.txt
+[0.896s] writing top-level names to ../build/drone_vision/drone_vision.egg-info/top_level.txt
+[0.915s] reading manifest file '../build/drone_vision/drone_vision.egg-info/SOURCES.txt'
+[0.915s] adding license file 'LICENSE'
+[0.916s] writing manifest file '../build/drone_vision/drone_vision.egg-info/SOURCES.txt'
+[0.916s] running build
+[0.916s] running build_py
+[0.916s] copying drone_vision/__init__.py -> /home/x650/Multitask-Drone/src/build/drone_vision/build/lib/drone_vision
+[0.916s] copying drone_vision/object_detector.py -> /home/x650/Multitask-Drone/src/build/drone_vision/build/lib/drone_vision
+[0.916s] copying drone_vision/utils.py -> /home/x650/Multitask-Drone/src/build/drone_vision/build/lib/drone_vision
+[0.916s] running install
+[0.919s] running install_lib
+[0.928s] running install_data
+[0.929s] copying resource/drone_vision -> /home/x650/Multitask-Drone/src/install/drone_vision/share/ament_index/resource_index/packages
+[0.929s] copying package.xml -> /home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision
+[0.929s] copying launch/drone_vision.launch.py -> /home/x650/Multitask-Drone/src/install/drone_vision/share/drone_vision
+[0.929s] running install_egg_info
+[0.939s] removing '/home/x650/Multitask-Drone/src/install/drone_vision/lib/python3.10/site-packages/drone_vision-0.0.0-py3.10.egg-info' (and everything under it)
+[0.939s] Copying ../build/drone_vision/drone_vision.egg-info to /home/x650/Multitask-Drone/src/install/drone_vision/lib/python3.10/site-packages/drone_vision-0.0.0-py3.10.egg-info
+[0.940s] running install_scripts
+[1.021s] Installing object_detector script to /home/x650/Multitask-Drone/src/install/drone_vision/lib/drone_vision
+[1.021s] writing list of installed files to '/home/x650/Multitask-Drone/src/build/drone_vision/install.log'
+[1.046s] Invoked command in '/home/x650/Multitask-Drone/src/drone_vision' returned '0': PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_vision/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_vision build --build-base /home/x650/Multitask-Drone/src/build/drone_vision/build install --record /home/x650/Multitask-Drone/src/build/drone_vision/install.log --single-version-externally-managed install_data

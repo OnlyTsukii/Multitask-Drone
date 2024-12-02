@@ -22,4 +22,8 @@ def generate_launch_description():
             package='drone_controller',
             executable='drone_controller',
         ),
+        # Node(
+        #     package='drone_controller',
+        #     executable='waypoint_task_executor',
+        # ),
     ])

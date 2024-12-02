@@ -28,12 +28,15 @@
 # export TERM=xterm-256color
 # /home/x650/UAV/Camera/Demo &
 
-/bin/sleep 3
+
+/bin/sleep 2
+
+# python3 /home/x650/Multitask-Drone/src/scripts/http_server.py &
 
 source /opt/ros/humble/setup.bash
 ros2 launch mavros px4.launch &
 
-/bin/sleep 3
+/bin/sleep 2
 
 source /home/x650/Multitask-Drone/src/install/setup.bash
 ros2 launch drone_controller drone_controller.launch.py

@@ -18,8 +18,11 @@ IMAGE_WIDTH         = 1920
 IMAGE_HEIGHT        = 1080
 FRAME_PER_SECOND    = 30
 CONF_THRESHOLD      = 0.6
-MODEL_PATH          = '/home/x650/Multitask-Drone/src/drone_vision/weights/new_panel.pt'
-IMAGE_PATH          = '/home/x650/Multitask-Drone/src/drone_vision/images/'
+
+MODEL_PATH                  = '/home/x650/Multitask-Drone/src/drone_vision/weights/new_panel.pt'
+CLEAN_RAW_IMAGE_PATH        = '/home/x650/Multitask-Drone/src/drone_vision/images/task_clean/raw/'
+CLEAN_LABELED_IMAGE_PATH    = '/home/x650/Multitask-Drone/src/drone_vision/images/task_clean/labeled/'
+CAPTURE_IMAGE_PATH          = '/home/x650/Multitask-Drone/src/drone_vision/images/task_capture/'
 
 
 class ObjectDetector(Node):
@@ -27,6 +30,7 @@ class ObjectDetector(Node):
         super().__init__('object_detector')
 
         self.yolo_srv = self.create_service(YoloRequest, '/drone/yolo_request', self.handle_yolo_request)
+        self.capture_srv = self.create_service(YoloRequest, '/drone/capture_request', self.handle_capture_request)
 
         self.panel_publisher = self.create_publisher(PanelBox, '/drone/panel_box', 10)
         self.panel_yaw_publisher = self.create_publisher(Yaw, '/drone/panel_yaw', 10)
@@ -49,6 +53,11 @@ class ObjectDetector(Node):
     def handle_yolo_request(self, request, response):
         self.yolo_enabled = request.start
         response.success = True
+        return response
+    
+    def handle_capture_request(self, request, response):
+        res = cv2.imwrite(CAPTURE_IMAGE_PATH+str(time.time())+'.jpg', self.frame)
+        response.success = res
         return response
 
     def init_camera(self) -> bool:
@@ -76,8 +85,8 @@ class ObjectDetector(Node):
         if not self.yolo_enabled:
             return
         
-        if self.counter % 30 == 0:
-            cv2.imwrite(IMAGE_PATH+'img-'+str(time.time())+'.jpg', self.frame)
+        if self.counter % 20 == 0:
+            cv2.imwrite(CLEAN_RAW_IMAGE_PATH+str(time.time())+'.jpg', self.frame)
             self.counter = 0
 
         self.counter += 1
@@ -96,7 +105,7 @@ class ObjectDetector(Node):
                 continue
 
             if self.detect_counter % 10 == 0:
-                cv2.imwrite(IMAGE_PATH+'yolo-'+str(time.time())+'.jpg', result.plot())
+                cv2.imwrite(CLEAN_LABELED_IMAGE_PATH+str(time.time())+'.jpg', result.plot())
                 self.detect_counter = 0
 
             self.detect_counter += 1

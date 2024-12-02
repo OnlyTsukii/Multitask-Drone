@@ -13,7 +13,6 @@ class TaskHandler():
 
     def parse_waypoint(self, raw_waypoint) -> RawWaypoint:
         try:
-            # Attempt to parse JSON data
             parsed_wp = raw_waypoint
             if not isinstance(raw_waypoint, dict):
                 parsed_wp = json.loads(raw_waypoint)
@@ -62,7 +61,6 @@ class TaskHandler():
         elif not is_valid_altitude(altitude):
             raise WaypointParseException(f"Invalid 'altitude' value: {altitude}")
 
-        # Create and return a successfully parsed RawWaypoint object
         waypoint = RawWaypoint()
         waypoint.type = type
         waypoint.mission = mission
@@ -77,7 +75,6 @@ class TaskHandler():
         waypoints = []
         for raw_wp in raw_task:
             try:
-                # Attempt to parse each waypoint
                 parsed_waypoint = self.parse_waypoint(raw_wp)
                 if parsed_waypoint:
                     waypoints.append(parsed_waypoint)

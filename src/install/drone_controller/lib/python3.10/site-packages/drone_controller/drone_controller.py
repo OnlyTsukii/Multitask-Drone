@@ -50,8 +50,16 @@ class DroneController(Node):
         self.state = msg
 
     def preflight(self) -> bool:
-        rclpy.spin_once(self)
-        if self.state == None or not self.state.connected:
+        for _ in range(3):
+            rclpy.spin_once(self)
+
+        if self.state == None:
+            return False
+
+        while time.time() - self.state.header.stamp.sec > 1:
+            rclpy.spin_once(self)
+        # self.get_logger().info(f"{self.state}")
+        if not self.state.connected or self.state.mode == 'OFFBOARD' or self.state.mode == 'AUTO.LAND':
             return False
         
         # if self.state.mode == 'OFFBOARD' and self.state.armed:
@@ -66,8 +74,11 @@ class DroneController(Node):
         if not res:
             return False
         
-        return self.arm_drone()
-
+        res = self.arm_drone()
+        if not res:
+            self.set_mode("AUTO.LOITER")
+        return res
+    
     def init_pose(self, time_sec=1.5):
         waypoint = PoseStamped()
         waypoint.header = Header()
@@ -143,20 +154,22 @@ class DroneController(Node):
             await asyncio.Future() 
 
     async def websocket_handler(self, websocket, path):
-        async for message in websocket:
-            self.get_logger().info(f'receive websocket message: {message}')
-            task, response = self.task_handler.handle_json_data(message, websocket)
-            if response == None:
-                res = self.preflight()
-                if not res:
-                    response = {"status": "error", "message": "Failed to preflight"}
-                else:
-                    res = self.send_task_request(task)
-                    if res:
-                        response = {"status": "success", "message": "Task dispatched successfully"}
+        try:
+            async for message in websocket:
+                self.get_logger().info(f'receive websocket message: {message}')
+                task, response = self.task_handler.handle_json_data(message, websocket)
+                if response == None:
+                    if not self.preflight():
+                        response = {"status": "error", "message": "Failed to preflight"}
                     else:
-                        response = {"status": "error", "message": "Failed to dispatch task"}
-            await self.send_response(websocket, response)
+                        if self.send_task_request(task):
+                            response = {"status": "success", "message": "Task dispatched successfully"}
+                        else:
+                            response = {"status": "error", "message": "Failed to dispatch task"}
+                await self.send_response(websocket, response)
+                
+        except Exception as e:
+            self.get_logger().info(e)
 
 def main(args=None):
     rclpy.init(args=args)

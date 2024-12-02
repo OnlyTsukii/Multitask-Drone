@@ -1,0 +1,42 @@
+[1.115s] Invoking command in '/home/x650/Multitask-Drone/src/drone_controller': PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_controller build --build-base /home/x650/Multitask-Drone/src/build/drone_controller/build install --record /home/x650/Multitask-Drone/src/build/drone_controller/install.log --single-version-externally-managed install_data
+[1.413s] running egg_info
+[1.428s] writing ../build/drone_controller/drone_controller.egg-info/PKG-INFO
+[1.429s] writing dependency_links to ../build/drone_controller/drone_controller.egg-info/dependency_links.txt
+[1.429s] writing entry points to ../build/drone_controller/drone_controller.egg-info/entry_points.txt
+[1.429s] writing requirements to ../build/drone_controller/drone_controller.egg-info/requires.txt
+[1.429s] writing top-level names to ../build/drone_controller/drone_controller.egg-info/top_level.txt
+[1.461s] reading manifest file '../build/drone_controller/drone_controller.egg-info/SOURCES.txt'
+[1.461s] adding license file 'LICENSE'
+[1.462s] writing manifest file '../build/drone_controller/drone_controller.egg-info/SOURCES.txt'
+[1.462s] running build
+[1.462s] running build_py
+[1.462s] copying drone_controller/__init__.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller
+[1.462s] copying drone_controller/constant.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller
+[1.463s] copying drone_controller/config.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller
+[1.463s] copying drone_controller/utils.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller
+[1.463s] copying drone_controller/drone_controller.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller
+[1.463s] copying drone_controller/task/task_handler.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller/task
+[1.463s] copying drone_controller/task/task_executor.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller/task
+[1.463s] copying drone_controller/task/__init__.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller/task
+[1.463s] copying drone_controller/waypoint/waypoint_handler.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller/waypoint
+[1.463s] copying drone_controller/waypoint/waypoint.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller/waypoint
+[1.463s] copying drone_controller/waypoint/__init__.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller/waypoint
+[1.463s] copying drone_controller/waypoint/waypoint_task_executor.py -> /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller/waypoint
+[1.464s] running install
+[1.468s] running install_lib
+[1.482s] copying /home/x650/Multitask-Drone/src/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_task_executor.py -> /home/x650/Multitask-Drone/src/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint
+[1.484s] byte-compiling /home/x650/Multitask-Drone/src/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_task_executor.py to waypoint_task_executor.cpython-310.pyc
+[1.488s] running install_data
+[1.488s] copying resource/drone_controller -> /home/x650/Multitask-Drone/src/install/drone_controller/share/ament_index/resource_index/packages
+[1.488s] copying package.xml -> /home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller
+[1.488s] copying launch/drone_controller.launch.py -> /home/x650/Multitask-Drone/src/install/drone_controller/share/drone_controller
+[1.488s] running install_egg_info
+[1.509s] removing '/home/x650/Multitask-Drone/src/install/drone_controller/lib/python3.10/site-packages/drone_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[1.509s] Copying ../build/drone_controller/drone_controller.egg-info to /home/x650/Multitask-Drone/src/install/drone_controller/lib/python3.10/site-packages/drone_controller-0.0.0-py3.10.egg-info
+[1.510s] running install_scripts
+[1.681s] Installing drone_controller script to /home/x650/Multitask-Drone/src/install/drone_controller/lib/drone_controller
+[1.681s] Installing task_executor script to /home/x650/Multitask-Drone/src/install/drone_controller/lib/drone_controller
+[1.681s] Installing waypoint_handler script to /home/x650/Multitask-Drone/src/install/drone_controller/lib/drone_controller
+[1.681s] Installing waypoint_task_executor script to /home/x650/Multitask-Drone/src/install/drone_controller/lib/drone_controller
+[1.681s] writing list of installed files to '/home/x650/Multitask-Drone/src/build/drone_controller/install.log'
+[1.768s] Invoked command in '/home/x650/Multitask-Drone/src/drone_controller' returned '0': PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_controller build --build-base /home/x650/Multitask-Drone/src/build/drone_controller/build install --record /home/x650/Multitask-Drone/src/build/drone_controller/install.log --single-version-externally-managed install_data

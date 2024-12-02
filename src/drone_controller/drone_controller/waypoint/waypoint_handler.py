@@ -3,13 +3,13 @@ import time
 
 from rclpy.node import Node
 from drone_interfaces.action import ExecuteWaypoint
-from drone_interfaces.msg import RawWaypoint
+from drone_interfaces.srv import YoloRequest
 from rclpy.action import ActionServer, GoalResponse
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
-from std_msgs.msg import Bool, UInt8, Header, Float64
+from std_msgs.msg import Header, Float64
 from mavros_msgs.msg import GlobalPositionTarget, PositionTarget
 from sensor_msgs.msg import NavSatFix
-from geometry_msgs.msg import PoseStamped, Vector3, Point
+from geometry_msgs.msg import PoseStamped, Vector3
 
 from drone_controller.utils import *
 from drone_controller.constant import *
@@ -21,6 +21,11 @@ class WaypointHandler(Node):
         super().__init__('waypoint_handler')
 
         self.waypoint_task_executor = WaypointTaskExecutor()
+
+        self.yolo_client = self.create_client(YoloRequest, '/drone/yolo_request')
+
+        while not self.yolo_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Waiting for Yolo service to be available...")
 
         qos_profile = QoSProfile(reliability=ReliabilityPolicy.RELIABLE, history=HistoryPolicy.KEEP_LAST, depth=10)
 
@@ -68,6 +73,16 @@ class WaypointHandler(Node):
         goal_handle.succeed()
         return result_msg
     
+    def yolo_request(self, start: bool):
+        req = YoloRequest.Request()
+        req.start = start
+        future = self.yolo_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result().success:
+            self.get_logger().info('Request yolo service successfully.')
+        else:
+            self.get_logger().error('Failed to request yolo service.')
+    
     def process_waypoint(self, waypoint):
         target = GlobalPositionTarget()
         self.setup_params(waypoint, target)
@@ -90,10 +105,13 @@ class WaypointHandler(Node):
             cur_time = time.time() 
 
         if waypoint.mission == MISSION_GLOBAL_CLEAN:
+            self.yolo_request(True)
             self.waypoint_task_executor.execute_clean_task()
+            self.yolo_request(False)
+        elif waypoint.mission == MISSION_LOCAL_CAPTURE:
+            self.waypoint_task_executor.execute_capture_task()
 
     def reached_waypoint(self, waypoint) -> bool:
-
         reached = True
         
         if waypoint.type == TYPE_ROTATE:
@@ -101,7 +119,7 @@ class WaypointHandler(Node):
         elif waypoint.type == TYPE_NAVIGATION or waypoint.type == TYPE_HORIZONTAL or waypoint.type == TYPE_START:
             reached &= abs(waypoint.latitude - self.gps_fix.latitude) <= THRESHOLD_LATITUDE
             reached &= abs(waypoint.longitude - self.gps_fix.longitude) <= THRESHOLD_LONGITUDE
-        elif waypoint.type == TYPE_TAKEOFF or waypoint.type == TYPE_VERTICAL or waypoint.type == TYPE_LAND:
+        elif waypoint.type == TYPE_TAKEOFF or waypoint.type == TYPE_VERTICAL:
             reached &= abs(waypoint.altitude - self.rel_alt) <= THRESHOLD_ALTITUDE
         elif waypoint.type == TYPE_LAND:
             reached &= abs(waypoint.altitude - self.rel_alt) <= 1
@@ -124,14 +142,14 @@ class WaypointHandler(Node):
         target.longitude = raw_wp.longitude
         target.altitude = raw_wp.altitude
 
-        type_mask = IGNORE_YAW | IGNORE_AFX | IGNORE_AFY | IGNORE_AFZ
+        type_mask = PositionTarget.IGNORE_YAW | PositionTarget.IGNORE_AFX | PositionTarget.IGNORE_AFY | PositionTarget.IGNORE_AFZ
 
         if raw_wp.type == TYPE_TAKEOFF or raw_wp.type == TYPE_VERTICAL or raw_wp.type == TYPE_LAND:
             target.velocity = Vector3(x=0.0, y=0.0, z=raw_wp.velocity)
-            type_mask |= IGNORE_VX | IGNORE_VY | IGNORE_YAW_RATE
+            type_mask |= PositionTarget.IGNORE_VX | PositionTarget.IGNORE_VY | PositionTarget.IGNORE_YAW_RATE
         elif raw_wp.type == TYPE_ROTATE:
             # target.yaw_rate = raw_wp.yaw_rate
-            type_mask |= IGNORE_VX | IGNORE_VY | IGNORE_VZ
+            type_mask |= PositionTarget.IGNORE_VX | PositionTarget.IGNORE_VY | PositionTarget.IGNORE_VZ
         # else:
         #     target.velocity = Vector3(x=raw_wp.velocity, y=0.0, z=0.0)
 

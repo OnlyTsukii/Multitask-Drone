@@ -45,6 +45,16 @@ def calculate_body_speed(pos_diff, min_speed=0.1, max_speed=1.0, k_p=0.005):
     
     return move_speed
 
+def calculate_panel_pos_thres(rel_alt):
+    if rel_alt < 1.0:
+        return 60, 40
+    elif rel_alt > 20.0:
+        return 150, 100
+    
+    px = 4.5 * rel_alt + 60
+    py = 3 * rel_alt + 40
+    return px, py
+
 def is_valid_latitude(lat) -> bool:
     if not isinstance(lat, float):
         return False
@@ -73,7 +83,7 @@ def is_valid_type(type) -> bool:
 def is_valid_mission(mission) -> bool:
     if not isinstance(mission, int):
         return False
-    return mission == MISSION_NONE or mission == MISSION_LOCAL_CLEAN or mission == MISSION_GLOBAL_CLEAN
+    return mission == MISSION_NONE or mission == MISSION_LOCAL_CLEAN or mission == MISSION_GLOBAL_CLEAN or mission == MISSION_LOCAL_CAPTURE
 
 def is_valid_distance(waypoint1, waypoint2) -> bool:
     wp1 = (waypoint1.latitude, waypoint1.longitude)

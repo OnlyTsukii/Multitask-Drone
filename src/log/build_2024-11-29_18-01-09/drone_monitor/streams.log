@@ -1,0 +1,23 @@
+[0.517s] Invoking command in '/home/x650/Multitask-Drone/src/drone_monitor': PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_monitor build --build-base /home/x650/Multitask-Drone/src/build/drone_monitor/build install --record /home/x650/Multitask-Drone/src/build/drone_monitor/install.log --single-version-externally-managed install_data
+[0.693s] running egg_info
+[0.702s] writing ../build/drone_monitor/drone_monitor.egg-info/PKG-INFO
+[0.702s] writing dependency_links to ../build/drone_monitor/drone_monitor.egg-info/dependency_links.txt
+[0.703s] writing requirements to ../build/drone_monitor/drone_monitor.egg-info/requires.txt
+[0.703s] writing top-level names to ../build/drone_monitor/drone_monitor.egg-info/top_level.txt
+[0.722s] reading manifest file '../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'
+[0.722s] adding license file 'LICENSE'
+[0.723s] writing manifest file '../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'
+[0.723s] running build
+[0.724s] running build_py
+[0.724s] copying src/__init__.py -> /home/x650/Multitask-Drone/src/build/drone_monitor/build/lib/src
+[0.724s] running install
+[0.727s] running install_lib
+[0.736s] running install_data
+[0.736s] copying resource/drone_monitor -> /home/x650/Multitask-Drone/src/install/drone_monitor/share/ament_index/resource_index/packages
+[0.736s] copying package.xml -> /home/x650/Multitask-Drone/src/install/drone_monitor/share/drone_monitor
+[0.736s] running install_egg_info
+[0.746s] removing '/home/x650/Multitask-Drone/src/install/drone_monitor/lib/python3.10/site-packages/drone_monitor-0.0.0-py3.10.egg-info' (and everything under it)
+[0.746s] Copying ../build/drone_monitor/drone_monitor.egg-info to /home/x650/Multitask-Drone/src/install/drone_monitor/lib/python3.10/site-packages/drone_monitor-0.0.0-py3.10.egg-info
+[0.746s] running install_scripts
+[0.828s] writing list of installed files to '/home/x650/Multitask-Drone/src/build/drone_monitor/install.log'
+[1.026s] Invoked command in '/home/x650/Multitask-Drone/src/drone_monitor' returned '0': PYTHONPATH=/home/x650/Multitask-Drone/src/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/x650/Multitask-Drone/src/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../build/drone_monitor build --build-base /home/x650/Multitask-Drone/src/build/drone_monitor/build install --record /home/x650/Multitask-Drone/src/build/drone_monitor/install.log --single-version-externally-managed install_data
