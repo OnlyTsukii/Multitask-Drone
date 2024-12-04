@@ -35,7 +35,7 @@ class WaypointTaskExecutor(Node):
         self.panel_loss = 0
 
         # for test
-        self.panel_pos = PanelBox(x=0.0, y=0.0, w=500.0, h=600.0)
+        self.panel_pos = PanelBox(x=500.0, y=-300.0, w=150.0, h=100.0)
         # self.panel_pos = None
 
         self.panel_detected = False
@@ -229,9 +229,22 @@ class WaypointTaskExecutor(Node):
             self.panel_yaw = float('nan')
             return
         
+        if not self.adjust_yaw():
+            self.panel_yaw = float('nan')
+            return
+        
         if not self.goto_task_point():
             self.panel_yaw = float('nan')
             return
+
+        count = 0
+        while rclpy.ok():
+            self.body_move(BODY_HOLD)
+            rclpy.spin_once(self)
+            time.sleep(0.2)
+            count += 1
+            if count == 25:
+                break
         
         if not self.goto_task_end():
             self.panel_yaw = float('nan')
@@ -307,23 +320,39 @@ class WaypointTaskExecutor(Node):
             if move_direction != BODY_HOLD:
                 self.body_move(move_direction)
             else:
-                if not math.isnan(self.panel_yaw):
-                    self.max_retries = 0
-                    if self.panel_yaw > PANEL_YAW_THRES:
-                        self.body_move(BODY_ROTATE_CLOCKWISE)
-                    elif self.panel_yaw < -1 * PANEL_YAW_THRES:
-                        self.body_move(BODY_ROTATE_COUNTERCW)
-                    else:
-                        self.get_logger().info("panel center reached") 
-                        return True
+                self.get_logger().info("panel center reached") 
+                return True
+            pass
+            timestamp = time.time()
+
+    def adjust_yaw(self) -> bool:
+        timestamp = time.time()
+
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.3:
+                continue
+
+            if not self.panel_detected:
+                self.get_logger().info('panel edge not found, navigate to next waypoint')
+                return False
+            
+            if not math.isnan(self.panel_yaw):
+                self.max_retries = 0
+                if self.panel_yaw > PANEL_YAW_THRES:
+                    self.body_move(BODY_ROTATE_CLOCKWISE)
+                elif self.panel_yaw < -1 * PANEL_YAW_THRES:
+                    self.body_move(BODY_ROTATE_COUNTERCW)
                 else:
-                    self.body_move(BODY_HOLD)
-                    self.max_retries += 1
-                    if self.max_retries == 30:
-                        self.max_retries = 0
-                        self.get_logger().info('panel edge not found, navigate to next waypoint')
-                        self.panel_yaw = float('nan')
-                        return False
+                    self.get_logger().info("target yaw reached") 
+                    return True
+            else:
+                self.body_move(BODY_HOLD)
+                self.max_retries += 1
+                if self.max_retries == 30:
+                    self.max_retries = 0
+                    self.get_logger().info('panel edge not found, navigate to next waypoint')
+                    return False
             pass
             timestamp = time.time()
 

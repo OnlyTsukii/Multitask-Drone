@@ -104,9 +104,22 @@ class WaypointTaskExecutor(Node):
             self.panel_yaw = float('nan')
             return
         
+        if not self.adjust_yaw():
+            self.panel_yaw = float('nan')
+            return
+        
         if not self.goto_task_point():
             self.panel_yaw = float('nan')
             return
+
+        count = 0
+        while rclpy.ok():
+            self.body_move(BODY_HOLD)
+            rclpy.spin_once(self)
+            time.sleep(0.2)
+            count += 1
+            if count == 15:
+                break
         
         if not self.goto_task_end():
             self.panel_yaw = float('nan')
@@ -175,23 +188,39 @@ class WaypointTaskExecutor(Node):
             if move_direction != BODY_HOLD:
                 self.body_move(move_direction)
             else:
-                if not math.isnan(self.panel_yaw):
-                    self.max_retries = 0
-                    if self.panel_yaw > PANEL_YAW_THRES:
-                        self.body_move(BODY_ROTATE_CLOCKWISE)
-                    elif self.panel_yaw < -1 * PANEL_YAW_THRES:
-                        self.body_move(BODY_ROTATE_COUNTERCW)
-                    else:
-                        self.get_logger().info("panel center reached") 
-                        return True
+                self.get_logger().info("panel center reached") 
+                return True
+            pass
+            timestamp = time.time()
+
+    def adjust_yaw(self) -> bool:
+        timestamp = time.time()
+
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.3:
+                continue
+
+            if not self.panel_detected:
+                self.get_logger().info('panel edge not found, navigate to next waypoint')
+                return False
+            
+            if not math.isnan(self.panel_yaw):
+                self.max_retries = 0
+                if self.panel_yaw > PANEL_YAW_THRES:
+                    self.body_move(BODY_ROTATE_CLOCKWISE)
+                elif self.panel_yaw < -1 * PANEL_YAW_THRES:
+                    self.body_move(BODY_ROTATE_COUNTERCW)
                 else:
-                    self.body_move(BODY_HOLD)
-                    self.max_retries += 1
-                    if self.max_retries == 30:
-                        self.max_retries = 0
-                        self.get_logger().info('panel edge not found, navigate to next waypoint')
-                        self.panel_yaw = float('nan')
-                        return False
+                    self.get_logger().info("target yaw reached") 
+                    return True
+            else:
+                self.body_move(BODY_HOLD)
+                self.max_retries += 1
+                if self.max_retries == 30:
+                    self.max_retries = 0
+                    self.get_logger().info('panel edge not found, navigate to next waypoint')
+                    return False
             pass
             timestamp = time.time()
 
@@ -229,7 +258,7 @@ class WaypointTaskExecutor(Node):
 
             move_direction = move_left_right | move_forward_backward | move_up_down
             if move_direction != BODY_HOLD:
-                self.body_move(move_direction)
+                self.body_move(move_direction, velocity=0.3)
             else:
                 self.get_logger().info("task point reached") 
                 return True
@@ -249,12 +278,12 @@ class WaypointTaskExecutor(Node):
             
             panel_pos = self.panel_pos
 
-            px, _ = calculate_panel_pos_thres(self.rel_alt)
+            # px, _ = calculate_panel_pos_thres(self.rel_alt)
             move_left_right = BODY_HOLD
-            if panel_pos.x > px:
-                move_left_right = BODY_LEFT
-            elif panel_pos.x < -1 * px:
-                move_left_right = BODY_RIGHT
+            # if panel_pos.x > px:
+            #     move_left_right = BODY_LEFT
+            # elif panel_pos.x < -1 * px:
+            #     move_left_right = BODY_RIGHT
             
             move_forward_backward = BODY_HOLD
             top_edge_pos_y = panel_pos.h / 2 + panel_pos.y
@@ -271,7 +300,7 @@ class WaypointTaskExecutor(Node):
             
             timestamp = time.time()
     
-    def body_move(self, direction):
+    def body_move(self, direction, velocity=DEFAULT_BODY_VEL):
         point = PositionTarget()
         point.header = Header()
         point.header.stamp = self.get_clock().now().to_msg()   
@@ -305,7 +334,7 @@ class WaypointTaskExecutor(Node):
                 self.get_logger().info('parameter coefficient too large')
                 return
 
-            point.velocity = Vector3(x=coeff_x*0.5, y=coeff_y*0.5, z=coeff_z*0.5)
+            point.velocity = Vector3(x=coeff_x*velocity, y=coeff_y*velocity, z=coeff_z*velocity)
 
             coeff_x *= coeff_x
             coeff_y *= coeff_y

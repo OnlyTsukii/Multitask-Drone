@@ -111,6 +111,15 @@ class WaypointTaskExecutor(Node):
         if not self.goto_task_point():
             self.panel_yaw = float('nan')
             return
+
+        count = 0
+        while rclpy.ok():
+            self.body_move(BODY_HOLD)
+            rclpy.spin_once(self)
+            time.sleep(0.2)
+            count += 1
+            if count == 15:
+                break
         
         if not self.goto_task_end():
             self.panel_yaw = float('nan')
@@ -211,7 +220,6 @@ class WaypointTaskExecutor(Node):
                 if self.max_retries == 30:
                     self.max_retries = 0
                     self.get_logger().info('panel edge not found, navigate to next waypoint')
-                    self.panel_yaw = float('nan')
                     return False
             pass
             timestamp = time.time()
@@ -270,12 +278,12 @@ class WaypointTaskExecutor(Node):
             
             panel_pos = self.panel_pos
 
-            px, _ = calculate_panel_pos_thres(self.rel_alt)
+            # px, _ = calculate_panel_pos_thres(self.rel_alt)
             move_left_right = BODY_HOLD
-            if panel_pos.x > px:
-                move_left_right = BODY_LEFT
-            elif panel_pos.x < -1 * px:
-                move_left_right = BODY_RIGHT
+            # if panel_pos.x > px:
+            #     move_left_right = BODY_LEFT
+            # elif panel_pos.x < -1 * px:
+            #     move_left_right = BODY_RIGHT
             
             move_forward_backward = BODY_HOLD
             top_edge_pos_y = panel_pos.h / 2 + panel_pos.y

@@ -31,7 +31,7 @@
 
 /bin/sleep 2
 
-# python3 /home/x650/Multitask-Drone/src/scripts/http_server.py &
+python3 /home/x650/Multitask-Drone/src/scripts/http_server.py &
 
 source /opt/ros/humble/setup.bash
 ros2 launch mavros px4.launch &

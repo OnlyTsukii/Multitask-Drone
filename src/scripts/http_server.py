@@ -1,7 +1,7 @@
 import os
+import stat
 
-from flask import Flask, send_file, jsonify
-import os
+from flask import Flask, send_file, jsonify, after_this_request
 from zipfile import ZipFile
 
 app = Flask(__name__)
@@ -16,10 +16,19 @@ def get_images():
     if not image_paths:
         return jsonify({"message": "No images found"}), 404
 
-    zip_path = "raw.zip"
+    zip_path = "/tmp/raw.zip"
     with ZipFile(zip_path, 'w') as zipf:
         for img in image_paths:
             zipf.write(img, os.path.basename(img))
+    
+    @after_this_request
+    def remove_file(response):
+        try:
+            os.remove(zip_path)
+        except Exception as e:
+            print(e)
+        return response
+
     return send_file(zip_path, as_attachment=True)
 
 
@@ -36,4 +45,7 @@ def get_json():
     return send_file(json_path, as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000) 
+    try:
+        app.run(host='0.0.0.0', port=5000) 
+    except Exception as e:
+        print(e)

@@ -30,7 +30,7 @@ setup(
             'drone_controller = drone_controller.drone_controller:main',
             'task_executor = drone_controller.task.task_executor:main',
             'waypoint_handler = drone_controller.waypoint.waypoint_handler:main',
-            # 'waypoint_task_executor = drone_controller.waypoint.waypoint_task_executor:main'
+            # 'waypoint_task_executor_test = drone_controller.waypoint.waypoint_task_executor_test:main'
         ],
     },
 )
