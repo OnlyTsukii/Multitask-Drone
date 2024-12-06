@@ -1,5 +1,4 @@
 import os
-import stat
 
 from flask import Flask, send_file, jsonify, after_this_request
 from zipfile import ZipFile

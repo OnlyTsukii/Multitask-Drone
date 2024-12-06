@@ -14,9 +14,9 @@ MISSION_LOCAL_CAPTURE   = 2
 
 
 data = [
-    {'latitude': 31.3103954421165, 'longitude': 120.6353975762323, 'altitude': 15, 'type': 2, 'mission': -1, 'velocity': 1},
-    {'latitude': 31.31030895219921, 'longitude': 120.6356110476122, 'altitude': 15, 'type': 2, 'mission': 0, 'velocity': 1},
-    {'latitude': 31.31032775443108, 'longitude': 120.6358223180631, 'altitude': 15, 'type': 2, 'mission': -1, 'velocity': 1},
+    {'latitude': 31.3103954421165, 'longitude': 120.6353975762323, 'altitude': 15, 'type': 2, 'mission': 2, 'velocity': 1},
+    {'latitude': 31.31030895219921, 'longitude': 120.6356110476122, 'altitude': 15, 'type': 2, 'mission': 2, 'velocity': 1},
+    {'latitude': 31.31032775443108, 'longitude': 120.6358223180631, 'altitude': 15, 'type': 2, 'mission': 2, 'velocity': 1},
 ]
 
 
