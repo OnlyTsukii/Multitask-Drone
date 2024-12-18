@@ -9,6 +9,7 @@ setup(
     version='0.0.0',
     packages=[
         package_name, 
+        'drone_vision.utils'
         ],
     data_files=[
         ('share/ament_index/resource_index/packages',

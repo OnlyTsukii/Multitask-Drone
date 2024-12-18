@@ -1,1 +1,0 @@
-RawWaypoint[] waypoints

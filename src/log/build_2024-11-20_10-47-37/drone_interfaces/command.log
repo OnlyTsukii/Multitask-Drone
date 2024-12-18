@@ -1,4 +1,0 @@
-Invoking command in '/home/x650/Multitask-Drone/src/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/x650/Multitask-Drone/src/build/drone_interfaces -- -j16 -l16
-Invoked command in '/home/x650/Multitask-Drone/src/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/x650/Multitask-Drone/src/build/drone_interfaces -- -j16 -l16
-Invoking command in '/home/x650/Multitask-Drone/src/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/x650/Multitask-Drone/src/build/drone_interfaces
-Invoked command in '/home/x650/Multitask-Drone/src/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/x650/Multitask-Drone/src/build/drone_interfaces

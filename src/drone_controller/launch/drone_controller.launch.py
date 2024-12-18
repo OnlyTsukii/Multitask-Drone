@@ -10,18 +10,18 @@ def generate_launch_description():
             package='drone_vision',
             executable='object_detector',
         ),
-        Node(
-            package='drone_controller',
-            executable='waypoint_handler',
-        ),
-        Node(
-            package='drone_controller',
-            executable='task_executor',
-        ),
-        Node(
-            package='drone_controller',
-            executable='drone_controller',
-        ),
+        # Node(
+        #     package='drone_controller',
+        #     executable='waypoint_handler',
+        # ),
+        # Node(
+        #     package='drone_controller',
+        #     executable='task_executor',
+        # ),
+        # Node(
+        #     package='drone_controller',
+        #     executable='drone_controller',
+        # ),
         # Node(
         #     package='drone_controller',
         #     executable='waypoint_task_executor_test',

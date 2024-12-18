@@ -19,7 +19,7 @@ from drone_controller.utils import *
 from drone_controller.constant import *
 
 
-JSON_PATH = '/home/x650/Multitask-Drone/src/json_paths/path.json'
+JSON_PATH = '/home/orangepi/Multitask-Drone/src/json_paths/path.json'
 
 class TaskExecutor(Node):
     def __init__(self):

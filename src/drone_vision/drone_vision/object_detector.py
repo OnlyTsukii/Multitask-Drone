@@ -6,23 +6,14 @@ import sys
 import os
 import math
 
-from ultralytics import YOLO
 from rclpy.node import Node
 from copy import deepcopy
 from drone_interfaces.msg import PanelBox, Yaw
 from drone_interfaces.srv import YoloRequest
 
-from drone_vision.utils import calc_angle_by_canny
-
-IMAGE_WIDTH         = 1920
-IMAGE_HEIGHT        = 1080
-FRAME_PER_SECOND    = 30
-CONF_THRESHOLD      = 0.6
-
-MODEL_PATH                  = '/home/x650/Multitask-Drone/src/drone_vision/weights/new_panel.pt'
-CLEAN_RAW_IMAGE_PATH        = '/home/x650/Multitask-Drone/src/drone_vision/images/task_clean/raw/'
-CLEAN_LABELED_IMAGE_PATH    = '/home/x650/Multitask-Drone/src/drone_vision/images/task_clean/labeled/'
-CAPTURE_IMAGE_PATH          = '/home/x650/Multitask-Drone/src/drone_vision/images/task_capture/'
+from drone_vision.config import *
+from drone_vision.utils.bound_detector import calc_angle_by_canny
+from drone_vision.utils.rknn_helper import RKNN_Helper
 
 
 class ObjectDetector(Node):
@@ -35,7 +26,7 @@ class ObjectDetector(Node):
         self.panel_publisher = self.create_publisher(PanelBox, '/drone/panel_box', 10)
         self.panel_yaw_publisher = self.create_publisher(Yaw, '/drone/panel_yaw', 10)
 
-        self.detect_model = YOLO(MODEL_PATH)
+        self.detect_model = RKNN_Helper(RKNN_MODEL, PLATFORM)
 
         self.counter = 0
         self.detect_counter = 0
@@ -47,8 +38,9 @@ class ObjectDetector(Node):
         self.mutex = threading.Lock()
 
         self.yolo_enabled = False
+        self.has_frame = False
         
-        self.create_timer(0.09, self.detect)
+        self.create_timer(0.1, self.detect)
 
     def handle_yolo_request(self, request, response):
         self.yolo_enabled = request.start
@@ -80,48 +72,61 @@ class ObjectDetector(Node):
                 continue
 
             self.frame = frame
+            self.has_frame = True
+
+    def save_img(self, folder, img) -> str:
+        if not os.path.exists(folder):
+            os.makedirs(folder, exist_ok=True)
+        image_name = str(time.time()) + '.jpg'
+        cv2.imwrite(folder+'/'+image_name, img)
+        return image_name
     
     def detect(self):
-        if not self.yolo_enabled:
-            return
+        # if not self.yolo_enabled:
+        #     return
         
-        if self.counter % 20 == 0:
-            cv2.imwrite(CLEAN_RAW_IMAGE_PATH+str(time.time())+'.jpg', self.frame)
+        if not self.has_frame:
+            return
+
+        if self.counter % 5 == 0:
+            self.save_img(CLEAN_RAW_IMAGE_PATH, self.frame)
             self.counter = 0
 
         self.counter += 1
         
         self.mutex.acquire()
-        results = self.detect_model(self.frame, True)
+        boxes, scores, img = self.detect_model.detect(self.frame)
         self.mutex.release()
 
         has_result = False
 
-        for result in results:
-            if len(result.boxes.conf) == 0:
-                continue
-            conf = result.boxes.conf[0]
-            if conf < CONF_THRESHOLD:
-                continue
+        if boxes is not None:
+            # if self.detect_counter % 5 == 0:
+            #     self.save_img(CLEAN_LABELED_IMAGE_PATH, img)
+            #     self.detect_counter = 0
 
-            if self.detect_counter % 10 == 0:
-                cv2.imwrite(CLEAN_LABELED_IMAGE_PATH+str(time.time())+'.jpg', result.plot())
-                self.detect_counter = 0
+            # self.detect_counter += 1
 
-            self.detect_counter += 1
-        
-            x, y, w, h = result.boxes.xywh[0]
-            center_x = IMAGE_WIDTH/2 - x
-            center_y = IMAGE_HEIGHT/2 - y
+            for box, score in zip(boxes, scores):
+                if score < CONF_THRESHOLD:
+                    continue
+                
+                left, top, right, bottom = [int(_b) for _b in box]
+                image_name = self.save_img(CLEAN_LABELED_IMAGE_PATH, img)
+                self.get_logger().info(f'{image_name}: {left, top, right, bottom}')
+                center_x = IMAGE_WIDTH/2 - (left+right)/2
+                center_y = IMAGE_HEIGHT/2 - (top+bottom)/2
+                width = right - left
+                height = bottom - top
 
-            has_result = True
+                has_result = True
 
         panel_box = PanelBox()
         if has_result:
             panel_box.x = float(center_x)
             panel_box.y = float(center_y)
-            panel_box.w = float(w)
-            panel_box.h = float(h)
+            panel_box.w = float(width)
+            panel_box.h = float(height)
             self.get_logger().info(f'{panel_box, panel_box.y - panel_box.h / 2, panel_box.h / 2 + panel_box.y}')
 
         self.panel_publisher.publish(panel_box)
@@ -145,6 +150,7 @@ def main(args=None):
     rclpy.spin(yolo_detector)
 
     yolo_detector.cap.release()
+    yolo_detector.detect_model.release()
 
     rclpy.shutdown()
 

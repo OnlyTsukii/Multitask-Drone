@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/get_images', methods=['POST'])
 def get_images():
-    image_folder = '/home/x650/Multitask-Drone/src/drone_vision/images/task_clean/raw'
+    image_folder = '/home/orangepi/Multitask-Drone/src/drone_vision/images/task_clean/raw'
     images = os.listdir(image_folder)  
     image_paths = [os.path.join(image_folder, img) for img in images if img.endswith(('.png', '.jpg', '.jpeg'))]
 
@@ -33,7 +33,7 @@ def get_images():
 
 @app.route('/get_json', methods=['POST'])
 def get_json():
-    json_path = '/home/x650/Multitask-Drone/src/json_paths/path.json'
+    json_path = '/home/orangepi/Multitask-Drone/src/json_paths/path.json'
     
     if not os.path.exists(json_path):
         return jsonify({"message": "JSON file not found"}), 404
