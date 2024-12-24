@@ -1,0 +1,364 @@
+[0.339s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build'][0m
+[0.339s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f92bbc190>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f92da3ca0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f92da3ca0>>, mixin_verb=('build',))[0m
+[0.688s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.689s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.689s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.689s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.689s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.689s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.689s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/orangepi/Multitask-Drone'
+[0.689s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.689s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.690s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.690s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.690s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.690s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.690s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.690s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.690s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.711s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.711s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.711s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.711s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.711s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.712s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extensions ['ignore', 'ignore_ament_install']
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extension 'ignore'
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extension 'ignore_ament_install'
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extensions ['colcon_pkg']
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extension 'colcon_pkg'
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extensions ['colcon_meta']
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extension 'colcon_meta'
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extensions ['ros']
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extension 'ros'
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extensions ['cmake', 'python']
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extension 'cmake'
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extension 'python'
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extensions ['python_setup_py']
+[0.713s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(results) by extension 'python_setup_py'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.714s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.715s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_controller) by extension 'ignore'
+[0.715s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_controller) by extension 'ignore_ament_install'
+[0.715s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_controller) by extensions ['colcon_pkg']
+[0.715s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_controller) by extension 'colcon_pkg'
+[0.715s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_controller) by extensions ['colcon_meta']
+[0.715s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_controller) by extension 'colcon_meta'
+[0.715s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_controller) by extensions ['ros']
+[0.715s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_controller) by extension 'ros'
+[0.720s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/drone_controller' with type 'ros.ament_python' and name 'drone_controller'[0m
+[0.721s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.721s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_interfaces) by extension 'ignore'
+[0.721s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_interfaces) by extension 'ignore_ament_install'
+[0.721s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_interfaces) by extensions ['colcon_pkg']
+[0.721s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_interfaces) by extension 'colcon_pkg'
+[0.721s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_interfaces) by extensions ['colcon_meta']
+[0.721s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_interfaces) by extension 'colcon_meta'
+[0.721s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_interfaces) by extensions ['ros']
+[0.721s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_interfaces) by extension 'ros'
+[0.723s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/drone_interfaces' with type 'ros.ament_cmake' and name 'drone_interfaces'[0m
+[0.723s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_monitor) by extensions ['ignore', 'ignore_ament_install']
+[0.723s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_monitor) by extension 'ignore'
+[0.723s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_monitor) by extension 'ignore_ament_install'
+[0.723s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_monitor) by extensions ['colcon_pkg']
+[0.723s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_monitor) by extension 'colcon_pkg'
+[0.724s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_monitor) by extensions ['colcon_meta']
+[0.724s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_monitor) by extension 'colcon_meta'
+[0.724s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_monitor) by extensions ['ros']
+[0.724s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_monitor) by extension 'ros'
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/drone_monitor' with type 'ros.ament_python' and name 'drone_monitor'[0m
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_vision) by extensions ['ignore', 'ignore_ament_install']
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_vision) by extension 'ignore'
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_vision) by extension 'ignore_ament_install'
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_vision) by extensions ['colcon_pkg']
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_vision) by extension 'colcon_pkg'
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_vision) by extensions ['colcon_meta']
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_vision) by extension 'colcon_meta'
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_vision) by extensions ['ros']
+[0.725s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/drone_vision) by extension 'ros'
+[0.726s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/drone_vision' with type 'ros.ament_python' and name 'drone_vision'[0m
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extensions ['ignore', 'ignore_ament_install']
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extension 'ignore'
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extension 'ignore_ament_install'
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extensions ['colcon_pkg']
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extension 'colcon_pkg'
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extensions ['colcon_meta']
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extension 'colcon_meta'
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extensions ['ros']
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extension 'ros'
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extensions ['cmake', 'python']
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extension 'cmake'
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extension 'python'
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extensions ['python_setup_py']
+[0.727s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/json_paths) by extension 'python_setup_py'
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extension 'ignore'
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extension 'ignore_ament_install'
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extensions ['colcon_pkg']
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extension 'colcon_pkg'
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extensions ['colcon_meta']
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extension 'colcon_meta'
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extensions ['ros']
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extension 'ros'
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extensions ['cmake', 'python']
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extension 'cmake'
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extension 'python'
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extensions ['python_setup_py']
+[0.728s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/scripts) by extension 'python_setup_py'
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extensions ['ignore', 'ignore_ament_install']
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extension 'ignore'
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extension 'ignore_ament_install'
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extensions ['colcon_pkg']
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extension 'colcon_pkg'
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extensions ['colcon_meta']
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extension 'colcon_meta'
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extensions ['ros']
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extension 'ros'
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extensions ['cmake', 'python']
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extension 'cmake'
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extension 'python'
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extensions ['python_setup_py']
+[0.729s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/shell) by extension 'python_setup_py'
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extensions ['ignore', 'ignore_ament_install']
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extension 'ignore'
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extension 'ignore_ament_install'
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extensions ['colcon_pkg']
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extension 'colcon_pkg'
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extensions ['colcon_meta']
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extension 'colcon_meta'
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extensions ['ros']
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extension 'ros'
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extensions ['cmake', 'python']
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extension 'cmake'
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extension 'python'
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extensions ['python_setup_py']
+[0.730s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/test_demo) by extension 'python_setup_py'
+[0.730s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.730s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.730s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.731s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.731s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.805s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.805s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.805s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.805s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.805s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.805s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.805s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.805s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.806s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.806s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'drone_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Multitask-Drone/build/drone_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Multitask-Drone/install/drone_interfaces', 'merge_install': False, 'path': '/home/orangepi/Multitask-Drone/src/drone_interfaces', 'symlink_install': False, 'test_result_base': None}[0m
+[0.806s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_monitor' build argument 'cmake_args' from command line to 'None'
+[0.806s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_monitor' build argument 'cmake_target' from command line to 'None'
+[0.806s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_monitor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.806s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_monitor' build argument 'cmake_clean_cache' from command line to 'False'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_monitor' build argument 'cmake_clean_first' from command line to 'False'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_monitor' build argument 'cmake_force_configure' from command line to 'False'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_monitor' build argument 'ament_cmake_args' from command line to 'None'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_monitor' build argument 'catkin_cmake_args' from command line to 'None'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_monitor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'drone_monitor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Multitask-Drone/build/drone_monitor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Multitask-Drone/install/drone_monitor', 'merge_install': False, 'path': '/home/orangepi/Multitask-Drone/src/drone_monitor', 'symlink_install': False, 'test_result_base': None}[0m
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_controller' build argument 'cmake_args' from command line to 'None'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_controller' build argument 'cmake_target' from command line to 'None'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.807s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'drone_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Multitask-Drone/build/drone_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Multitask-Drone/install/drone_controller', 'merge_install': False, 'path': '/home/orangepi/Multitask-Drone/src/drone_controller', 'symlink_install': False, 'test_result_base': None}[0m
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_vision' build argument 'cmake_args' from command line to 'None'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_vision' build argument 'cmake_target' from command line to 'None'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_vision' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_vision' build argument 'cmake_clean_cache' from command line to 'False'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_vision' build argument 'cmake_clean_first' from command line to 'False'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_vision' build argument 'cmake_force_configure' from command line to 'False'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_vision' build argument 'ament_cmake_args' from command line to 'None'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_vision' build argument 'catkin_cmake_args' from command line to 'None'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'drone_vision' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.808s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'drone_vision' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Multitask-Drone/build/drone_vision', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Multitask-Drone/install/drone_vision', 'merge_install': False, 'path': '/home/orangepi/Multitask-Drone/src/drone_vision', 'symlink_install': False, 'test_result_base': None}[0m
+[0.809s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.811s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.811s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/orangepi/Multitask-Drone/src/drone_interfaces' with build type 'ament_cmake'
+[0.812s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/orangepi/Multitask-Drone/src/drone_interfaces'
+[0.818s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.818s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.818s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.826s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/orangepi/Multitask-Drone/src/drone_monitor' with build type 'ament_python'
+[0.827s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_monitor', 'ament_prefix_path')
+[0.827s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/hook/ament_prefix_path.ps1'
+[0.829s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/hook/ament_prefix_path.dsv'
+[0.831s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/hook/ament_prefix_path.sh'
+[0.833s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.833s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.852s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/Multitask-Drone/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Multitask-Drone/build/drone_interfaces -- -j8 -l8[0m
+[1.280s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/orangepi/Multitask-Drone/src/drone_monitor'
+[1.281s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.281s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.746s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/Multitask-Drone/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Multitask-Drone/build/drone_interfaces -- -j8 -l8[0m
+[1.787s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/Multitask-Drone/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Multitask-Drone/build/drone_interfaces[0m
+[1.949s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/Multitask-Drone/src/drone_monitor': PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_monitor build --build-base /home/orangepi/Multitask-Drone/build/drone_monitor/build install --record /home/orangepi/Multitask-Drone/build/drone_monitor/install.log --single-version-externally-managed install_data[0m
+[1.958s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(drone_interfaces)
+[1.959s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/Multitask-Drone/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Multitask-Drone/build/drone_interfaces[0m
+[1.965s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces' for CMake module files
+[1.966s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces' for CMake config files
+[1.967s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_interfaces', 'cmake_prefix_path')
+[1.968s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.ps1'
+[1.969s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.dsv'
+[1.970s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.sh'
+[1.971s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/lib'
+[1.972s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_interfaces', 'ld_library_path_lib')
+[1.972s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.ps1'
+[1.973s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.dsv'
+[1.974s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.sh'
+[1.974s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/bin'
+[1.974s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/pkgconfig/drone_interfaces.pc'
+[1.975s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/python3.10/site-packages'
+[1.975s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/bin'
+[1.976s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.ps1'
+[1.977s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.dsv'
+[1.979s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.sh'
+[1.980s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.bash'
+[1.982s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.zsh'
+[1.983s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/Multitask-Drone/install/drone_interfaces/share/colcon-core/packages/drone_interfaces)
+[1.985s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(drone_interfaces)
+[1.985s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces' for CMake module files
+[1.986s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces' for CMake config files
+[1.987s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_interfaces', 'cmake_prefix_path')
+[1.988s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.ps1'
+[1.989s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.dsv'
+[1.990s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/cmake_prefix_path.sh'
+[1.991s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/lib'
+[1.991s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_interfaces', 'ld_library_path_lib')
+[1.992s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.ps1'
+[1.993s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.dsv'
+[1.993s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/hook/ld_library_path_lib.sh'
+[1.994s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/bin'
+[1.994s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/pkgconfig/drone_interfaces.pc'
+[1.995s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/python3.10/site-packages'
+[1.995s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_interfaces/bin'
+[1.996s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.ps1'
+[1.997s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.dsv'
+[1.998s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.sh'
+[1.999s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.bash'
+[2.000s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.zsh'
+[2.001s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/Multitask-Drone/install/drone_interfaces/share/colcon-core/packages/drone_interfaces)
+[2.002s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/orangepi/Multitask-Drone/src/drone_controller' with build type 'ament_python'
+[2.002s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_controller', 'ament_prefix_path')
+[2.003s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/hook/ament_prefix_path.ps1'
+[2.004s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/hook/ament_prefix_path.dsv'
+[2.005s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/hook/ament_prefix_path.sh'
+[2.007s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.008s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[2.013s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/orangepi/Multitask-Drone/src/drone_vision' with build type 'ament_python'
+[2.014s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_vision', 'ament_prefix_path')
+[2.014s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/hook/ament_prefix_path.ps1'
+[2.016s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/hook/ament_prefix_path.dsv'
+[2.017s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/hook/ament_prefix_path.sh'
+[2.018s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.019s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[2.469s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/orangepi/Multitask-Drone/src/drone_controller'
+[2.470s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.470s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[2.891s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/orangepi/Multitask-Drone/src/drone_vision'
+[2.892s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.893s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[2.901s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_monitor' for CMake module files
+[2.903s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/Multitask-Drone/src/drone_monitor' returned '0': PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_monitor build --build-base /home/orangepi/Multitask-Drone/build/drone_monitor/build install --record /home/orangepi/Multitask-Drone/build/drone_monitor/install.log --single-version-externally-managed install_data[0m
+[2.906s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_monitor' for CMake config files
+[2.908s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_monitor/lib'
+[2.909s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_monitor/bin'
+[2.909s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_monitor/lib/pkgconfig/drone_monitor.pc'
+[2.910s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages'
+[2.911s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_monitor', 'pythonpath')
+[2.912s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/hook/pythonpath.ps1'
+[2.916s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/hook/pythonpath.dsv'
+[2.919s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/hook/pythonpath.sh'
+[2.922s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_monitor/bin'
+[2.922s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(drone_monitor)
+[2.924s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/package.ps1'
+[2.928s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/package.dsv'
+[2.930s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/package.sh'
+[2.932s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/package.bash'
+[2.933s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor/package.zsh'
+[2.935s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/Multitask-Drone/install/drone_monitor/share/colcon-core/packages/drone_monitor)
+[3.582s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/Multitask-Drone/src/drone_vision': AMENT_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_vision build --build-base /home/orangepi/Multitask-Drone/build/drone_vision/build install --record /home/orangepi/Multitask-Drone/build/drone_vision/install.log --single-version-externally-managed install_data[0m
+[3.589s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/Multitask-Drone/src/drone_controller': AMENT_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_controller build --build-base /home/orangepi/Multitask-Drone/build/drone_controller/build install --record /home/orangepi/Multitask-Drone/build/drone_controller/install.log --single-version-externally-managed install_data[0m
+[4.135s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_vision' for CMake module files
+[4.138s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_vision' for CMake config files
+[4.141s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_vision/lib'
+[4.141s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_vision/bin'
+[4.142s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_vision/lib/pkgconfig/drone_vision.pc'
+[4.143s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages'
+[4.143s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_vision', 'pythonpath')
+[4.144s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/hook/pythonpath.ps1'
+[4.147s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/hook/pythonpath.dsv'
+[4.148s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/hook/pythonpath.sh'
+[4.150s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_vision/bin'
+[4.152s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/Multitask-Drone/src/drone_vision' returned '0': AMENT_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_vision build --build-base /home/orangepi/Multitask-Drone/build/drone_vision/build install --record /home/orangepi/Multitask-Drone/build/drone_vision/install.log --single-version-externally-managed install_data[0m
+[4.153s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(drone_vision)
+[4.155s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/package.ps1'
+[4.157s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/package.dsv'
+[4.159s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/package.sh'
+[4.161s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/package.bash'
+[4.162s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision/package.zsh'
+[4.164s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/Multitask-Drone/install/drone_vision/share/colcon-core/packages/drone_vision)
+[4.167s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_controller' for CMake module files
+[4.170s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_controller' for CMake config files
+[4.174s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_controller/lib'
+[4.174s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_controller/bin'
+[4.174s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_controller/lib/pkgconfig/drone_controller.pc'
+[4.175s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages'
+[4.176s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('drone_controller', 'pythonpath')
+[4.177s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/hook/pythonpath.ps1'
+[4.181s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/Multitask-Drone/src/drone_controller' returned '0': AMENT_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_controller build --build-base /home/orangepi/Multitask-Drone/build/drone_controller/build install --record /home/orangepi/Multitask-Drone/build/drone_controller/install.log --single-version-externally-managed install_data[0m
+[4.182s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/hook/pythonpath.dsv'
+[4.184s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/hook/pythonpath.sh'
+[4.186s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/Multitask-Drone/install/drone_controller/bin'
+[4.187s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(drone_controller)
+[4.188s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/package.ps1'
+[4.191s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/package.dsv'
+[4.192s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/package.sh'
+[4.194s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/package.bash'
+[4.195s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller/package.zsh'
+[4.196s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/Multitask-Drone/install/drone_controller/share/colcon-core/packages/drone_controller)
+[4.196s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[4.197s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[4.197s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[4.197s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[4.223s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.224s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.224s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[4.414s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[4.416s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/orangepi/Multitask-Drone/install/local_setup.ps1'
+[4.422s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/orangepi/Multitask-Drone/install/_local_setup_util_ps1.py'
+[4.431s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/orangepi/Multitask-Drone/install/setup.ps1'
+[4.436s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/orangepi/Multitask-Drone/install/local_setup.sh'
+[4.440s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/orangepi/Multitask-Drone/install/_local_setup_util_sh.py'
+[4.443s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/orangepi/Multitask-Drone/install/setup.sh'
+[4.449s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/orangepi/Multitask-Drone/install/local_setup.bash'
+[4.454s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/orangepi/Multitask-Drone/install/setup.bash'
+[4.460s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/orangepi/Multitask-Drone/install/local_setup.zsh'
+[4.463s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/orangepi/Multitask-Drone/install/setup.zsh'

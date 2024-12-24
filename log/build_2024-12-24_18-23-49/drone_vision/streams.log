@@ -1,0 +1,22 @@
+[1.553s] Invoking command in '/home/orangepi/Multitask-Drone/src/drone_vision': AMENT_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_vision build --build-base /home/orangepi/Multitask-Drone/build/drone_vision/build install --record /home/orangepi/Multitask-Drone/build/drone_vision/install.log --single-version-externally-managed install_data
+[1.904s] running egg_info
+[1.906s] writing ../../build/drone_vision/drone_vision.egg-info/PKG-INFO
+[1.906s] writing dependency_links to ../../build/drone_vision/drone_vision.egg-info/dependency_links.txt
+[1.907s] writing entry points to ../../build/drone_vision/drone_vision.egg-info/entry_points.txt
+[1.907s] writing requirements to ../../build/drone_vision/drone_vision.egg-info/requires.txt
+[1.908s] writing top-level names to ../../build/drone_vision/drone_vision.egg-info/top_level.txt
+[1.912s] reading manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'
+[1.912s] adding license file 'LICENSE'
+[1.913s] writing manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'
+[1.913s] running build
+[1.914s] running build_py
+[1.914s] running install
+[1.915s] running install_lib
+[1.918s] running install_data
+[1.919s] running install_egg_info
+[1.923s] removing '/home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision-0.0.0-py3.10.egg-info' (and everything under it)
+[1.924s] Copying ../../build/drone_vision/drone_vision.egg-info to /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision-0.0.0-py3.10.egg-info
+[1.924s] running install_scripts
+[1.968s] Installing object_detector script to /home/orangepi/Multitask-Drone/install/drone_vision/lib/drone_vision
+[1.969s] writing list of installed files to '/home/orangepi/Multitask-Drone/build/drone_vision/install.log'
+[2.050s] Invoked command in '/home/orangepi/Multitask-Drone/src/drone_vision' returned '0': AMENT_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_vision build --build-base /home/orangepi/Multitask-Drone/build/drone_vision/build install --record /home/orangepi/Multitask-Drone/build/drone_vision/install.log --single-version-externally-managed install_data

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from drone_interfaces/action/ExecuteWaypoint.action
+// generated code does not contain a copyright notice
+
+#include "drone_interfaces/msg/RawWaypoint.idl"
+
+module drone_interfaces {
+  module action {
+    struct ExecuteWaypoint_Goal {
+      drone_interfaces::msg::RawWaypoint waypoint;
+    };
+    struct ExecuteWaypoint_Result {
+      boolean success;
+    };
+    struct ExecuteWaypoint_Feedback {
+      uint8 feedback;
+    };
+  };
+};
