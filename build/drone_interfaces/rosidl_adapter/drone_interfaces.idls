@@ -1,9 +1,0 @@
-/home/orangepi/Multitask-Drone/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/Yaw.idl
-/home/orangepi/Multitask-Drone/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/PanelBox.idl
-/home/orangepi/Multitask-Drone/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/Task.idl
-/home/orangepi/Multitask-Drone/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/TaskState.idl
-/home/orangepi/Multitask-Drone/build/drone_interfaces/rosidl_adapter/drone_interfaces:msg/RawWaypoint.idl
-/home/orangepi/Multitask-Drone/build/drone_interfaces/rosidl_adapter/drone_interfaces:srv/TaskDispatch.idl
-/home/orangepi/Multitask-Drone/build/drone_interfaces/rosidl_adapter/drone_interfaces:srv/YoloRequest.idl
-/home/orangepi/Multitask-Drone/build/drone_interfaces/rosidl_adapter/drone_interfaces:srv/TaskPush.idl
-/home/orangepi/Multitask-Drone/build/drone_interfaces/rosidl_adapter/drone_interfaces:action/ExecuteWaypoint.idl

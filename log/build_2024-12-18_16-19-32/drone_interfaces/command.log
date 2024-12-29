@@ -1,6 +1,0 @@
-Invoking command in '/home/orangepi/Multitask-Drone/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/orangepi/Multitask-Drone/src/drone_interfaces -DCMAKE_INSTALL_PREFIX=/home/orangepi/Multitask-Drone/install/drone_interfaces
-Invoked command in '/home/orangepi/Multitask-Drone/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/orangepi/Multitask-Drone/src/drone_interfaces -DCMAKE_INSTALL_PREFIX=/home/orangepi/Multitask-Drone/install/drone_interfaces
-Invoking command in '/home/orangepi/Multitask-Drone/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Multitask-Drone/build/drone_interfaces -- -j8 -l8
-Invoked command in '/home/orangepi/Multitask-Drone/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Multitask-Drone/build/drone_interfaces -- -j8 -l8
-Invoking command in '/home/orangepi/Multitask-Drone/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Multitask-Drone/build/drone_interfaces
-Invoked command in '/home/orangepi/Multitask-Drone/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Multitask-Drone/build/drone_interfaces
