@@ -10,7 +10,8 @@ setup(
     packages=[
         package_name, 
         'drone_controller.task',
-        'drone_controller.waypoint'
+        'drone_controller.waypoint',
+        'drone_controller.payload'
         ],
     data_files=[
         ('share/ament_index/resource_index/packages',

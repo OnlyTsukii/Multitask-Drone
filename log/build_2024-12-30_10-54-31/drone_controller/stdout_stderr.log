@@ -1,0 +1,41 @@
+running egg_info
+writing ../../build/drone_controller/drone_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/drone_controller/drone_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/drone_controller/drone_controller.egg-info/entry_points.txt
+writing requirements to ../../build/drone_controller/drone_controller.egg-info/requires.txt
+writing top-level names to ../../build/drone_controller/drone_controller.egg-info/top_level.txt
+package init file 'drone_controller/payload/__init__.py' not found (or not a regular file)
+reading manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+copying drone_controller/drone_controller.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller
+copying drone_controller/config.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller
+copying drone_controller/waypoint/waypoint_handler.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint
+copying drone_controller/waypoint/waypoint_task_executor.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint
+creating /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload
+copying drone_controller/payload/payload_controller.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload
+running install
+running install_lib
+copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_handler.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint
+copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_task_executor.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint
+creating /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload
+copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload/payload_controller.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload
+copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/drone_controller.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller
+copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/config.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller
+byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_handler.py to waypoint_handler.cpython-310.pyc
+byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_task_executor.py to waypoint_task_executor.cpython-310.pyc
+byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload/payload_controller.py to payload_controller.cpython-310.pyc
+byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/drone_controller.py to drone_controller.cpython-310.pyc
+byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/config.py to config.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/drone_controller/drone_controller.egg-info to /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller-0.0.0-py3.10.egg-info
+running install_scripts
+Installing drone_controller script to /home/orangepi/Multitask-Drone/install/drone_controller/lib/drone_controller
+Installing task_executor script to /home/orangepi/Multitask-Drone/install/drone_controller/lib/drone_controller
+Installing waypoint_handler script to /home/orangepi/Multitask-Drone/install/drone_controller/lib/drone_controller
+Installing yiku_test script to /home/orangepi/Multitask-Drone/install/drone_controller/lib/drone_controller
+writing list of installed files to '/home/orangepi/Multitask-Drone/build/drone_controller/install.log'

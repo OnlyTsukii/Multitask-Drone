@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from drone_interfaces/srv/TaskPush.srv
+// generated code does not contain a copyright notice
+
+#include "drone_interfaces/msg/Task.idl"
+
+module drone_interfaces {
+  module srv {
+    struct TaskPush_Request {
+      drone_interfaces::msg::Task task;
+    };
+    struct TaskPush_Response {
+      boolean success;
+    };
+  };
+};
