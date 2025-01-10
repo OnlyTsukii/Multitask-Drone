@@ -83,6 +83,98 @@ class WaypointTaskExecutor(Node):
                 self.panel_detected = True
                 self.panel_pos = msg
 
+    def execute_test_task(self):
+        start_time = time.time()
+        timestamp = time.time()
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.2:
+                continue
+            if time.time() - start_time > 7.0:
+                self.get_logger().info('climbing test finished')
+                break
+            self.body_move(BODY_UP)
+            self.get_logger().info('drone climbing...')
+            timestamp = time.time()
+
+        start_time = time.time()
+        timestamp = time.time()
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.2:
+                continue
+            if time.time() - start_time > 7.0:
+                self.get_logger().info('descend test finished')
+                break
+            self.body_move(BODY_DOWN)
+            self.get_logger().info('drone descending...')
+            timestamp = time.time()
+
+        start_time = time.time()
+        timestamp = time.time()
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.2:
+                continue
+            if time.time() - start_time > 10.0:
+                self.get_logger().info('rotate test finished')
+                break
+            self.body_move(BODY_ROTATE_CW)
+            self.get_logger().info('drone rotating...')
+            timestamp = time.time()
+
+        start_time = time.time()
+        timestamp = time.time()
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.2:
+                continue
+            if time.time() - start_time > 5.0:
+                self.get_logger().info('forward test finished')
+                break
+            self.body_move(BODY_FORWARD)
+            self.get_logger().info('drone forwarding...')
+            timestamp = time.time()
+
+        start_time = time.time()
+        timestamp = time.time()
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.2:
+                continue
+            if time.time() - start_time > 5.0:
+                self.get_logger().info('backward test finished')
+                break
+            self.body_move(BODY_BACKWARD)
+            self.get_logger().info('drone backwarding...')
+            timestamp = time.time()
+
+        start_time = time.time()
+        timestamp = time.time()
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.2:
+                continue
+            if time.time() - start_time > 5.0:
+                self.get_logger().info('left moving test finished')
+                break
+            self.body_move(BODY_LEFT)
+            self.get_logger().info('drone left moving...')
+            timestamp = time.time()
+
+        start_time = time.time()
+        timestamp = time.time()
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if time.time() - timestamp < 0.2:
+                continue
+            if time.time() - start_time > 5.0:
+                self.get_logger().info('right moving test finished')
+                break
+            self.body_move(BODY_RIGHT)
+            self.get_logger().info('drone right moving...')
+            timestamp = time.time()
+
     def execute_capture_task(self):
         req = YoloRequest.Request()
         future = self.capture_client.call_async(req)
@@ -228,9 +320,9 @@ class WaypointTaskExecutor(Node):
             if not math.isnan(self.panel_yaw):
                 self.max_retries = 0
                 if self.panel_yaw > PANEL_YAW_THRES:
-                    self.body_move(BODY_ROTATE_CLOCKWISE)
+                    self.body_move(BODY_ROTATE_CW)
                 elif self.panel_yaw < -1 * PANEL_YAW_THRES:
-                    self.body_move(BODY_ROTATE_COUNTERCW)
+                    self.body_move(BODY_ROTATE_CCW)
                 else:
                     self.get_logger().info("target yaw reached") 
                     return True
@@ -326,11 +418,11 @@ class WaypointTaskExecutor(Node):
         point.header.stamp = self.get_clock().now().to_msg()   
         point.coordinate_frame = FRAME_BODY_NED
 
-        if direction == BODY_ROTATE_CLOCKWISE or direction == BODY_ROTATE_COUNTERCW:
+        if direction == BODY_ROTATE_CW or direction == BODY_ROTATE_CCW:
             point.type_mask = PositionTarget.IGNORE_YAW | PositionTarget.IGNORE_AFX | PositionTarget.IGNORE_AFY | PositionTarget.IGNORE_AFZ
             point.velocity = Vector3(x=0.0, y=0.0, z=0.0)
             point.position = Point(x=0.0, y=0.0, z=0.0)
-            if direction == BODY_ROTATE_CLOCKWISE:
+            if direction == BODY_ROTATE_CW:
                 point.yaw_rate = -1 * 0.2
             else:
                 point.yaw_rate = 0.2

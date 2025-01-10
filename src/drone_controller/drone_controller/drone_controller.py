@@ -15,16 +15,11 @@ from mavros_msgs.srv import CommandBool, SetMode, CommandTOL
 from drone_controller.utils import *
 from drone_controller.constant import *
 from drone_controller.task.task_handler import TaskHandler
-# test
-from drone_controller.payload.payload_controller import PayloadController
 
 
 class DroneController(Node):
     def __init__(self):
         super().__init__('drone_controller')
-
-        # test
-        self.payload_controller = PayloadController()
 
         self.pose_pub = self.create_publisher(PoseStamped, '/mavros/setpoint_position/local', 10)
         self.state_sub = self.create_subscription(State, '/mavros/state', self.state_callback, 10)
@@ -73,6 +68,7 @@ class DroneController(Node):
                 break
             time.sleep(2)
         if not res:
+            self.get_logger().info("set mode failed")
             return False
         
         return self.arm_drone()
@@ -95,7 +91,8 @@ class DroneController(Node):
         future = self.task_client.call_async(request)
 
         while not future.done():
-            self.init_pose(0.5)
+            # self.init_pose(0.5)
+            time.sleep(0.1)
             rclpy.spin_once(self)
 
         res = future.result().success
@@ -151,39 +148,21 @@ class DroneController(Node):
             self.get_logger().info(f"WebSocket server started at ws://{SOCKET_IP}:{SOCKET_PORT}")
             await asyncio.Future() 
 
-    async def websocket_handler(self, websocket, path):
+    async def websocket_handler(self, websocket):
         try:
             async for message in websocket:
                 self.get_logger().info(f'receive websocket message: {message}')
 
-                # test
-                await self.send_response(websocket,  {"status": "success", "message": "Task dispatched successfully"})
-
-                if not self.payload_controller.enable_payload():
-                    self.get_logger().info('Enable payload failed.')
-                else:
-                    self.get_logger().info('Enable payload successfully.')
-
-                cur = time.time()
-                while time.time() - cur < 10.0:
-                    rclpy.spin_once(self)
-                    time.sleep(0.1)
-
-                if not self.payload_controller.disable_payload():
-                    self.get_logger().info('Disable payload failed.')
-                else:
-                    self.get_logger().info('Disable payload successfully.')
-                    
-                # task, response = self.task_handler.handle_json_data(message)
-                # if response == None:
-                #     if not self.preflight():
-                #         response = {"status": "error", "message": "Failed to preflight"}
-                #     else:
-                #         if self.send_task_request(task):
-                #             response = {"status": "success", "message": "Task dispatched successfully"}
-                #         else:
-                #             response = {"status": "error", "message": "Failed to dispatch task"}
-                # await self.send_response(websocket, response)
+                task, response = self.task_handler.handle_json_data(message)
+                if response == None:
+                    if not self.preflight():
+                        response = {"status": "error", "message": "Failed to preflight"}
+                    else:
+                        if self.send_task_request(task):
+                            response = {"status": "success", "message": "Task dispatched successfully"}
+                        else:
+                            response = {"status": "error", "message": "Failed to dispatch task"}
+                await self.send_response(websocket, response)
                 
         except Exception as e:
             self.get_logger().info(e)

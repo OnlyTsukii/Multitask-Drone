@@ -1,0 +1,914 @@
+[0.000000] (-) TimerEvent: {}
+[0.000836] (drone_interfaces) JobQueued: {'identifier': 'drone_interfaces', 'dependencies': OrderedDict()}
+[0.001023] (drone_monitor) JobQueued: {'identifier': 'drone_monitor', 'dependencies': OrderedDict()}
+[0.001174] (drone_controller) JobQueued: {'identifier': 'drone_controller', 'dependencies': OrderedDict([('drone_interfaces', '/home/orangepi/Multitask-Drone/install/drone_interfaces')])}
+[0.001359] (drone_vision) JobQueued: {'identifier': 'drone_vision', 'dependencies': OrderedDict([('drone_interfaces', '/home/orangepi/Multitask-Drone/install/drone_interfaces')])}
+[0.001483] (drone_interfaces) JobStarted: {'identifier': 'drone_interfaces'}
+[0.010535] (drone_monitor) JobStarted: {'identifier': 'drone_monitor'}
+[0.022874] (drone_interfaces) JobProgress: {'identifier': 'drone_interfaces', 'progress': 'cmake'}
+[0.023708] (drone_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/orangepi/Multitask-Drone/src/drone_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/orangepi/Multitask-Drone/install/drone_interfaces'], 'cwd': '/home/orangepi/Multitask-Drone/build/drone_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('no_proxy', 'localhost, 127.0.0.1'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'orangepi'), ('SSH_CLIENT', '192.168.137.1 37071 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/orangepi'), ('OLDPWD', '/home/orangepi'), ('TERM_PROGRAM_VERSION', '1.96.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-3fdf4e28-c376-4648-b179-39384abbc558.sock'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://192.168.137.1:5555'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'orangepi'), ('http_proxy', 'http://192.168.137.1:5555'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '5'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/remote-cli:/home/orangepi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d88bdced48.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/Multitask-Drone/build/drone_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.137.1 37071 192.168.137.2 22'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('UMS_FILE', '/userdata/ums_shared.img'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.098181] (-) TimerEvent: {}
+[0.198783] (-) TimerEvent: {}
+[0.299391] (-) TimerEvent: {}
+[0.305132] (drone_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.399582] (-) TimerEvent: {}
+[0.500293] (-) TimerEvent: {}
+[0.601008] (-) TimerEvent: {}
+[0.601569] (drone_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.630147] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.701155] (-) TimerEvent: {}
+[0.801707] (-) TimerEvent: {}
+[0.888852] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.901844] (-) TimerEvent: {}
+[0.927866] (drone_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.934539] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.937146] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.954622] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.002033] (-) TimerEvent: {}
+[1.049969] (drone_monitor) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_monitor', 'build', '--build-base', '/home/orangepi/Multitask-Drone/build/drone_monitor/build', 'install', '--record', '/home/orangepi/Multitask-Drone/build/drone_monitor/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/orangepi/Multitask-Drone/src/drone_monitor', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'UMS_MOUNTPOINT': '/mnt/ums', 'GST_V4L2_PREFERRED_FOURCC': 'NV12:YU12:NV16:YUY2', 'no_proxy': 'localhost, 127.0.0.1', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'orangepi', 'SSH_CLIENT': '192.168.137.1 37071 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'USB_FUNCS': 'adb', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/orangepi', 'OLDPWD': '/home/orangepi', 'TERM_PROGRAM_VERSION': '1.96.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-3fdf4e28-c376-4648-b179-39384abbc558.sock', 'GST_INSPECT_NO_COLORS': '1', 'GST_MPP_NO_RGA': '1', 'ROS_PYTHON_VERSION': '3', 'COGL_DRIVER': 'gles2', 'VSCODE_GIT_ASKPASS_MAIN': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'https_proxy': 'http://192.168.137.1:5555', 'GST_V4L2SRC_MAX_RESOLUTION': '3840x2160', 'ROS_DISTRO': 'humble', 'LOGNAME': 'orangepi', 'http_proxy': 'http://192.168.137.1:5555', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GST_GL_API': 'gles2', 'XDG_SESSION_ID': '5', 'GST_VIDEO_CONVERT_PREFERRED_FORMAT': 'NV12:NV16:I420:YUY2', 'GST_V4L2SRC_RK_DEVICES': '_mainpath:_selfpath:_bypass:_scale', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/remote-cli:/home/orangepi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GST_GL_PLATFORM': 'egl', 'GST_DEBUG_NO_COLOR': '1', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'GST_V4L2SRC_DEFAULT_DEVICE': '/dev/video-camera0', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d88bdced48.sock', 'TERM_PROGRAM': 'vscode', 'GST_V4L2_USE_LIBV4L2': '1', 'UMS_SIZE': '256M', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'UMS_RO': '0', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'UMS_FSTYPE': 'vfat', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/orangepi/Multitask-Drone/build/drone_monitor', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 37071 192.168.137.2 22', 'PYTHONPATH': '/home/orangepi/Multitask-Drone/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'UMS_MOUNT': '0', 'COLCON': '1', 'UMS_FILE': '/userdata/ums_shared.img'}, 'shell': False}
+[1.103050] (-) TimerEvent: {}
+[1.204212] (-) TimerEvent: {}
+[1.245169] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.285148] (drone_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.286096] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.288934] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.303669] (drone_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.304375] (-) TimerEvent: {}
+[1.405230] (-) TimerEvent: {}
+[1.423658] (drone_monitor) StdoutLine: {'line': b'running egg_info\n'}
+[1.425155] (drone_monitor) StdoutLine: {'line': b'creating ../../build/drone_monitor/drone_monitor.egg-info\n'}
+[1.425992] (drone_monitor) StdoutLine: {'line': b'writing ../../build/drone_monitor/drone_monitor.egg-info/PKG-INFO\n'}
+[1.426779] (drone_monitor) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_monitor/drone_monitor.egg-info/dependency_links.txt\n'}
+[1.427351] (drone_monitor) StdoutLine: {'line': b'writing entry points to ../../build/drone_monitor/drone_monitor.egg-info/entry_points.txt\n'}
+[1.427863] (drone_monitor) StdoutLine: {'line': b'writing requirements to ../../build/drone_monitor/drone_monitor.egg-info/requires.txt\n'}
+[1.428300] (drone_monitor) StdoutLine: {'line': b'writing top-level names to ../../build/drone_monitor/drone_monitor.egg-info/top_level.txt\n'}
+[1.428701] (drone_monitor) StdoutLine: {'line': b"writing manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'\n"}
+[1.430477] (drone_monitor) StdoutLine: {'line': b"reading manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'\n"}
+[1.430919] (drone_monitor) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.431501] (drone_monitor) StdoutLine: {'line': b"writing manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'\n"}
+[1.432200] (drone_monitor) StdoutLine: {'line': b'running build\n'}
+[1.432665] (drone_monitor) StdoutLine: {'line': b'running build_py\n'}
+[1.433122] (drone_monitor) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_monitor/build\n'}
+[1.433481] (drone_monitor) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_monitor/build/lib\n'}
+[1.433837] (drone_monitor) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_monitor/build/lib/src\n'}
+[1.434324] (drone_monitor) StdoutLine: {'line': b'copying src/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_monitor/build/lib/src\n'}
+[1.434681] (drone_monitor) StdoutLine: {'line': b'running install\n'}
+[1.435097] (drone_monitor) StdoutLine: {'line': b'running install_lib\n'}
+[1.435703] (drone_monitor) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src\n'}
+[1.436189] (drone_monitor) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_monitor/build/lib/src/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src\n'}
+[1.436553] (drone_monitor) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src/__init__.py to __init__.cpython-310.pyc\n'}
+[1.436910] (drone_monitor) StdoutLine: {'line': b'running install_data\n'}
+[1.437259] (drone_monitor) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_monitor/share/ament_index\n'}
+[1.437609] (drone_monitor) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index\n'}
+[1.437964] (drone_monitor) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index/packages\n'}
+[1.438316] (drone_monitor) StdoutLine: {'line': b'copying resource/drone_monitor -> /home/orangepi/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index/packages\n'}
+[1.438712] (drone_monitor) StdoutLine: {'line': b'copying package.xml -> /home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor\n'}
+[1.439065] (drone_monitor) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.439567] (drone_monitor) StdoutLine: {'line': b'Copying ../../build/drone_monitor/drone_monitor.egg-info to /home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/drone_monitor-0.0.0-py3.10.egg-info\n'}
+[1.440311] (drone_monitor) StdoutLine: {'line': b'running install_scripts\n'}
+[1.481240] (drone_monitor) StdoutLine: {'line': b"writing list of installed files to '/home/orangepi/Multitask-Drone/build/drone_monitor/install.log'\n"}
+[1.505614] (-) TimerEvent: {}
+[1.595566] (drone_monitor) CommandEnded: {'returncode': 0}
+[1.606513] (-) TimerEvent: {}
+[1.633974] (drone_monitor) JobEnded: {'identifier': 'drone_monitor', 'rc': 0}
+[1.706783] (-) TimerEvent: {}
+[1.753930] (drone_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.807030] (-) TimerEvent: {}
+[1.908154] (-) TimerEvent: {}
+[2.009647] (-) TimerEvent: {}
+[2.013325] (drone_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.030319] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.040303] (drone_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.109927] (-) TimerEvent: {}
+[2.142189] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.210230] (-) TimerEvent: {}
+[2.225027] (drone_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[2.303790] (drone_interfaces) StdoutLine: {'line': b'-- Found mavros_msgs: 2.9.0 (/opt/ros/humble/share/mavros_msgs/cmake)\n'}
+[2.310369] (-) TimerEvent: {}
+[2.411374] (-) TimerEvent: {}
+[2.512681] (-) TimerEvent: {}
+[2.519915] (drone_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.612994] (-) TimerEvent: {}
+[2.714352] (-) TimerEvent: {}
+[2.815626] (-) TimerEvent: {}
+[2.917316] (-) TimerEvent: {}
+[3.018410] (-) TimerEvent: {}
+[3.119553] (-) TimerEvent: {}
+[3.220901] (-) TimerEvent: {}
+[3.322098] (-) TimerEvent: {}
+[3.423228] (-) TimerEvent: {}
+[3.524394] (-) TimerEvent: {}
+[3.589947] (drone_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[3.624596] (-) TimerEvent: {}
+[3.725688] (-) TimerEvent: {}
+[3.827073] (-) TimerEvent: {}
+[3.928681] (-) TimerEvent: {}
+[4.029917] (-) TimerEvent: {}
+[4.131754] (-) TimerEvent: {}
+[4.233515] (-) TimerEvent: {}
+[4.334669] (-) TimerEvent: {}
+[4.435737] (-) TimerEvent: {}
+[4.536891] (-) TimerEvent: {}
+[4.579573] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.637153] (-) TimerEvent: {}
+[4.738250] (-) TimerEvent: {}
+[4.839605] (-) TimerEvent: {}
+[4.940949] (-) TimerEvent: {}
+[5.042261] (-) TimerEvent: {}
+[5.143539] (-) TimerEvent: {}
+[5.244807] (-) TimerEvent: {}
+[5.345990] (-) TimerEvent: {}
+[5.447143] (-) TimerEvent: {}
+[5.548394] (-) TimerEvent: {}
+[5.649577] (-) TimerEvent: {}
+[5.750739] (-) TimerEvent: {}
+[5.851972] (-) TimerEvent: {}
+[5.893417] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.952319] (-) TimerEvent: {}
+[5.959901] (drone_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[5.970282] (drone_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[6.052714] (-) TimerEvent: {}
+[6.067826] (drone_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[6.069000] (drone_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.069577] (drone_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[6.070043] (drone_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[6.141999] (drone_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[6.152890] (-) TimerEvent: {}
+[6.253824] (-) TimerEvent: {}
+[6.354861] (-) TimerEvent: {}
+[6.455892] (-) TimerEvent: {}
+[6.459605] (drone_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.461705] (drone_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.473942] (drone_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.556256] (-) TimerEvent: {}
+[6.576023] (drone_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[6.602807] (drone_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/orangepi/Multitask-Drone/build/drone_interfaces\n'}
+[6.636959] (drone_interfaces) CommandEnded: {'returncode': 0}
+[6.639159] (drone_interfaces) JobProgress: {'identifier': 'drone_interfaces', 'progress': 'build'}
+[6.642538] (drone_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/orangepi/Multitask-Drone/build/drone_interfaces', '--', '-j8', '-l8'], 'cwd': '/home/orangepi/Multitask-Drone/build/drone_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('no_proxy', 'localhost, 127.0.0.1'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'orangepi'), ('SSH_CLIENT', '192.168.137.1 37071 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/orangepi'), ('OLDPWD', '/home/orangepi'), ('TERM_PROGRAM_VERSION', '1.96.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-3fdf4e28-c376-4648-b179-39384abbc558.sock'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://192.168.137.1:5555'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'orangepi'), ('http_proxy', 'http://192.168.137.1:5555'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '5'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/remote-cli:/home/orangepi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d88bdced48.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/Multitask-Drone/build/drone_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.137.1 37071 192.168.137.2 22'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('UMS_FILE', '/userdata/ums_shared.img'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.656423] (-) TimerEvent: {}
+[6.757448] (-) TimerEvent: {}
+[6.811582] (drone_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[6.847343] (drone_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[6.855975] (drone_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_drone_interfaces\n'}
+[6.857522] (-) TimerEvent: {}
+[6.958096] (-) TimerEvent: {}
+[7.058712] (-) TimerEvent: {}
+[7.159255] (-) TimerEvent: {}
+[7.233499] (drone_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[7.234776] (drone_interfaces) StdoutLine: {'line': b'creating drone_interfaces.egg-info\n'}
+[7.235250] (drone_interfaces) StdoutLine: {'line': b'writing drone_interfaces.egg-info/PKG-INFO\n'}
+[7.235646] (drone_interfaces) StdoutLine: {'line': b'writing dependency_links to drone_interfaces.egg-info/dependency_links.txt\n'}
+[7.236048] (drone_interfaces) StdoutLine: {'line': b'writing top-level names to drone_interfaces.egg-info/top_level.txt\n'}
+[7.236444] (drone_interfaces) StdoutLine: {'line': b"writing manifest file 'drone_interfaces.egg-info/SOURCES.txt'\n"}
+[7.239251] (drone_interfaces) StdoutLine: {'line': b"reading manifest file 'drone_interfaces.egg-info/SOURCES.txt'\n"}
+[7.240030] (drone_interfaces) StdoutLine: {'line': b"writing manifest file 'drone_interfaces.egg-info/SOURCES.txt'\n"}
+[7.259630] (-) TimerEvent: {}
+[7.358157] (drone_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_drone_interfaces_egg\n'}
+[7.359753] (-) TimerEvent: {}
+[7.460575] (-) TimerEvent: {}
+[7.561583] (-) TimerEvent: {}
+[7.662577] (-) TimerEvent: {}
+[7.763631] (-) TimerEvent: {}
+[7.864659] (-) TimerEvent: {}
+[7.965661] (-) TimerEvent: {}
+[8.066724] (-) TimerEvent: {}
+[8.168018] (-) TimerEvent: {}
+[8.270523] (-) TimerEvent: {}
+[8.371438] (-) TimerEvent: {}
+[8.418649] (drone_interfaces) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.c.o\x1b[0m\n'}
+[8.432473] (drone_interfaces) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/panel_box__functions.c.o\x1b[0m\n'}
+[8.435403] (drone_interfaces) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o\x1b[0m\n'}
+[8.440421] (drone_interfaces) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o\x1b[0m\n'}
+[8.446553] (drone_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.o\x1b[0m\n'}
+[8.447699] (drone_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o\x1b[0m\n'}
+[8.461404] (drone_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o\x1b[0m\n'}
+[8.462762] (drone_interfaces) StdoutLine: {'line': b'[  9%] Built target drone_interfaces__cpp\n'}
+[8.471529] (-) TimerEvent: {}
+[8.488924] (drone_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.546633] (drone_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o\x1b[0m\n'}
+[8.557081] (drone_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o\x1b[0m\n'}
+[8.569157] (drone_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.571653] (-) TimerEvent: {}
+[8.586015] (drone_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[8.672041] (-) TimerEvent: {}
+[8.772774] (-) TimerEvent: {}
+[8.806391] (drone_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking C shared library libdrone_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[8.873065] (-) TimerEvent: {}
+[8.937604] (drone_interfaces) StdoutLine: {'line': b'[ 15%] Built target drone_interfaces__rosidl_generator_c\n'}
+[8.973398] (-) TimerEvent: {}
+[8.981482] (drone_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.981863] (drone_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.981983] (drone_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[9.073644] (-) TimerEvent: {}
+[9.174967] (-) TimerEvent: {}
+[9.276323] (-) TimerEvent: {}
+[9.377654] (-) TimerEvent: {}
+[9.478893] (-) TimerEvent: {}
+[9.506932] (drone_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/yaw__type_support.cpp.o\x1b[0m\n'}
+[9.507788] (drone_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/panel_box__type_support.cpp.o\x1b[0m\n'}
+[9.531910] (drone_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/task__type_support.cpp.o\x1b[0m\n'}
+[9.579038] (-) TimerEvent: {}
+[9.679751] (-) TimerEvent: {}
+[9.780392] (-) TimerEvent: {}
+[9.880949] (-) TimerEvent: {}
+[9.981384] (-) TimerEvent: {}
+[10.081860] (-) TimerEvent: {}
+[10.114605] (drone_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/yaw__type_support.cpp.o\x1b[0m\n'}
+[10.134363] (drone_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/yaw__type_support.cpp.o\x1b[0m\n'}
+[10.182153] (-) TimerEvent: {}
+[10.281682] (drone_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.o\x1b[0m\n'}
+[10.282560] (-) TimerEvent: {}
+[10.288531] (drone_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/panel_box__type_support.cpp.o\x1b[0m\n'}
+[10.302726] (drone_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/task__type_support.cpp.o\x1b[0m\n'}
+[10.353070] (drone_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/raw_waypoint__type_support.cpp.o\x1b[0m\n'}
+[10.377114] (drone_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/panel_box__type_support.cpp.o\x1b[0m\n'}
+[10.378441] (drone_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/yaw__type_support.cpp.o\x1b[0m\n'}
+[10.382939] (-) TimerEvent: {}
+[10.384806] (drone_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.o\x1b[0m\n'}
+[10.438177] (drone_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/raw_waypoint__type_support.cpp.o\x1b[0m\n'}
+[10.483102] (-) TimerEvent: {}
+[10.501983] (drone_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.cpp.o\x1b[0m\n'}
+[10.583523] (-) TimerEvent: {}
+[10.601474] (drone_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.o\x1b[0m\n'}
+[10.663147] (drone_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.o\x1b[0m\n'}
+[10.664924] (drone_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/yaw__type_support.c.o\x1b[0m\n'}
+[10.683788] (-) TimerEvent: {}
+[10.707757] (drone_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.cpp.o\x1b[0m\n'}
+[10.753192] (drone_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/action/execute_waypoint__type_support.cpp.o\x1b[0m\n'}
+[10.784068] (-) TimerEvent: {}
+[10.814464] (drone_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.cpp.o\x1b[0m\n'}
+[10.828133] (drone_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/panel_box__type_support.c.o\x1b[0m\n'}
+[10.834781] (drone_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task__type_support.cpp.o\x1b[0m\n'}
+[10.845629] (drone_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[10.884873] (-) TimerEvent: {}
+[10.915561] (drone_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task__type_support.c.o\x1b[0m\n'}
+[10.985216] (-) TimerEvent: {}
+[10.994670] (drone_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.o\x1b[0m\n'}
+[11.060323] (drone_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/raw_waypoint__type_support.c.o\x1b[0m\n'}
+[11.082451] (drone_interfaces) StdoutLine: {'line': b'[ 46%] Built target drone_interfaces__rosidl_typesupport_c\n'}
+[11.085468] (-) TimerEvent: {}
+[11.122939] (drone_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__type_support.c.o\x1b[0m\n'}
+[11.125883] (drone_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.o\x1b[0m\n'}
+[11.185794] (-) TimerEvent: {}
+[11.191186] (drone_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.o\x1b[0m\n'}
+[11.197810] (drone_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/raw_waypoint__type_support.cpp.o\x1b[0m\n'}
+[11.256027] (drone_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/panel_box__type_support_c.cpp.o\x1b[0m\n'}
+[11.260107] (drone_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.o\x1b[0m\n'}
+[11.286166] (-) TimerEvent: {}
+[11.321810] (drone_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/action/detail/execute_waypoint__type_support.c.o\x1b[0m\n'}
+[11.363165] (drone_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.o\x1b[0m\n'}
+[11.386490] (-) TimerEvent: {}
+[11.487574] (-) TimerEvent: {}
+[11.517373] (drone_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking C shared library libdrone_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[11.587928] (-) TimerEvent: {}
+[11.689528] (-) TimerEvent: {}
+[11.690694] (drone_interfaces) StdoutLine: {'line': b'[ 55%] Built target drone_interfaces__rosidl_typesupport_introspection_c\n'}
+[11.716137] (drone_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_dispatch__type_support.cpp.o\x1b[0m\n'}
+[11.727447] (drone_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.o\x1b[0m\n'}
+[11.791576] (-) TimerEvent: {}
+[11.813129] (drone_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp.o\x1b[0m\n'}
+[11.821503] (drone_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.o\x1b[0m\n'}
+[11.828288] (drone_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/panel_box__type_support.cpp.o\x1b[0m\n'}
+[11.891746] (-) TimerEvent: {}
+[11.944712] (drone_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.o\x1b[0m\n'}
+[11.991951] (-) TimerEvent: {}
+[12.092556] (-) TimerEvent: {}
+[12.193138] (-) TimerEvent: {}
+[12.234943] (drone_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task__type_support.cpp.o\x1b[0m\n'}
+[12.237584] (drone_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/action/execute_waypoint__type_support.cpp.o\x1b[0m\n'}
+[12.293509] (-) TimerEvent: {}
+[12.297904] (drone_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/action/detail/execute_waypoint__type_support.cpp.o\x1b[0m\n'}
+[12.393828] (-) TimerEvent: {}
+[12.396525] (drone_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o\x1b[0m\n'}
+[12.494102] (-) TimerEvent: {}
+[12.517667] (drone_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o\x1b[0m\n'}
+[12.594433] (-) TimerEvent: {}
+[12.697748] (-) TimerEvent: {}
+[12.753183] (drone_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.o\x1b[0m\n'}
+[12.798078] (-) TimerEvent: {}
+[12.821446] (drone_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/raw_waypoint__type_support.cpp.o\x1b[0m\n'}
+[12.898395] (-) TimerEvent: {}
+[12.937851] (drone_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o\x1b[0m\n'}
+[12.998539] (-) TimerEvent: {}
+[13.077757] (drone_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o\x1b[0m\n'}
+[13.098735] (-) TimerEvent: {}
+[13.145179] (drone_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_dispatch__type_support.cpp.o\x1b[0m\n'}
+[13.198922] (-) TimerEvent: {}
+[13.299506] (-) TimerEvent: {}
+[13.381069] (drone_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.o\x1b[0m\n'}
+[13.399676] (-) TimerEvent: {}
+[13.500266] (-) TimerEvent: {}
+[13.600850] (-) TimerEvent: {}
+[13.632015] (drone_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.o\x1b[0m\n'}
+[13.701029] (-) TimerEvent: {}
+[13.755554] (drone_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[13.801202] (-) TimerEvent: {}
+[13.874288] (drone_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/action/detail/dds_fastrtps/execute_waypoint__type_support.cpp.o\x1b[0m\n'}
+[13.901385] (-) TimerEvent: {}
+[13.939543] (drone_interfaces) StdoutLine: {'line': b'[ 76%] Built target drone_interfaces__rosidl_typesupport_cpp\n'}
+[13.944025] (drone_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[13.953779] (drone_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o\x1b[0m\n'}
+[13.980665] (drone_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o\x1b[0m\n'}
+[14.001562] (-) TimerEvent: {}
+[14.102159] (-) TimerEvent: {}
+[14.202751] (-) TimerEvent: {}
+[14.303505] (-) TimerEvent: {}
+[14.406030] (-) TimerEvent: {}
+[14.462227] (drone_interfaces) StdoutLine: {'line': b'[ 80%] Built target drone_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[14.506248] (-) TimerEvent: {}
+[14.607281] (-) TimerEvent: {}
+[14.708487] (-) TimerEvent: {}
+[14.809983] (-) TimerEvent: {}
+[14.833453] (drone_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[14.910410] (-) TimerEvent: {}
+[15.011977] (-) TimerEvent: {}
+[15.106976] (drone_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[15.112236] (-) TimerEvent: {}
+[15.114372] (drone_interfaces) StdoutLine: {'line': b'[ 82%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[15.212856] (-) TimerEvent: {}
+[15.314430] (-) TimerEvent: {}
+[15.356350] (drone_interfaces) StdoutLine: {'line': b'[ 82%] Built target drone_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[15.414817] (-) TimerEvent: {}
+[15.435272] (drone_interfaces) StdoutLine: {'line': b'[ 82%] Built target drone_interfaces\n'}
+[15.515169] (-) TimerEvent: {}
+[15.529081] (drone_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[15.615280] (-) TimerEvent: {}
+[15.715871] (-) TimerEvent: {}
+[15.816390] (-) TimerEvent: {}
+[15.916765] (-) TimerEvent: {}
+[16.017061] (-) TimerEvent: {}
+[16.117352] (-) TimerEvent: {}
+[16.217610] (-) TimerEvent: {}
+[16.317892] (-) TimerEvent: {}
+[16.418374] (-) TimerEvent: {}
+[16.518882] (-) TimerEvent: {}
+[16.619336] (-) TimerEvent: {}
+[16.719732] (-) TimerEvent: {}
+[16.820477] (-) TimerEvent: {}
+[16.921497] (-) TimerEvent: {}
+[17.022458] (-) TimerEvent: {}
+[17.123601] (-) TimerEvent: {}
+[17.224741] (-) TimerEvent: {}
+[17.325860] (-) TimerEvent: {}
+[17.427049] (-) TimerEvent: {}
+[17.528115] (-) TimerEvent: {}
+[17.629183] (-) TimerEvent: {}
+[17.730365] (-) TimerEvent: {}
+[17.831641] (-) TimerEvent: {}
+[17.933178] (-) TimerEvent: {}
+[17.934643] (drone_interfaces) StdoutLine: {'line': b'[ 83%] Built target drone_interfaces__py\n'}
+[18.007188] (drone_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_yaw_s.c.o\x1b[0m\n'}
+[18.007972] (drone_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.o\x1b[0m\n'}
+[18.008351] (drone_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_raw_waypoint_s.c.o\x1b[0m\n'}
+[18.009450] (drone_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.o\x1b[0m\n'}
+[18.011388] (drone_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c.o\x1b[0m\n'}
+[18.014869] (drone_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.o\x1b[0m\n'}
+[18.016270] (drone_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_task_s.c.o\x1b[0m\n'}
+[18.017947] (drone_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_panel_box_s.c.o\x1b[0m\n'}
+[18.033497] (-) TimerEvent: {}
+[18.134308] (-) TimerEvent: {}
+[18.234827] (-) TimerEvent: {}
+[18.255193] (drone_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/action/_execute_waypoint_s.c.o\x1b[0m\n'}
+[18.335218] (-) TimerEvent: {}
+[18.436322] (-) TimerEvent: {}
+[18.537642] (-) TimerEvent: {}
+[18.575851] (drone_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/libdrone_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[18.638010] (-) TimerEvent: {}
+[18.734363] (drone_interfaces) StdoutLine: {'line': b'[ 93%] Built target drone_interfaces__rosidl_generator_py\n'}
+[18.738205] (-) TimerEvent: {}
+[18.789942] (drone_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[18.801925] (drone_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[18.809823] (drone_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[18.838626] (-) TimerEvent: {}
+[18.940036] (-) TimerEvent: {}
+[19.041570] (-) TimerEvent: {}
+[19.093972] (drone_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[19.134750] (drone_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[19.141614] (-) TimerEvent: {}
+[19.149096] (drone_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[19.241864] (-) TimerEvent: {}
+[19.257189] (drone_interfaces) StdoutLine: {'line': b'[100%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[19.299044] (drone_interfaces) StdoutLine: {'line': b'[100%] Built target drone_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[19.306828] (drone_interfaces) StdoutLine: {'line': b'[100%] Built target drone_interfaces__rosidl_typesupport_c__pyext\n'}
+[19.342245] (-) TimerEvent: {}
+[19.366961] (drone_interfaces) CommandEnded: {'returncode': 0}
+[19.370908] (drone_interfaces) JobProgress: {'identifier': 'drone_interfaces', 'progress': 'install'}
+[19.405937] (drone_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/orangepi/Multitask-Drone/build/drone_interfaces'], 'cwd': '/home/orangepi/Multitask-Drone/build/drone_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('no_proxy', 'localhost, 127.0.0.1'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'orangepi'), ('SSH_CLIENT', '192.168.137.1 37071 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/orangepi'), ('OLDPWD', '/home/orangepi'), ('TERM_PROGRAM_VERSION', '1.96.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-3fdf4e28-c376-4648-b179-39384abbc558.sock'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('https_proxy', 'http://192.168.137.1:5555'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'orangepi'), ('http_proxy', 'http://192.168.137.1:5555'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '5'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/remote-cli:/home/orangepi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d88bdced48.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/Multitask-Drone/build/drone_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.137.1 37071 192.168.137.2 22'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('UMS_FILE', '/userdata/ums_shared.img'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[19.442520] (-) TimerEvent: {}
+[19.444911] (drone_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.446327] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/ament_index/resource_index/rosidl_interfaces/drone_interfaces\n'}
+[19.447431] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.448112] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.448624] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/yolo_request.h\n'}
+[19.449304] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.450034] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__functions.c\n'}
+[19.451098] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__functions.c\n'}
+[19.451859] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.h\n'}
+[19.452484] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__functions.c\n'}
+[19.453536] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__struct.h\n'}
+[19.454242] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__struct.h\n'}
+[19.455007] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__functions.h\n'}
+[19.455547] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__functions.h\n'}
+[19.456165] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.h\n'}
+[19.456870] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__functions.h\n'}
+[19.457510] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__struct.h\n'}
+[19.458220] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__type_support.h\n'}
+[19.458934] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_push.h\n'}
+[19.459490] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_dispatch.h\n'}
+[19.459977] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.460331] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.460859] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.h\n'}
+[19.461555] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__struct.h\n'}
+[19.462210] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__functions.h\n'}
+[19.462655] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__functions.c\n'}
+[19.463273] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/execute_waypoint.h\n'}
+[19.463830] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.464590] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[19.465261] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/panel_box.h\n'}
+[19.465919] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.466381] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__functions.c\n'}
+[19.466870] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__type_support.h\n'}
+[19.467225] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__functions.c\n'}
+[19.468031] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__struct.h\n'}
+[19.468735] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__struct.h\n'}
+[19.469508] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.h\n'}
+[19.470002] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__functions.h\n'}
+[19.470672] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__struct.h\n'}
+[19.471201] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__functions.h\n'}
+[19.471939] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.h\n'}
+[19.472532] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__struct.h\n'}
+[19.473329] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__functions.c\n'}
+[19.473972] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__functions.h\n'}
+[19.474608] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.h\n'}
+[19.475372] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__functions.c\n'}
+[19.475847] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.h\n'}
+[19.476256] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__functions.h\n'}
+[19.476855] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__functions.h\n'}
+[19.477452] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__functions.c\n'}
+[19.478150] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__struct.h\n'}
+[19.478856] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/raw_waypoint.h\n'}
+[19.479496] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/yaw.h\n'}
+[19.479867] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task.h\n'}
+[19.480342] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task_state.h\n'}
+[19.480697] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/library_path.sh\n'}
+[19.481228] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/library_path.dsv\n'}
+[19.481828] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_c.so\n'}
+[19.482573] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_c.so" to ""\n'}
+[19.483022] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.483571] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.484232] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.484710] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_fastrtps_c.h\n'}
+[19.485146] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__rosidl_typesupport_fastrtps_c.h\n'}
+[19.485731] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_fastrtps_c.h\n'}
+[19.487302] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.487805] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.488198] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_fastrtps_c.h\n'}
+[19.488574] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.488934] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.489369] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_fastrtps_c.h\n'}
+[19.489744] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__rosidl_typesupport_fastrtps_c.h\n'}
+[19.490099] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_c.h\n'}
+[19.490456] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h\n'}
+[19.490841] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_fastrtps_c.h\n'}
+[19.491197] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[19.491552] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[19.491908] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[19.492266] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.492645] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.493015] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.493366] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_introspection_c.h\n'}
+[19.493725] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__type_support.c\n'}
+[19.494081] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.c\n'}
+[19.494441] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__rosidl_typesupport_introspection_c.h\n'}
+[19.494796] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.c\n'}
+[19.495155] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_introspection_c.h\n'}
+[19.495554] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.495909] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.496309] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.c\n'}
+[19.496670] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_introspection_c.h\n'}
+[19.497029] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.497383] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.497734] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.c\n'}
+[19.498089] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.c\n'}
+[19.498443] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_introspection_c.h\n'}
+[19.498797] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__type_support.c\n'}
+[19.499228] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_introspection_c.h\n'}
+[19.499625] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.c\n'}
+[19.499986] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_introspection_c.h\n'}
+[19.500370] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__rosidl_typesupport_introspection_c.h\n'}
+[19.500725] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.c\n'}
+[19.501078] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_introspection_c.h\n'}
+[19.501433] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[19.501787] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[19.502142] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[19.502495] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_c.so\n'}
+[19.502919] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[19.503279] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.503633] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.503987] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_dispatch.hpp\n'}
+[19.504343] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.504696] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__builder.hpp\n'}
+[19.505049] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__traits.hpp\n'}
+[19.505404] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__struct.hpp\n'}
+[19.505759] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.hpp\n'}
+[19.506145] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.hpp\n'}
+[19.506507] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__traits.hpp\n'}
+[19.506861] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__traits.hpp\n'}
+[19.507216] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__struct.hpp\n'}
+[19.507569] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__builder.hpp\n'}
+[19.507921] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__struct.hpp\n'}
+[19.508276] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__type_support.hpp\n'}
+[19.508630] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__builder.hpp\n'}
+[19.508986] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/yolo_request.hpp\n'}
+[19.509510] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_push.hpp\n'}
+[19.510198] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.510696] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.511111] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.hpp\n'}
+[19.511515] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__builder.hpp\n'}
+[19.511909] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__struct.hpp\n'}
+[19.512301] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__traits.hpp\n'}
+[19.512730] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/execute_waypoint.hpp\n'}
+[19.513155] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.513544] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.513927] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__traits.hpp\n'}
+[19.514311] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__type_support.hpp\n'}
+[19.514694] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__builder.hpp\n'}
+[19.515078] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__struct.hpp\n'}
+[19.515462] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__builder.hpp\n'}
+[19.515846] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__builder.hpp\n'}
+[19.516280] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__builder.hpp\n'}
+[19.516679] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.hpp\n'}
+[19.517061] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.hpp\n'}
+[19.517444] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.hpp\n'}
+[19.517822] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__builder.hpp\n'}
+[19.518203] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.hpp\n'}
+[19.518638] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__traits.hpp\n'}
+[19.519023] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__traits.hpp\n'}
+[19.519444] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__struct.hpp\n'}
+[19.519851] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__struct.hpp\n'}
+[19.520231] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__traits.hpp\n'}
+[19.520611] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__struct.hpp\n'}
+[19.521100] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__traits.hpp\n'}
+[19.521494] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__struct.hpp\n'}
+[19.521875] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/yaw.hpp\n'}
+[19.522258] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task.hpp\n'}
+[19.522666] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/panel_box.hpp\n'}
+[19.523079] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/raw_waypoint.hpp\n'}
+[19.523461] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[19.523847] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task_state.hpp\n'}
+[19.524229] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.524612] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.524992] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.525369] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.525752] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.526172] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/dds_fastrtps\n'}
+[19.526569] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.527009] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.527397] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.527780] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/dds_fastrtps\n'}
+[19.528162] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.528548] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.528931] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.529340] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.529757] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.530142] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.530522] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/dds_fastrtps\n'}
+[19.530901] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.531322] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.531603] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[19.531671] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[19.531758] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[19.531830] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.531898] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.531965] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.532033] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.532103] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.cpp\n'}
+[19.532185] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.532255] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.532325] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__type_support.cpp\n'}
+[19.532394] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.cpp\n'}
+[19.532462] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.532530] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.532598] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.532716] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.cpp\n'}
+[19.532791] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.532860] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.532928] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.532996] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.533065] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.cpp\n'}
+[19.533134] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.533202] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__type_support.cpp\n'}
+[19.533270] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.533338] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.cpp\n'}
+[19.533429] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.cpp\n'}
+[19.533504] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.cpp\n'}
+[19.533582] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.533652] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[19.533742] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[19.533814] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_cpp.so\n'}
+[19.533883] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[19.533953] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.sh\n'}
+[19.534021] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.dsv\n'}
+[19.534090] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info\n'}
+[19.534159] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[19.534227] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[19.534294] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[19.534363] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[19.534431] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces\n'}
+[19.534499] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/__init__.py\n'}
+[19.534566] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv\n'}
+[19.534634] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_dispatch.py\n'}
+[19.534702] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_dispatch_s.c\n'}
+[19.534770] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/__init__.py\n'}
+[19.534838] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_push_s.c\n'}
+[19.534907] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_push.py\n'}
+[19.534975] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_yolo_request.py\n'}
+[19.535055] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_yolo_request_s.c\n'}
+[19.535125] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action\n'}
+[19.535193] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/_execute_waypoint_s.c\n'}
+[19.535269] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/__init__.py\n'}
+[19.535339] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/_execute_waypoint.py\n'}
+[19.535409] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/libdrone_interfaces__rosidl_generator_py.so\n'}
+[19.535483] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[19.535555] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.535627] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[19.536233] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg\n'}
+[19.536322] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_yaw.py\n'}
+[19.536399] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_panel_box_s.c\n'}
+[19.536473] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/__init__.py\n'}
+[19.536543] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_yaw_s.c\n'}
+[19.536613] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task_state.py\n'}
+[19.536684] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_raw_waypoint.py\n'}
+[19.536754] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_raw_waypoint_s.c\n'}
+[19.536824] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task.py\n'}
+[19.536893] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task_s.c\n'}
+[19.536978] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task_state_s.c\n'}
+[19.537049] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_panel_box.py\n'}
+[19.537119] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.537191] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.537262] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[19.542578] (-) TimerEvent: {}
+[19.592426] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces'...\n"}
+[19.593375] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/__init__.py'...\n"}
+[19.593861] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action'...\n"}
+[19.594278] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/__init__.py'...\n"}
+[19.594681] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/_execute_waypoint.py'...\n"}
+[19.595153] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg'...\n"}
+[19.595560] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/__init__.py'...\n"}
+[19.596120] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_panel_box.py'...\n"}
+[19.596335] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_raw_waypoint.py'...\n"}
+[19.596496] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task.py'...\n"}
+[19.596650] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task_state.py'...\n"}
+[19.596804] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_yaw.py'...\n"}
+[19.596957] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv'...\n"}
+[19.597166] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/__init__.py'...\n"}
+[19.597324] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_dispatch.py'...\n"}
+[19.597500] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_push.py'...\n"}
+[19.597654] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_yolo_request.py'...\n"}
+[19.606850] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.607795] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[19.608499] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.608787] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[19.609140] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.609379] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[19.609636] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_py.so\n'}
+[19.610463] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_py.so" to ""\n'}
+[19.610738] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/Yaw.idl\n'}
+[19.610998] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/PanelBox.idl\n'}
+[19.611818] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/Task.idl\n'}
+[19.612417] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/TaskState.idl\n'}
+[19.612868] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/RawWaypoint.idl\n'}
+[19.613352] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch.idl\n'}
+[19.613722] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest.idl\n'}
+[19.614105] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskPush.idl\n'}
+[19.614416] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/action/ExecuteWaypoint.idl\n'}
+[19.614750] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/Yaw.msg\n'}
+[19.615137] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/PanelBox.msg\n'}
+[19.615434] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/Task.msg\n'}
+[19.615765] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/TaskState.msg\n'}
+[19.616269] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/RawWaypoint.msg\n'}
+[19.616615] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch.srv\n'}
+[19.617016] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch_Request.msg\n'}
+[19.617336] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch_Response.msg\n'}
+[19.617749] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest.srv\n'}
+[19.618144] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest_Request.msg\n'}
+[19.618365] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest_Response.msg\n'}
+[19.618593] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskPush.srv\n'}
+[19.618955] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskPush_Request.msg\n'}
+[19.619230] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskPush_Response.msg\n'}
+[19.619466] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/action/ExecuteWaypoint.action\n'}
+[19.619699] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/ament_index/resource_index/package_run_dependencies/drone_interfaces\n'}
+[19.620084] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/ament_index/resource_index/parent_prefix_path/drone_interfaces\n'}
+[19.620318] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.sh\n'}
+[19.620523] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.dsv\n'}
+[19.620716] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/path.sh\n'}
+[19.620943] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/path.dsv\n'}
+[19.621133] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/local_setup.bash\n'}
+[19.621350] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/local_setup.sh\n'}
+[19.621547] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/local_setup.zsh\n'}
+[19.621768] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/local_setup.dsv\n'}
+[19.621996] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.dsv\n'}
+[19.622220] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/ament_index/resource_index/packages/drone_interfaces\n'}
+[19.622502] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport.cmake\n'}
+[19.622974] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[19.623371] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[19.623750] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[19.624045] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[19.624483] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[19.624660] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[19.624948] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[19.625144] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cppExport.cmake\n'}
+[19.625336] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[19.625513] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[19.625917] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[19.626126] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[19.626421] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[19.626615] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[19.626805] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport.cmake\n'}
+[19.626995] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[19.627353] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[19.627535] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[19.627706] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[19.627875] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[19.628042] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[19.628209] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[19.628374] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[19.628540] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig.cmake\n'}
+[19.628705] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig-version.cmake\n'}
+[19.628955] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/orangepi/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.xml\n'}
+[19.639032] (drone_interfaces) CommandEnded: {'returncode': 0}
+[19.642954] (-) TimerEvent: {}
+[19.708886] (drone_interfaces) JobEnded: {'identifier': 'drone_interfaces', 'rc': 0}
+[19.711412] (drone_controller) JobStarted: {'identifier': 'drone_controller'}
+[19.717457] (drone_vision) JobStarted: {'identifier': 'drone_vision'}
+[19.743275] (-) TimerEvent: {}
+[19.844402] (-) TimerEvent: {}
+[19.945525] (-) TimerEvent: {}
+[20.046646] (-) TimerEvent: {}
+[20.147756] (-) TimerEvent: {}
+[20.249236] (-) TimerEvent: {}
+[20.350412] (-) TimerEvent: {}
+[20.451546] (-) TimerEvent: {}
+[20.554202] (-) TimerEvent: {}
+[20.655306] (-) TimerEvent: {}
+[20.756469] (-) TimerEvent: {}
+[20.857548] (-) TimerEvent: {}
+[20.958682] (-) TimerEvent: {}
+[21.060004] (-) TimerEvent: {}
+[21.159752] (drone_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_controller', 'build', '--build-base', '/home/orangepi/Multitask-Drone/build/drone_controller/build', 'install', '--record', '/home/orangepi/Multitask-Drone/build/drone_controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/orangepi/Multitask-Drone/src/drone_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'UMS_MOUNTPOINT': '/mnt/ums', 'GST_V4L2_PREFERRED_FOURCC': 'NV12:YU12:NV16:YUY2', 'no_proxy': 'localhost, 127.0.0.1', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'orangepi', 'SSH_CLIENT': '192.168.137.1 37071 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'USB_FUNCS': 'adb', 'LD_LIBRARY_PATH': '/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/orangepi', 'OLDPWD': '/home/orangepi', 'TERM_PROGRAM_VERSION': '1.96.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-3fdf4e28-c376-4648-b179-39384abbc558.sock', 'GST_INSPECT_NO_COLORS': '1', 'GST_MPP_NO_RGA': '1', 'ROS_PYTHON_VERSION': '3', 'COGL_DRIVER': 'gles2', 'VSCODE_GIT_ASKPASS_MAIN': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'https_proxy': 'http://192.168.137.1:5555', 'GST_V4L2SRC_MAX_RESOLUTION': '3840x2160', 'ROS_DISTRO': 'humble', 'LOGNAME': 'orangepi', 'http_proxy': 'http://192.168.137.1:5555', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GST_GL_API': 'gles2', 'XDG_SESSION_ID': '5', 'GST_VIDEO_CONVERT_PREFERRED_FORMAT': 'NV12:NV16:I420:YUY2', 'GST_V4L2SRC_RK_DEVICES': '_mainpath:_selfpath:_bypass:_scale', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/remote-cli:/home/orangepi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GST_GL_PLATFORM': 'egl', 'GST_DEBUG_NO_COLOR': '1', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'GST_V4L2SRC_DEFAULT_DEVICE': '/dev/video-camera0', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d88bdced48.sock', 'TERM_PROGRAM': 'vscode', 'GST_V4L2_USE_LIBV4L2': '1', 'UMS_SIZE': '256M', 'AMENT_PREFIX_PATH': '/home/orangepi/Multitask-Drone/install/drone_interfaces:/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'UMS_RO': '0', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'UMS_FSTYPE': 'vfat', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/orangepi/Multitask-Drone/build/drone_controller', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 37071 192.168.137.2 22', 'PYTHONPATH': '/home/orangepi/Multitask-Drone/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'UMS_MOUNT': '0', 'COLCON': '1', 'UMS_FILE': '/userdata/ums_shared.img', 'CMAKE_PREFIX_PATH': '/home/orangepi/Multitask-Drone/install/drone_interfaces'}, 'shell': False}
+[21.168563] (-) TimerEvent: {}
+[21.171334] (drone_vision) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_vision', 'build', '--build-base', '/home/orangepi/Multitask-Drone/build/drone_vision/build', 'install', '--record', '/home/orangepi/Multitask-Drone/build/drone_vision/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/orangepi/Multitask-Drone/src/drone_vision', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'UMS_MOUNTPOINT': '/mnt/ums', 'GST_V4L2_PREFERRED_FOURCC': 'NV12:YU12:NV16:YUY2', 'no_proxy': 'localhost, 127.0.0.1', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'orangepi', 'SSH_CLIENT': '192.168.137.1 37071 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'USB_FUNCS': 'adb', 'LD_LIBRARY_PATH': '/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/orangepi', 'OLDPWD': '/home/orangepi', 'TERM_PROGRAM_VERSION': '1.96.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-3fdf4e28-c376-4648-b179-39384abbc558.sock', 'GST_INSPECT_NO_COLORS': '1', 'GST_MPP_NO_RGA': '1', 'ROS_PYTHON_VERSION': '3', 'COGL_DRIVER': 'gles2', 'VSCODE_GIT_ASKPASS_MAIN': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'https_proxy': 'http://192.168.137.1:5555', 'GST_V4L2SRC_MAX_RESOLUTION': '3840x2160', 'ROS_DISTRO': 'humble', 'LOGNAME': 'orangepi', 'http_proxy': 'http://192.168.137.1:5555', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GST_GL_API': 'gles2', 'XDG_SESSION_ID': '5', 'GST_VIDEO_CONVERT_PREFERRED_FORMAT': 'NV12:NV16:I420:YUY2', 'GST_V4L2SRC_RK_DEVICES': '_mainpath:_selfpath:_bypass:_scale', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/orangepi/.vscode-server/cli/servers/Stable-fabdb6a30b49f79a7aba0f2ad9df9b399473380f/server/bin/remote-cli:/home/orangepi/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GST_GL_PLATFORM': 'egl', 'GST_DEBUG_NO_COLOR': '1', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'GST_V4L2SRC_DEFAULT_DEVICE': '/dev/video-camera0', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-d88bdced48.sock', 'TERM_PROGRAM': 'vscode', 'GST_V4L2_USE_LIBV4L2': '1', 'UMS_SIZE': '256M', 'AMENT_PREFIX_PATH': '/home/orangepi/Multitask-Drone/install/drone_interfaces:/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'UMS_RO': '0', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'UMS_FSTYPE': 'vfat', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/orangepi/Multitask-Drone/build/drone_vision', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.137.1 37071 192.168.137.2 22', 'PYTHONPATH': '/home/orangepi/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'UMS_MOUNT': '0', 'COLCON': '1', 'UMS_FILE': '/userdata/ums_shared.img', 'CMAKE_PREFIX_PATH': '/home/orangepi/Multitask-Drone/install/drone_interfaces'}, 'shell': False}
+[21.268952] (-) TimerEvent: {}
+[21.370176] (-) TimerEvent: {}
+[21.471278] (-) TimerEvent: {}
+[21.528111] (drone_controller) StdoutLine: {'line': b'running egg_info\n'}
+[21.529077] (drone_controller) StdoutLine: {'line': b'creating ../../build/drone_controller/drone_controller.egg-info\n'}
+[21.529581] (drone_controller) StdoutLine: {'line': b'writing ../../build/drone_controller/drone_controller.egg-info/PKG-INFO\n'}
+[21.529970] (drone_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_controller/drone_controller.egg-info/dependency_links.txt\n'}
+[21.530395] (drone_controller) StdoutLine: {'line': b'writing entry points to ../../build/drone_controller/drone_controller.egg-info/entry_points.txt\n'}
+[21.530753] (drone_controller) StdoutLine: {'line': b'writing requirements to ../../build/drone_controller/drone_controller.egg-info/requires.txt\n'}
+[21.531107] (drone_controller) StdoutLine: {'line': b'writing top-level names to ../../build/drone_controller/drone_controller.egg-info/top_level.txt\n'}
+[21.531463] (drone_controller) StdoutLine: {'line': b"writing manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'\n"}
+[21.534879] (drone_controller) StdoutLine: {'line': b"reading manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'\n"}
+[21.535421] (drone_controller) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[21.536078] (drone_controller) StdoutLine: {'line': b"writing manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'\n"}
+[21.536495] (drone_controller) StdoutLine: {'line': b'running build\n'}
+[21.536909] (drone_controller) StdoutLine: {'line': b'running build_py\n'}
+[21.537285] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_controller/build\n'}
+[21.537703] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_controller/build/lib\n'}
+[21.538117] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[21.538518] (drone_controller) StdoutLine: {'line': b'copying drone_controller/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[21.538897] (drone_controller) StdoutLine: {'line': b'copying drone_controller/constant.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[21.539269] (drone_controller) StdoutLine: {'line': b'copying drone_controller/utils.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[21.539690] (drone_controller) StdoutLine: {'line': b'copying drone_controller/drone_controller.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[21.540045] (drone_controller) StdoutLine: {'line': b'copying drone_controller/yiku_test.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[21.540410] (drone_controller) StdoutLine: {'line': b'copying drone_controller/config.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[21.540762] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task\n'}
+[21.541125] (drone_controller) StdoutLine: {'line': b'copying drone_controller/task/task_executor.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task\n'}
+[21.541480] (drone_controller) StdoutLine: {'line': b'copying drone_controller/task/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task\n'}
+[21.541832] (drone_controller) StdoutLine: {'line': b'copying drone_controller/task/task_handler.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task\n'}
+[21.542184] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[21.542557] (drone_controller) StdoutLine: {'line': b'copying drone_controller/waypoint/waypoint_handler.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[21.543048] (drone_controller) StdoutLine: {'line': b'copying drone_controller/waypoint/waypoint_task_executor_test.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[21.543487] (drone_controller) StdoutLine: {'line': b'copying drone_controller/waypoint/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[21.543905] (drone_controller) StdoutLine: {'line': b'copying drone_controller/waypoint/waypoint_task_executor.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[21.544288] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload\n'}
+[21.544688] (drone_controller) StdoutLine: {'line': b'copying drone_controller/payload/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload\n'}
+[21.545224] (drone_controller) StdoutLine: {'line': b'copying drone_controller/payload/payload_controller.py -> /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload\n'}
+[21.545580] (drone_controller) StdoutLine: {'line': b'running install\n'}
+[21.546034] (drone_controller) StdoutLine: {'line': b'running install_lib\n'}
+[21.546565] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[21.546925] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[21.547287] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[21.547700] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_handler.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[21.548301] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_task_executor_test.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[21.548847] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[21.549299] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_task_executor.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[21.549681] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/constant.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[21.550326] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload\n'}
+[21.550758] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload\n'}
+[21.551119] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload/payload_controller.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload\n'}
+[21.551480] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/utils.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[21.551841] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/drone_controller.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[21.552197] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/yiku_test.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[21.552555] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task\n'}
+[21.552956] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task/task_executor.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task\n'}
+[21.553416] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task\n'}
+[21.553873] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task/task_handler.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task\n'}
+[21.554231] (drone_controller) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_controller/build/lib/drone_controller/config.py -> /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[21.554614] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/__init__.py to __init__.cpython-310.pyc\n'}
+[21.554969] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_handler.py to waypoint_handler.cpython-310.pyc\n'}
+[21.555479] (drone_vision) StdoutLine: {'line': b'running egg_info\n'}
+[21.555970] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_task_executor_test.py to waypoint_task_executor_test.cpython-310.pyc\n'}
+[21.556435] (drone_vision) StdoutLine: {'line': b'creating ../../build/drone_vision/drone_vision.egg-info\n'}
+[21.557091] (drone_vision) StdoutLine: {'line': b'writing ../../build/drone_vision/drone_vision.egg-info/PKG-INFO\n'}
+[21.557710] (drone_vision) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_vision/drone_vision.egg-info/dependency_links.txt\n'}
+[21.558528] (drone_vision) StdoutLine: {'line': b'writing entry points to ../../build/drone_vision/drone_vision.egg-info/entry_points.txt\n'}
+[21.558950] (drone_vision) StdoutLine: {'line': b'writing requirements to ../../build/drone_vision/drone_vision.egg-info/requires.txt\n'}
+[21.559402] (drone_vision) StdoutLine: {'line': b'writing top-level names to ../../build/drone_vision/drone_vision.egg-info/top_level.txt\n'}
+[21.559837] (drone_vision) StdoutLine: {'line': b"writing manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'\n"}
+[21.560196] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/__init__.py to __init__.cpython-310.pyc\n'}
+[21.560588] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_task_executor.py to waypoint_task_executor.cpython-310.pyc\n'}
+[21.560958] (drone_vision) StdoutLine: {'line': b"reading manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'\n"}
+[21.561474] (drone_vision) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[21.562273] (drone_vision) StdoutLine: {'line': b"writing manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'\n"}
+[21.562718] (drone_vision) StdoutLine: {'line': b'running build\n'}
+[21.563174] (drone_vision) StdoutLine: {'line': b'running build_py\n'}
+[21.563611] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/constant.py to constant.cpython-310.pyc\n'}
+[21.564107] (drone_vision) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_vision/build\n'}
+[21.564479] (drone_vision) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_vision/build/lib\n'}
+[21.564914] (drone_vision) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision\n'}
+[21.565488] (drone_vision) StdoutLine: {'line': b'copying drone_vision/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision\n'}
+[21.565854] (drone_vision) StdoutLine: {'line': b'copying drone_vision/object_detector.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision\n'}
+[21.566261] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload/__init__.py to __init__.cpython-310.pyc\n'}
+[21.566729] (drone_vision) StdoutLine: {'line': b'copying drone_vision/config.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision\n'}
+[21.567357] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload/payload_controller.py to payload_controller.cpython-310.pyc\n'}
+[21.567921] (drone_vision) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils\n'}
+[21.568368] (drone_vision) StdoutLine: {'line': b'copying drone_vision/utils/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils\n'}
+[21.568728] (drone_vision) StdoutLine: {'line': b'copying drone_vision/utils/rknn_executor.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils\n'}
+[21.569086] (drone_vision) StdoutLine: {'line': b'copying drone_vision/utils/bound_detector.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils\n'}
+[21.569481] (drone_vision) StdoutLine: {'line': b'copying drone_vision/utils/rknn_helper.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils\n'}
+[21.569847] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/utils.py to utils.cpython-310.pyc\n'}
+[21.570237] (drone_vision) StdoutLine: {'line': b'copying drone_vision/utils/coco_helper.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils\n'}
+[21.570678] (drone_vision) StdoutLine: {'line': b'running install\n'}
+[21.571032] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/drone_controller.py to drone_controller.cpython-310.pyc\n'}
+[21.571392] (-) TimerEvent: {}
+[21.571991] (drone_vision) StdoutLine: {'line': b'running install_lib\n'}
+[21.572661] (drone_vision) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision\n'}
+[21.573271] (drone_vision) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision\n'}
+[21.573640] (drone_vision) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils\n'}
+[21.574000] (drone_vision) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils\n'}
+[21.574362] (drone_vision) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/rknn_executor.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils\n'}
+[21.574759] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/yiku_test.py to yiku_test.cpython-310.pyc\n'}
+[21.575153] (drone_vision) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/bound_detector.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils\n'}
+[21.575517] (drone_vision) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/rknn_helper.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils\n'}
+[21.575878] (drone_vision) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/coco_helper.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils\n'}
+[21.576312] (drone_vision) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/object_detector.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision\n'}
+[21.576675] (drone_vision) StdoutLine: {'line': b'copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/config.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision\n'}
+[21.577033] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task/task_executor.py to task_executor.cpython-310.pyc\n'}
+[21.577524] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/__init__.py to __init__.cpython-310.pyc\n'}
+[21.577884] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/__init__.py to __init__.cpython-310.pyc\n'}
+[21.578352] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/rknn_executor.py to rknn_executor.cpython-310.pyc\n'}
+[21.578720] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/bound_detector.py to bound_detector.cpython-310.pyc\n'}
+[21.579080] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task/__init__.py to __init__.cpython-310.pyc\n'}
+[21.579494] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task/task_handler.py to task_handler.cpython-310.pyc\n'}
+[21.579873] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/rknn_helper.py to rknn_helper.cpython-310.pyc\n'}
+[21.580246] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/config.py to config.cpython-310.pyc\n'}
+[21.580619] (drone_controller) StdoutLine: {'line': b'running install_data\n'}
+[21.580985] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_controller/share/ament_index\n'}
+[21.581375] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_controller/share/ament_index/resource_index\n'}
+[21.582058] (drone_controller) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_controller/share/ament_index/resource_index/packages\n'}
+[21.582433] (drone_controller) StdoutLine: {'line': b'copying resource/drone_controller -> /home/orangepi/Multitask-Drone/install/drone_controller/share/ament_index/resource_index/packages\n'}
+[21.582837] (drone_controller) StdoutLine: {'line': b'copying package.xml -> /home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller\n'}
+[21.583204] (drone_controller) StdoutLine: {'line': b'copying launch/drone_controller.launch.py -> /home/orangepi/Multitask-Drone/install/drone_controller/share/drone_controller\n'}
+[21.583560] (drone_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[21.583913] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/coco_helper.py to coco_helper.cpython-310.pyc\n'}
+[21.584298] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/object_detector.py to object_detector.cpython-310.pyc\n'}
+[21.584660] (drone_controller) StdoutLine: {'line': b'Copying ../../build/drone_controller/drone_controller.egg-info to /home/orangepi/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller-0.0.0-py3.10.egg-info\n'}
+[21.585119] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/config.py to config.cpython-310.pyc\n'}
+[21.585484] (drone_vision) StdoutLine: {'line': b'running install_data\n'}
+[21.585841] (drone_vision) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_vision/share/ament_index\n'}
+[21.586252] (drone_vision) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_vision/share/ament_index/resource_index\n'}
+[21.586613] (drone_vision) StdoutLine: {'line': b'creating /home/orangepi/Multitask-Drone/install/drone_vision/share/ament_index/resource_index/packages\n'}
+[21.586969] (drone_vision) StdoutLine: {'line': b'copying resource/drone_vision -> /home/orangepi/Multitask-Drone/install/drone_vision/share/ament_index/resource_index/packages\n'}
+[21.587331] (drone_vision) StdoutLine: {'line': b'copying package.xml -> /home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision\n'}
+[21.587692] (drone_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[21.588073] (drone_vision) StdoutLine: {'line': b'copying launch/drone_vision.launch.py -> /home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision\n'}
+[21.588428] (drone_vision) StdoutLine: {'line': b'running install_egg_info\n'}
+[21.588777] (drone_vision) StdoutLine: {'line': b'Copying ../../build/drone_vision/drone_vision.egg-info to /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision-0.0.0-py3.10.egg-info\n'}
+[21.589132] (drone_vision) StdoutLine: {'line': b'running install_scripts\n'}
+[21.614194] (drone_controller) StdoutLine: {'line': b'Installing drone_controller script to /home/orangepi/Multitask-Drone/install/drone_controller/lib/drone_controller\n'}
+[21.615178] (drone_controller) StdoutLine: {'line': b'Installing task_executor script to /home/orangepi/Multitask-Drone/install/drone_controller/lib/drone_controller\n'}
+[21.615794] (drone_controller) StdoutLine: {'line': b'Installing waypoint_handler script to /home/orangepi/Multitask-Drone/install/drone_controller/lib/drone_controller\n'}
+[21.616214] (drone_controller) StdoutLine: {'line': b'Installing yiku_test script to /home/orangepi/Multitask-Drone/install/drone_controller/lib/drone_controller\n'}
+[21.616575] (drone_controller) StdoutLine: {'line': b"writing list of installed files to '/home/orangepi/Multitask-Drone/build/drone_controller/install.log'\n"}
+[21.618485] (drone_vision) StdoutLine: {'line': b'Installing object_detector script to /home/orangepi/Multitask-Drone/install/drone_vision/lib/drone_vision\n'}
+[21.619448] (drone_vision) StdoutLine: {'line': b"writing list of installed files to '/home/orangepi/Multitask-Drone/build/drone_vision/install.log'\n"}
+[21.671958] (-) TimerEvent: {}
+[21.721206] (drone_controller) CommandEnded: {'returncode': 0}
+[21.748040] (drone_controller) JobEnded: {'identifier': 'drone_controller', 'rc': 0}
+[21.753069] (drone_vision) CommandEnded: {'returncode': 0}
+[21.772563] (-) TimerEvent: {}
+[21.779326] (drone_vision) JobEnded: {'identifier': 'drone_vision', 'rc': 0}
+[21.782058] (-) EventReactorShutdown: {}

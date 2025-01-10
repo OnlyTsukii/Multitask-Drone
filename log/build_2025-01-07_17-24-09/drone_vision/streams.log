@@ -1,0 +1,59 @@
+[1.455s] Invoking command in '/home/orangepi/Multitask-Drone/src/drone_vision': AMENT_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_vision build --build-base /home/orangepi/Multitask-Drone/build/drone_vision/build install --record /home/orangepi/Multitask-Drone/build/drone_vision/install.log --single-version-externally-managed install_data
+[1.838s] running egg_info
+[1.839s] creating ../../build/drone_vision/drone_vision.egg-info
+[1.839s] writing ../../build/drone_vision/drone_vision.egg-info/PKG-INFO
+[1.840s] writing dependency_links to ../../build/drone_vision/drone_vision.egg-info/dependency_links.txt
+[1.841s] writing entry points to ../../build/drone_vision/drone_vision.egg-info/entry_points.txt
+[1.841s] writing requirements to ../../build/drone_vision/drone_vision.egg-info/requires.txt
+[1.841s] writing top-level names to ../../build/drone_vision/drone_vision.egg-info/top_level.txt
+[1.842s] writing manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'
+[1.843s] reading manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'
+[1.844s] adding license file 'LICENSE'
+[1.844s] writing manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'
+[1.845s] running build
+[1.845s] running build_py
+[1.846s] creating /home/orangepi/Multitask-Drone/build/drone_vision/build
+[1.847s] creating /home/orangepi/Multitask-Drone/build/drone_vision/build/lib
+[1.847s] creating /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision
+[1.848s] copying drone_vision/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision
+[1.848s] copying drone_vision/object_detector.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision
+[1.849s] copying drone_vision/config.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision
+[1.850s] creating /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils
+[1.850s] copying drone_vision/utils/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils
+[1.851s] copying drone_vision/utils/rknn_executor.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils
+[1.851s] copying drone_vision/utils/bound_detector.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils
+[1.851s] copying drone_vision/utils/rknn_helper.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils
+[1.852s] copying drone_vision/utils/coco_helper.py -> /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils
+[1.853s] running install
+[1.854s] running install_lib
+[1.855s] creating /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision
+[1.855s] copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision
+[1.856s] creating /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils
+[1.856s] copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils
+[1.856s] copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/rknn_executor.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils
+[1.857s] copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/bound_detector.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils
+[1.858s] copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/rknn_helper.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils
+[1.858s] copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils/coco_helper.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils
+[1.858s] copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/object_detector.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision
+[1.859s] copying /home/orangepi/Multitask-Drone/build/drone_vision/build/lib/drone_vision/config.py -> /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision
+[1.860s] byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/__init__.py to __init__.cpython-310.pyc
+[1.860s] byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/__init__.py to __init__.cpython-310.pyc
+[1.860s] byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/rknn_executor.py to rknn_executor.cpython-310.pyc
+[1.861s] byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/bound_detector.py to bound_detector.cpython-310.pyc
+[1.862s] byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/rknn_helper.py to rknn_helper.cpython-310.pyc
+[1.866s] byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils/coco_helper.py to coco_helper.cpython-310.pyc
+[1.866s] byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/object_detector.py to object_detector.cpython-310.pyc
+[1.867s] byte-compiling /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/config.py to config.cpython-310.pyc
+[1.867s] running install_data
+[1.868s] creating /home/orangepi/Multitask-Drone/install/drone_vision/share/ament_index
+[1.868s] creating /home/orangepi/Multitask-Drone/install/drone_vision/share/ament_index/resource_index
+[1.869s] creating /home/orangepi/Multitask-Drone/install/drone_vision/share/ament_index/resource_index/packages
+[1.869s] copying resource/drone_vision -> /home/orangepi/Multitask-Drone/install/drone_vision/share/ament_index/resource_index/packages
+[1.869s] copying package.xml -> /home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision
+[1.870s] copying launch/drone_vision.launch.py -> /home/orangepi/Multitask-Drone/install/drone_vision/share/drone_vision
+[1.870s] running install_egg_info
+[1.871s] Copying ../../build/drone_vision/drone_vision.egg-info to /home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision-0.0.0-py3.10.egg-info
+[1.872s] running install_scripts
+[1.901s] Installing object_detector script to /home/orangepi/Multitask-Drone/install/drone_vision/lib/drone_vision
+[1.902s] writing list of installed files to '/home/orangepi/Multitask-Drone/build/drone_vision/install.log'
+[2.036s] Invoked command in '/home/orangepi/Multitask-Drone/src/drone_vision' returned '0': AMENT_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/orangepi/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/orangepi/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_vision build --build-base /home/orangepi/Multitask-Drone/build/drone_vision/build install --record /home/orangepi/Multitask-Drone/build/drone_vision/install.log --single-version-externally-managed install_data

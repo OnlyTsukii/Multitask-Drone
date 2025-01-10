@@ -1,0 +1,34 @@
+[1.042s] Invoking command in '/home/orangepi/Multitask-Drone/src/drone_monitor': PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_monitor build --build-base /home/orangepi/Multitask-Drone/build/drone_monitor/build install --record /home/orangepi/Multitask-Drone/build/drone_monitor/install.log --single-version-externally-managed install_data
+[1.413s] running egg_info
+[1.414s] creating ../../build/drone_monitor/drone_monitor.egg-info
+[1.415s] writing ../../build/drone_monitor/drone_monitor.egg-info/PKG-INFO
+[1.416s] writing dependency_links to ../../build/drone_monitor/drone_monitor.egg-info/dependency_links.txt
+[1.416s] writing entry points to ../../build/drone_monitor/drone_monitor.egg-info/entry_points.txt
+[1.417s] writing requirements to ../../build/drone_monitor/drone_monitor.egg-info/requires.txt
+[1.417s] writing top-level names to ../../build/drone_monitor/drone_monitor.egg-info/top_level.txt
+[1.417s] writing manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'
+[1.419s] reading manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'
+[1.420s] adding license file 'LICENSE'
+[1.421s] writing manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'
+[1.421s] running build
+[1.421s] running build_py
+[1.422s] creating /home/orangepi/Multitask-Drone/build/drone_monitor/build
+[1.422s] creating /home/orangepi/Multitask-Drone/build/drone_monitor/build/lib
+[1.423s] creating /home/orangepi/Multitask-Drone/build/drone_monitor/build/lib/src
+[1.423s] copying src/__init__.py -> /home/orangepi/Multitask-Drone/build/drone_monitor/build/lib/src
+[1.423s] running install
+[1.424s] running install_lib
+[1.425s] creating /home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src
+[1.425s] copying /home/orangepi/Multitask-Drone/build/drone_monitor/build/lib/src/__init__.py -> /home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src
+[1.425s] byte-compiling /home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src/__init__.py to __init__.cpython-310.pyc
+[1.426s] running install_data
+[1.426s] creating /home/orangepi/Multitask-Drone/install/drone_monitor/share/ament_index
+[1.426s] creating /home/orangepi/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index
+[1.427s] creating /home/orangepi/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index/packages
+[1.427s] copying resource/drone_monitor -> /home/orangepi/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index/packages
+[1.427s] copying package.xml -> /home/orangepi/Multitask-Drone/install/drone_monitor/share/drone_monitor
+[1.428s] running install_egg_info
+[1.428s] Copying ../../build/drone_monitor/drone_monitor.egg-info to /home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/drone_monitor-0.0.0-py3.10.egg-info
+[1.429s] running install_scripts
+[1.470s] writing list of installed files to '/home/orangepi/Multitask-Drone/build/drone_monitor/install.log'
+[1.585s] Invoked command in '/home/orangepi/Multitask-Drone/src/drone_monitor' returned '0': PYTHONPATH=/home/orangepi/Multitask-Drone/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_monitor build --build-base /home/orangepi/Multitask-Drone/build/drone_monitor/build install --record /home/orangepi/Multitask-Drone/build/drone_monitor/install.log --single-version-externally-managed install_data

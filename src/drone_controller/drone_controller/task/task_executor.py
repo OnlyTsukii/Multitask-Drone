@@ -104,23 +104,23 @@ class TaskExecutor(Node):
             self.get_logger().error(f'Failed to set mode to {mode}.')
             return False
     
-    # def land(self):
-    #     rclpy.spin_once(self)
-    #     req = CommandTOL.Request()
-    #     req.latitude = self.gps_fix.latitude
-    #     req.longitude = self.gps_fix.longitude
+    def land(self):
+        rclpy.spin_once(self)
+        req = CommandTOL.Request()
+        req.latitude = self.gps_fix.latitude
+        req.longitude = self.gps_fix.longitude
 
-    #     future = self.land_client.call_async(req)
-    #     rclpy.spin_until_future_complete(self, future)
+        future = self.land_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
         
-    #     if future.result().success:
-    #         while self.state.armed:
-    #             rclpy.spin_once(self)
-    #             time.sleep(0.3)
-    #         self.get_logger().info('Drone landed successfully.')
-    #         self.has_takeoff = False
-    #     else:
-    #         self.get_logger().error('Failed to land.')
+        if future.result().success:
+            while self.state.armed:
+                rclpy.spin_once(self)
+                time.sleep(0.3)
+            self.get_logger().info('Drone landed successfully.')
+            self.has_takeoff = False
+        else:
+            self.get_logger().error('Failed to land.')
 
     def execute_takeoff(self, id, altitude=DEFAULT_TAKEOFF_ALTITUDE):
         rclpy.spin_once(self)
@@ -140,23 +140,23 @@ class TaskExecutor(Node):
         self.get_logger().info('Drone takeoff successfully.')
         self.has_takeoff = True
 
-    def execute_land(self, id):
-        rclpy.spin_once(self)
+    # def execute_land(self, id):
+    #     rclpy.spin_once(self)
 
-        land_wp = RawWaypoint(
-            id = id,
-            type = TYPE_LAND,
-            mission = MISSION_NONE,
-            latitude=self.gps_fix.latitude,
-            longitude=self.gps_fix.longitude,
-            altitude=0.0,
-            velocity=-1*DEFAULT_VERTICAL_VEL
-        )
+    #     land_wp = RawWaypoint(
+    #         id = id,
+    #         type = TYPE_LAND,
+    #         mission = MISSION_NONE,
+    #         latitude=self.gps_fix.latitude,
+    #         longitude=self.gps_fix.longitude,
+    #         altitude=0.0,
+    #         velocity=-1*DEFAULT_VERTICAL_VEL
+    #     )
 
-        self.send_waypoint_action(land_wp)
+    #     self.send_waypoint_action(land_wp)
 
-        self.get_logger().info('Drone land successfully.')
-        self.has_takeoff = False
+    #     self.get_logger().info('Drone land successfully.')
+    #     self.has_takeoff = False
 
     def execute_rotate(self, id, target_wp):
         """
@@ -215,9 +215,9 @@ class TaskExecutor(Node):
                     self.send_waypoint_action(waypoint, True)
                     next_waypoint_id += 1
                     
-                    if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
-                        self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
-                        next_waypoint_id += 1
+                    # if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
+                    #     self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
+                    #     next_waypoint_id += 1
 
                     index += 1
 
@@ -227,10 +227,10 @@ class TaskExecutor(Node):
                     json.dump(self.feedback, json_file, indent=4)  
             else:
                 if self.has_takeoff:
-                    self.execute_land(next_waypoint_id)
-                    next_waypoint_id = 0
-                    # self.land()
-                    self.set_mode("AUTO.LOITER")
+                    # self.execute_land(next_waypoint_id)
+                    # next_waypoint_id = 0
+                    self.land()
+                    # self.set_mode("AUTO.LOITER")
 
     def send_waypoint_action(self, waypoint, join_feedback=False):
         """

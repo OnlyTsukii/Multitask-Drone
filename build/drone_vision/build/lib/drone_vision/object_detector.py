@@ -88,6 +88,8 @@ class ObjectDetector(Node):
         if not self.has_frame:
             return
 
+        # self.get_logger().info("got an image")
+
         if self.counter % 5 == 0:
             self.save_img(CLEAN_RAW_IMAGE_PATH, self.frame)
             self.counter = 0
