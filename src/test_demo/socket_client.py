@@ -13,12 +13,16 @@ MISSION_LOCAL_CLEAN     = 1
 MISSION_LOCAL_CAPTURE   = 2
 
 
+# data = [
+#     {'latitude': 31.3103954421165, 'longitude': 120.6353975762323, 'altitude': 15, 'type': 2, 'mission': 2, 'velocity': 1},
+#     {'latitude': 31.31030895219921, 'longitude': 120.6356110476122, 'altitude': 15, 'type': 2, 'mission': 2, 'velocity': 1},
+#     {'latitude': 31.31032775443108, 'longitude': 120.6358223180631, 'altitude': 15, 'type': 2, 'mission': 2, 'velocity': 1},
+# ]
+# 120.6354806816461,31.31033444464784,0 120.6357004193035,31.31028382509383,0 
 data = [
-    {'latitude': 31.3103954421165, 'longitude': 120.6353975762323, 'altitude': 15, 'type': 2, 'mission': 2, 'velocity': 1},
-    {'latitude': 31.31030895219921, 'longitude': 120.6356110476122, 'altitude': 15, 'type': 2, 'mission': 2, 'velocity': 1},
-    {'latitude': 31.31032775443108, 'longitude': 120.6358223180631, 'altitude': 15, 'type': 2, 'mission': 2, 'velocity': 1},
+    {'latitude': 31.31033444464784, 'longitude': 120.6354806816461, 'altitude': 10, 'type': 2, 'mission': 2, 'velocity': 1},
+    {'latitude': 31.31028382509383, 'longitude': 120.6357004193035, 'altitude': 10, 'type': 2, 'mission': 1, 'velocity': 1},
 ]
-
 
 async def send_and_receive_data():
     uri = "ws://127.0.0.1:8765"  

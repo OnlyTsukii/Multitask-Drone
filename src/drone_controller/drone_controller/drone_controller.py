@@ -58,26 +58,20 @@ class DroneController(Node):
 
         while time.time() - self.state.header.stamp.sec > 1:
             rclpy.spin_once(self)
-        # self.get_logger().info(f"{self.state}")
-        if not self.state.connected or self.state.mode == 'OFFBOARD' or self.state.mode == 'AUTO.LAND':
+
+        if not self.state.connected or self.state.mode == 'OFFBOARD':
             return False
         
-        # if self.state.mode == 'OFFBOARD' and self.state.armed:
-        #     return True
-        
-        for _ in range(10):
-            self.init_pose()
+        for _ in range(5):
             res = self.set_mode('OFFBOARD')
             if res:
                 break
             time.sleep(2)
         if not res:
+            self.get_logger().info("set mode failed")
             return False
         
-        res = self.arm_drone()
-        if not res:
-            self.set_mode("AUTO.LOITER")
-        return res
+        return self.arm_drone()
     
     def init_pose(self, time_sec=1.5):
         waypoint = PoseStamped()
@@ -97,7 +91,8 @@ class DroneController(Node):
         future = self.task_client.call_async(request)
 
         while not future.done():
-            self.init_pose(0.5)
+            # self.init_pose(0.5)
+            time.sleep(0.1)
             rclpy.spin_once(self)
 
         res = future.result().success
@@ -153,11 +148,12 @@ class DroneController(Node):
             self.get_logger().info(f"WebSocket server started at ws://{SOCKET_IP}:{SOCKET_PORT}")
             await asyncio.Future() 
 
-    async def websocket_handler(self, websocket, path):
+    async def websocket_handler(self, websocket):
         try:
             async for message in websocket:
                 self.get_logger().info(f'receive websocket message: {message}')
-                task, response = self.task_handler.handle_json_data(message, websocket)
+
+                task, response = self.task_handler.handle_json_data(message)
                 if response == None:
                     if not self.preflight():
                         response = {"status": "error", "message": "Failed to preflight"}

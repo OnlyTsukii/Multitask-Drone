@@ -8,7 +8,7 @@ MIN_LONGITUDE       = -180
 MAX_ALTITUDE        = 120
 MIN_ALTITUDE        = 0
 
-MAX_DISTANCE        = 500
+MAX_DISTANCE        = 50
 
 MAX_VELOCITY        = 5
 MIN_VELOCITY        = 0.3
@@ -39,9 +39,12 @@ IMAGE_WIDTH         = 1920
 IMAGE_HEIGHT        = 1080
 
 MAX_CLIMB_HEIGHT        = 10.0
+
 PANEL_POS_THRES_X       = 70
 PANEL_POS_THRES_Y       = 40
 PANEL_YAW_THRES         = 5
+
+SYSTEM_PASSWORD    = '123'
 
 
 

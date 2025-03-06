@@ -50,7 +50,7 @@ class WaypointHandler(Node):
     def goal_callback(self, goal_request):
         self.get_logger().info(f'{goal_request}')
         return GoalResponse.ACCEPT
-
+    
     def global_pos_callback(self, msg: NavSatFix):
         self.gps_fix = msg
 
@@ -104,12 +104,16 @@ class WaypointHandler(Node):
             self.global_point_publisher.publish(target)
             cur_time = time.time() 
 
-        if waypoint.mission == MISSION_GLOBAL_CLEAN:
-            self.yolo_request(True)
-            self.waypoint_task_executor.execute_clean_task()
-            self.yolo_request(False)
-        elif waypoint.mission == MISSION_LOCAL_CAPTURE:
-            self.waypoint_task_executor.execute_capture_task()
+        # if waypoint.mission == MISSION_GLOBAL_CLEAN:
+        #     self.yolo_request(True)
+        #     self.waypoint_task_executor.execute_clean_task()
+        #     self.yolo_request(False)
+        # if waypoint.mission == MISSION_LOCAL_CAPTURE:
+        #     self.waypoint_task_executor.execute_capture_task()
+        # elif waypoint.mission == MISSION_LOCAL_CLEAN:
+        #     self.waypoint_task_executor.execute_local_clean_task()
+        if waypoint.mission == MISSION_LOCAL_TEST:
+            self.waypoint_task_executor.execute_test_task()
 
     def reached_waypoint(self, waypoint) -> bool:
         reached = True
@@ -142,14 +146,14 @@ class WaypointHandler(Node):
         target.longitude = raw_wp.longitude
         target.altitude = raw_wp.altitude
 
-        type_mask = PositionTarget.IGNORE_YAW | PositionTarget.IGNORE_AFX | PositionTarget.IGNORE_AFY | PositionTarget.IGNORE_AFZ
+        type_mask = GlobalPositionTarget.IGNORE_YAW | GlobalPositionTarget.IGNORE_AFX | GlobalPositionTarget.IGNORE_AFY | GlobalPositionTarget.IGNORE_AFZ
 
         if raw_wp.type == TYPE_TAKEOFF or raw_wp.type == TYPE_VERTICAL or raw_wp.type == TYPE_LAND:
             target.velocity = Vector3(x=0.0, y=0.0, z=raw_wp.velocity)
-            type_mask |= PositionTarget.IGNORE_VX | PositionTarget.IGNORE_VY | PositionTarget.IGNORE_YAW_RATE
+            type_mask |= GlobalPositionTarget.IGNORE_VX | GlobalPositionTarget.IGNORE_VY | GlobalPositionTarget.IGNORE_YAW_RATE
         elif raw_wp.type == TYPE_ROTATE:
             # target.yaw_rate = raw_wp.yaw_rate
-            type_mask |= PositionTarget.IGNORE_VX | PositionTarget.IGNORE_VY | PositionTarget.IGNORE_VZ
+            type_mask |= GlobalPositionTarget.IGNORE_VX | GlobalPositionTarget.IGNORE_VY | GlobalPositionTarget.IGNORE_VZ
         # else:
         #     target.velocity = Vector3(x=raw_wp.velocity, y=0.0, z=0.0)
 

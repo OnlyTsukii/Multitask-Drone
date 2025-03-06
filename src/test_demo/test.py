@@ -1,13 +1,16 @@
-# import asyncio
-# import time
+from ultralytics import YOLO
 
-# async def my_async_function():
-#     print("Start")
-#     time.sleep(3)
-#     print("End")
+# # Load a YOLO11n PyTorch model
+# model = YOLO("/home/jetson/Multitask-Drone/src/drone_vision/weights/new_panel.pt")
 
-# # Run the async function
-# task = asyncio.create_task(my_async_function())
-# print(1)
-# while True:
-#     pass
+# # Export the model to TensorRT
+# model.export(format="engine")  # creates 'yolo11n.engine'
+
+# Load the exported TensorRT model
+trt_model = YOLO("/home/jetson/Multitask-Drone/src/drone_vision/weights/new_panel.engine" ,task='detect')
+
+# Run inference
+results = trt_model("/home/jetson/Multitask-Drone/src/drone_vision/images")
+
+for i, result in enumerate(results):
+    result.save(filename=f"/home/jetson/Multitask-Drone/src/drone_vision/results/result_{i}.jpg")

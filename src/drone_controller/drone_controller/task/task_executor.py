@@ -19,7 +19,7 @@ from drone_controller.utils import *
 from drone_controller.constant import *
 
 
-JSON_PATH = '/home/x650/Multitask-Drone/src/json_paths/path.json'
+JSON_PATH = '/home/jetson/Multitask-Drone/src/json_paths/path.json'
 
 class TaskExecutor(Node):
     def __init__(self):
@@ -215,9 +215,9 @@ class TaskExecutor(Node):
                     self.send_waypoint_action(waypoint, True)
                     next_waypoint_id += 1
                     
-                    if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
-                        self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
-                        next_waypoint_id += 1
+                    # if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
+                    #     self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
+                    #     next_waypoint_id += 1
 
                     index += 1
 
@@ -228,9 +228,9 @@ class TaskExecutor(Node):
             else:
                 if self.has_takeoff:
                     # self.execute_land(next_waypoint_id)
-                    # next_waypoint_id += 1
+                    # next_waypoint_id = 0
                     self.land()
-                    self.set_mode("AUTO.LOITER")
+                    # self.set_mode("AUTO.LOITER")
 
     def send_waypoint_action(self, waypoint, join_feedback=False):
         """
@@ -239,7 +239,7 @@ class TaskExecutor(Node):
         goal_msg = ExecuteWaypoint.Goal()
         goal_msg.waypoint = waypoint
 
-        if not self.waypoint_action_client.wait_for_server(timeout_sec=5.0):
+        if not self.waypoint_action_client.wait_for_server(timeout_sec=3.0):
             self.get_logger().error('Waypoint Action Server not available!')
             return
 
@@ -248,6 +248,7 @@ class TaskExecutor(Node):
 
         while not self.goal_finished:
             rclpy.spin_once(self)
+            time.sleep(0.01)
             # self.state_pub.publish(TaskState(state=0))
 
         if join_feedback:

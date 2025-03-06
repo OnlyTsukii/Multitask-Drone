@@ -19,10 +19,10 @@ IMAGE_HEIGHT        = 1080
 FRAME_PER_SECOND    = 30
 CONF_THRESHOLD      = 0.6
 
-MODEL_PATH                  = '/home/x650/Multitask-Drone/src/drone_vision/weights/new_panel.pt'
-CLEAN_RAW_IMAGE_PATH        = '/home/x650/Multitask-Drone/src/drone_vision/images/task_clean/raw/'
-CLEAN_LABELED_IMAGE_PATH    = '/home/x650/Multitask-Drone/src/drone_vision/images/task_clean/labeled/'
-CAPTURE_IMAGE_PATH          = '/home/x650/Multitask-Drone/src/drone_vision/images/task_capture/'
+MODEL_PATH                  = '/home/jetson/Multitask-Drone/src/drone_vision/weights/new_panel.pt'
+CLEAN_RAW_IMAGE_PATH        = '/home/jetson/Multitask-Drone/src/drone_vision/images/task_clean/raw/'
+CLEAN_LABELED_IMAGE_PATH    = '/home/jetson/Multitask-Drone/src/drone_vision/images/task_clean/labeled/'
+CAPTURE_IMAGE_PATH          = '/home/jetson/Multitask-Drone/src/drone_vision/images/task_capture/'
 
 
 class ObjectDetector(Node):
@@ -82,8 +82,8 @@ class ObjectDetector(Node):
             self.frame = frame
     
     def detect(self):
-        if not self.yolo_enabled:
-            return
+        # if not self.yolo_enabled:
+        #     return
         
         if self.counter % 20 == 0:
             cv2.imwrite(CLEAN_RAW_IMAGE_PATH+str(time.time())+'.jpg', self.frame)

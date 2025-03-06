@@ -10,7 +10,8 @@ setup(
     packages=[
         package_name, 
         'drone_controller.task',
-        'drone_controller.waypoint'
+        'drone_controller.waypoint',
+        'drone_controller.payload'
         ],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -31,6 +32,7 @@ setup(
             'task_executor = drone_controller.task.task_executor:main',
             'waypoint_handler = drone_controller.waypoint.waypoint_handler:main',
             # 'waypoint_task_executor_test = drone_controller.waypoint.waypoint_task_executor_test:main'
+            'yiku_test = drone_controller.yiku_test:main'
         ],
     },
 )

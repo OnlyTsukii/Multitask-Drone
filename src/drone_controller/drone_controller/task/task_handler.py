@@ -101,7 +101,7 @@ class TaskHandler():
         # Return True if all distances are within the limit
         return True
 
-    def handle_json_data(self, json_data, socket):
+    def handle_json_data(self, json_data):
         """
         Handle incoming JSON data:
         1. Parse the task.
