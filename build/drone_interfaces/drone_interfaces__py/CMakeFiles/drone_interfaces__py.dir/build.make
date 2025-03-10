@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ccl/Multitask-Drone/src/drone_interfaces
+CMAKE_SOURCE_DIR = /home/jetson/Multitask-Drone/src/drone_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ccl/Multitask-Drone/build/drone_interfaces
+CMAKE_BINARY_DIR = /home/jetson/Multitask-Drone/build/drone_interfaces
 
 # Utility rule file for drone_interfaces__py.
 
@@ -365,8 +365,8 @@ rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_f
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/action_msgs/msg/GoalStatusArray.idl
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/action_msgs/srv/CancelGoal.idl
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/unique_identifier_msgs/msg/UUID.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ccl/Multitask-Drone/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/ccl/Multitask-Drone/build/drone_interfaces/drone_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/ccl/Multitask-Drone/build/drone_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jetson/Multitask-Drone/build/drone_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/jetson/Multitask-Drone/build/drone_interfaces/drone_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/jetson/Multitask-Drone/build/drone_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c
@@ -470,10 +470,10 @@ drone_interfaces__py/CMakeFiles/drone_interfaces__py.dir/build: drone_interfaces
 .PHONY : drone_interfaces__py/CMakeFiles/drone_interfaces__py.dir/build
 
 drone_interfaces__py/CMakeFiles/drone_interfaces__py.dir/clean:
-	cd /home/ccl/Multitask-Drone/build/drone_interfaces/drone_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/drone_interfaces__py.dir/cmake_clean.cmake
+	cd /home/jetson/Multitask-Drone/build/drone_interfaces/drone_interfaces__py && $(CMAKE_COMMAND) -P CMakeFiles/drone_interfaces__py.dir/cmake_clean.cmake
 .PHONY : drone_interfaces__py/CMakeFiles/drone_interfaces__py.dir/clean
 
 drone_interfaces__py/CMakeFiles/drone_interfaces__py.dir/depend:
-	cd /home/ccl/Multitask-Drone/build/drone_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ccl/Multitask-Drone/src/drone_interfaces /home/ccl/Multitask-Drone/build/drone_interfaces/drone_interfaces__py /home/ccl/Multitask-Drone/build/drone_interfaces /home/ccl/Multitask-Drone/build/drone_interfaces/drone_interfaces__py /home/ccl/Multitask-Drone/build/drone_interfaces/drone_interfaces__py/CMakeFiles/drone_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/Multitask-Drone/build/drone_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Multitask-Drone/src/drone_interfaces /home/jetson/Multitask-Drone/build/drone_interfaces/drone_interfaces__py /home/jetson/Multitask-Drone/build/drone_interfaces /home/jetson/Multitask-Drone/build/drone_interfaces/drone_interfaces__py /home/jetson/Multitask-Drone/build/drone_interfaces/drone_interfaces__py/CMakeFiles/drone_interfaces__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : drone_interfaces__py/CMakeFiles/drone_interfaces__py.dir/depend
 

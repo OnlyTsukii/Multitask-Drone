@@ -1,0 +1,22 @@
+[1.865s] Invoking command in '/home/jetson/Multitask-Drone/src/drone_vision': AMENT_PREFIX_PATH=/home/jetson/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/jetson/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_vision build --build-base /home/jetson/Multitask-Drone/build/drone_vision/build install --record /home/jetson/Multitask-Drone/build/drone_vision/install.log --single-version-externally-managed install_data
+[2.368s] running egg_info
+[2.368s] writing ../../build/drone_vision/drone_vision.egg-info/PKG-INFO
+[2.369s] writing dependency_links to ../../build/drone_vision/drone_vision.egg-info/dependency_links.txt
+[2.369s] writing entry points to ../../build/drone_vision/drone_vision.egg-info/entry_points.txt
+[2.369s] writing requirements to ../../build/drone_vision/drone_vision.egg-info/requires.txt
+[2.370s] writing top-level names to ../../build/drone_vision/drone_vision.egg-info/top_level.txt
+[2.373s] reading manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'
+[2.373s] adding license file 'LICENSE'
+[2.374s] writing manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'
+[2.374s] running build
+[2.375s] running build_py
+[2.376s] running install
+[2.376s] running install_lib
+[2.378s] running install_data
+[2.378s] running install_egg_info
+[2.382s] removing '/home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision-0.0.0-py3.10.egg-info' (and everything under it)
+[2.382s] Copying ../../build/drone_vision/drone_vision.egg-info to /home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision-0.0.0-py3.10.egg-info
+[2.384s] running install_scripts
+[2.418s] Installing object_detector script to /home/jetson/Multitask-Drone/install/drone_vision/lib/drone_vision
+[2.419s] writing list of installed files to '/home/jetson/Multitask-Drone/build/drone_vision/install.log'
+[2.494s] Invoked command in '/home/jetson/Multitask-Drone/src/drone_vision' returned '0': AMENT_PREFIX_PATH=/home/jetson/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jetson/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/jetson/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jetson/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_vision build --build-base /home/jetson/Multitask-Drone/build/drone_vision/build install --record /home/jetson/Multitask-Drone/build/drone_vision/install.log --single-version-externally-managed install_data

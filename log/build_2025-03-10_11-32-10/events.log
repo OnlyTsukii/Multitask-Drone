@@ -1,0 +1,901 @@
+[0.000000] (-) TimerEvent: {}
+[0.000330] (drone_interfaces) JobQueued: {'identifier': 'drone_interfaces', 'dependencies': OrderedDict()}
+[0.000952] (drone_monitor) JobQueued: {'identifier': 'drone_monitor', 'dependencies': OrderedDict()}
+[0.001164] (drone_controller) JobQueued: {'identifier': 'drone_controller', 'dependencies': OrderedDict([('drone_interfaces', '/home/jetson/Multitask-Drone/install/drone_interfaces')])}
+[0.001355] (drone_vision) JobQueued: {'identifier': 'drone_vision', 'dependencies': OrderedDict([('drone_interfaces', '/home/jetson/Multitask-Drone/install/drone_interfaces')])}
+[0.001431] (drone_interfaces) JobStarted: {'identifier': 'drone_interfaces'}
+[0.011447] (drone_monitor) JobStarted: {'identifier': 'drone_monitor'}
+[0.021749] (drone_interfaces) JobProgress: {'identifier': 'drone_interfaces', 'progress': 'cmake'}
+[0.022487] (drone_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/jetson/Multitask-Drone/src/drone_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/jetson/Multitask-Drone/install/drone_interfaces'], 'cwd': '/home/jetson/Multitask-Drone/build/drone_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'jetson'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jetson'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2005'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'jetson'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jetson'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jetson:@/tmp/.ICE-unix/2005,unix/jetson:/tmp/.ICE-unix/2005'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('ftp_proxy', 'http://127.0.0.1:7890/'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9a8d0485_5bcf_4f3f_b854_e177c8cad82f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.96'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jetson/Multitask-Drone/build/drone_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('FTP_PROXY', 'http://127.0.0.1:7890/'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099565] (-) TimerEvent: {}
+[0.173490] (drone_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199728] (-) TimerEvent: {}
+[0.284680] (drone_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.297983] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299783] (-) TimerEvent: {}
+[0.400174] (-) TimerEvent: {}
+[0.400630] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.409847] (drone_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.410479] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.411412] (drone_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.416362] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500280] (-) TimerEvent: {}
+[0.538529] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.548332] (drone_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.548771] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.549413] (drone_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.553682] (drone_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600404] (-) TimerEvent: {}
+[0.700957] (-) TimerEvent: {}
+[0.792011] (drone_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.801035] (-) TimerEvent: {}
+[0.901506] (-) TimerEvent: {}
+[0.943486] (drone_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.948665] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.960054] (drone_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.001645] (-) TimerEvent: {}
+[1.030257] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.081920] (drone_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[1.092501] (drone_monitor) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_monitor', 'build', '--build-base', '/home/jetson/Multitask-Drone/build/drone_monitor/build', 'install', '--record', '/home/jetson/Multitask-Drone/build/drone_monitor/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jetson/Multitask-Drone/src/drone_monitor', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'HTTPS_PROXY': 'http://127.0.0.1:7890/', 'no_proxy': 'localhost,127.0.0.0/8,::1', 'LANGUAGE': 'en_US:en', 'USER': 'jetson', 'LC_TIME': 'zh_CN.UTF-8', 'all_proxy': 'socks://127.0.0.1:7890/', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/jetson', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.0/8,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'zh_CN.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2005', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'https_proxy': 'http://127.0.0.1:7890/', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'jetson', 'ALL_PROXY': 'socks://127.0.0.1:7890/', 'http_proxy': 'http://127.0.0.1:7890/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'jetson', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/jetson:@/tmp/.ICE-unix/2005,unix/jetson:/tmp/.ICE-unix/2005', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'zh_CN.UTF-8', 'ftp_proxy': 'http://127.0.0.1:7890/', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/9a8d0485_5bcf_4f3f_b854_e177c8cad82f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.96', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/jetson/Multitask-Drone/build/drone_monitor', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'FTP_PROXY': 'http://127.0.0.1:7890/', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetson/Multitask-Drone/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'HTTP_PROXY': 'http://127.0.0.1:7890/', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[1.101709] (-) TimerEvent: {}
+[1.125093] (drone_interfaces) StdoutLine: {'line': b'-- Found mavros_msgs: 2.9.0 (/opt/ros/humble/share/mavros_msgs/cmake)\n'}
+[1.201824] (-) TimerEvent: {}
+[1.275373] (drone_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.301962] (-) TimerEvent: {}
+[1.402552] (-) TimerEvent: {}
+[1.503292] (-) TimerEvent: {}
+[1.507462] (drone_monitor) StdoutLine: {'line': b'running egg_info\n'}
+[1.508478] (drone_monitor) StdoutLine: {'line': b'creating ../../build/drone_monitor/drone_monitor.egg-info\n'}
+[1.508833] (drone_monitor) StdoutLine: {'line': b'writing ../../build/drone_monitor/drone_monitor.egg-info/PKG-INFO\n'}
+[1.509253] (drone_monitor) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_monitor/drone_monitor.egg-info/dependency_links.txt\n'}
+[1.509446] (drone_monitor) StdoutLine: {'line': b'writing entry points to ../../build/drone_monitor/drone_monitor.egg-info/entry_points.txt\n'}
+[1.509649] (drone_monitor) StdoutLine: {'line': b'writing requirements to ../../build/drone_monitor/drone_monitor.egg-info/requires.txt\n'}
+[1.509830] (drone_monitor) StdoutLine: {'line': b'writing top-level names to ../../build/drone_monitor/drone_monitor.egg-info/top_level.txt\n'}
+[1.510080] (drone_monitor) StdoutLine: {'line': b"writing manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'\n"}
+[1.512760] (drone_monitor) StdoutLine: {'line': b"reading manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'\n"}
+[1.513058] (drone_monitor) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.514060] (drone_monitor) StdoutLine: {'line': b"writing manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'\n"}
+[1.514293] (drone_monitor) StdoutLine: {'line': b'running build\n'}
+[1.514457] (drone_monitor) StdoutLine: {'line': b'running build_py\n'}
+[1.514698] (drone_monitor) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_monitor/build\n'}
+[1.514838] (drone_monitor) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_monitor/build/lib\n'}
+[1.515068] (drone_monitor) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_monitor/build/lib/src\n'}
+[1.515340] (drone_monitor) StdoutLine: {'line': b'copying src/__init__.py -> /home/jetson/Multitask-Drone/build/drone_monitor/build/lib/src\n'}
+[1.515493] (drone_monitor) StdoutLine: {'line': b'running install\n'}
+[1.515871] (drone_monitor) StdoutLine: {'line': b'running install_lib\n'}
+[1.516985] (drone_monitor) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src\n'}
+[1.517173] (drone_monitor) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_monitor/build/lib/src/__init__.py -> /home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src\n'}
+[1.518276] (drone_monitor) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src/__init__.py to __init__.cpython-310.pyc\n'}
+[1.518730] (drone_monitor) StdoutLine: {'line': b'running install_data\n'}
+[1.519009] (drone_monitor) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_monitor/share/ament_index\n'}
+[1.519152] (drone_monitor) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index\n'}
+[1.519278] (drone_monitor) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index/packages\n'}
+[1.519397] (drone_monitor) StdoutLine: {'line': b'copying resource/drone_monitor -> /home/jetson/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index/packages\n'}
+[1.519520] (drone_monitor) StdoutLine: {'line': b'copying package.xml -> /home/jetson/Multitask-Drone/install/drone_monitor/share/drone_monitor\n'}
+[1.519631] (drone_monitor) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.522040] (drone_monitor) StdoutLine: {'line': b'Copying ../../build/drone_monitor/drone_monitor.egg-info to /home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/drone_monitor-0.0.0-py3.10.egg-info\n'}
+[1.523573] (drone_monitor) StdoutLine: {'line': b'running install_scripts\n'}
+[1.556195] (drone_monitor) StdoutLine: {'line': b"writing list of installed files to '/home/jetson/Multitask-Drone/build/drone_monitor/install.log'\n"}
+[1.603424] (-) TimerEvent: {}
+[1.616509] (drone_monitor) CommandEnded: {'returncode': 0}
+[1.639021] (drone_monitor) JobEnded: {'identifier': 'drone_monitor', 'rc': 0}
+[1.703603] (-) TimerEvent: {}
+[1.804329] (-) TimerEvent: {}
+[1.904918] (-) TimerEvent: {}
+[2.005434] (-) TimerEvent: {}
+[2.091424] (drone_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.105630] (-) TimerEvent: {}
+[2.206065] (-) TimerEvent: {}
+[2.306577] (-) TimerEvent: {}
+[2.407133] (-) TimerEvent: {}
+[2.507692] (-) TimerEvent: {}
+[2.608226] (-) TimerEvent: {}
+[2.709000] (-) TimerEvent: {}
+[2.809553] (-) TimerEvent: {}
+[2.878971] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.909694] (-) TimerEvent: {}
+[3.010213] (-) TimerEvent: {}
+[3.110710] (-) TimerEvent: {}
+[3.211304] (-) TimerEvent: {}
+[3.311997] (-) TimerEvent: {}
+[3.412692] (-) TimerEvent: {}
+[3.513271] (-) TimerEvent: {}
+[3.613875] (-) TimerEvent: {}
+[3.714493] (-) TimerEvent: {}
+[3.815219] (-) TimerEvent: {}
+[3.915883] (-) TimerEvent: {}
+[3.965143] (drone_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.013701] (drone_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[4.015974] (-) TimerEvent: {}
+[4.018502] (drone_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[4.080520] (drone_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[4.081207] (drone_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[4.081499] (drone_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[4.081883] (drone_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[4.116120] (-) TimerEvent: {}
+[4.120372] (drone_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[4.216209] (-) TimerEvent: {}
+[4.316740] (-) TimerEvent: {}
+[4.379161] (drone_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.381600] (drone_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.392037] (drone_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.416818] (-) TimerEvent: {}
+[4.492603] (drone_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[4.516921] (-) TimerEvent: {}
+[4.517297] (drone_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/jetson/Multitask-Drone/build/drone_interfaces\n'}
+[4.540611] (drone_interfaces) CommandEnded: {'returncode': 0}
+[4.542721] (drone_interfaces) JobProgress: {'identifier': 'drone_interfaces', 'progress': 'build'}
+[4.545711] (drone_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jetson/Multitask-Drone/build/drone_interfaces', '--', '-j6', '-l6'], 'cwd': '/home/jetson/Multitask-Drone/build/drone_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'jetson'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jetson'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2005'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'jetson'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jetson'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jetson:@/tmp/.ICE-unix/2005,unix/jetson:/tmp/.ICE-unix/2005'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('ftp_proxy', 'http://127.0.0.1:7890/'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9a8d0485_5bcf_4f3f_b854_e177c8cad82f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.96'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jetson/Multitask-Drone/build/drone_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('FTP_PROXY', 'http://127.0.0.1:7890/'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[4.617102] (-) TimerEvent: {}
+[4.617949] (drone_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[4.636139] (drone_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.648526] (drone_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_drone_interfaces\n'}
+[4.717234] (-) TimerEvent: {}
+[4.817744] (-) TimerEvent: {}
+[4.918290] (-) TimerEvent: {}
+[5.018811] (-) TimerEvent: {}
+[5.046682] (drone_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[5.047686] (drone_interfaces) StdoutLine: {'line': b'creating drone_interfaces.egg-info\n'}
+[5.048098] (drone_interfaces) StdoutLine: {'line': b'writing drone_interfaces.egg-info/PKG-INFO\n'}
+[5.048480] (drone_interfaces) StdoutLine: {'line': b'writing dependency_links to drone_interfaces.egg-info/dependency_links.txt\n'}
+[5.048816] (drone_interfaces) StdoutLine: {'line': b'writing top-level names to drone_interfaces.egg-info/top_level.txt\n'}
+[5.049241] (drone_interfaces) StdoutLine: {'line': b"writing manifest file 'drone_interfaces.egg-info/SOURCES.txt'\n"}
+[5.053196] (drone_interfaces) StdoutLine: {'line': b"reading manifest file 'drone_interfaces.egg-info/SOURCES.txt'\n"}
+[5.053907] (drone_interfaces) StdoutLine: {'line': b"writing manifest file 'drone_interfaces.egg-info/SOURCES.txt'\n"}
+[5.117057] (drone_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_drone_interfaces_egg\n'}
+[5.118878] (-) TimerEvent: {}
+[5.219282] (-) TimerEvent: {}
+[5.319763] (-) TimerEvent: {}
+[5.420269] (-) TimerEvent: {}
+[5.520743] (-) TimerEvent: {}
+[5.621240] (-) TimerEvent: {}
+[5.721713] (-) TimerEvent: {}
+[5.822214] (-) TimerEvent: {}
+[5.922749] (-) TimerEvent: {}
+[6.023395] (-) TimerEvent: {}
+[6.124101] (-) TimerEvent: {}
+[6.176627] (drone_interfaces) StdoutLine: {'line': b'[  2%] Built target drone_interfaces__cpp\n'}
+[6.194458] (drone_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.194900] (drone_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[6.195044] (drone_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[6.196656] (drone_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/yaw__functions.c.o\x1b[0m\n'}
+[6.197044] (drone_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task__functions.c.o\x1b[0m\n'}
+[6.198767] (drone_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/panel_box__functions.c.o\x1b[0m\n'}
+[6.224241] (-) TimerEvent: {}
+[6.316742] (drone_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_dispatch__functions.c.o\x1b[0m\n'}
+[6.317160] (drone_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/raw_waypoint__functions.c.o\x1b[0m\n'}
+[6.317314] (drone_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/msg/detail/task_state__functions.c.o\x1b[0m\n'}
+[6.324408] (-) TimerEvent: {}
+[6.403206] (drone_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/task_push__functions.c.o\x1b[0m\n'}
+[6.403921] (drone_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/srv/detail/yolo_request__functions.c.o\x1b[0m\n'}
+[6.424547] (-) TimerEvent: {}
+[6.438762] (drone_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_c.dir/rosidl_generator_c/drone_interfaces/action/detail/execute_waypoint__functions.c.o\x1b[0m\n'}
+[6.524704] (-) TimerEvent: {}
+[6.625244] (-) TimerEvent: {}
+[6.668834] (drone_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking C shared library libdrone_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[6.725385] (-) TimerEvent: {}
+[6.733970] (drone_interfaces) StdoutLine: {'line': b'[ 15%] Built target drone_interfaces__rosidl_generator_c\n'}
+[6.751725] (drone_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[6.752655] (drone_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[6.753664] (drone_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.825517] (-) TimerEvent: {}
+[6.926119] (-) TimerEvent: {}
+[7.026693] (-) TimerEvent: {}
+[7.127255] (-) TimerEvent: {}
+[7.217801] (drone_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/yaw__type_support.cpp.o\x1b[0m\n'}
+[7.227405] (-) TimerEvent: {}
+[7.327945] (-) TimerEvent: {}
+[7.428490] (-) TimerEvent: {}
+[7.529048] (-) TimerEvent: {}
+[7.629647] (-) TimerEvent: {}
+[7.652264] (drone_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/yaw__type_support.cpp.o\x1b[0m\n'}
+[7.729744] (-) TimerEvent: {}
+[7.812355] (drone_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/yaw__type_support.cpp.o\x1b[0m\n'}
+[7.827715] (drone_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/panel_box__type_support.cpp.o\x1b[0m\n'}
+[7.829880] (-) TimerEvent: {}
+[7.875116] (drone_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/panel_box__type_support.cpp.o\x1b[0m\n'}
+[7.881243] (drone_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/yaw__type_support.cpp.o\x1b[0m\n'}
+[7.926652] (drone_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/task__type_support.cpp.o\x1b[0m\n'}
+[7.930056] (-) TimerEvent: {}
+[8.016328] (drone_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/task_state__type_support.cpp.o\x1b[0m\n'}
+[8.030244] (-) TimerEvent: {}
+[8.109050] (drone_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/msg/raw_waypoint__type_support.cpp.o\x1b[0m\n'}
+[8.130424] (-) TimerEvent: {}
+[8.219086] (drone_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/task_dispatch__type_support.cpp.o\x1b[0m\n'}
+[8.230620] (-) TimerEvent: {}
+[8.283868] (drone_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/yolo_request__type_support.cpp.o\x1b[0m\n'}
+[8.296274] (drone_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/yaw__type_support.c.o\x1b[0m\n'}
+[8.330808] (-) TimerEvent: {}
+[8.368901] (drone_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/srv/task_push__type_support.cpp.o\x1b[0m\n'}
+[8.379050] (drone_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/yaw__type_support_c.cpp.o\x1b[0m\n'}
+[8.386710] (drone_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/panel_box__type_support.c.o\x1b[0m\n'}
+[8.430967] (-) TimerEvent: {}
+[8.459191] (drone_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/drone_interfaces/action/execute_waypoint__type_support.cpp.o\x1b[0m\n'}
+[8.462203] (drone_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/panel_box__type_support.cpp.o\x1b[0m\n'}
+[8.482621] (drone_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task__type_support.c.o\x1b[0m\n'}
+[8.484393] (drone_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/task__type_support.cpp.o\x1b[0m\n'}
+[8.531111] (-) TimerEvent: {}
+[8.631659] (-) TimerEvent: {}
+[8.687342] (drone_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/task_state__type_support.c.o\x1b[0m\n'}
+[8.697344] (drone_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[8.731869] (-) TimerEvent: {}
+[8.820581] (drone_interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/msg/detail/raw_waypoint__type_support.c.o\x1b[0m\n'}
+[8.832071] (-) TimerEvent: {}
+[8.843965] (drone_interfaces) StdoutLine: {'line': b'[ 42%] Built target drone_interfaces__rosidl_typesupport_c\n'}
+[8.858051] (drone_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_dispatch__type_support.c.o\x1b[0m\n'}
+[8.913586] (drone_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/yolo_request__type_support.c.o\x1b[0m\n'}
+[8.932251] (-) TimerEvent: {}
+[8.958012] (drone_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/panel_box__type_support.cpp.o\x1b[0m\n'}
+[8.969335] (drone_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/srv/detail/task_push__type_support.c.o\x1b[0m\n'}
+[9.009693] (drone_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/drone_interfaces/action/detail/execute_waypoint__type_support.c.o\x1b[0m\n'}
+[9.032448] (-) TimerEvent: {}
+[9.102289] (drone_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task__type_support.cpp.o\x1b[0m\n'}
+[9.119824] (drone_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32m\x1b[1mLinking C shared library libdrone_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[9.132655] (-) TimerEvent: {}
+[9.158527] (drone_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/task_state__type_support.cpp.o\x1b[0m\n'}
+[9.232850] (-) TimerEvent: {}
+[9.240232] (drone_interfaces) StdoutLine: {'line': b'[ 50%] Built target drone_interfaces__rosidl_typesupport_introspection_c\n'}
+[9.257075] (drone_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/msg/raw_waypoint__type_support.cpp.o\x1b[0m\n'}
+[9.274540] (drone_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/panel_box__type_support_c.cpp.o\x1b[0m\n'}
+[9.333121] (-) TimerEvent: {}
+[9.395385] (drone_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task__type_support.cpp.o\x1b[0m\n'}
+[9.433296] (-) TimerEvent: {}
+[9.533952] (-) TimerEvent: {}
+[9.634659] (-) TimerEvent: {}
+[9.735426] (-) TimerEvent: {}
+[9.836131] (-) TimerEvent: {}
+[9.858528] (drone_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/task_dispatch__type_support.cpp.o\x1b[0m\n'}
+[9.877392] (drone_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/yolo_request__type_support.cpp.o\x1b[0m\n'}
+[9.906611] (drone_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/task_state__type_support.cpp.o\x1b[0m\n'}
+[9.936309] (-) TimerEvent: {}
+[10.036984] (-) TimerEvent: {}
+[10.041827] (drone_interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task__type_support_c.cpp.o\x1b[0m\n'}
+[10.137160] (-) TimerEvent: {}
+[10.203579] (drone_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/msg/detail/dds_fastrtps/raw_waypoint__type_support.cpp.o\x1b[0m\n'}
+[10.237349] (-) TimerEvent: {}
+[10.338149] (-) TimerEvent: {}
+[10.438781] (-) TimerEvent: {}
+[10.542180] (drone_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/srv/task_push__type_support.cpp.o\x1b[0m\n'}
+[10.542663] (-) TimerEvent: {}
+[10.554005] (drone_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/task_state__type_support.cpp.o\x1b[0m\n'}
+[10.621533] (drone_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/drone_interfaces/action/execute_waypoint__type_support.cpp.o\x1b[0m\n'}
+[10.643126] (-) TimerEvent: {}
+[10.744530] (-) TimerEvent: {}
+[10.851654] (-) TimerEvent: {}
+[10.906200] (drone_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_dispatch__type_support.cpp.o\x1b[0m\n'}
+[10.951794] (-) TimerEvent: {}
+[10.985464] (drone_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/task_state__type_support_c.cpp.o\x1b[0m\n'}
+[11.051954] (-) TimerEvent: {}
+[11.152564] (-) TimerEvent: {}
+[11.253185] (-) TimerEvent: {}
+[11.353776] (-) TimerEvent: {}
+[11.454355] (-) TimerEvent: {}
+[11.455012] (drone_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/msg/detail/raw_waypoint__type_support.cpp.o\x1b[0m\n'}
+[11.471354] (drone_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_dispatch__type_support.cpp.o\x1b[0m\n'}
+[11.554563] (-) TimerEvent: {}
+[11.600481] (drone_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/yolo_request__type_support.cpp.o\x1b[0m\n'}
+[11.654708] (-) TimerEvent: {}
+[11.755323] (-) TimerEvent: {}
+[11.856019] (-) TimerEvent: {}
+[11.908999] (drone_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/msg/detail/raw_waypoint__type_support_c.cpp.o\x1b[0m\n'}
+[11.956198] (-) TimerEvent: {}
+[12.056818] (-) TimerEvent: {}
+[12.115982] (drone_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[12.131580] (drone_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/yolo_request__type_support.cpp.o\x1b[0m\n'}
+[12.157024] (-) TimerEvent: {}
+[12.233581] (drone_interfaces) StdoutLine: {'line': b'[ 70%] Built target drone_interfaces__rosidl_typesupport_cpp\n'}
+[12.257203] (-) TimerEvent: {}
+[12.290843] (drone_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/srv/detail/dds_fastrtps/task_push__type_support.cpp.o\x1b[0m\n'}
+[12.357384] (-) TimerEvent: {}
+[12.458195] (-) TimerEvent: {}
+[12.537920] (drone_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/drone_interfaces/action/detail/dds_fastrtps/execute_waypoint__type_support.cpp.o\x1b[0m\n'}
+[12.558373] (-) TimerEvent: {}
+[12.659048] (-) TimerEvent: {}
+[12.690368] (drone_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/srv/detail/task_push__type_support.cpp.o\x1b[0m\n'}
+[12.759278] (-) TimerEvent: {}
+[12.839155] (drone_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/drone_interfaces/action/detail/execute_waypoint__type_support.cpp.o\x1b[0m\n'}
+[12.859504] (-) TimerEvent: {}
+[12.925457] (drone_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_dispatch__type_support_c.cpp.o\x1b[0m\n'}
+[12.959716] (-) TimerEvent: {}
+[13.033742] (drone_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/yolo_request__type_support_c.cpp.o\x1b[0m\n'}
+[13.059890] (-) TimerEvent: {}
+[13.160533] (-) TimerEvent: {}
+[13.261209] (-) TimerEvent: {}
+[13.361903] (-) TimerEvent: {}
+[13.462571] (-) TimerEvent: {}
+[13.563238] (-) TimerEvent: {}
+[13.663902] (-) TimerEvent: {}
+[13.691588] (drone_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/srv/detail/task_push__type_support_c.cpp.o\x1b[0m\n'}
+[13.728859] (drone_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/drone_interfaces/action/detail/execute_waypoint__type_support_c.cpp.o\x1b[0m\n'}
+[13.764107] (-) TimerEvent: {}
+[13.864797] (-) TimerEvent: {}
+[13.965440] (-) TimerEvent: {}
+[14.066312] (-) TimerEvent: {}
+[14.148767] (drone_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[14.166484] (-) TimerEvent: {}
+[14.267128] (-) TimerEvent: {}
+[14.367791] (-) TimerEvent: {}
+[14.468426] (-) TimerEvent: {}
+[14.504303] (drone_interfaces) StdoutLine: {'line': b'[ 80%] Built target drone_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[14.568606] (-) TimerEvent: {}
+[14.669272] (-) TimerEvent: {}
+[14.769958] (-) TimerEvent: {}
+[14.835212] (drone_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[14.870239] (-) TimerEvent: {}
+[14.968137] (drone_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX shared library libdrone_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[14.970389] (-) TimerEvent: {}
+[15.044541] (drone_interfaces) StdoutLine: {'line': b'[ 82%] Built target drone_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[15.070780] (-) TimerEvent: {}
+[15.171614] (-) TimerEvent: {}
+[15.174401] (drone_interfaces) StdoutLine: {'line': b'[ 82%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[15.253197] (drone_interfaces) StdoutLine: {'line': b'[ 82%] Built target drone_interfaces\n'}
+[15.271814] (-) TimerEvent: {}
+[15.349172] (drone_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[15.371996] (-) TimerEvent: {}
+[15.472677] (-) TimerEvent: {}
+[15.573253] (-) TimerEvent: {}
+[15.673871] (-) TimerEvent: {}
+[15.774464] (-) TimerEvent: {}
+[15.875107] (-) TimerEvent: {}
+[15.975675] (-) TimerEvent: {}
+[16.076218] (-) TimerEvent: {}
+[16.176752] (-) TimerEvent: {}
+[16.277324] (-) TimerEvent: {}
+[16.379212] (-) TimerEvent: {}
+[16.479817] (-) TimerEvent: {}
+[16.580480] (-) TimerEvent: {}
+[16.681161] (-) TimerEvent: {}
+[16.782311] (-) TimerEvent: {}
+[16.882962] (-) TimerEvent: {}
+[16.983540] (-) TimerEvent: {}
+[17.084182] (-) TimerEvent: {}
+[17.185337] (-) TimerEvent: {}
+[17.286164] (-) TimerEvent: {}
+[17.386795] (-) TimerEvent: {}
+[17.487431] (-) TimerEvent: {}
+[17.588051] (-) TimerEvent: {}
+[17.688716] (-) TimerEvent: {}
+[17.789306] (-) TimerEvent: {}
+[17.890075] (-) TimerEvent: {}
+[17.990781] (-) TimerEvent: {}
+[18.091402] (-) TimerEvent: {}
+[18.192249] (-) TimerEvent: {}
+[18.292871] (-) TimerEvent: {}
+[18.393707] (-) TimerEvent: {}
+[18.494483] (-) TimerEvent: {}
+[18.502054] (drone_interfaces) StdoutLine: {'line': b'[ 83%] Built target drone_interfaces__py\n'}
+[18.542821] (drone_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_yaw_s.c.o\x1b[0m\n'}
+[18.545156] (drone_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_task_s.c.o\x1b[0m\n'}
+[18.545651] (drone_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_raw_waypoint_s.c.o\x1b[0m\n'}
+[18.559758] (drone_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_panel_box_s.c.o\x1b[0m\n'}
+[18.568143] (drone_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/msg/_task_state_s.c.o\x1b[0m\n'}
+[18.576024] (drone_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_task_dispatch_s.c.o\x1b[0m\n'}
+[18.594681] (-) TimerEvent: {}
+[18.695340] (-) TimerEvent: {}
+[18.796021] (-) TimerEvent: {}
+[18.875044] (drone_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_yolo_request_s.c.o\x1b[0m\n'}
+[18.876838] (drone_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/srv/_task_push_s.c.o\x1b[0m\n'}
+[18.896193] (-) TimerEvent: {}
+[18.901720] (drone_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_generator_py.dir/rosidl_generator_py/drone_interfaces/action/_execute_waypoint_s.c.o\x1b[0m\n'}
+[18.996388] (-) TimerEvent: {}
+[19.097039] (-) TimerEvent: {}
+[19.175247] (drone_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/libdrone_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[19.197247] (-) TimerEvent: {}
+[19.262990] (drone_interfaces) StdoutLine: {'line': b'[ 93%] Built target drone_interfaces__rosidl_generator_py\n'}
+[19.297145] (drone_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[19.297657] (-) TimerEvent: {}
+[19.298130] (drone_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[19.300663] (drone_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/drone_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[19.397857] (-) TimerEvent: {}
+[19.498499] (-) TimerEvent: {}
+[19.589035] (drone_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[19.589514] (drone_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[19.598989] (-) TimerEvent: {}
+[19.636881] (drone_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[19.679865] (drone_interfaces) StdoutLine: {'line': b'[100%] Built target drone_interfaces__rosidl_typesupport_c__pyext\n'}
+[19.684362] (drone_interfaces) StdoutLine: {'line': b'[100%] Built target drone_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[19.699150] (-) TimerEvent: {}
+[19.736454] (drone_interfaces) StdoutLine: {'line': b'[100%] Built target drone_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[19.760491] (drone_interfaces) CommandEnded: {'returncode': 0}
+[19.763218] (drone_interfaces) JobProgress: {'identifier': 'drone_interfaces', 'progress': 'install'}
+[19.779543] (drone_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jetson/Multitask-Drone/build/drone_interfaces'], 'cwd': '/home/jetson/Multitask-Drone/build/drone_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'jetson'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/jetson'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2005'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'jetson'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'jetson'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/jetson:@/tmp/.ICE-unix/2005,unix/jetson:/tmp/.ICE-unix/2005'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('ftp_proxy', 'http://127.0.0.1:7890/'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9a8d0485_5bcf_4f3f_b854_e177c8cad82f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.96'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/jetson/Multitask-Drone/build/drone_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('FTP_PROXY', 'http://127.0.0.1:7890/'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[19.796382] (drone_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.796862] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/ament_index/resource_index/rosidl_interfaces/drone_interfaces\n'}
+[19.797177] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.797422] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.797777] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/execute_waypoint.h\n'}
+[19.798000] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.798150] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__functions.h\n'}
+[19.798506] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__struct.h\n'}
+[19.798723] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__functions.c\n'}
+[19.799033] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.h\n'}
+[19.799197] (-) TimerEvent: {}
+[19.799594] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.799808] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/raw_waypoint.h\n'}
+[19.799995] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/yaw.h\n'}
+[19.800163] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/panel_box.h\n'}
+[19.800324] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task_state.h\n'}
+[19.800484] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[19.800640] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task.h\n'}
+[19.800768] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.800914] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__functions.h\n'}
+[19.801066] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__struct.h\n'}
+[19.801209] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__functions.c\n'}
+[19.801353] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.h\n'}
+[19.801501] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__functions.h\n'}
+[19.801670] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__struct.h\n'}
+[19.801827] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__struct.h\n'}
+[19.801991] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__functions.c\n'}
+[19.802213] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.h\n'}
+[19.802414] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__type_support.h\n'}
+[19.802605] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__functions.c\n'}
+[19.802783] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.h\n'}
+[19.802959] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__functions.h\n'}
+[19.803161] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.h\n'}
+[19.803352] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__struct.h\n'}
+[19.803525] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__functions.h\n'}
+[19.804050] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__functions.c\n'}
+[19.804268] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__functions.h\n'}
+[19.804433] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__struct.h\n'}
+[19.804591] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__functions.c\n'}
+[19.804753] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.804907] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/yolo_request.h\n'}
+[19.805033] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_push.h\n'}
+[19.805214] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_dispatch.h\n'}
+[19.805390] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.805522] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__functions.h\n'}
+[19.805694] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.h\n'}
+[19.805847] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__functions.h\n'}
+[19.806040] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__functions.c\n'}
+[19.806247] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__functions.c\n'}
+[19.806456] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__functions.c\n'}
+[19.806673] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.h\n'}
+[19.806855] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__struct.h\n'}
+[19.807012] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__struct.h\n'}
+[19.807210] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__type_support.h\n'}
+[19.807391] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__struct.h\n'}
+[19.807557] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__functions.h\n'}
+[19.808021] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/library_path.sh\n'}
+[19.808265] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/library_path.dsv\n'}
+[19.808590] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_c.so\n'}
+[19.809339] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_c.so" to ""\n'}
+[19.809550] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.809738] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.809859] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.809972] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_fastrtps_c.h\n'}
+[19.810175] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.810292] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.810430] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_c.h\n'}
+[19.810572] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_fastrtps_c.h\n'}
+[19.810713] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__rosidl_typesupport_fastrtps_c.h\n'}
+[19.810851] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_fastrtps_c.h\n'}
+[19.811010] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_c.h\n'}
+[19.811180] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[19.811333] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.811447] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.811586] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__rosidl_typesupport_fastrtps_c.h\n'}
+[19.811722] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_fastrtps_c.h\n'}
+[19.811851] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_fastrtps_c.h\n'}
+[19.811997] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[19.812569] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[19.812808] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.812981] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.813102] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.813259] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.c\n'}
+[19.813422] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_introspection_c.h\n'}
+[19.813562] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.813715] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[19.813855] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.813993] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_introspection_c.h\n'}
+[19.814106] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_introspection_c.h\n'}
+[19.814235] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.c\n'}
+[19.814397] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.c\n'}
+[19.814509] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.c\n'}
+[19.814650] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.c\n'}
+[19.814778] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_introspection_c.h\n'}
+[19.814908] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_introspection_c.h\n'}
+[19.815041] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__type_support.c\n'}
+[19.815184] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__rosidl_typesupport_introspection_c.h\n'}
+[19.815389] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.815591] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.815759] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.c\n'}
+[19.815907] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.c\n'}
+[19.816047] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_introspection_c.h\n'}
+[19.816181] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_introspection_c.h\n'}
+[19.816321] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__rosidl_typesupport_introspection_c.h\n'}
+[19.816458] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__type_support.c\n'}
+[19.816662] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[19.817256] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[19.817400] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_c.so\n'}
+[19.818055] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[19.818243] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.818386] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.818542] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/execute_waypoint.hpp\n'}
+[19.818658] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.818793] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__traits.hpp\n'}
+[19.818925] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.hpp\n'}
+[19.819042] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__builder.hpp\n'}
+[19.819172] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__struct.hpp\n'}
+[19.819311] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.819451] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/panel_box.hpp\n'}
+[19.819583] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task.hpp\n'}
+[19.819711] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/raw_waypoint.hpp\n'}
+[19.819957] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/yaw.hpp\n'}
+[19.820124] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/task_state.hpp\n'}
+[19.820280] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[19.820429] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.820574] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__traits.hpp\n'}
+[19.820707] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__type_support.hpp\n'}
+[19.820851] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__struct.hpp\n'}
+[19.821059] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__builder.hpp\n'}
+[19.821218] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__builder.hpp\n'}
+[19.821388] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.hpp\n'}
+[19.821553] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__struct.hpp\n'}
+[19.821743] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__builder.hpp\n'}
+[19.821898] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__traits.hpp\n'}
+[19.822063] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.hpp\n'}
+[19.822215] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__struct.hpp\n'}
+[19.822390] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.hpp\n'}
+[19.822538] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__traits.hpp\n'}
+[19.822707] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__traits.hpp\n'}
+[19.822868] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__builder.hpp\n'}
+[19.823034] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__struct.hpp\n'}
+[19.823195] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__struct.hpp\n'}
+[19.823386] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__traits.hpp\n'}
+[19.823548] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.hpp\n'}
+[19.823704] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__builder.hpp\n'}
+[19.823867] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.824017] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_dispatch.hpp\n'}
+[19.824152] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/task_push.hpp\n'}
+[19.824295] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.824406] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.hpp\n'}
+[19.824531] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__traits.hpp\n'}
+[19.824674] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__type_support.hpp\n'}
+[19.824799] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__builder.hpp\n'}
+[19.824937] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__builder.hpp\n'}
+[19.825760] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__struct.hpp\n'}
+[19.826942] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__struct.hpp\n'}
+[19.827597] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__traits.hpp\n'}
+[19.827994] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__struct.hpp\n'}
+[19.828326] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.hpp\n'}
+[19.828688] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__traits.hpp\n'}
+[19.828969] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__builder.hpp\n'}
+[19.829231] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/yolo_request.hpp\n'}
+[19.829481] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.829724] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.829939] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.830178] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.830499] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/dds_fastrtps\n'}
+[19.830735] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.831028] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[19.831295] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.831540] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.831806] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.832112] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.832368] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.832695] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/dds_fastrtps\n'}
+[19.832946] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.833154] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.833353] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.833553] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.833821] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/dds_fastrtps\n'}
+[19.834029] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.834232] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[19.834426] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[19.834652] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[19.834855] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces\n'}
+[19.835094] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action\n'}
+[19.835296] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail\n'}
+[19.835835] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.836137] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/action/detail/execute_waypoint__type_support.cpp\n'}
+[19.836405] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg\n'}
+[19.836641] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail\n'}
+[19.836867] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__type_support.cpp\n'}
+[19.837133] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__type_support.cpp\n'}
+[19.837574] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.837888] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__type_support.cpp\n'}
+[19.838164] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.838417] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/task_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.838689] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/raw_waypoint__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.838940] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/panel_box__type_support.cpp\n'}
+[19.839222] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__type_support.cpp\n'}
+[19.839493] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/msg/detail/yaw__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.839739] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv\n'}
+[19.840003] (drone_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail\n'}
+[19.840253] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.840525] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.840728] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_dispatch__type_support.cpp\n'}
+[19.840965] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__rosidl_typesupport_introspection_cpp.hpp\n'}
+[19.841231] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/task_push__type_support.cpp\n'}
+[19.841476] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/include/drone_interfaces/drone_interfaces/srv/detail/yolo_request__type_support.cpp\n'}
+[19.841818] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[19.842105] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[19.842426] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_cpp.so\n'}
+[19.842683] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[19.842943] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.sh\n'}
+[19.843146] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/pythonpath.dsv\n'}
+[19.843340] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info\n'}
+[19.843533] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[19.843726] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[19.843916] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[19.844107] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[19.844295] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces\n'}
+[19.844483] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.844676] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[19.844865] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action\n'}
+[19.845055] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/_execute_waypoint_s.c\n'}
+[19.845244] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/__init__.py\n'}
+[19.845431] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/_execute_waypoint.py\n'}
+[19.845842] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.846043] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg\n'}
+[19.846425] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_yaw_s.c\n'}
+[19.846617] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task.py\n'}
+[19.846862] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task_s.c\n'}
+[19.847047] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_panel_box_s.c\n'}
+[19.847233] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_raw_waypoint.py\n'}
+[19.847413] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_raw_waypoint_s.c\n'}
+[19.847617] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_panel_box.py\n'}
+[19.847804] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/__init__.py\n'}
+[19.847983] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task_state.py\n'}
+[19.848162] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_yaw.py\n'}
+[19.848342] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task_state_s.c\n'}
+[19.848520] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/libdrone_interfaces__rosidl_generator_py.so\n'}
+[19.848742] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[19.848926] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/__init__.py\n'}
+[19.849102] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv\n'}
+[19.849279] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_yolo_request.py\n'}
+[19.849457] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_dispatch.py\n'}
+[19.849825] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_yolo_request_s.c\n'}
+[19.850052] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_push.py\n'}
+[19.850229] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_dispatch_s.c\n'}
+[19.850399] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_push_s.c\n'}
+[19.850569] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/__init__.py\n'}
+[19.850733] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/_drone_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[19.850925] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.899436] (-) TimerEvent: {}
+[19.927076] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces'...\n"}
+[19.927801] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/__init__.py'...\n"}
+[19.928120] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action'...\n"}
+[19.928402] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/__init__.py'...\n"}
+[19.928668] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/action/_execute_waypoint.py'...\n"}
+[19.928924] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg'...\n"}
+[19.929169] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/__init__.py'...\n"}
+[19.929406] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_panel_box.py'...\n"}
+[19.929685] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_raw_waypoint.py'...\n"}
+[19.929992] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task.py'...\n"}
+[19.930235] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_task_state.py'...\n"}
+[19.930470] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/msg/_yaw.py'...\n"}
+[19.930700] (drone_interfaces) StdoutLine: {'line': b"Listing '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv'...\n"}
+[19.930928] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/__init__.py'...\n"}
+[19.931153] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_dispatch.py'...\n"}
+[19.931379] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_task_push.py'...\n"}
+[19.931604] (drone_interfaces) StdoutLine: {'line': b"Compiling '/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/srv/_yolo_request.py'...\n"}
+[19.938522] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.939205] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[19.939621] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.940977] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[19.941593] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[19.942014] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages/drone_interfaces/drone_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[19.942523] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_py.so\n'}
+[19.943014] (drone_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/jetson/Multitask-Drone/install/drone_interfaces/lib/libdrone_interfaces__rosidl_generator_py.so" to ""\n'}
+[19.943459] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/Yaw.idl\n'}
+[19.943958] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/PanelBox.idl\n'}
+[19.944963] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/Task.idl\n'}
+[19.945369] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/TaskState.idl\n'}
+[19.945602] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/RawWaypoint.idl\n'}
+[19.945837] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch.idl\n'}
+[19.945984] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest.idl\n'}
+[19.946175] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskPush.idl\n'}
+[19.946361] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/action/ExecuteWaypoint.idl\n'}
+[19.946539] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/Yaw.msg\n'}
+[19.946674] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/PanelBox.msg\n'}
+[19.947009] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/Task.msg\n'}
+[19.947148] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/TaskState.msg\n'}
+[19.947331] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/msg/RawWaypoint.msg\n'}
+[19.947467] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch.srv\n'}
+[19.947648] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch_Request.msg\n'}
+[19.947821] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskDispatch_Response.msg\n'}
+[19.947993] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest.srv\n'}
+[19.948122] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest_Request.msg\n'}
+[19.948301] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/YoloRequest_Response.msg\n'}
+[19.948425] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskPush.srv\n'}
+[19.948550] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskPush_Request.msg\n'}
+[19.948725] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/srv/TaskPush_Response.msg\n'}
+[19.948918] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/action/ExecuteWaypoint.action\n'}
+[19.949048] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/ament_index/resource_index/package_run_dependencies/drone_interfaces\n'}
+[19.949221] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/ament_index/resource_index/parent_prefix_path/drone_interfaces\n'}
+[19.949348] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.sh\n'}
+[19.949526] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/ament_prefix_path.dsv\n'}
+[19.949710] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/path.sh\n'}
+[19.949957] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/environment/path.dsv\n'}
+[19.950188] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/local_setup.bash\n'}
+[19.950432] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/local_setup.sh\n'}
+[19.950685] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/local_setup.zsh\n'}
+[19.950930] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/local_setup.dsv\n'}
+[19.951170] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.dsv\n'}
+[19.951498] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/ament_index/resource_index/packages/drone_interfaces\n'}
+[19.951845] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport.cmake\n'}
+[19.952135] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[19.952426] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[19.952721] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[19.953007] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[19.953285] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[19.953575] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[19.953915] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[19.954160] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_cppExport.cmake\n'}
+[19.954471] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[19.954754] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[19.955095] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[19.955357] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[19.955659] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[19.955929] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[19.956222] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport.cmake\n'}
+[19.956486] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/export_drone_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[19.957103] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[19.957244] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[19.957437] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[19.957633] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[19.957849] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[19.958088] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[19.958354] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[19.958605] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig.cmake\n'}
+[19.958799] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/cmake/drone_interfacesConfig-version.cmake\n'}
+[19.959031] (drone_interfaces) StdoutLine: {'line': b'-- Installing: /home/jetson/Multitask-Drone/install/drone_interfaces/share/drone_interfaces/package.xml\n'}
+[19.964461] (drone_interfaces) CommandEnded: {'returncode': 0}
+[20.000088] (-) TimerEvent: {}
+[20.019372] (drone_interfaces) JobEnded: {'identifier': 'drone_interfaces', 'rc': 0}
+[20.022937] (drone_controller) JobStarted: {'identifier': 'drone_controller'}
+[20.035688] (drone_vision) JobStarted: {'identifier': 'drone_vision'}
+[20.100234] (-) TimerEvent: {}
+[20.200819] (-) TimerEvent: {}
+[20.301405] (-) TimerEvent: {}
+[20.402021] (-) TimerEvent: {}
+[20.502918] (-) TimerEvent: {}
+[20.603642] (-) TimerEvent: {}
+[20.704225] (-) TimerEvent: {}
+[20.804823] (-) TimerEvent: {}
+[20.905386] (-) TimerEvent: {}
+[21.006060] (-) TimerEvent: {}
+[21.107180] (-) TimerEvent: {}
+[21.207736] (-) TimerEvent: {}
+[21.308289] (-) TimerEvent: {}
+[21.408865] (-) TimerEvent: {}
+[21.509422] (-) TimerEvent: {}
+[21.602777] (drone_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_controller', 'build', '--build-base', '/home/jetson/Multitask-Drone/build/drone_controller/build', 'install', '--record', '/home/jetson/Multitask-Drone/build/drone_controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jetson/Multitask-Drone/src/drone_controller', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'HTTPS_PROXY': 'http://127.0.0.1:7890/', 'no_proxy': 'localhost,127.0.0.0/8,::1', 'LANGUAGE': 'en_US:en', 'USER': 'jetson', 'LC_TIME': 'zh_CN.UTF-8', 'all_proxy': 'socks://127.0.0.1:7890/', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jetson/Multitask-Drone/install/drone_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/jetson', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.0/8,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'zh_CN.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2005', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'https_proxy': 'http://127.0.0.1:7890/', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'jetson', 'ALL_PROXY': 'socks://127.0.0.1:7890/', 'http_proxy': 'http://127.0.0.1:7890/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'jetson', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/jetson:@/tmp/.ICE-unix/2005,unix/jetson:/tmp/.ICE-unix/2005', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'zh_CN.UTF-8', 'ftp_proxy': 'http://127.0.0.1:7890/', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/9a8d0485_5bcf_4f3f_b854_e177c8cad82f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.96', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/jetson/Multitask-Drone/install/drone_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/jetson/Multitask-Drone/build/drone_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'FTP_PROXY': 'http://127.0.0.1:7890/', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetson/Multitask-Drone/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages:/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'HTTP_PROXY': 'http://127.0.0.1:7890/', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/jetson/Multitask-Drone/install/drone_interfaces'}, 'shell': False}
+[21.609532] (-) TimerEvent: {}
+[21.612079] (drone_vision) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_vision', 'build', '--build-base', '/home/jetson/Multitask-Drone/build/drone_vision/build', 'install', '--record', '/home/jetson/Multitask-Drone/build/drone_vision/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jetson/Multitask-Drone/src/drone_vision', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'HTTPS_PROXY': 'http://127.0.0.1:7890/', 'no_proxy': 'localhost,127.0.0.0/8,::1', 'LANGUAGE': 'en_US:en', 'USER': 'jetson', 'LC_TIME': 'zh_CN.UTF-8', 'all_proxy': 'socks://127.0.0.1:7890/', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jetson/Multitask-Drone/install/drone_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/jetson', 'DESKTOP_SESSION': 'ubuntu', 'NO_PROXY': 'localhost,127.0.0.0/8,::1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'zh_CN.UTF-8', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2005', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'https_proxy': 'http://127.0.0.1:7890/', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'jetson', 'ALL_PROXY': 'socks://127.0.0.1:7890/', 'http_proxy': 'http://127.0.0.1:7890/', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'jetson', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/jetson/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/jetson:@/tmp/.ICE-unix/2005,unix/jetson:/tmp/.ICE-unix/2005', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'zh_CN.UTF-8', 'ftp_proxy': 'http://127.0.0.1:7890/', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/9a8d0485_5bcf_4f3f_b854_e177c8cad82f', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.96', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/jetson/Multitask-Drone/install/drone_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'zh_CN.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/jetson/Multitask-Drone/build/drone_vision', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'FTP_PROXY': 'http://127.0.0.1:7890/', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=9db3cc91acbaae51fba4ce6867ce5ccf', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetson/Multitask-Drone/build/drone_vision/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages:/home/jetson/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'HTTP_PROXY': 'http://127.0.0.1:7890/', 'LC_NUMERIC': 'zh_CN.UTF-8', 'LC_PAPER': 'zh_CN.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/jetson/Multitask-Drone/install/drone_interfaces'}, 'shell': False}
+[21.709699] (-) TimerEvent: {}
+[21.810304] (-) TimerEvent: {}
+[21.910803] (-) TimerEvent: {}
+[22.011359] (-) TimerEvent: {}
+[22.015624] (drone_controller) StdoutLine: {'line': b'running egg_info\n'}
+[22.016960] (drone_controller) StdoutLine: {'line': b'creating ../../build/drone_controller/drone_controller.egg-info\n'}
+[22.017374] (drone_controller) StdoutLine: {'line': b'writing ../../build/drone_controller/drone_controller.egg-info/PKG-INFO\n'}
+[22.017846] (drone_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_controller/drone_controller.egg-info/dependency_links.txt\n'}
+[22.018265] (drone_controller) StdoutLine: {'line': b'writing entry points to ../../build/drone_controller/drone_controller.egg-info/entry_points.txt\n'}
+[22.018405] (drone_controller) StdoutLine: {'line': b'writing requirements to ../../build/drone_controller/drone_controller.egg-info/requires.txt\n'}
+[22.018512] (drone_controller) StdoutLine: {'line': b'writing top-level names to ../../build/drone_controller/drone_controller.egg-info/top_level.txt\n'}
+[22.018639] (drone_controller) StdoutLine: {'line': b"writing manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'\n"}
+[22.020968] (drone_vision) StdoutLine: {'line': b'running egg_info\n'}
+[22.021952] (drone_controller) StdoutLine: {'line': b"reading manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'\n"}
+[22.022358] (drone_controller) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[22.022604] (drone_vision) StdoutLine: {'line': b'creating ../../build/drone_vision/drone_vision.egg-info\n'}
+[22.022720] (drone_vision) StdoutLine: {'line': b'writing ../../build/drone_vision/drone_vision.egg-info/PKG-INFO\n'}
+[22.022978] (drone_vision) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_vision/drone_vision.egg-info/dependency_links.txt\n'}
+[22.023207] (drone_vision) StdoutLine: {'line': b'writing entry points to ../../build/drone_vision/drone_vision.egg-info/entry_points.txt\n'}
+[22.023392] (drone_vision) StdoutLine: {'line': b'writing requirements to ../../build/drone_vision/drone_vision.egg-info/requires.txt\n'}
+[22.023527] (drone_vision) StdoutLine: {'line': b'writing top-level names to ../../build/drone_vision/drone_vision.egg-info/top_level.txt\n'}
+[22.023656] (drone_controller) StdoutLine: {'line': b"writing manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'\n"}
+[22.023781] (drone_controller) StdoutLine: {'line': b'running build\n'}
+[22.023942] (drone_controller) StdoutLine: {'line': b'running build_py\n'}
+[22.024043] (drone_vision) StdoutLine: {'line': b"writing manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'\n"}
+[22.024165] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_controller/build\n'}
+[22.024288] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_controller/build/lib\n'}
+[22.024392] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[22.024529] (drone_controller) StdoutLine: {'line': b'copying drone_controller/config.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[22.026482] (drone_controller) StdoutLine: {'line': b'copying drone_controller/drone_controller.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[22.026659] (drone_vision) StdoutLine: {'line': b"reading manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'\n"}
+[22.026794] (drone_controller) StdoutLine: {'line': b'copying drone_controller/__init__.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[22.026959] (drone_vision) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[22.027094] (drone_controller) StdoutLine: {'line': b'copying drone_controller/constant.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[22.027214] (drone_controller) StdoutLine: {'line': b'copying drone_controller/utils.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[22.027377] (drone_controller) StdoutLine: {'line': b'copying drone_controller/yiku_test.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller\n'}
+[22.027696] (drone_vision) StdoutLine: {'line': b"writing manifest file '../../build/drone_vision/drone_vision.egg-info/SOURCES.txt'\n"}
+[22.027896] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task\n'}
+[22.028083] (drone_vision) StdoutLine: {'line': b'running build\n'}
+[22.028185] (drone_vision) StdoutLine: {'line': b'running build_py\n'}
+[22.028306] (drone_controller) StdoutLine: {'line': b'copying drone_controller/task/task_executor.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task\n'}
+[22.028433] (drone_controller) StdoutLine: {'line': b'copying drone_controller/task/task_handler.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task\n'}
+[22.028577] (drone_vision) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_vision/build\n'}
+[22.028765] (drone_vision) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_vision/build/lib\n'}
+[22.028899] (drone_controller) StdoutLine: {'line': b'copying drone_controller/task/__init__.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task\n'}
+[22.029052] (drone_vision) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_vision/build/lib/drone_vision\n'}
+[22.029173] (drone_vision) StdoutLine: {'line': b'copying drone_vision/object_detector.py -> /home/jetson/Multitask-Drone/build/drone_vision/build/lib/drone_vision\n'}
+[22.029324] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[22.029446] (drone_vision) StdoutLine: {'line': b'copying drone_vision/__init__.py -> /home/jetson/Multitask-Drone/build/drone_vision/build/lib/drone_vision\n'}
+[22.029542] (drone_controller) StdoutLine: {'line': b'copying drone_controller/waypoint/waypoint_task_executor.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[22.029689] (drone_vision) StdoutLine: {'line': b'copying drone_vision/utils.py -> /home/jetson/Multitask-Drone/build/drone_vision/build/lib/drone_vision\n'}
+[22.029835] (drone_controller) StdoutLine: {'line': b'copying drone_controller/waypoint/waypoint_task_executor_test.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[22.029958] (drone_vision) StdoutLine: {'line': b'running install\n'}
+[22.030054] (drone_controller) StdoutLine: {'line': b'copying drone_controller/waypoint/waypoint_handler.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[22.030236] (drone_vision) StdoutLine: {'line': b'running install_lib\n'}
+[22.030360] (drone_controller) StdoutLine: {'line': b'copying drone_controller/waypoint/__init__.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint\n'}
+[22.030489] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload\n'}
+[22.030623] (drone_controller) StdoutLine: {'line': b'copying drone_controller/payload/__init__.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload\n'}
+[22.030807] (drone_controller) StdoutLine: {'line': b'copying drone_controller/payload/payload_controller.py -> /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload\n'}
+[22.031366] (drone_vision) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision\n'}
+[22.031564] (drone_vision) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_vision/build/lib/drone_vision/object_detector.py -> /home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision\n'}
+[22.031679] (drone_controller) StdoutLine: {'line': b'running install\n'}
+[22.031813] (drone_vision) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_vision/build/lib/drone_vision/__init__.py -> /home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision\n'}
+[22.031949] (drone_vision) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_vision/build/lib/drone_vision/utils.py -> /home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision\n'}
+[22.032119] (drone_controller) StdoutLine: {'line': b'running install_lib\n'}
+[22.032780] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/object_detector.py to object_detector.cpython-310.pyc\n'}
+[22.033335] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[22.033508] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/config.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[22.033739] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/drone_controller.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[22.033981] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task\n'}
+[22.034124] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task/task_executor.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task\n'}
+[22.034319] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task/task_handler.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task\n'}
+[22.034507] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task/__init__.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task\n'}
+[22.034673] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/__init__.py to __init__.cpython-310.pyc\n'}
+[22.034805] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/__init__.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[22.034982] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload\n'}
+[22.035112] (drone_vision) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision/utils.py to utils.cpython-310.pyc\n'}
+[22.035238] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload/__init__.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload\n'}
+[22.035340] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload/payload_controller.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload\n'}
+[22.035461] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/constant.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[22.035575] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[22.035737] (drone_vision) StdoutLine: {'line': b'running install_data\n'}
+[22.035916] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_task_executor.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[22.036075] (drone_vision) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_vision/share/ament_index\n'}
+[22.036202] (drone_vision) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_vision/share/ament_index/resource_index\n'}
+[22.036370] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_task_executor_test.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[22.036533] (drone_vision) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_vision/share/ament_index/resource_index/packages\n'}
+[22.036696] (drone_vision) StdoutLine: {'line': b'copying resource/drone_vision -> /home/jetson/Multitask-Drone/install/drone_vision/share/ament_index/resource_index/packages\n'}
+[22.036837] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_handler.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[22.036989] (drone_vision) StdoutLine: {'line': b'copying package.xml -> /home/jetson/Multitask-Drone/install/drone_vision/share/drone_vision\n'}
+[22.037091] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/__init__.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint\n'}
+[22.037208] (drone_vision) StdoutLine: {'line': b'copying launch/drone_vision.launch.py -> /home/jetson/Multitask-Drone/install/drone_vision/share/drone_vision\n'}
+[22.037310] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/utils.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[22.037464] (drone_vision) StdoutLine: {'line': b'running install_egg_info\n'}
+[22.037564] (drone_controller) StdoutLine: {'line': b'copying /home/jetson/Multitask-Drone/build/drone_controller/build/lib/drone_controller/yiku_test.py -> /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller\n'}
+[22.039186] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/config.py to config.cpython-310.pyc\n'}
+[22.039472] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/drone_controller.py to drone_controller.cpython-310.pyc\n'}
+[22.040432] (drone_vision) StdoutLine: {'line': b'Copying ../../build/drone_vision/drone_vision.egg-info to /home/jetson/Multitask-Drone/install/drone_vision/lib/python3.10/site-packages/drone_vision-0.0.0-py3.10.egg-info\n'}
+[22.041337] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task/task_executor.py to task_executor.cpython-310.pyc\n'}
+[22.042098] (drone_vision) StdoutLine: {'line': b'running install_scripts\n'}
+[22.043688] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task/task_handler.py to task_handler.cpython-310.pyc\n'}
+[22.044859] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task/__init__.py to __init__.cpython-310.pyc\n'}
+[22.045162] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/__init__.py to __init__.cpython-310.pyc\n'}
+[22.045452] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload/__init__.py to __init__.cpython-310.pyc\n'}
+[22.045821] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload/payload_controller.py to payload_controller.cpython-310.pyc\n'}
+[22.046357] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/constant.py to constant.cpython-310.pyc\n'}
+[22.046900] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_task_executor.py to waypoint_task_executor.cpython-310.pyc\n'}
+[22.050447] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_task_executor_test.py to waypoint_task_executor_test.cpython-310.pyc\n'}
+[22.053974] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_handler.py to waypoint_handler.cpython-310.pyc\n'}
+[22.055680] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/__init__.py to __init__.cpython-310.pyc\n'}
+[22.056009] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/utils.py to utils.cpython-310.pyc\n'}
+[22.057199] (drone_controller) StdoutLine: {'line': b'byte-compiling /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/yiku_test.py to yiku_test.cpython-310.pyc\n'}
+[22.058932] (drone_controller) StdoutLine: {'line': b'running install_data\n'}
+[22.059655] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_controller/share/ament_index\n'}
+[22.059846] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_controller/share/ament_index/resource_index\n'}
+[22.060024] (drone_controller) StdoutLine: {'line': b'creating /home/jetson/Multitask-Drone/install/drone_controller/share/ament_index/resource_index/packages\n'}
+[22.060163] (drone_controller) StdoutLine: {'line': b'copying resource/drone_controller -> /home/jetson/Multitask-Drone/install/drone_controller/share/ament_index/resource_index/packages\n'}
+[22.060274] (drone_controller) StdoutLine: {'line': b'copying package.xml -> /home/jetson/Multitask-Drone/install/drone_controller/share/drone_controller\n'}
+[22.060378] (drone_controller) StdoutLine: {'line': b'copying launch/drone_controller.launch.py -> /home/jetson/Multitask-Drone/install/drone_controller/share/drone_controller\n'}
+[22.060479] (drone_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[22.063592] (drone_controller) StdoutLine: {'line': b'Copying ../../build/drone_controller/drone_controller.egg-info to /home/jetson/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller-0.0.0-py3.10.egg-info\n'}
+[22.065121] (drone_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[22.074911] (drone_vision) StdoutLine: {'line': b'Installing object_detector script to /home/jetson/Multitask-Drone/install/drone_vision/lib/drone_vision\n'}
+[22.075631] (drone_vision) StdoutLine: {'line': b"writing list of installed files to '/home/jetson/Multitask-Drone/build/drone_vision/install.log'\n"}
+[22.098281] (drone_controller) StdoutLine: {'line': b'Installing drone_controller script to /home/jetson/Multitask-Drone/install/drone_controller/lib/drone_controller\n'}
+[22.098665] (drone_controller) StdoutLine: {'line': b'Installing task_executor script to /home/jetson/Multitask-Drone/install/drone_controller/lib/drone_controller\n'}
+[22.098862] (drone_controller) StdoutLine: {'line': b'Installing waypoint_handler script to /home/jetson/Multitask-Drone/install/drone_controller/lib/drone_controller\n'}
+[22.099035] (drone_controller) StdoutLine: {'line': b'Installing yiku_test script to /home/jetson/Multitask-Drone/install/drone_controller/lib/drone_controller\n'}
+[22.100163] (drone_controller) StdoutLine: {'line': b"writing list of installed files to '/home/jetson/Multitask-Drone/build/drone_controller/install.log'\n"}
+[22.111444] (-) TimerEvent: {}
+[22.139788] (drone_vision) CommandEnded: {'returncode': 0}
+[22.161133] (drone_vision) JobEnded: {'identifier': 'drone_vision', 'rc': 0}
+[22.165299] (drone_controller) CommandEnded: {'returncode': 0}
+[22.187646] (drone_controller) JobEnded: {'identifier': 'drone_controller', 'rc': 0}
+[22.190088] (-) EventReactorShutdown: {}

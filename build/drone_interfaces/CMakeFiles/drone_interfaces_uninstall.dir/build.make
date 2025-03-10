@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ccl/Multitask-Drone/src/drone_interfaces
+CMAKE_SOURCE_DIR = /home/jetson/Multitask-Drone/src/drone_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ccl/Multitask-Drone/build/drone_interfaces
+CMAKE_BINARY_DIR = /home/jetson/Multitask-Drone/build/drone_interfaces
 
 # Utility rule file for drone_interfaces_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/drone_interfaces_uninstall.dir/compiler_depend.make
 include CMakeFiles/drone_interfaces_uninstall.dir/progress.make
 
 CMakeFiles/drone_interfaces_uninstall:
-	/usr/bin/cmake -P /home/ccl/Multitask-Drone/build/drone_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/jetson/Multitask-Drone/build/drone_interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 drone_interfaces_uninstall: CMakeFiles/drone_interfaces_uninstall
 drone_interfaces_uninstall: CMakeFiles/drone_interfaces_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/drone_interfaces_uninstall.dir/clean:
 .PHONY : CMakeFiles/drone_interfaces_uninstall.dir/clean
 
 CMakeFiles/drone_interfaces_uninstall.dir/depend:
-	cd /home/ccl/Multitask-Drone/build/drone_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ccl/Multitask-Drone/src/drone_interfaces /home/ccl/Multitask-Drone/src/drone_interfaces /home/ccl/Multitask-Drone/build/drone_interfaces /home/ccl/Multitask-Drone/build/drone_interfaces /home/ccl/Multitask-Drone/build/drone_interfaces/CMakeFiles/drone_interfaces_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/Multitask-Drone/build/drone_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Multitask-Drone/src/drone_interfaces /home/jetson/Multitask-Drone/src/drone_interfaces /home/jetson/Multitask-Drone/build/drone_interfaces /home/jetson/Multitask-Drone/build/drone_interfaces /home/jetson/Multitask-Drone/build/drone_interfaces/CMakeFiles/drone_interfaces_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/drone_interfaces_uninstall.dir/depend
 

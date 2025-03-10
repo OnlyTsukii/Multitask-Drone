@@ -1,0 +1,34 @@
+[1.084s] Invoking command in '/home/jetson/Multitask-Drone/src/drone_monitor': PYTHONPATH=/home/jetson/Multitask-Drone/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_monitor build --build-base /home/jetson/Multitask-Drone/build/drone_monitor/build install --record /home/jetson/Multitask-Drone/build/drone_monitor/install.log --single-version-externally-managed install_data
+[1.496s] running egg_info
+[1.497s] creating ../../build/drone_monitor/drone_monitor.egg-info
+[1.497s] writing ../../build/drone_monitor/drone_monitor.egg-info/PKG-INFO
+[1.498s] writing dependency_links to ../../build/drone_monitor/drone_monitor.egg-info/dependency_links.txt
+[1.498s] writing entry points to ../../build/drone_monitor/drone_monitor.egg-info/entry_points.txt
+[1.498s] writing requirements to ../../build/drone_monitor/drone_monitor.egg-info/requires.txt
+[1.498s] writing top-level names to ../../build/drone_monitor/drone_monitor.egg-info/top_level.txt
+[1.498s] writing manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'
+[1.501s] reading manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'
+[1.501s] adding license file 'LICENSE'
+[1.502s] writing manifest file '../../build/drone_monitor/drone_monitor.egg-info/SOURCES.txt'
+[1.503s] running build
+[1.503s] running build_py
+[1.503s] creating /home/jetson/Multitask-Drone/build/drone_monitor/build
+[1.503s] creating /home/jetson/Multitask-Drone/build/drone_monitor/build/lib
+[1.503s] creating /home/jetson/Multitask-Drone/build/drone_monitor/build/lib/src
+[1.504s] copying src/__init__.py -> /home/jetson/Multitask-Drone/build/drone_monitor/build/lib/src
+[1.504s] running install
+[1.504s] running install_lib
+[1.505s] creating /home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src
+[1.505s] copying /home/jetson/Multitask-Drone/build/drone_monitor/build/lib/src/__init__.py -> /home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src
+[1.507s] byte-compiling /home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/src/__init__.py to __init__.cpython-310.pyc
+[1.507s] running install_data
+[1.507s] creating /home/jetson/Multitask-Drone/install/drone_monitor/share/ament_index
+[1.507s] creating /home/jetson/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index
+[1.507s] creating /home/jetson/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index/packages
+[1.508s] copying resource/drone_monitor -> /home/jetson/Multitask-Drone/install/drone_monitor/share/ament_index/resource_index/packages
+[1.508s] copying package.xml -> /home/jetson/Multitask-Drone/install/drone_monitor/share/drone_monitor
+[1.508s] running install_egg_info
+[1.510s] Copying ../../build/drone_monitor/drone_monitor.egg-info to /home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages/drone_monitor-0.0.0-py3.10.egg-info
+[1.512s] running install_scripts
+[1.545s] writing list of installed files to '/home/jetson/Multitask-Drone/build/drone_monitor/install.log'
+[1.605s] Invoked command in '/home/jetson/Multitask-Drone/src/drone_monitor' returned '0': PYTHONPATH=/home/jetson/Multitask-Drone/build/drone_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/Multitask-Drone/install/drone_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_monitor build --build-base /home/jetson/Multitask-Drone/build/drone_monitor/build install --record /home/jetson/Multitask-Drone/build/drone_monitor/install.log --single-version-externally-managed install_data

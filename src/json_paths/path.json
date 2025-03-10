@@ -1,16 +1,16 @@
 [
     {
-        "latitude": 31.3102859,
-        "longitude": 120.6357092,
-        "altitude": 12.670815675852726,
+        "latitude": 31.3102117,
+        "longitude": 120.635677,
+        "altitude": 14.006728518931597,
         "type": 3,
         "mission": -1,
         "velocity": 1.0
     },
     {
-        "latitude": 31.3102901,
-        "longitude": 120.6356997,
-        "altitude": 16.21177674138317,
+        "latitude": 31.3102774,
+        "longitude": 120.6357092,
+        "altitude": 11.446819982628748,
         "type": 2,
         "mission": 3,
         "velocity": 1.0

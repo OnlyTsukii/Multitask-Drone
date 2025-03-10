@@ -24,7 +24,7 @@ while True:
         print("can't read the frame")
         break
 
-    # print(time.time())
+    print(time.time())
 
     cv2.imshow("test", frame)
 

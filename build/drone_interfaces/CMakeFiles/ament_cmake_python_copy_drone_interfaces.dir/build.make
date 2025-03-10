@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ccl/Multitask-Drone/src/drone_interfaces
+CMAKE_SOURCE_DIR = /home/jetson/Multitask-Drone/src/drone_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ccl/Multitask-Drone/build/drone_interfaces
+CMAKE_BINARY_DIR = /home/jetson/Multitask-Drone/build/drone_interfaces
 
 # Utility rule file for ament_cmake_python_copy_drone_interfaces.
 
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_copy_drone_interfaces.dir/compiler_depend.
 include CMakeFiles/ament_cmake_python_copy_drone_interfaces.dir/progress.make
 
 CMakeFiles/ament_cmake_python_copy_drone_interfaces:
-	/usr/bin/cmake -E copy_directory /home/ccl/Multitask-Drone/build/drone_interfaces/rosidl_generator_py/drone_interfaces /home/ccl/Multitask-Drone/build/drone_interfaces/ament_cmake_python/drone_interfaces/drone_interfaces
+	/usr/bin/cmake -E copy_directory /home/jetson/Multitask-Drone/build/drone_interfaces/rosidl_generator_py/drone_interfaces /home/jetson/Multitask-Drone/build/drone_interfaces/ament_cmake_python/drone_interfaces/drone_interfaces
 
 ament_cmake_python_copy_drone_interfaces: CMakeFiles/ament_cmake_python_copy_drone_interfaces
 ament_cmake_python_copy_drone_interfaces: CMakeFiles/ament_cmake_python_copy_drone_interfaces.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_copy_drone_interfaces.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_copy_drone_interfaces.dir/clean
 
 CMakeFiles/ament_cmake_python_copy_drone_interfaces.dir/depend:
-	cd /home/ccl/Multitask-Drone/build/drone_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ccl/Multitask-Drone/src/drone_interfaces /home/ccl/Multitask-Drone/src/drone_interfaces /home/ccl/Multitask-Drone/build/drone_interfaces /home/ccl/Multitask-Drone/build/drone_interfaces /home/ccl/Multitask-Drone/build/drone_interfaces/CMakeFiles/ament_cmake_python_copy_drone_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/Multitask-Drone/build/drone_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Multitask-Drone/src/drone_interfaces /home/jetson/Multitask-Drone/src/drone_interfaces /home/jetson/Multitask-Drone/build/drone_interfaces /home/jetson/Multitask-Drone/build/drone_interfaces /home/jetson/Multitask-Drone/build/drone_interfaces/CMakeFiles/ament_cmake_python_copy_drone_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_copy_drone_interfaces.dir/depend
 

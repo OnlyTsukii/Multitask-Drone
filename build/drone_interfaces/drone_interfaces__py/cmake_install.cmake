@@ -1,8 +1,8 @@
-# Install script for directory: /home/ccl/Multitask-Drone/build/drone_interfaces/drone_interfaces__py
+# Install script for directory: /home/jetson/Multitask-Drone/build/drone_interfaces/drone_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ccl/Multitask-Drone/install/drone_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/jetson/Multitask-Drone/install/drone_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

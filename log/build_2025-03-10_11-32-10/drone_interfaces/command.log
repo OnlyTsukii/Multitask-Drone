@@ -1,0 +1,6 @@
+Invoking command in '/home/jetson/Multitask-Drone/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jetson/Multitask-Drone/src/drone_interfaces -DCMAKE_INSTALL_PREFIX=/home/jetson/Multitask-Drone/install/drone_interfaces
+Invoked command in '/home/jetson/Multitask-Drone/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jetson/Multitask-Drone/src/drone_interfaces -DCMAKE_INSTALL_PREFIX=/home/jetson/Multitask-Drone/install/drone_interfaces
+Invoking command in '/home/jetson/Multitask-Drone/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jetson/Multitask-Drone/build/drone_interfaces -- -j6 -l6
+Invoked command in '/home/jetson/Multitask-Drone/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jetson/Multitask-Drone/build/drone_interfaces -- -j6 -l6
+Invoking command in '/home/jetson/Multitask-Drone/build/drone_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jetson/Multitask-Drone/build/drone_interfaces
+Invoked command in '/home/jetson/Multitask-Drone/build/drone_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jetson/Multitask-Drone/build/drone_interfaces

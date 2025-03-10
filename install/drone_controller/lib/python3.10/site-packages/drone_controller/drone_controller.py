@@ -63,7 +63,7 @@ class DroneController(Node):
             return False
         
         # for px4
-        self.init_pose()
+        # self.init_pose()
         
         for _ in range(5):
             res = self.set_mode('OFFBOARD')

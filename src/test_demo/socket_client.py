@@ -26,7 +26,7 @@ data = [
 ]
 
 async def send_and_receive_data():
-    uri = "ws://0.0.0.0:8765"  
+    uri = "ws://127.0.0.1:8765"  
     async with websockets.connect(uri) as websocket:
         await websocket.send(json.dumps(data))
         print(f"Sent data: {data}")
