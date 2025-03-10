@@ -1,0 +1,14 @@
+{
+  "package_name": "drone_interfaces",
+  "non_idl_tuples": [
+    "/home/ccl/Multitask-Drone/src/drone_interfaces:msg/Yaw.msg",
+    "/home/ccl/Multitask-Drone/src/drone_interfaces:msg/PanelBox.msg",
+    "/home/ccl/Multitask-Drone/src/drone_interfaces:msg/Task.msg",
+    "/home/ccl/Multitask-Drone/src/drone_interfaces:msg/TaskState.msg",
+    "/home/ccl/Multitask-Drone/src/drone_interfaces:msg/RawWaypoint.msg",
+    "/home/ccl/Multitask-Drone/src/drone_interfaces:srv/TaskDispatch.srv",
+    "/home/ccl/Multitask-Drone/src/drone_interfaces:srv/YoloRequest.srv",
+    "/home/ccl/Multitask-Drone/src/drone_interfaces:srv/TaskPush.srv",
+    "/home/ccl/Multitask-Drone/src/drone_interfaces:action/ExecuteWaypoint.action"
+  ]
+}

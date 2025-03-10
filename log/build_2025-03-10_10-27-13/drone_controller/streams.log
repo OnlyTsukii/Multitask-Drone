@@ -1,0 +1,87 @@
+[0.613s] Invoking command in '/home/ccl/Multitask-Drone/src/drone_controller': AMENT_PREFIX_PATH=/home/ccl/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ccl/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/ccl/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ccl/Multitask-Drone/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages:/home/ccl/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_controller build --build-base /home/ccl/Multitask-Drone/build/drone_controller/build install --record /home/ccl/Multitask-Drone/build/drone_controller/install.log --single-version-externally-managed install_data
+[0.772s] running egg_info
+[0.774s] creating ../../build/drone_controller/drone_controller.egg-info
+[0.774s] writing ../../build/drone_controller/drone_controller.egg-info/PKG-INFO
+[0.774s] writing dependency_links to ../../build/drone_controller/drone_controller.egg-info/dependency_links.txt
+[0.774s] writing entry points to ../../build/drone_controller/drone_controller.egg-info/entry_points.txt
+[0.774s] writing requirements to ../../build/drone_controller/drone_controller.egg-info/requires.txt
+[0.774s] writing top-level names to ../../build/drone_controller/drone_controller.egg-info/top_level.txt
+[0.774s] writing manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'
+[0.775s] reading manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'
+[0.775s] adding license file 'LICENSE'
+[0.776s] writing manifest file '../../build/drone_controller/drone_controller.egg-info/SOURCES.txt'
+[0.776s] running build
+[0.776s] running build_py
+[0.776s] creating /home/ccl/Multitask-Drone/build/drone_controller/build
+[0.776s] creating /home/ccl/Multitask-Drone/build/drone_controller/build/lib
+[0.777s] creating /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller
+[0.777s] copying drone_controller/drone_controller.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller
+[0.777s] copying drone_controller/__init__.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller
+[0.777s] copying drone_controller/yiku_test.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller
+[0.777s] copying drone_controller/constant.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller
+[0.777s] copying drone_controller/config.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller
+[0.777s] copying drone_controller/utils.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller
+[0.777s] creating /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task
+[0.777s] copying drone_controller/task/__init__.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task
+[0.778s] copying drone_controller/task/task_executor.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task
+[0.778s] copying drone_controller/task/task_handler.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task
+[0.778s] creating /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint
+[0.778s] copying drone_controller/waypoint/waypoint_handler.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint
+[0.778s] copying drone_controller/waypoint/__init__.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint
+[0.779s] copying drone_controller/waypoint/waypoint_task_executor.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint
+[0.779s] copying drone_controller/waypoint/waypoint_task_executor_test.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint
+[0.779s] creating /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload
+[0.780s] copying drone_controller/payload/payload_controller.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload
+[0.780s] copying drone_controller/payload/__init__.py -> /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload
+[0.780s] running install
+[0.780s] running install_lib
+[0.780s] creating /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller
+[0.781s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/drone_controller.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller
+[0.781s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/__init__.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller
+[0.781s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/yiku_test.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller
+[0.781s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/constant.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller
+[0.781s] creating /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint
+[0.781s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_handler.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint
+[0.781s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/__init__.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint
+[0.781s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_task_executor.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint
+[0.782s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/waypoint/waypoint_task_executor_test.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint
+[0.783s] creating /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task
+[0.783s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task/__init__.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task
+[0.783s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task/task_executor.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task
+[0.783s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/task/task_handler.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task
+[0.783s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/config.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller
+[0.783s] creating /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload
+[0.783s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload/payload_controller.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload
+[0.783s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/payload/__init__.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload
+[0.783s] copying /home/ccl/Multitask-Drone/build/drone_controller/build/lib/drone_controller/utils.py -> /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller
+[0.783s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/drone_controller.py to drone_controller.cpython-310.pyc
+[0.784s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/__init__.py to __init__.cpython-310.pyc
+[0.784s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/yiku_test.py to yiku_test.cpython-310.pyc
+[0.785s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/constant.py to constant.cpython-310.pyc
+[0.785s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_handler.py to waypoint_handler.cpython-310.pyc
+[0.786s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/__init__.py to __init__.cpython-310.pyc
+[0.786s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_task_executor.py to waypoint_task_executor.cpython-310.pyc
+[0.788s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/waypoint/waypoint_task_executor_test.py to waypoint_task_executor_test.cpython-310.pyc
+[0.789s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task/__init__.py to __init__.cpython-310.pyc
+[0.789s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task/task_executor.py to task_executor.cpython-310.pyc
+[0.790s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/task/task_handler.py to task_handler.cpython-310.pyc
+[0.791s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/config.py to config.cpython-310.pyc
+[0.792s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload/payload_controller.py to payload_controller.cpython-310.pyc
+[0.793s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/payload/__init__.py to __init__.cpython-310.pyc
+[0.793s] byte-compiling /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller/utils.py to utils.cpython-310.pyc
+[0.793s] running install_data
+[0.793s] creating /home/ccl/Multitask-Drone/install/drone_controller/share/ament_index
+[0.794s] creating /home/ccl/Multitask-Drone/install/drone_controller/share/ament_index/resource_index
+[0.794s] creating /home/ccl/Multitask-Drone/install/drone_controller/share/ament_index/resource_index/packages
+[0.794s] copying resource/drone_controller -> /home/ccl/Multitask-Drone/install/drone_controller/share/ament_index/resource_index/packages
+[0.794s] copying package.xml -> /home/ccl/Multitask-Drone/install/drone_controller/share/drone_controller
+[0.795s] copying launch/drone_controller.launch.py -> /home/ccl/Multitask-Drone/install/drone_controller/share/drone_controller
+[0.795s] running install_egg_info
+[0.796s] Copying ../../build/drone_controller/drone_controller.egg-info to /home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages/drone_controller-0.0.0-py3.10.egg-info
+[0.797s] running install_scripts
+[0.815s] Installing drone_controller script to /home/ccl/Multitask-Drone/install/drone_controller/lib/drone_controller
+[0.816s] Installing task_executor script to /home/ccl/Multitask-Drone/install/drone_controller/lib/drone_controller
+[0.816s] Installing waypoint_handler script to /home/ccl/Multitask-Drone/install/drone_controller/lib/drone_controller
+[0.816s] Installing yiku_test script to /home/ccl/Multitask-Drone/install/drone_controller/lib/drone_controller
+[0.816s] writing list of installed files to '/home/ccl/Multitask-Drone/build/drone_controller/install.log'
+[0.838s] Invoked command in '/home/ccl/Multitask-Drone/src/drone_controller' returned '0': AMENT_PREFIX_PATH=/home/ccl/Multitask-Drone/install/drone_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ccl/Multitask-Drone/install/drone_interfaces LD_LIBRARY_PATH=/home/ccl/Multitask-Drone/install/drone_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ccl/Multitask-Drone/build/drone_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ccl/Multitask-Drone/install/drone_controller/lib/python3.10/site-packages:/home/ccl/Multitask-Drone/install/drone_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/drone_controller build --build-base /home/ccl/Multitask-Drone/build/drone_controller/build install --record /home/ccl/Multitask-Drone/build/drone_controller/install.log --single-version-externally-managed install_data

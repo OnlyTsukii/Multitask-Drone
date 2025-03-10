@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# SCRIPT_DIR="/home/jetson/UAV/Shell"
+# SCRIPT_DIR="~/UAV/Shell"
 
 # SCRIPTS=(
 #     "start_camera.sh"
@@ -26,17 +26,17 @@
 # /bin/sleep 3
 
 # export TERM=xterm-256color
-# /home/jetson/UAV/Camera/Demo &
+# ~/UAV/Camera/Demo &
 
 
 /bin/sleep 2
 
-# python3 /home/jetson/Multitask-Drone/src/scripts/http_server.py &
+# python3 ~/Multitask-Drone/src/scripts/http_server.py &
 
 source /opt/ros/humble/setup.bash
 ros2 launch mavros px4.launch &
 
 /bin/sleep 2
 
-source /home/jetson/Multitask-Drone/install/setup.bash
+source ~/Multitask-Drone/install/setup.bash
 ros2 launch drone_controller drone_controller.launch.py
