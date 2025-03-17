@@ -205,8 +205,8 @@ class TaskExecutor(Node):
                     self.execute_takeoff(next_waypoint_id, task.waypoints[0].altitude)
                     next_waypoint_id += 1
 
-                    self.execute_rotate(next_waypoint_id, task.waypoints[0])
-                    next_waypoint_id += 1
+                    # self.execute_rotate(next_waypoint_id, task.waypoints[0])
+                    # next_waypoint_id += 1
             
                 while index < length:
                     waypoint = task.waypoints[index]
@@ -215,9 +215,9 @@ class TaskExecutor(Node):
                     self.send_waypoint_action(waypoint, True)
                     next_waypoint_id += 1
                     
-                    if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
-                        self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
-                        next_waypoint_id += 1
+                    # if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
+                        # self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
+                        # next_waypoint_id += 1
 
                     index += 1
 

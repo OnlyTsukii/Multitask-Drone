@@ -1,6 +1,7 @@
 import asyncio
 import websockets
 import json
+import time
 
 
 # TYPE_START              = 0   
@@ -34,4 +35,5 @@ async def send_and_receive_data():
         response = await websocket.recv()
         print(f"Received response: {response}")
 
+time.sleep(300)
 asyncio.run(send_and_receive_data())
