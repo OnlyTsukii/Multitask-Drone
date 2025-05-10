@@ -1,5 +1,0 @@
-drone_interfaces/RawWaypoint waypoint
----
-bool success
----
-uint8 feedback
