@@ -1,0 +1,11 @@
+[Unit]
+Description=Set Static IP at Boot
+After=network.target
+
+[Service]
+ExecStart=/bin/python3 /home/nx8g01/Multitask-Drone/src/scripts/static_ip.py
+User=root
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
