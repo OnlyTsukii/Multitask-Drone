@@ -31,14 +31,14 @@ class TaskExecutor(Node):
         self.state_sub = self.create_subscription(State, '/mavros/state', self.state_callback, 10)
 
         self.land_client = self.create_client(CommandTOL, '/mavros/cmd/land')
-        # self.yolo_client = self.create_client(YoloRequest, '/drone/yolo_request')
+        self.yolo_client = self.create_client(YoloRequest, '/drone/yolo_request')
         self.mode_client = self.create_client(SetMode, '/mavros/set_mode')
 
         while not self.land_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Waiting for Land service to be available...")
 
-        # while not self.yolo_client.wait_for_service(timeout_sec=1.0):
-        #     self.get_logger().info("Waiting for Yolo service to be available...")
+        while not self.yolo_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Waiting for Yolo service to be available...")
 
         while not self.mode_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Mode service not available, waiting...')

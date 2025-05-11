@@ -22,10 +22,10 @@ class WaypointHandler(Node):
 
         self.waypoint_task_executor = WaypointTaskExecutor()
 
-        # self.yolo_client = self.create_client(YoloRequest, '/drone/yolo_request')
+        self.yolo_client = self.create_client(YoloRequest, '/drone/yolo_request')
 
-        # while not self.yolo_client.wait_for_service(timeout_sec=1.0):
-        #     self.get_logger().info("Waiting for Yolo service to be available...")
+        while not self.yolo_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Waiting for Yolo service to be available...")
 
         qos_profile = QoSProfile(reliability=ReliabilityPolicy.RELIABLE, history=HistoryPolicy.KEEP_LAST, depth=10)
 
@@ -108,8 +108,8 @@ class WaypointHandler(Node):
         #     self.yolo_request(True)
         #     self.waypoint_task_executor.execute_clean_task()
         #     self.yolo_request(False)
-        # if waypoint.mission == MISSION_LOCAL_CAPTURE:
-        #     self.waypoint_task_executor.execute_capture_task()
+        if waypoint.mission == MISSION_LOCAL_CAPTURE:
+            self.waypoint_task_executor.execute_capture_task()
         # elif waypoint.mission == MISSION_LOCAL_CLEAN:
         #     self.waypoint_task_executor.execute_local_clean_task()
         if waypoint.mission == MISSION_LOCAL_TEST:

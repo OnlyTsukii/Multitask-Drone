@@ -2,17 +2,15 @@ import cv2
 import time
 import rclpy
 import threading
-import sys
-import os
 import math
 
-from ultralytics import YOLO
+# from ultralytics import YOLO
 from rclpy.node import Node
 from copy import deepcopy
 from drone_interfaces.msg import PanelBox, Yaw
 from drone_interfaces.srv import YoloRequest
 
-from drone_vision.utils import calc_angle_by_canny
+# from drone_vision.utils import calc_angle_by_canny
 
 IMAGE_WIDTH         = 1920
 IMAGE_HEIGHT        = 1080
@@ -35,7 +33,7 @@ class ObjectDetector(Node):
         self.panel_publisher = self.create_publisher(PanelBox, '/drone/panel_box', 10)
         self.panel_yaw_publisher = self.create_publisher(Yaw, '/drone/panel_yaw', 10)
 
-        self.detect_model = YOLO(MODEL_PATH)
+        # self.detect_model = YOLO(MODEL_PATH)
 
         self.counter = 0
         self.detect_counter = 0
@@ -48,7 +46,7 @@ class ObjectDetector(Node):
 
         self.yolo_enabled = False
         
-        self.create_timer(0.09, self.detect)
+        # self.create_timer(0.09, self.detect)
 
     def handle_yolo_request(self, request, response):
         self.yolo_enabled = request.start
@@ -81,57 +79,57 @@ class ObjectDetector(Node):
 
             self.frame = frame
     
-    def detect(self):
-        # if not self.yolo_enabled:
-        #     return
+    # def detect(self):
+    #     if not self.yolo_enabled:
+    #         return
         
-        if self.counter % 20 == 0:
-            cv2.imwrite(CLEAN_RAW_IMAGE_PATH+str(time.time())+'.jpg', self.frame)
-            self.counter = 0
+    #     if self.counter % 20 == 0:
+    #         cv2.imwrite(CLEAN_RAW_IMAGE_PATH+str(time.time())+'.jpg', self.frame)
+    #         self.counter = 0
 
-        self.counter += 1
+    #     self.counter += 1
         
-        self.mutex.acquire()
-        results = self.detect_model(self.frame, True)
-        self.mutex.release()
+    #     self.mutex.acquire()
+    #     results = self.detect_model(self.frame, True)
+    #     self.mutex.release()
 
-        has_result = False
+    #     has_result = False
 
-        for result in results:
-            if len(result.boxes.conf) == 0:
-                continue
-            conf = result.boxes.conf[0]
-            if conf < CONF_THRESHOLD:
-                continue
+    #     for result in results:
+    #         if len(result.boxes.conf) == 0:
+    #             continue
+    #         conf = result.boxes.conf[0]
+    #         if conf < CONF_THRESHOLD:
+    #             continue
 
-            if self.detect_counter % 10 == 0:
-                cv2.imwrite(CLEAN_LABELED_IMAGE_PATH+str(time.time())+'.jpg', result.plot())
-                self.detect_counter = 0
+    #         if self.detect_counter % 10 == 0:
+    #             cv2.imwrite(CLEAN_LABELED_IMAGE_PATH+str(time.time())+'.jpg', result.plot())
+    #             self.detect_counter = 0
 
-            self.detect_counter += 1
+    #         self.detect_counter += 1
         
-            x, y, w, h = result.boxes.xywh[0]
-            center_x = IMAGE_WIDTH/2 - x
-            center_y = IMAGE_HEIGHT/2 - y
+    #         x, y, w, h = result.boxes.xywh[0]
+    #         center_x = IMAGE_WIDTH/2 - x
+    #         center_y = IMAGE_HEIGHT/2 - y
 
-            has_result = True
+    #         has_result = True
 
-        panel_box = PanelBox()
-        if has_result:
-            panel_box.x = float(center_x)
-            panel_box.y = float(center_y)
-            panel_box.w = float(w)
-            panel_box.h = float(h)
-            self.get_logger().info(f'{panel_box, panel_box.y - panel_box.h / 2, panel_box.h / 2 + panel_box.y}')
+    #     panel_box = PanelBox()
+    #     if has_result:
+    #         panel_box.x = float(center_x)
+    #         panel_box.y = float(center_y)
+    #         panel_box.w = float(w)
+    #         panel_box.h = float(h)
+    #         self.get_logger().info(f'{panel_box, panel_box.y - panel_box.h / 2, panel_box.h / 2 + panel_box.y}')
 
-        self.panel_publisher.publish(panel_box)
+    #     self.panel_publisher.publish(panel_box)
 
-        yaw = calc_angle_by_canny(self.frame)
-        if not math.isnan(yaw):
-            panel_yaw = Yaw()
-            panel_yaw.yaw = yaw
-            self.panel_yaw_publisher.publish(panel_yaw)
-            self.get_logger().info(f'{panel_yaw}')
+    #     yaw = calc_angle_by_canny(self.frame)
+    #     if not math.isnan(yaw):
+    #         panel_yaw = Yaw()
+    #         panel_yaw.yaw = yaw
+    #         self.panel_yaw_publisher.publish(panel_yaw)
+    #         self.get_logger().info(f'{panel_yaw}')
 
 
 def main(args=None):

@@ -6,10 +6,10 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     return LaunchDescription([
-        # Node(
-        #     package='drone_vision',
-        #     executable='object_detector',
-        # ),
+        Node(
+            package='drone_vision',
+            executable='object_detector',
+        ),
         Node(
             package='drone_controller',
             executable='waypoint_handler',

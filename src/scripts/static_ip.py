@@ -3,10 +3,10 @@ import subprocess
 import logging
 import time
 
-SSID = "SDUA_WIFI"
-PASSWORD = "zhen1234..zz"
-IFNAME = "wlP1p1s0"
-IP_SUBFIX = "123"
+SSID = "uav123"
+PASSWORD = "123456789@"
+IFNAME = "wlo1"
+IP_SUBFIX = "122"
 
 
 def scan_ssids():
@@ -25,7 +25,7 @@ def scan_ssids():
 
 logging.info("Waiting for SSID '%s'...", SSID)
 
-for _ in range(20):  # 最多等待20秒
+for _ in range(60):  # 最多等待60秒
     ssids = scan_ssids()
     if SSID in ssids:
         logging.info("SSID '%s' found.", SSID)
@@ -35,21 +35,11 @@ else:
     logging.error("SSID '%s' not found after timeout.", SSID)
     exit(1)
 
-isconnected = False
 res = subprocess.run(
-    ["nmcli", "connection", "show", "--active"], check=True, stdout=subprocess.PIPE
+    ["nmcli", "device", "wifi", "connect", SSID, "password", PASSWORD],
+    check=True,
+    stdout=subprocess.PIPE,
 )
-netinfos = res.stdout.decode().split("\n")
-for netinfo in netinfos:
-    if IFNAME in netinfo:
-        isconnected = True
-        break
-if not isconnected:
-    res = subprocess.run(
-        ["nmcli", "device", "wifi", "connect", SSID, "password", PASSWORD],
-        check=True,
-        stdout=subprocess.PIPE,
-    )
 res = subprocess.run(["ifconfig", IFNAME], check=True, stdout=subprocess.PIPE)
 ipaddresses = res.stdout.decode().split("\n")
 for addr in ipaddresses:
@@ -72,7 +62,7 @@ if nowIP.split(".")[-1] != IP_SUBFIX:
             "nmcli",
             "connection",
             "modify",
-            "SDUA_WIFI",
+            SSID,
             "ipv4.addresses",
             IP,
             "ipv4.gateway",
@@ -87,7 +77,7 @@ if nowIP.split(".")[-1] != IP_SUBFIX:
         check=True,
         stdout=subprocess.PIPE,
     )
-    subprocess.run(["nmcli", "connection", "up", "SDUA_WIFI"], check=True)
+    subprocess.run(["nmcli", "connection", "up", SSID], check=True)
 else:
     print("already set target ip")
 subprocess.run('echo "123456789" > test.txt', shell=True, check=True)

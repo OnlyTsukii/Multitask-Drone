@@ -3,7 +3,7 @@ Description=Set Static IP at Boot
 After=network.target
 
 [Service]
-ExecStart=/bin/python3 /home/nx8g01/Multitask-Drone/src/scripts/static_ip.py
+ExecStart=/bin/python3 /home/x650/Multitask-Drone/src/scripts/static_ip.py
 User=root
 Restart=on-failure
 
