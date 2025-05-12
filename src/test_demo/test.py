@@ -1,16 +1,16 @@
-from ultralytics import YOLO
+import netifaces
 
-# # Load a YOLO11n PyTorch model
-# model = YOLO("~/Multitask-Drone/src/drone_vision/weights/new_panel.pt")
-
-# # Export the model to TensorRT
-# model.export(format="engine")  # creates 'yolo11n.engine'
-
-# Load the exported TensorRT model
-trt_model = YOLO("~/Multitask-Drone/src/drone_vision/weights/new_panel.engine" ,task='detect')
-
-# Run inference
-results = trt_model("~/Multitask-Drone/src/drone_vision/images")
-
-for i, result in enumerate(results):
-    result.save(filename=f"~/Multitask-Drone/src/drone_vision/results/result_{i}.jpg")
+def get_network_interfaces_with_mac():
+    interfaces = netifaces.interfaces()
+    
+    for iface in interfaces:
+        addrs = netifaces.ifaddresses(iface)
+        if netifaces.AF_LINK in addrs:
+            mac = addrs[netifaces.AF_LINK][0].get('addr')
+            if mac == '58:1c:f8:b9:eb:7d':
+                return iface
+    
+    return None
+                
+wireless_iface = get_network_interfaces_with_mac()
+print(wireless_iface)

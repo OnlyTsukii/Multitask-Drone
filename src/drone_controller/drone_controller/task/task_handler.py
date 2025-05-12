@@ -2,6 +2,7 @@ import json
 
 from drone_interfaces.msg import Task, RawWaypoint
 from drone_controller.utils import *
+from geopy.distance import geodesic
 
 
 class WaypointParseException(Exception):
@@ -85,20 +86,65 @@ class TaskHandler():
         task.waypoints = waypoints
 
         return task
+    
+
+    def interpolate_waypoints(self, waypoints):
+        if len(waypoints) < 2:
+            return waypoints
+        
+        interpolated = [waypoints[0]]
+        
+        for i in range(1, len(waypoints)):
+            prev = waypoints[i-1]
+            curr = waypoints[i]
+
+            if prev.mission != MISSION_LOCAL_CAPTURE or curr.mission != MISSION_LOCAL_CAPTURE:
+                interpolated.append(curr)
+                continue
+            
+            altitude = prev.altitude
+            
+            distance_meters = geodesic(
+                (prev.latitude, prev.longitude),
+                (curr.latitude, curr.longitude)
+            ).meters
+            
+            segment_distance = altitude / 4
+            
+            if distance_meters <= segment_distance:
+                interpolated.append(curr)
+                continue
+                
+            num_segments = math.ceil(distance_meters / segment_distance)
+            
+            for j in range(1, num_segments):
+                ratio = j / num_segments
+                
+                new_wp = RawWaypoint()
+                new_wp.type = prev.type
+                new_wp.mission = prev.mission
+                new_wp.velocity = prev.velocity
+                
+                new_wp.latitude = prev.latitude + ratio * (curr.latitude - prev.latitude)
+                new_wp.longitude = prev.longitude + ratio * (curr.longitude - prev.longitude)
+                new_wp.altitude = prev.altitude
+                
+                interpolated.append(new_wp)
+            
+            interpolated.append(curr)
+        
+        return interpolated
             
     def validate_task(self, task: Task) -> bool:
-        # If there is only one or no waypoint, return True (valid task)
         if len(task.waypoints) == 0:
             return False
 
-        # Iterate through consecutive waypoints
         for i in range(len(task.waypoints) - 1):
             res = is_valid_distance(task.waypoints[i], task.waypoints[i + 1])
 
             if not res:
                 return False
 
-        # Return True if all distances are within the limit
         return True
 
     def handle_json_data(self, json_data):
@@ -106,6 +152,7 @@ class TaskHandler():
         Handle incoming JSON data:
         1. Parse the task.
         2. Validate the task.
+        3. Generate new waypoints.
         """
         try:
             # Parse the task
@@ -120,6 +167,9 @@ class TaskHandler():
             # Validate the task
             if not self.validate_task(task):
                 return None, {"status": "error", "message": "Task validation failed"}
+            
+            # Generate new waypoints
+            task.waypoints = self.interpolate_waypoints(task.waypoints)
             
             return task, None
         

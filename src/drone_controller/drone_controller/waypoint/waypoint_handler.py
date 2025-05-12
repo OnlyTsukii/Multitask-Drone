@@ -112,8 +112,8 @@ class WaypointHandler(Node):
             self.waypoint_task_executor.execute_capture_task()
         # elif waypoint.mission == MISSION_LOCAL_CLEAN:
         #     self.waypoint_task_executor.execute_local_clean_task()
-        if waypoint.mission == MISSION_LOCAL_TEST:
-            self.waypoint_task_executor.execute_test_task()
+        # if waypoint.mission == MISSION_LOCAL_TEST:
+        #     self.waypoint_task_executor.execute_test_task()
 
     def reached_waypoint(self, waypoint) -> bool:
         reached = True

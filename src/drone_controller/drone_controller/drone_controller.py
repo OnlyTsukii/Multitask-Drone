@@ -63,7 +63,7 @@ class DroneController(Node):
             return False
         
         # for px4
-        # self.init_pose()
+        self.init_pose()
         
         for _ in range(5):
             res = self.set_mode('OFFBOARD')
@@ -96,7 +96,7 @@ class DroneController(Node):
         future = self.task_client.call_async(request)
 
         while not future.done():
-            # self.init_pose(0.5)
+            self.init_pose(0.5)
             time.sleep(0.1)
             rclpy.spin_once(self)
 

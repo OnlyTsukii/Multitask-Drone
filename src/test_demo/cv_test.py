@@ -1,5 +1,10 @@
 import cv2
 import time
+import os
+
+home_dir = os.environ.get('HOME')
+
+CAPTURE_IMAGE_PATH          = home_dir + '/Multitask-Drone/src/drone_vision/images/task_capture/'
 
 cap = cv2.VideoCapture(0)
 
@@ -16,6 +21,7 @@ print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 print(cap.get(cv2.CAP_PROP_FPS))
 
+start_time = time.time()
 
 while True:
     ret, frame = cap.read()
@@ -24,9 +30,9 @@ while True:
         print("can't read the frame")
         break
 
-    print(time.time())
-
-    cv2.imshow("test", frame)
+    if time.time() - start_time >= 1.0:
+        res = cv2.imwrite(CAPTURE_IMAGE_PATH+str(time.time())+'.jpg', frame)
+        start_time = time.time()
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

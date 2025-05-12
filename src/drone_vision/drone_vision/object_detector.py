@@ -2,13 +2,15 @@ import cv2
 import time
 import rclpy
 import threading
-import math
+import os
 
 # from ultralytics import YOLO
 from rclpy.node import Node
 from copy import deepcopy
 from drone_interfaces.msg import PanelBox, Yaw
 from drone_interfaces.srv import YoloRequest
+
+home_dir = os.environ.get('HOME')
 
 # from drone_vision.utils import calc_angle_by_canny
 
@@ -17,10 +19,10 @@ IMAGE_HEIGHT        = 1080
 FRAME_PER_SECOND    = 30
 CONF_THRESHOLD      = 0.6
 
-MODEL_PATH                  = '~/Multitask-Drone/src/drone_vision/weights/new_panel.pt'
-CLEAN_RAW_IMAGE_PATH        = '~/Multitask-Drone/src/drone_vision/images/task_clean/raw/'
-CLEAN_LABELED_IMAGE_PATH    = '~/Multitask-Drone/src/drone_vision/images/task_clean/labeled/'
-CAPTURE_IMAGE_PATH          = '~/Multitask-Drone/src/drone_vision/images/task_capture/'
+MODEL_PATH                  = home_dir + '/Multitask-Drone/src/drone_vision/weights/new_panel.pt'
+CLEAN_RAW_IMAGE_PATH        = home_dir + '/Multitask-Drone/src/drone_vision/images/task_clean/raw/'
+CLEAN_LABELED_IMAGE_PATH    = home_dir + '/Multitask-Drone/src/drone_vision/images/task_clean/labeled/'
+CAPTURE_IMAGE_PATH          = home_dir + '/Multitask-Drone/src/drone_vision/images/task_capture/'
 
 
 class ObjectDetector(Node):
@@ -30,8 +32,8 @@ class ObjectDetector(Node):
         self.yolo_srv = self.create_service(YoloRequest, '/drone/yolo_request', self.handle_yolo_request)
         self.capture_srv = self.create_service(YoloRequest, '/drone/capture_request', self.handle_capture_request)
 
-        self.panel_publisher = self.create_publisher(PanelBox, '/drone/panel_box', 10)
-        self.panel_yaw_publisher = self.create_publisher(Yaw, '/drone/panel_yaw', 10)
+        # self.panel_publisher = self.create_publisher(PanelBox, '/drone/panel_box', 10)
+        # self.panel_yaw_publisher = self.create_publisher(Yaw, '/drone/panel_yaw', 10)
 
         # self.detect_model = YOLO(MODEL_PATH)
 
@@ -39,12 +41,15 @@ class ObjectDetector(Node):
         self.detect_counter = 0
 
         if not self.init_camera():
+            print("initialize camera failed")
             return
         
         self.frame = None
         self.mutex = threading.Lock()
 
         self.yolo_enabled = False
+
+        os.makedirs(CAPTURE_IMAGE_PATH, exist_ok=True)
         
         # self.create_timer(0.09, self.detect)
 
@@ -64,10 +69,10 @@ class ObjectDetector(Node):
         if not self.cap.isOpened():
             return False
 
-        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
-        self.cap.set(cv2.CAP_PROP_FPS, 30)
+        # self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
+        # self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
+        # self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
+        # self.cap.set(cv2.CAP_PROP_FPS, 30)
 
         return True 
     
