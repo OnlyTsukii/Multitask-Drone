@@ -4,7 +4,6 @@ import rclpy
 import threading
 import os
 
-# from ultralytics import YOLO
 from rclpy.node import Node
 from copy import deepcopy
 from drone_interfaces.msg import PanelBox, Yaw
@@ -12,10 +11,8 @@ from drone_interfaces.srv import YoloRequest
 
 home_dir = os.environ.get('HOME')
 
-# from drone_vision.utils import calc_angle_by_canny
-
-IMAGE_WIDTH         = 1920
-IMAGE_HEIGHT        = 1080
+IMAGE_WIDTH         = 3840
+IMAGE_HEIGHT        = 2160
 FRAME_PER_SECOND    = 30
 CONF_THRESHOLD      = 0.6
 
@@ -24,6 +21,8 @@ CLEAN_RAW_IMAGE_PATH        = home_dir + '/Multitask-Drone/src/drone_vision/imag
 CLEAN_LABELED_IMAGE_PATH    = home_dir + '/Multitask-Drone/src/drone_vision/images/task_clean/labeled/'
 CAPTURE_IMAGE_PATH          = home_dir + '/Multitask-Drone/src/drone_vision/images/task_capture/'
 
+user = os.getenv('USER')
+
 
 class ObjectDetector(Node):
     def __init__(self):
@@ -31,6 +30,9 @@ class ObjectDetector(Node):
 
         self.yolo_srv = self.create_service(YoloRequest, '/drone/yolo_request', self.handle_yolo_request)
         self.capture_srv = self.create_service(YoloRequest, '/drone/capture_request', self.handle_capture_request)
+
+        if user == 'nx8g01':
+            return
 
         # self.panel_publisher = self.create_publisher(PanelBox, '/drone/panel_box', 10)
         # self.panel_yaw_publisher = self.create_publisher(Yaw, '/drone/panel_yaw', 10)
@@ -69,10 +71,10 @@ class ObjectDetector(Node):
         if not self.cap.isOpened():
             return False
 
-        # self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
-        # self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
-        # self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
-        # self.cap.set(cv2.CAP_PROP_FPS, 30)
+        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
+        self.cap.set(cv2.CAP_PROP_FPS, FRAME_PER_SECOND)
 
         return True 
     
@@ -142,12 +144,14 @@ def main(args=None):
 
     yolo_detector = ObjectDetector()
 
-    capture = threading.Thread(target=yolo_detector.capture)
-    capture.start()
+    if user != 'nx8g01':
+        capture = threading.Thread(target=yolo_detector.capture)
+        capture.start()
 
     rclpy.spin(yolo_detector)
 
-    yolo_detector.cap.release()
+    if user != 'nx8g01':
+        yolo_detector.cap.release()
 
     rclpy.shutdown()
 
