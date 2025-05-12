@@ -4,6 +4,7 @@ import asyncio
 import rclpy
 import time
 import rclpy.logging
+import os
 
 from rclpy.node import Node
 from mavros_msgs.msg import State
@@ -19,32 +20,39 @@ from drone_controller.task.task_handler import TaskHandler
 
 class DroneController(Node):
     def __init__(self):
-        super().__init__('drone_controller')
+        super().__init__("drone_controller")
 
-        self.pose_pub = self.create_publisher(PoseStamped, '/mavros/setpoint_position/local', 10)
-        self.state_sub = self.create_subscription(State, '/mavros/state', self.state_callback, 10)
+        self.user = os.getenv("USER")
+
+        self.pose_pub = self.create_publisher(
+            PoseStamped, "/mavros/setpoint_position/local", 10
+        )
+        self.state_sub = self.create_subscription(
+            State, "/mavros/state", self.state_callback, 10
+        )
 
         self.task_handler = TaskHandler()
         self.state = None
 
-        self.task_client = self.create_client(TaskDispatch, '/drone/dispatch_task')
-        self.arming_client = self.create_client(CommandBool, '/mavros/cmd/arming')
-        self.mode_client = self.create_client(SetMode, '/mavros/set_mode')
-        
-        self.takeoff_client = self.create_client(CommandTOL, '/mavros/cmd/takeoff')
-        self.land_client = self.create_client(CommandTOL, '/mavros/cmd/land')
+        self.task_client = self.create_client(TaskDispatch, "/drone/dispatch_task")
+        self.arming_client = self.create_client(CommandBool, "/mavros/cmd/arming")
+        self.mode_client = self.create_client(SetMode, "/mavros/set_mode")
+
+        self.takeoff_client = self.create_client(CommandTOL, "/mavros/cmd/takeoff")
+        self.land_client = self.create_client(CommandTOL, "/mavros/cmd/land")
 
         while not self.task_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for TaskDispatch service to be available...")
+            self.get_logger().info(
+                "Waiting for TaskDispatch service to be available..."
+            )
 
         while not self.arming_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Arming service not available, waiting...')
-        
-        while not self.mode_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Mode service not available, waiting...')
-        
-        self.get_logger().info('All services are available, ready to arm and take off.')
+            self.get_logger().info("Arming service not available, waiting...")
 
+        while not self.mode_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Mode service not available, waiting...")
+
+        self.get_logger().info("All services are available, ready to arm and take off.")
 
     def state_callback(self, msg: State):
         self.state = msg
@@ -59,14 +67,15 @@ class DroneController(Node):
         while time.time() - self.state.header.stamp.sec > 1:
             rclpy.spin_once(self)
 
-        if not self.state.connected or self.state.mode == 'OFFBOARD':
+        if not self.state.connected or self.state.mode == "OFFBOARD":
             return False
-        
-        # for px4
-        self.init_pose()
-        
+
+        if self.user != "nx8g01":
+            # for px4
+            self.init_pose()
+
         for _ in range(5):
-            res = self.set_mode('OFFBOARD')
+            res = self.set_mode("OFFBOARD")
             if res:
                 break
             time.sleep(2)
@@ -75,9 +84,9 @@ class DroneController(Node):
             self.get_logger().info("set mode failed")
             self.set_mode("AUTO.LOITER")
             return False
-        
+
         return self.arm_drone()
-    
+
     def init_pose(self, time_sec=1.5):
         waypoint = PoseStamped()
         waypoint.header = Header()
@@ -96,15 +105,16 @@ class DroneController(Node):
         future = self.task_client.call_async(request)
 
         while not future.done():
-            self.init_pose(0.5)
+            if self.user != "nx8g01":
+                self.init_pose(0.5)
             time.sleep(0.1)
             rclpy.spin_once(self)
 
         res = future.result().success
         if res:
-            self.get_logger().info('Task Dispatched successfully.')
+            self.get_logger().info("Task Dispatched successfully.")
         else:
-            self.get_logger().info('Failed to dispatch task.')
+            self.get_logger().info("Failed to dispatch task.")
 
         return res
 
@@ -114,10 +124,10 @@ class DroneController(Node):
         future = self.arming_client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         if future.result().success:
-            self.get_logger().info('Drone armed successfully.')
+            self.get_logger().info("Drone armed successfully.")
             return True
         else:
-            self.get_logger().error('Failed to arm drone.')
+            self.get_logger().error("Failed to arm drone.")
             return False
 
     def disarm_drone(self):
@@ -126,9 +136,9 @@ class DroneController(Node):
         future = self.arming_client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         if future.result().success:
-            self.get_logger().info('Drone disarmed successfully.')
+            self.get_logger().info("Drone disarmed successfully.")
         else:
-            self.get_logger().error('Failed to disarm drone.')
+            self.get_logger().error("Failed to disarm drone.")
 
     def set_mode(self, mode) -> bool:
         req = SetMode.Request()
@@ -136,10 +146,10 @@ class DroneController(Node):
         future = self.mode_client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
         if future.result().mode_sent:
-            self.get_logger().info(f'Mode set to {mode} successfully.')
+            self.get_logger().info(f"Mode set to {mode} successfully.")
             return True
         else:
-            self.get_logger().error(f'Failed to set mode to {mode}.')
+            self.get_logger().error(f"Failed to set mode to {mode}.")
             return False
 
     async def send_response(self, socket, response):
@@ -150,13 +160,15 @@ class DroneController(Node):
 
     async def start_websocket_server(self):
         async with websockets.serve(self.websocket_handler, SOCKET_IP, SOCKET_PORT):
-            self.get_logger().info(f"WebSocket server started at ws://{SOCKET_IP}:{SOCKET_PORT}")
-            await asyncio.Future() 
+            self.get_logger().info(
+                f"WebSocket server started at ws://{SOCKET_IP}:{SOCKET_PORT}"
+            )
+            await asyncio.Future()
 
     async def websocket_handler(self, websocket):
         try:
             async for message in websocket:
-                self.get_logger().info(f'receive websocket message: {message}')
+                self.get_logger().info(f"receive websocket message: {message}")
 
                 task, response = self.task_handler.handle_json_data(message)
                 if response == None:
@@ -164,13 +176,20 @@ class DroneController(Node):
                         response = {"status": "error", "message": "Failed to preflight"}
                     else:
                         if self.send_task_request(task):
-                            response = {"status": "success", "message": "Task dispatched successfully"}
+                            response = {
+                                "status": "success",
+                                "message": "Task dispatched successfully",
+                            }
                         else:
-                            response = {"status": "error", "message": "Failed to dispatch task"}
+                            response = {
+                                "status": "error",
+                                "message": "Failed to dispatch task",
+                            }
                 await self.send_response(websocket, response)
-                
+
         except Exception as e:
             self.get_logger().info(e)
+
 
 def main(args=None):
     rclpy.init(args=args)
@@ -189,6 +208,7 @@ def main(args=None):
         if rclpy.ok():
             drone_controller.destroy_node()
             rclpy.shutdown()
+
 
 if __name__ == "__main__":
     main()

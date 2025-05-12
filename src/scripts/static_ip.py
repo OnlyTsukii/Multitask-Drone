@@ -6,24 +6,27 @@ import netifaces
 
 SSID = "uav123"
 PASSWORD = "123456789@"
-IFNAME = 'wlo1'
+IFNAME = "wlo1"
 IP_SUBFIX = "122"
 
-KNOWN_MAC = ['dc:4a:9e:d3:46:29', '54:8d:5a:3b:86:ed']
+KNOWN_MAC = ["dc:4a:9e:d3:46:29", "54:8d:5a:3b:86:ed"]
+
 
 def get_network_interfaces_with_mac():
     global IFNAME
     interfaces = netifaces.interfaces()
-    
+
     for iface in interfaces:
         addrs = netifaces.ifaddresses(iface)
         if netifaces.AF_LINK in addrs:
-            mac = addrs[netifaces.AF_LINK][0].get('addr')
+            mac = addrs[netifaces.AF_LINK][0].get("addr")
             if mac == KNOWN_MAC[0] or mac == KNOWN_MAC[1]:
                 IFNAME = iface
                 break
 
+
 get_network_interfaces_with_mac()
+
 
 def scan_ssids():
     try:
