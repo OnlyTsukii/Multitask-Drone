@@ -6,6 +6,8 @@ home_dir = os.environ.get('HOME')
 
 CAPTURE_IMAGE_PATH          = home_dir + '/Multitask-Drone/src/drone_vision/images/task_capture/'
 
+os.makedirs(CAPTURE_IMAGE_PATH, exist_ok=True)
+
 cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
@@ -14,8 +16,8 @@ if not cap.isOpened():
 
 cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 3840)  
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 2880)  
-cap.set(cv2.CAP_PROP_FPS, 20)  
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 2160)  
+cap.set(cv2.CAP_PROP_FPS, 30)  
 
 print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -29,6 +31,9 @@ while True:
     if not ret:
         print("can't read the frame")
         break
+
+    # cv2.imshow("frame", frame)
+    # print(time.time())
 
     if time.time() - start_time >= 1.0:
         res = cv2.imwrite(CAPTURE_IMAGE_PATH+str(time.time())+'.jpg', frame)

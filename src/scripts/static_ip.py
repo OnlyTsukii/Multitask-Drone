@@ -26,10 +26,6 @@ def get_network_interfaces_with_mac():
                 IP_SUBFIX = STATIC_IPS[KNOWN_MAC.index(mac)]
                 break
 
-
-get_network_interfaces_with_mac()
-
-
 def scan_ssids():
     try:
         result = subprocess.run(
@@ -42,60 +38,62 @@ def scan_ssids():
     except subprocess.CalledProcessError as e:
         logging.error("Wi-Fi scan failed: %s", e.stderr.decode())
         return []
-
-
-logging.info("Waiting for SSID '%s'...", SSID)
-
-for _ in range(60):  # 最多等待60秒
-    ssids = scan_ssids()
-    if SSID in ssids:
-        logging.info("SSID '%s' found.", SSID)
-        break
-    time.sleep(1)
-else:
-    logging.error("SSID '%s' not found after timeout.", SSID)
-    exit(1)
-
-res = subprocess.run(
-    ["nmcli", "device", "wifi", "connect", SSID, "password", PASSWORD],
-    check=True,
-    stdout=subprocess.PIPE,
-)
-res = subprocess.run(["ifconfig", IFNAME], check=True, stdout=subprocess.PIPE)
-ipaddresses = res.stdout.decode().split("\n")
-for addr in ipaddresses:
-    if "inet" in addr and "inet6" not in addr:
-        nowIP = addr.lstrip().split(" ")[1]
-
-res = subprocess.run(["ip", "route"], check=True, stdout=subprocess.PIPE)
-iproutes = res.stdout.decode().split("\n")
-for route in iproutes:
-    if IFNAME in route:
-        temp = route.split(" ")
-        if "default" in temp:
-            GW = temp[2]
+def waiting_for_wifi():
+    logging.info("Waiting for SSID '%s'...", SSID)
+    for _ in range(60):  # 最多等待60秒
+        ssids = scan_ssids()
+        if SSID in ssids:
+            logging.info("SSID '%s' found.", SSID)
             break
-print(GW)
-IP = ".".join(GW.split(".")[:-1]) + "." + IP_SUBFIX + "/24"
-print(IP)
-subprocess.run(
-    [
-        "nmcli",
-        "connection",
-        "modify",
-        SSID,
-        "ipv4.addresses",
-        IP,
-        "ipv4.gateway",
-        GW,
-        "ipv4.dns",
-        GW,
-        "ipv4.method",
-        "manual",
-        "connection.autoconnect",
-        "yes",
-    ],
-    check=True,
-    stdout=subprocess.PIPE,
-)
-subprocess.run(["nmcli", "connection", "up", SSID], check=True)
+        time.sleep(1)
+    else:
+        logging.error("SSID '%s' not found after timeout.", SSID)
+        exit(1)
+
+def main():
+    get_network_interfaces_with_mac()
+    waiting_for_wifi()
+    subprocess.run(
+        ["nmcli", "device", "wifi", "connect", SSID, "password", PASSWORD],
+        check=True,
+    )
+    subprocess.run(
+        ["nmcli","connection","delete",SSID],
+        check=True
+    )
+    subprocess.run(
+        ["nmcli", "device", "wifi", "connect", SSID, "password", PASSWORD],
+        check=True,
+    )
+    res = subprocess.run(["ip", "route"], check=True, stdout=subprocess.PIPE)
+    iproutes = res.stdout.decode().split("\n")
+    for route in iproutes:
+        if IFNAME in route and "default" in route:
+            GW = route.split(" ")[2]
+            break
+    
+    IP = ".".join(GW.split(".")[:-1]) + "." + IP_SUBFIX + "/24"
+    print(f"setting GW:{GW},setting IP:{IP}")
+    subprocess.run(
+        [
+            "nmcli",
+            "connection",
+            "modify",
+            SSID,
+            "ipv4.addresses",
+            IP,
+            "ipv4.gateway",
+            GW,
+            "ipv4.dns",
+            GW,
+            "ipv4.method",
+            "manual",
+            "connection.autoconnect",
+            "yes",
+        ],
+        check=True,
+        stdout=subprocess.PIPE,
+    )
+    subprocess.run(["nmcli", "connection", "up", SSID], check=True)
+if __name__ == "__main__":
+    main()
