@@ -13,7 +13,7 @@ from std_msgs.msg import Float64
 from geometry_msgs.msg import PoseStamped, Vector3
 from sensor_msgs.msg import NavSatFix, NavSatStatus
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
-from mavros_msgs.srv import CommandTOL, SetMode
+from mavros_msgs.srv import CommandTOL, SetMode, CommandLong
 
 from drone_controller.utils import *
 from drone_controller.constant import *
@@ -35,9 +35,13 @@ class TaskExecutor(Node):
             State, "/mavros/state", self.state_callback, 10
         )
 
+        self.cmdLong     = self.create_client(CommandLong,"/mavros/cmd/command")
         self.land_client = self.create_client(CommandTOL, "/mavros/cmd/land")
         self.yolo_client = self.create_client(YoloRequest, "/drone/yolo_request")
         self.mode_client = self.create_client(SetMode, "/mavros/set_mode")
+
+        while not self.cmdLong.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Waiting for commandLong service to be available...")
 
         while not self.land_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Waiting for Land service to be available...")
@@ -136,12 +140,16 @@ class TaskExecutor(Node):
 
     def land(self):
         rclpy.spin_once(self)
-        req = CommandTOL.Request()
-        req.latitude = self.gps_fix.latitude
-        req.longitude = self.gps_fix.longitude
+        # req = CommandTOL.Request()
+        # req.latitude = self.gps_fix.latitude
+        # req.longitude = self.gps_fix.longitude
+        req = CommandLong.Request()
+        req.command = MAV_CMD_NAV_LAND
+        req.broadcast = False
+        req.confirmation = 0
 
-        future = self.land_client.call_async(req)
-        rclpy.spin_until_future_complete(self, future)
+        future = self.cmdLong.call_async(req)
+        rclpy.spin_until_future_complete(self,future)
 
         if future.result().success:
             while self.state.armed:
