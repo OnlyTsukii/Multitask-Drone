@@ -53,7 +53,7 @@ class ObjectDetector(Node):
 
         self.yolo_enabled = False
 
-        
+        self.create_timer(0.03,self.capture)
         # self.create_timer(0.09, self.detect)
 
     def handle_yolo_request(self, request, response):
@@ -77,20 +77,21 @@ class ObjectDetector(Node):
         if not self.cap.isOpened():
             return False
 
-        # self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
-        # self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
-        # self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
-        # self.cap.set(cv2.CAP_PROP_FPS, FRAME_PER_SECOND)
+        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
+        self.cap.set(cv2.CAP_PROP_FPS, FRAME_PER_SECOND)
 
         return True 
     
     def capture(self):
-        while rclpy.ok():
-            ret, frame = self.cap.read()
-            if not ret:
-                continue
+        # while rclpy.ok():
+        ret, frame = self.cap.read()
+        if not ret:
+            return
 
-            self.frame = frame
+        self.frame = frame
+        # time.sleep(0.03)
     
     # def detect(self):
     #     if not self.yolo_enabled:
@@ -150,9 +151,9 @@ def main(args=None):
 
     yolo_detector = ObjectDetector()
 
-    if user != 'nx8g01':
-        capture = threading.Thread(target=yolo_detector.capture)
-        capture.start()
+    # if user != 'nx8g01':
+    #     capture = threading.Thread(target=yolo_detector.capture)
+    #     capture.start()
 
     rclpy.spin(yolo_detector)
 
