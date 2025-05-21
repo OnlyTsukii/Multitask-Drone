@@ -100,7 +100,7 @@ class WaypointHandler(Node):
             if waypoint.type == TYPE_ROTATE:
                 yaw_diff = waypoint.yaw - self.yaw
                 # target.yaw_rate = calculate_rotation_speed(yaw_diff)
-                target.yaw_rate = -1 * DEFAULT_YAW_RATE if yaw_diff >= 0 else DEFAULT_YAW_RATE
+                target.yaw_rate = -1 * DEFAULT_YAW_RATE if yaw_diff < 0 else DEFAULT_YAW_RATE
 
             self.global_point_publisher.publish(target)
             cur_time = time.time() 

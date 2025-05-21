@@ -53,7 +53,7 @@ class ObjectDetector(Node):
 
         self.yolo_enabled = False
 
-        self.create_timer(0.03,self.capture)
+        self.create_timer(0.03, self.capture)
         # self.create_timer(0.09, self.detect)
 
     def handle_yolo_request(self, request, response):
@@ -62,12 +62,7 @@ class ObjectDetector(Node):
         return response
     
     def handle_capture_request(self, request, response):
-        for i in range(2):
-            res = cv2.imwrite(CAPTURE_IMAGE_PATH+str(time.time())+'.jpg', self.frame)
-            if not res:
-                break
-            time.sleep(1)
-
+        res = cv2.imwrite(CAPTURE_IMAGE_PATH+str(time.time())+'.jpg', self.frame)
         response.success = res
         return response
 
