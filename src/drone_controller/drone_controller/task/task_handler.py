@@ -139,8 +139,8 @@ class TaskHandler():
         if len(task.waypoints) == 0:
             return False
 
-        for i in range(len(task.waypoints) - 1):
-            res = is_valid_distance(task.waypoints[i], task.waypoints[i + 1])
+        for i in range(1, len(task.waypoints) - 1):
+            res = is_valid_distance(task.waypoints[i - 1], task.waypoints[i])
 
             if not res:
                 return False

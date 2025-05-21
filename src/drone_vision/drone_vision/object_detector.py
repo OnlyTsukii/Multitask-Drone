@@ -33,6 +33,8 @@ class ObjectDetector(Node):
 
         if user == 'nx8g01':
             return
+        
+        os.makedirs(CAPTURE_IMAGE_PATH, exist_ok=True)
 
         # self.panel_publisher = self.create_publisher(PanelBox, '/drone/panel_box', 10)
         # self.panel_yaw_publisher = self.create_publisher(Yaw, '/drone/panel_yaw', 10)
@@ -51,7 +53,6 @@ class ObjectDetector(Node):
 
         self.yolo_enabled = False
 
-        os.makedirs(CAPTURE_IMAGE_PATH, exist_ok=True)
         
         # self.create_timer(0.09, self.detect)
 
@@ -61,7 +62,12 @@ class ObjectDetector(Node):
         return response
     
     def handle_capture_request(self, request, response):
-        res = cv2.imwrite(CAPTURE_IMAGE_PATH+str(time.time())+'.jpg', self.frame)
+        for i in range(2):
+            res = cv2.imwrite(CAPTURE_IMAGE_PATH+str(time.time())+'.jpg', self.frame)
+            if not res:
+                break
+            time.sleep(1)
+
         response.success = res
         return response
 
@@ -71,10 +77,10 @@ class ObjectDetector(Node):
         if not self.cap.isOpened():
             return False
 
-        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
-        self.cap.set(cv2.CAP_PROP_FPS, FRAME_PER_SECOND)
+        # self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
+        # self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, IMAGE_WIDTH)
+        # self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, IMAGE_HEIGHT)
+        # self.cap.set(cv2.CAP_PROP_FPS, FRAME_PER_SECOND)
 
         return True 
     

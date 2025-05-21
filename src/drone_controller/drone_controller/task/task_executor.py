@@ -26,6 +26,8 @@ class TaskExecutor(Node):
     def __init__(self):
         super().__init__("task_executor")
 
+        self.user = os.getenv("USER")
+
         self.task_srv = self.create_service(
             TaskDispatch, "/drone/dispatch_task", self.handle_task_request
         )
@@ -243,8 +245,9 @@ class TaskExecutor(Node):
                     self.execute_takeoff(next_waypoint_id, task.waypoints[0].altitude)
                     next_waypoint_id += 1
 
-                    # self.execute_rotate(next_waypoint_id, task.waypoints[0])
-                    # next_waypoint_id += 1
+                    if self.user != "nx8g01":
+                        self.execute_rotate(next_waypoint_id, task.waypoints[0])
+                        next_waypoint_id += 1
 
                 while index < length:
                     waypoint = task.waypoints[index]
@@ -253,9 +256,10 @@ class TaskExecutor(Node):
                     self.send_waypoint_action(waypoint, True)
                     next_waypoint_id += 1
 
-                    # if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
-                    # self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
-                    # next_waypoint_id += 1
+                    if self.user != "nx8g01":
+                        if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
+                            self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
+                            next_waypoint_id += 1
 
                     index += 1
 
@@ -265,10 +269,11 @@ class TaskExecutor(Node):
                     json.dump(self.feedback, json_file, indent=4)
             else:
                 if self.has_takeoff:
-                    self.execute_land(next_waypoint_id)
-                    next_waypoint_id = 0
-                    # self.land()
-                    # self.set_mode("AUTO.LOITER")
+                    # self.execute_land(next_waypoint_id)
+                    # next_waypoint_id = 0
+                    self.land()
+                    if self.user != "nx8g01":
+                        self.set_mode("AUTO.LOITER")
 
     def send_waypoint_action(self, waypoint, join_feedback=False):
         """
