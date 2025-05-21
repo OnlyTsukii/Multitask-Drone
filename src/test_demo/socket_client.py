@@ -17,9 +17,9 @@ MISSION_LOCAL_TEST      = 3
 
 
 data = [
-    {'latitude': 31.31036948702145, 'longitude': 120.63545148225, 'altitude': 5, 'type': 2, 'mission': 2, 'velocity': 1},
-    {'latitude': 31.31043227353878, 'longitude': 120.6358968345636, 'altitude': 5, 'type': 2, 'mission': 2, 'velocity': 1},
-    {'latitude': 31.31036948702145, 'longitude': 120.63545148225, 'altitude': 5, 'type': 2, 'mission': -1, 'velocity': 1},
+    # {'latitude': 31.31036948702145, 'longitude': 120.63545148225, 'altitude': 5, 'type': 2, 'mission': 2, 'velocity': 1},
+    {'latitude': 31.31013227353878, 'longitude': 120.6358968345636, 'altitude': 10, 'type': 2, 'mission': 2, 'velocity': 1},
+    {'latitude': 31.31036948702145, 'longitude': 120.63545148225, 'altitude': 10, 'type': 2, 'mission': -1, 'velocity': 1},
 ]
 
 async def send_and_receive_data():
