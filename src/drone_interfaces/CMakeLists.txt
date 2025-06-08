@@ -33,6 +33,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     "msg/Task.msg"
     "msg/TaskState.msg"
     "msg/RawWaypoint.msg"
+    "msg/UavData.msg"
     "srv/TaskDispatch.srv"
     "srv/YoloRequest.srv"
     "srv/TaskPush.srv"

@@ -4,14 +4,10 @@ import json
 
 from queue import Queue
 from rclpy.node import Node
-from mavros_msgs.msg import State
 from drone_interfaces.srv import TaskDispatch, YoloRequest
-from drone_interfaces.msg import Task, RawWaypoint, TaskState
+from drone_interfaces.msg import Task, RawWaypoint, TaskState, UavData
 from drone_interfaces.action import ExecuteWaypoint
 from rclpy.action import ActionClient
-from std_msgs.msg import Float64
-from geometry_msgs.msg import PoseStamped, Vector3
-from sensor_msgs.msg import NavSatFix, NavSatStatus
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 from mavros_msgs.srv import CommandTOL, SetMode, CommandLong
 
@@ -33,11 +29,8 @@ class TaskExecutor(Node):
         )
 
         # self.state_pub = self.create_publisher(TaskState, 'drone/task_state', 10)
-        self.state_sub = self.create_subscription(
-            State, "/mavros/state", self.state_callback, 10
-        )
 
-        self.cmdLong     = self.create_client(CommandLong,"/mavros/cmd/command")
+        self.cmdLong = self.create_client(CommandLong, "/mavros/cmd/command")
         self.land_client = self.create_client(CommandTOL, "/mavros/cmd/land")
         self.yolo_client = self.create_client(YoloRequest, "/drone/yolo_request")
         self.mode_client = self.create_client(SetMode, "/mavros/set_mode")
@@ -59,21 +52,6 @@ class TaskExecutor(Node):
             history=HistoryPolicy.KEEP_LAST,
             depth=10,
         )
-        self.gps_sub = self.create_subscription(
-            NavSatFix, "/mavros/global_position/global", self.gps_callback, qos_profile
-        )
-        self.yaw_sub = self.create_subscription(
-            Float64,
-            "/mavros/global_position/compass_hdg",
-            self.yaw_callback,
-            qos_profile,
-        )
-        self.rel_alt_sub = self.create_subscription(
-            Float64,
-            "/mavros/global_position/rel_alt",
-            self.rel_alt_callback,
-            qos_profile,
-        )
 
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.RELIABLE,
@@ -87,7 +65,14 @@ class TaskExecutor(Node):
             goal_service_qos_profile=qos_profile,
             cancel_service_qos_profile=qos_profile,
         )
-
+        qos_profile = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10,
+        )
+        self.uav_data_hub_sub = self.create_subscription(
+            UavData, "/uav/uav_data", self.data_callback, qos_profile
+        )
         self.pending_tasks = Queue()
         self.feedback = []
 
@@ -101,17 +86,11 @@ class TaskExecutor(Node):
 
         self.get_logger().info("Task Executor Initialized and Waiting for Requests.")
 
-    def gps_callback(self, msg):
-        self.gps_fix = msg
-
-    def yaw_callback(self, msg):
-        self.yaw = msg.data
-
-    def rel_alt_callback(self, msg: Float64):
-        self.rel_alt = msg.data
-
-    def state_callback(self, msg: State):
-        self.state = msg
+    def data_callback(self, msg: UavData):
+        self.gps_fix = msg.gps_fix
+        self.yaw = msg.yaw
+        self.rel_alt = msg.rel_alt
+        self.state = msg.state
 
     def handle_task_request(self, request, response):
         """
@@ -151,7 +130,7 @@ class TaskExecutor(Node):
         req.confirmation = 0
 
         future = self.cmdLong.call_async(req)
-        rclpy.spin_until_future_complete(self,future)
+        rclpy.spin_until_future_complete(self, future)
 
         if future.result().success:
             while self.state.armed:
@@ -241,13 +220,14 @@ class TaskExecutor(Node):
                 length = len(task.waypoints)
                 index = 0
 
-                if not self.has_takeoff:
-                    self.execute_takeoff(next_waypoint_id, task.waypoints[0].altitude)
-                    next_waypoint_id += 1
+                self.has_takeoff = True
+                # if not self.has_takeoff:
+                #     self.execute_takeoff(next_waypoint_id, task.waypoints[0].altitude)
+                #     next_waypoint_id += 1
 
-                    # if self.user != "nx8g01":
-                    #     self.execute_rotate(next_waypoint_id, task.waypoints[0])
-                    #     next_waypoint_id += 1
+                # if self.user != "nx8g01":
+                #     self.execute_rotate(next_waypoint_id, task.waypoints[0])
+                #     next_waypoint_id += 1
 
                 while index < length:
                     waypoint = task.waypoints[index]

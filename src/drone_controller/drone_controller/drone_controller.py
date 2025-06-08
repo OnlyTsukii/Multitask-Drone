@@ -3,16 +3,15 @@ import websockets
 import asyncio
 import rclpy
 import time
-import rclpy.logging
 import os
 
 from rclpy.node import Node
-from mavros_msgs.msg import State
 from drone_interfaces.srv import TaskDispatch
 from geometry_msgs.msg import PoseStamped, Point, Quaternion
 from std_msgs.msg import Header
 from mavros_msgs.srv import CommandBool, SetMode, CommandTOL
-
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+from drone_interfaces.msg import UavData
 from drone_controller.utils import *
 from drone_controller.constant import *
 from drone_controller.task.task_handler import TaskHandler
@@ -27,19 +26,24 @@ class DroneController(Node):
         self.pose_pub = self.create_publisher(
             PoseStamped, "/mavros/setpoint_position/local", 10
         )
-        self.state_sub = self.create_subscription(
-            State, "/mavros/state", self.state_callback, 10
+
+        qos_profile = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10,
         )
+        self.uav_data_hub_sub = self.create_subscription(
+            UavData, "/uav/uav_data", self.data_callback, qos_profile
+        )
+        self.gps_fix = None
+        self.state = None
 
         self.task_handler = TaskHandler()
-        self.state = None
 
         self.task_client = self.create_client(TaskDispatch, "/drone/dispatch_task")
         self.arming_client = self.create_client(CommandBool, "/mavros/cmd/arming")
         self.mode_client = self.create_client(SetMode, "/mavros/set_mode")
-
         self.takeoff_client = self.create_client(CommandTOL, "/mavros/cmd/takeoff")
-        self.land_client = self.create_client(CommandTOL, "/mavros/cmd/land")
 
         while not self.task_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info(
@@ -54,10 +58,24 @@ class DroneController(Node):
 
         self.get_logger().info("All services are available, ready to arm and take off.")
 
-    def state_callback(self, msg: State):
-        self.state = msg
+    def data_callback(self, msg: UavData):
+        self.gps_fix = msg.gps_fix
+        self.state = msg.state
 
-    def preflight(self) -> bool:
+    def takeoff(self, waypoint):
+        req = CommandTOL.Request()
+        req.latitude = self.gps_fix.latitude
+        req.longitude = self.gps_fix.longitude
+        req.altitude = waypoint.altitude
+        req.yaw = float("nan")
+        future = self.takeoff_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result().success:
+            self.get_logger().info("takeoff successfully")
+        else:
+            self.get_logger().info("takeoff failed")
+
+    def preflight(self, task) -> bool:
         for _ in range(3):
             rclpy.spin_once(self)
 
@@ -69,6 +87,8 @@ class DroneController(Node):
 
         if not self.state.connected or self.state.mode == "OFFBOARD":
             return False
+
+        self.takeoff(task.waypoints[0])
 
         if self.user != "nx8g01":
             # for px4
@@ -172,7 +192,7 @@ class DroneController(Node):
 
                 task, response = self.task_handler.handle_json_data(message)
                 if response == None:
-                    if not self.preflight():
+                    if not self.preflight(task):
                         response = {"status": "error", "message": "Failed to preflight"}
                     else:
                         if self.send_task_request(task):
