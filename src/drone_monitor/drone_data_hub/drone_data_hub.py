@@ -21,11 +21,19 @@ class UavDataHub(Node):
         self.data_publisher = self.create_publisher(UavData, "/uav/uav_data", 10)
 
         self.state_sub = self.create_subscription(
-            State, "/mavros/state", self.state_callback, 10
+            State, "/mavros/state", self.state_callback, qos_profile
         )
 
         self.gps_sub = self.create_subscription(
             NavSatFix, "/mavros/global_position/global", self.gps_callback, qos_profile
+        )
+
+        self.panel_sub = self.create_subscription(
+            PanelBox, "/drone/panel_box", self.panel_callback, qos_profile
+        )
+
+        self.panel_yaw_sub = self.create_subscription(
+            Yaw, "/drone/panel_yaw", self.panel_yaw_callback, qos_profile
         )
 
         self.yaw_sub = self.create_subscription(
@@ -47,12 +55,6 @@ class UavDataHub(Node):
             "/mavros/local_position/pose",
             self.local_pos_callback,
             qos_profile,
-        )
-        self.panel_sub = self.create_subscription(
-            PanelBox, "/drone/panel_box", self.panel_callback, 10
-        )
-        self.panel_yaw_sub = self.create_subscription(
-            Yaw, "/drone/panel_yaw", self.panel_yaw_callback, 10
         )
         self.state = None
         self.gps_fix = None
@@ -110,18 +112,10 @@ class UavDataHub(Node):
             return
 
         msg = UavData()
-        msg.mode = self.state.mode
-        msg.armed = self.state.armed
-        msg.connected = self.state.connected
-
-        self.gps_fix: NavSatFix
-        msg.latitude = self.gps_fix.latitude
-        msg.longitude = self.gps_fix.longitude
-        msg.altitude = self.gps_fix.altitude
-
+        msg.state = self.state
+        msg.gps_fix = self.gps_fix
         msg.yaw = self.yaw
         msg.rel_alt = self.rel_alt
-
         msg.local_pose = self.local_pose if self.local_pose else PoseStamped()
         msg.panel_pos = self.panel_pos if self.panel_pos else PanelBox()
         msg.panel_detected = self.panel_detected

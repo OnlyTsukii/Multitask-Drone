@@ -28,15 +28,13 @@ class TaskExecutor(Node):
             TaskDispatch, "/drone/dispatch_task", self.handle_task_request
         )
 
-        # self.state_pub = self.create_publisher(TaskState, 'drone/task_state', 10)
-
-        self.cmdLong = self.create_client(CommandLong, "/mavros/cmd/command")
+        self.cmdL_client = self.create_client(CommandLong, "/mavros/cmd/command")
         self.land_client = self.create_client(CommandTOL, "/mavros/cmd/land")
         self.yolo_client = self.create_client(YoloRequest, "/drone/yolo_request")
         self.mode_client = self.create_client(SetMode, "/mavros/set_mode")
 
-        while not self.cmdLong.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for commandLong service to be available...")
+        while not self.cmdL_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info("Waiting for cmd service to be available...")
 
         while not self.land_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Waiting for Land service to be available...")
@@ -46,12 +44,6 @@ class TaskExecutor(Node):
 
         while not self.mode_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Mode service not available, waiting...")
-
-        qos_profile = QoSProfile(
-            reliability=ReliabilityPolicy.BEST_EFFORT,
-            history=HistoryPolicy.KEEP_LAST,
-            depth=10,
-        )
 
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.RELIABLE,
@@ -64,11 +56,6 @@ class TaskExecutor(Node):
             "/drone/execute_waypoint",
             goal_service_qos_profile=qos_profile,
             cancel_service_qos_profile=qos_profile,
-        )
-        qos_profile = QoSProfile(
-            reliability=ReliabilityPolicy.BEST_EFFORT,
-            history=HistoryPolicy.KEEP_LAST,
-            depth=10,
         )
         self.uav_data_hub_sub = self.create_subscription(
             UavData, "/uav/uav_data", self.data_callback, qos_profile
@@ -129,7 +116,7 @@ class TaskExecutor(Node):
         req.broadcast = False
         req.confirmation = 0
 
-        future = self.cmdLong.call_async(req)
+        future = self.cmdL_client.call_async(req)
         rclpy.spin_until_future_complete(self, future)
 
         if future.result().success:
@@ -220,7 +207,10 @@ class TaskExecutor(Node):
                 length = len(task.waypoints)
                 index = 0
 
+                # Using takeoff service
                 self.has_takeoff = True
+
+                # Using takeoff waypoint
                 # if not self.has_takeoff:
                 #     self.execute_takeoff(next_waypoint_id, task.waypoints[0].altitude)
                 #     next_waypoint_id += 1
