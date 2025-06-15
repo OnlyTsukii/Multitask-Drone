@@ -24,8 +24,8 @@ class WaypointHandler(Node):
 
         self.yolo_client = self.create_client(YoloRequest, "/drone/yolo_request")
 
-        while not self.yolo_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for Yolo service to be available...")
+        # while not self.yolo_client.wait_for_service(timeout_sec=1.0):
+        #     self.get_logger().info("Waiting for Yolo service to be available...")
 
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.RELIABLE,

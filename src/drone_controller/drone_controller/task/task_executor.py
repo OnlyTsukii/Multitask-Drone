@@ -28,19 +28,15 @@ class TaskExecutor(Node):
             TaskDispatch, "/drone/dispatch_task", self.handle_task_request
         )
 
-        self.cmdL_client = self.create_client(CommandLong, "/mavros/cmd/command")
         self.land_client = self.create_client(CommandTOL, "/mavros/cmd/land")
         self.yolo_client = self.create_client(YoloRequest, "/drone/yolo_request")
         self.mode_client = self.create_client(SetMode, "/mavros/set_mode")
 
-        while not self.cmdL_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for cmd service to be available...")
-
         while not self.land_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Waiting for Land service to be available...")
 
-        while not self.yolo_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for Yolo service to be available...")
+        # while not self.yolo_client.wait_for_service(timeout_sec=1.0):
+        #     self.get_logger().info("Waiting for Yolo service to be available...")
 
         while not self.mode_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info("Mode service not available, waiting...")
@@ -106,31 +102,8 @@ class TaskExecutor(Node):
             self.get_logger().error(f"Failed to set mode to {mode}.")
             return False
 
-    def land(self):
-        rclpy.spin_once(self)
-        # req = CommandTOL.Request()
-        # req.latitude = self.gps_fix.latitude
-        # req.longitude = self.gps_fix.longitude
-        req = CommandLong.Request()
-        req.command = MAV_CMD_NAV_LAND
-        req.broadcast = False
-        req.confirmation = 0
-
-        future = self.cmdL_client.call_async(req)
-        rclpy.spin_until_future_complete(self, future)
-
-        if future.result().success:
-            while self.state.armed:
-                rclpy.spin_once(self)
-                time.sleep(0.3)
-            self.get_logger().info("Drone landed successfully.")
-            self.has_takeoff = False
-        else:
-            self.get_logger().error("Failed to land.")
-
     def execute_takeoff(self, id, altitude=DEFAULT_TAKEOFF_ALTITUDE):
         rclpy.spin_once(self)
-
         takeoff_wp = RawWaypoint(
             id=id,
             type=TYPE_TAKEOFF,
@@ -146,25 +119,31 @@ class TaskExecutor(Node):
         self.get_logger().info("Drone takeoff successfully.")
         self.has_takeoff = True
 
-    def execute_land(self, id):
+    def execute_land(self,id):
         rclpy.spin_once(self)
+        req = CommandTOL.Request()
+        req.latitude = self.gps_fix.latitude
+        req.longitude = self.gps_fix.longitude
+        req.altitude = 0.0
+        req.yaw = self.yaw
+        req.min_pitch = 0.0
 
-        land_wp = RawWaypoint(
-            id=id,
-            type=TYPE_LAND,
-            mission=MISSION_NONE,
-            latitude=self.gps_fix.latitude,
-            longitude=self.gps_fix.longitude,
-            altitude=0.0,
-            velocity=-1 * DEFAULT_VERTICAL_VEL,
-        )
+        future = self.land_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        if self.user == "nx8g01":
+            future = self.land_client.call_async(req)
+            rclpy.spin_until_future_complete(self, future)
 
-        self.send_waypoint_action(land_wp)
+        if future.result().success:
+            while self.state.armed:
+                rclpy.spin_once(self)
+                time.sleep(0.3)
+            self.get_logger().info("Drone landed successfully.")
+            self.has_takeoff = False
+        else:
+            self.get_logger().error("Failed to land.")
 
-        self.get_logger().info("Drone land successfully.")
-        self.has_takeoff = False
-
-    def execute_rotate(self, id, target_wp):
+    def execute_rotate(self, id, target_wp:RawWaypoint):
         """
         Create an yaw_adjust waypoint based on a given waypoint and yaw.
         """
@@ -200,20 +179,16 @@ class TaskExecutor(Node):
             if self.pending_tasks.qsize() > 0:
                 self.feedback = []
 
-                task = self.pending_tasks.get()
+                task:Task = self.pending_tasks.get()
 
                 next_waypoint_id = 0
 
                 length = len(task.waypoints)
                 index = 0
 
-                # Using takeoff service
-                self.has_takeoff = True
-
-                # Using takeoff waypoint
-                # if not self.has_takeoff:
-                #     self.execute_takeoff(next_waypoint_id, task.waypoints[0].altitude)
-                #     next_waypoint_id += 1
+                if not self.has_takeoff:
+                    self.execute_takeoff(next_waypoint_id, task.waypoints[0].altitude)
+                    next_waypoint_id += 1
 
                 # if self.user != "nx8g01":
                 #     self.execute_rotate(next_waypoint_id, task.waypoints[0])
@@ -239,13 +214,12 @@ class TaskExecutor(Node):
                     json.dump(self.feedback, json_file, indent=4)
             else:
                 if self.has_takeoff:
-                    # self.execute_land(next_waypoint_id)
-                    # next_waypoint_id = 0
-                    self.land()
+                    self.execute_land(next_waypoint_id)
+                    next_waypoint_id = 0
                     if self.user != "nx8g01":
                         self.set_mode("AUTO.LOITER")
 
-    def send_waypoint_action(self, waypoint, join_feedback=False):
+    def send_waypoint_action(self, waypoint:RawWaypoint, join_feedback=False):
         """
         Send a waypoint action to the waypoint handler and return the feedback.
         """

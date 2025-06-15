@@ -1,3 +1,11 @@
 {
-    "cmake.sourceDirectory": "/home/ccl/Multitask-Drone/src/drone_interfaces"
+    "cmake.sourceDirectory": "/home/ccl/Multitask-Drone/src/drone_interfaces",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/install/drone_interfaces/local/lib/python3.10/dist-packages"
+    ],
+    "terminal.integrated.env.linux": {
+        "ROS_DISTRO": "humble",
+        "COLCON_PREFIX_PATH": "${workspaceFolder}/install",
+        "AMENT_PREFIX_PATH": "${workspaceFolder}/install"
+    }
 }

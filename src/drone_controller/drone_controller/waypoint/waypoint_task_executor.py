@@ -42,8 +42,8 @@ class WaypointTaskExecutor(Node):
 
         self.capture_client = self.create_client(YoloRequest, "/drone/capture_request")
 
-        while not self.capture_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("Waiting for Capture service to be available...")
+        # while not self.capture_client.wait_for_service(timeout_sec=1.0):
+        #     self.get_logger().info("Waiting for Capture service to be available...")
 
         self.local_point_publisher = self.create_publisher(
             PositionTarget, "/mavros/setpoint_raw/local", 10

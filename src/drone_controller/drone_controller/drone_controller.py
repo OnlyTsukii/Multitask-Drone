@@ -26,24 +26,16 @@ class DroneController(Node):
         self.pose_pub = self.create_publisher(
             PoseStamped, "/mavros/setpoint_position/local", 10
         )
-
-        qos_profile = QoSProfile(
-            reliability=ReliabilityPolicy.BEST_EFFORT,
-            history=HistoryPolicy.KEEP_LAST,
-            depth=10,
-        )
         self.uav_data_hub_sub = self.create_subscription(
-            UavData, "/uav/uav_data", self.data_callback, qos_profile
+            UavData, "/uav/uav_data", self.data_callback, 10
         )
-        self.gps_fix = None
-        self.state = None
 
         self.task_handler = TaskHandler()
+        self.state = None
 
         self.task_client = self.create_client(TaskDispatch, "/drone/dispatch_task")
         self.arming_client = self.create_client(CommandBool, "/mavros/cmd/arming")
         self.mode_client = self.create_client(SetMode, "/mavros/set_mode")
-        self.takeoff_client = self.create_client(CommandTOL, "/mavros/cmd/takeoff")
 
         while not self.task_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info(
@@ -59,23 +51,9 @@ class DroneController(Node):
         self.get_logger().info("All services are available, ready to arm and take off.")
 
     def data_callback(self, msg: UavData):
-        self.gps_fix = msg.gps_fix
         self.state = msg.state
 
-    def takeoff(self, waypoint):
-        req = CommandTOL.Request()
-        req.latitude = self.gps_fix.latitude
-        req.longitude = self.gps_fix.longitude
-        req.altitude = waypoint.altitude
-        req.yaw = float("nan")
-        future = self.takeoff_client.call_async(req)
-        rclpy.spin_until_future_complete(self, future)
-        if future.result().success:
-            self.get_logger().info("takeoff successfully")
-        else:
-            self.get_logger().info("takeoff failed")
-
-    def preflight(self, task) -> bool:
+    def preflight(self) -> bool:
         for _ in range(3):
             rclpy.spin_once(self)
 
@@ -87,8 +65,6 @@ class DroneController(Node):
 
         if not self.state.connected or self.state.mode == "OFFBOARD":
             return False
-
-        self.takeoff(task.waypoints[0])
 
         if self.user != "nx8g01":
             # for px4
@@ -150,16 +126,6 @@ class DroneController(Node):
             self.get_logger().error("Failed to arm drone.")
             return False
 
-    def disarm_drone(self):
-        req = CommandBool.Request()
-        req.value = False
-        future = self.arming_client.call_async(req)
-        rclpy.spin_until_future_complete(self, future)
-        if future.result().success:
-            self.get_logger().info("Drone disarmed successfully.")
-        else:
-            self.get_logger().error("Failed to disarm drone.")
-
     def set_mode(self, mode) -> bool:
         req = SetMode.Request()
         req.custom_mode = mode
@@ -192,7 +158,7 @@ class DroneController(Node):
 
                 task, response = self.task_handler.handle_json_data(message)
                 if response == None:
-                    if not self.preflight(task):
+                    if not self.preflight():
                         response = {"status": "error", "message": "Failed to preflight"}
                     else:
                         if self.send_task_request(task):
