@@ -32,12 +32,12 @@ while True:
         print("can't read the frame")
         break
 
-    # cv2.imshow("frame", frame)
-    # print(time.time())
+    cv2.imshow("frame", frame)
+    print(time.time())
 
-    if time.time() - start_time >= 1.0:
-        res = cv2.imwrite(CAPTURE_IMAGE_PATH+str(time.time())+'.jpg', frame)
-        start_time = time.time()
+    # if time.time() - start_time >= 1.0:
+    #     res = cv2.imwrite(CAPTURE_IMAGE_PATH+str(time.time())+'.jpg', frame)
+    #     start_time = time.time()
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

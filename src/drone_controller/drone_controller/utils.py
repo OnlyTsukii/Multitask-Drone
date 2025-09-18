@@ -78,7 +78,7 @@ def is_valid_velocity(vel) -> bool:
 def is_valid_type(type) -> bool:
     if not isinstance(type, int):
         return False
-    return type == TYPE_START or type == TYPE_NAVIGATION or type == TYPE_LAND
+    return type == TYPE_START or type == TYPE_NAVIGATION or type == TYPE_LAND or TYPE_STAND
 
 def is_valid_mission(mission) -> bool:
     if not isinstance(mission, int):

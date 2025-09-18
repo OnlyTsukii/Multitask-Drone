@@ -174,7 +174,7 @@ class TaskExecutor(Node):
             altitude=float(altitude),
             velocity=DEFAULT_VERTICAL_VEL,
         )
-
+        self.get_logger().info(f"takeoff  latitude {self.gps_fix.latitude},longitude {self.gps_fix.longitude},altitude {float(altitude)}")
         self.send_waypoint_action(takeoff_wp, True)
 
         self.get_logger().info("Drone takeoff successfully.")
@@ -272,7 +272,7 @@ class TaskExecutor(Node):
                     # self.execute_land(next_waypoint_id)
                     # next_waypoint_id = 0
                     self.land()
-                    if self.user != "nx8g01":
+                    if self.user != "nx8g01" and self.user != 'x650':
                         self.set_mode("AUTO.LOITER")
 
     def send_waypoint_action(self, waypoint, join_feedback=False):

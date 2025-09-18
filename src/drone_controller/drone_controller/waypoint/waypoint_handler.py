@@ -94,6 +94,11 @@ class WaypointHandler(Node):
                 continue
 
             if self.reached_waypoint(waypoint):
+                if waypoint.type == TYPE_STAND:
+                    startTime = time.time()
+                    while time.time() - startTime <= 10:
+                        self.global_point_publisher.publish(target)
+                        rclpy.spin_once(self)
                 break
 
             target.header.stamp = self.get_clock().now().to_msg()

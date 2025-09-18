@@ -31,7 +31,7 @@ class ObjectDetector(Node):
         self.yolo_srv = self.create_service(YoloRequest, '/drone/yolo_request', self.handle_yolo_request)
         self.capture_srv = self.create_service(YoloRequest, '/drone/capture_request', self.handle_capture_request)
 
-        if user == 'nx8g01':
+        if user == 'nx8g01' or user == 'x650':
             return
         
         os.makedirs(CAPTURE_IMAGE_PATH, exist_ok=True)
@@ -152,7 +152,7 @@ def main(args=None):
 
     rclpy.spin(yolo_detector)
 
-    if user != 'nx8g01':
+    if user != 'nx8g01' and user != 'x650':
         yolo_detector.cap.release()
 
     rclpy.shutdown()
