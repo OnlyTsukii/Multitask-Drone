@@ -98,6 +98,7 @@ class WaypointHandler(Node):
                     startTime = time.time()
                     while time.time() - startTime <= 10:
                         self.global_point_publisher.publish(target)
+                        self.get_logger().info(f"do hovering,{time.time() - startTime}")
                         rclpy.spin_once(self)
                 break
 
