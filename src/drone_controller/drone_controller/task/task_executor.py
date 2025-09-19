@@ -37,7 +37,7 @@ class TaskExecutor(Node):
             State, "/mavros/state", self.state_callback, 10
         )
 
-        self.cmdLong     = self.create_client(CommandLong,"/mavros/cmd/command")
+        self.cmdLong = self.create_client(CommandLong, "/mavros/cmd/command")
         self.land_client = self.create_client(CommandTOL, "/mavros/cmd/land")
         self.yolo_client = self.create_client(YoloRequest, "/drone/yolo_request")
         self.mode_client = self.create_client(SetMode, "/mavros/set_mode")
@@ -142,16 +142,24 @@ class TaskExecutor(Node):
 
     def land(self):
         rclpy.spin_once(self)
-        # req = CommandTOL.Request()
-        # req.latitude = self.gps_fix.latitude
-        # req.longitude = self.gps_fix.longitude
-        req = CommandLong.Request()
-        req.command = MAV_CMD_NAV_LAND
-        req.broadcast = False
-        req.confirmation = 0
+        req = CommandTOL.Request()
+        req.latitude = self.gps_fix.latitude
+        req.longitude = self.gps_fix.longitude
+        req.altitude = 0.0
+        req.yaw = self.yaw
+        req.min_pitch = 0.0
+        # req = CommandLong.Request()
+        # req.command = MAV_CMD_NAV_LAND
+        # req.broadcast = False
+        # req.confirmation = 0
 
-        future = self.cmdLong.call_async(req)
-        rclpy.spin_until_future_complete(self,future)
+        future = self.land_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+
+        time.sleep(1.0)
+
+        future = self.land_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
 
         if future.result().success:
             while self.state.armed:
@@ -245,9 +253,8 @@ class TaskExecutor(Node):
                     self.execute_takeoff(next_waypoint_id, task.waypoints[0].altitude)
                     next_waypoint_id += 1
 
-                    # if self.user != "nx8g01":
-                    #     self.execute_rotate(next_waypoint_id, task.waypoints[0])
-                    #     next_waypoint_id += 1
+                    # self.execute_rotate(next_waypoint_id, task.waypoints[0])
+                    # next_waypoint_id += 1
 
                 while index < length:
                     waypoint = task.waypoints[index]
@@ -256,10 +263,9 @@ class TaskExecutor(Node):
                     self.send_waypoint_action(waypoint, True)
                     next_waypoint_id += 1
 
-                    # if self.user != "nx8g01":
-                    #     if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
-                    #         self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
-                    #         next_waypoint_id += 1
+                    # if (waypoint.type == TYPE_START or waypoint.type == TYPE_NAVIGATION) and index < length - 1:
+                    #   self.execute_rotate(next_waypoint_id, task.waypoints[index+1])
+                    #   next_waypoint_id += 1
 
                     index += 1
 
@@ -269,10 +275,10 @@ class TaskExecutor(Node):
                     json.dump(self.feedback, json_file, indent=4)
             else:
                 if self.has_takeoff:
-                    # self.execute_land(next_waypoint_id)
-                    # next_waypoint_id = 0
                     self.land()
+                    # next_waypoint_id = 0
                     if self.user != "nx8g01":
+                        self.land()
                         self.set_mode("AUTO.LOITER")
 
     def send_waypoint_action(self, waypoint, join_feedback=False):

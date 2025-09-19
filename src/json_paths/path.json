@@ -1,24 +1,24 @@
 [
     {
-        "latitude": 31.3103835,
-        "longitude": 120.6355554,
-        "altitude": 8.06417035272052,
+        "latitude": 31.3999941,
+        "longitude": 120.7429197,
+        "altitude": -0.828556307988551,
         "type": 3,
         "mission": -1,
         "velocity": 1.0
     },
     {
-        "latitude": 31.3106338,
-        "longitude": 120.6358958,
-        "altitude": 13.174362408731172,
+        "latitude": 31.400018,
+        "longitude": 120.7429021,
+        "altitude": 1.4253643979355566,
         "type": 2,
-        "mission": 2,
+        "mission": -1,
         "velocity": 1.0
     },
     {
-        "latitude": 31.3103702,
-        "longitude": 120.6354532,
-        "altitude": 13.148781136713286,
+        "latitude": 31.400019,
+        "longitude": 120.742699,
+        "altitude": 1.3965712574965758,
         "type": 2,
         "mission": -1,
         "velocity": 1.0

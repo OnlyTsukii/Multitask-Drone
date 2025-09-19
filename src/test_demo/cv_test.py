@@ -4,7 +4,7 @@ import os
 
 home_dir = os.environ.get('HOME')
 
-CAPTURE_IMAGE_PATH          = home_dir + '/Multitask-Drone/src/drone_vision/images/task_capture/'
+CAPTURE_IMAGE_PATH = home_dir + '/Multitask-Drone/src/drone_vision/images/task_capture/'
 
 os.makedirs(CAPTURE_IMAGE_PATH, exist_ok=True)
 

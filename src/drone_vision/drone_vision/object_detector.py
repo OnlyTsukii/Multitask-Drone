@@ -21,8 +21,6 @@ CLEAN_RAW_IMAGE_PATH        = home_dir + '/Multitask-Drone/src/drone_vision/imag
 CLEAN_LABELED_IMAGE_PATH    = home_dir + '/Multitask-Drone/src/drone_vision/images/task_clean/labeled/'
 CAPTURE_IMAGE_PATH          = home_dir + '/Multitask-Drone/src/drone_vision/images/task_capture/'
 
-user = os.getenv('USER')
-
 
 class ObjectDetector(Node):
     def __init__(self):
@@ -30,9 +28,6 @@ class ObjectDetector(Node):
 
         self.yolo_srv = self.create_service(YoloRequest, '/drone/yolo_request', self.handle_yolo_request)
         self.capture_srv = self.create_service(YoloRequest, '/drone/capture_request', self.handle_capture_request)
-
-        if user == 'nx8g01':
-            return
         
         os.makedirs(CAPTURE_IMAGE_PATH, exist_ok=True)
 
@@ -152,8 +147,7 @@ def main(args=None):
 
     rclpy.spin(yolo_detector)
 
-    if user != 'nx8g01':
-        yolo_detector.cap.release()
+    yolo_detector.cap.release()
 
     rclpy.shutdown()
 
